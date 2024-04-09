@@ -4,18 +4,31 @@
 # many of those features have coefficients, that are 0 (and thus meaningless).
 
 # Define Input parameters
-input_file_path <- "C://User//johan//Desktop//regession_output_example//
-Elasticnet_Regression_Model_Segmentation_ENSG00000001167_10_Pearson.RData"
+input_file_path <- paste(
+  "C:\\Users\\johan\\Desktop\\regession_output_example\\",
+  "Elasticnet_Regression_Model_Segmentation_ENSG00000001167_10_Spearman.RData",
+  sep = ""
+)
 
-print(sprintf("Imported file:", input_file_path))
-#cat(input_file_path)
+# Echo path of imported file
+cat(sprintf("File path for import:\n%s\n", input_file_path))
 
-quit()
+# Load the .RData file - accesible as 'elasticnet_model'
+#load(file.choose())
+load(input_file_path)
 
-# Load the RData file
-load(file_path)
+# Print imported df
+print(View(elasticnet_model))
+print(View(elasticnet_model$model$lambda.min))
 
-# View the head of the dataframe
-head(your_dataframe)
+print(elasticnet_model.model.lambda.min)
 
-# Test2
+# Count the number of features used in the glmnet model
+#num_features <- length(coef(your_model))
+
+# Count the number of features with coefficients equal to 0
+#num_zero_coeff_features <- sum(coef(your_model) == 0)
+
+# Print the results
+#cat("Number of features used in the model:", num_features, "\n")
+#cat("Number of features with coefficients equal to 0:", num_zero_coeff_features, "\n")
