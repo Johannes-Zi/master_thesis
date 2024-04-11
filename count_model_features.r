@@ -32,9 +32,10 @@ cat("lambda min index:", lambda_min_index)
 
 # Get the corresponding nzero value
 nzero_value <- elasticnet_model$model$nzero[lambda_min_index]
+number_of_features <- elasticnet_model$model$glmnet.fit$dim[1]
 
 # Print the calculated values after each step
 print("overview for lambda.min")
-cat("Number of features used in the model:", elasticnet_model$model$glmnet.fit$dim[1], "\n")
-cat("Number of features with coefficients unequal to 0:", elasticnet_model$model$glmnet.fit$dim[1], "\n")
+cat("Number of features used in the model:", number_of_features, "\n")
+cat("Number of features with coefficients unequal to 0:", nzero_value, "\n")
 
