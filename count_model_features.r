@@ -17,18 +17,24 @@ cat(sprintf("File path for import:\n%s\n", input_file_path))
 #load(file.choose())
 load(input_file_path)
 
-# Print imported df
-print(View(elasticnet_model))
-print(View(elasticnet_model$model$lambda.min))
+# Print structure of the loaded object
+#str(elasticnet_model)
+# Print keys that are accessible in a specif layer of the data structure
+#names(elasticnet_model$model)
 
-print(elasticnet_model.model.lambda.min)
+# insight into the elasticnet_model object
+lambda_min_value <- elasticnet_model$model$lambda.min
+cat("lambda min of the model:", lambda_min_value)
 
-# Count the number of features used in the glmnet model
-#num_features <- length(coef(your_model))
+# Get ident of lambda min based on the list with all lambdas
+lambda_min_index <- which(elasticnet_model$model$lambda == lambda_min_value)
+cat("lambda min index:", lambda_min_index)
 
-# Count the number of features with coefficients equal to 0
-#num_zero_coeff_features <- sum(coef(your_model) == 0)
+# Get the corresponding nzero value
+nzero_value <- elasticnet_model$model$nzero[lambda_min_index]
 
-# Print the results
-#cat("Number of features used in the model:", num_features, "\n")
-#cat("Number of features with coefficients equal to 0:", num_zero_coeff_features, "\n")
+# Print the calculated values after each step
+print("overview for lambda.min")
+cat("Number of features used in the model:", elasticnet_model$model$glmnet.fit$dim[1], "\n")
+cat("Number of features with coefficients unequal to 0:", elasticnet_model$model$glmnet.fit$dim[1], "\n")
+
