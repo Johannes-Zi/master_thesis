@@ -171,7 +171,7 @@ ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
 #   scale_color_viridis()
 
 # Create the plot
-p <- ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
+ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
   geom_count(aes(color = ..n..)) +
   scale_color_viridis_c() +
   labs(x = "Number of Features", y = "nzero") +
