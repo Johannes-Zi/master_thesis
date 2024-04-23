@@ -5,7 +5,7 @@
 
 # Define Input parameters
 input_file_path <- paste(
-  "C:\\Users\\johan\\Desktop\\regession_output_example\\",
+  "C:/Users/johan/Desktop/standard_regression/regression_output/regression_output/",
   "Elasticnet_Regression_Model_Segmentation_ENSG00000001167_10_Spearman.RData",
   sep = ""
 )

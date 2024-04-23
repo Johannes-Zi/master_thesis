@@ -64,8 +64,8 @@ process_directory <- function(directory_path, import_limit, file_pattern) {
 }
 
 # Define the input directory path
-#input_directory_path <- "C:/Users/johan/Desktop/regession_output_example/"
-input_directory_path <- "C:/Users/johan/Desktop/regression_output/regression_output/"
+#input_directory_path <- "C:/Users/johan/Desktop/standard_regression/regression_output/regression_output/"
+input_directory_path <- "C:/Users/johan/Desktop/LOneOCV_regression/regression_output/"
 
 
 cat("imported directory path:\n", input_directory_path, "\n")
@@ -170,8 +170,10 @@ ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
 #   geom_abline(intercept = 0, slope = 1, color = "red") +
 #   scale_color_viridis()
 
-# Create the plot
-ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
+
+
+# Spearman version
+s <- ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
   geom_count(aes(color = ..n..)) +
   scale_color_viridis_c() +
   labs(x = "Number of Features", y = "nzero") +
@@ -184,4 +186,22 @@ ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
   geom_abline(intercept = 0, slope = 1, color = "red")
 
   # Save the plot as a PNG file
-ggsave("plot.png", plot = p, width = 12, height = 12, dpi = 600)
+ggsave("spearman_plot.png", plot = s, width = 12, height = 12, dpi = 600)
+
+
+
+# Pearson version
+p <- ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
+  geom_count(aes(color = ..n..)) +
+  scale_color_viridis_c() +
+  labs(x = "Number of Features", y = "nzero") +
+  ggtitle(expression(paste(bold("Regression PearsonCorr. - "), "Number of non-zero Coefficients vs. Number of Features"))) +
+  theme_bw() +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_x_continuous(breaks = seq(0, max(output_df$number_of_features), by = 10)) +
+  scale_y_continuous(breaks = seq(0, max(output_df$nzero_value), by = 10)) +
+  coord_cartesian(xlim = c(0, max(output_df$number_of_features)), ylim = c(0, max(output_df$nzero_value))) +
+  geom_abline(intercept = 0, slope = 1, color = "red")
+
+# Save the plot as a PNG file
+ggsave("pearson_plot.png", plot = p, width = 12, height = 12, dpi = 600)
