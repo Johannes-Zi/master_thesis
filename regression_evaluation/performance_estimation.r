@@ -11,7 +11,7 @@ df_standard <- read.table(input_directory_path_standard, header = TRUE, sep = "\
 head(df_LeaveOneOut)
 head(df_standard)
 
-create_boxplots <- function(df_LeaveOneOut, df_standard, target_column) {
+create_boxplots <- function(df_LeaveOneOut, df_standard, target_column, output_directory) {
   
   # Extract x achsis names
   df_LeaveOneOut_name <- tail(strsplit(deparse(substitute(df_LeaveOneOut)), "_")[[1]], 1)
@@ -42,10 +42,14 @@ create_boxplots <- function(df_LeaveOneOut, df_standard, target_column) {
     coord_cartesian(ylim = ylim*1.1) + # Scale y limits based on ylim
     scale_fill_brewer(palette = "Set2") + # Apply Brewer color palette
     theme(legend.position = "none") # Remove legend
+
+  # Save the plot to the target directory
+  ggsave(filename = paste(output_directory, "/", target_column, "_violinplot.png", sep = ""), plot = boxplot)
+
   return(boxplot)
 }
 
-create_violin_plots <- function(df_LeaveOneOut, df_standard, target_column) {
+create_violin_plots <- function(df_LeaveOneOut, df_standard, target_column, output_directory) {
   
   # Extract x achsis names
   df_LeaveOneOut_name <- tail(strsplit(deparse(substitute(df_LeaveOneOut)), "_")[[1]], 1)
@@ -70,16 +74,18 @@ create_violin_plots <- function(df_LeaveOneOut, df_standard, target_column) {
     theme(legend.position = "none") # Remove legend
   
   # Save the plot to the target directory
-  ggsave(filename = paste(target_directory, "/", target_column, "_violinplot.png", sep = ""), plot = violinplot)
+  ggsave(filename = paste(output_directory, "/", target_column, "_violinplot.png", sep = ""), plot = violinplot)
   return(violinplot)
 }
 
+output_path = "C:/Users/johan/Desktop/LOneOCV_regression/performance_evaluation/"
+
 # Call the function with the dataframes as arguments
-create_violin_plots(df_LeaveOneOut, df_standard, target_column = "Pearson")
+create_violin_plots(df_LeaveOneOut, df_standard, target_column = "Pearson", output_directory = output_path)
 
-create_violin_plots(df_LeaveOneOut, df_standard, target_column = "Spearman")
+create_violin_plots(df_LeaveOneOut, df_standard, target_column = "Spearman", output_directory = output_path)
 
-create_boxplots(df_LeaveOneOut, df_standard, target_column = "MSE")
+create_boxplots(df_LeaveOneOut, df_standard, target_column = "MSE", output_directory = output_path)
 
 #create_violin_plots(df_LeaveOneOut, df_standard, target_column = "pVal")
 
