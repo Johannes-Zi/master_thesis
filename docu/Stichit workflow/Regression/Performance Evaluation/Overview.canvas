@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"id":"c1efbbb4b7b641dd","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/RegFeaturesXnzero.md","x":-1440,"y":-562,"width":692,"height":764},
+		{"id":"b7f9dbf15fac7a7e","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241635.md","x":40,"y":-28,"width":400,"height":498},
+		{"id":"74478224784b2060","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241636.md","x":-400,"y":240,"width":400,"height":480},
+		{"id":"ba67768cad47006c","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241637.md","x":40,"y":-600,"width":400,"height":500},
+		{"id":"78e3550c30d684ad","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241638.md","x":-400,"y":-1080,"width":400,"height":480}
+	],
+	"edges":[
+		{"id":"047064c0ba30bcb3","fromNode":"c1efbbb4b7b641dd","fromSide":"right","toNode":"b7f9dbf15fac7a7e","toSide":"left"},
+		{"id":"1e20a64d53a14c95","fromNode":"c1efbbb4b7b641dd","fromSide":"right","toNode":"74478224784b2060","toSide":"left"},
+		{"id":"74d5a6e94395c33e","fromNode":"c1efbbb4b7b641dd","fromSide":"right","toNode":"ba67768cad47006c","toSide":"left"},
+		{"id":"d8b194e320c0a1fe","fromNode":"c1efbbb4b7b641dd","fromSide":"right","toNode":"78e3550c30d684ad","toSide":"left"}
+	]
+}
