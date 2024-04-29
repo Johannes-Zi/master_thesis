@@ -15,12 +15,14 @@ This Version analyzes the gene-specific lambda.min models the were trained durin
 ```
 
 # File overview
+==For detailed in/output documentation see Notion docu==
 ### input
-- \*\_Pearson.RData
-- \*\_Spearman.RData
+- \*\_Pearson.txt
+- \*\_Spearman.txt
 ### output
-[[ElNetCoeffCounts_elasticnet_modelStructure]]	
 
-## Additional output insights
-The overview of the outputs are documented in notion - here is a detailed overview of the 
+* Performance_Overview.txt
+*  \*\_Pearson.RData
+- \*\_Spearman.RData
+[[ElNetCoeffCounts_elasticnet_modelStructure]]
  

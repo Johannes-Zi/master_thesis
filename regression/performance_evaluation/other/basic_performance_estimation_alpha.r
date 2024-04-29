@@ -1,5 +1,6 @@
 library(ggplot2)
 library(RColorBrewer)
+library(rstudioapi)
 
 # Import Performance_Overview files
 input_directory_path_LeaveOneOut <- "C:/Users/johan/Desktop/LOneOCV_regression/performance_evaluation/Performance_Overview.txt"
@@ -78,7 +79,8 @@ create_violin_plots <- function(df_LeaveOneOut, df_standard, target_column, outp
   return(violinplot)
 }
 
-output_path = "C:/Users/johan/Desktop/LOneOCV_regression/performance_evaluation/"
+output_path <- dirname(rstudioapi::getActiveDocumentContext()$path)
+print(output_path)
 
 # Call the function with the dataframes as arguments
 create_violin_plots(df_LeaveOneOut, df_standard, target_column = "Pearson", output_directory = output_path)

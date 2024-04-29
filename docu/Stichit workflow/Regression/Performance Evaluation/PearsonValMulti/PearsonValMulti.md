@@ -6,6 +6,6 @@ https://github.com/Johannes-Zi/master_thesis/blob/main/regression/performance_ev
 ## Runs performed
 plots were only generated for the Pearson based feature (segment) preselection at the end of the segmentation process
 
-| Feature segment preselection after segmentation | Standard CV        | LeaveOneOut CV     |
-| ----------------------------------------------- | ------------------ | ------------------ |
-| Pearson correlation based                       | [[fig_2904241636]] | [[fig_2904241637]] |
+| Feature segment preselection after segmentation | Standard CV/LeaveOneOut CV combined |
+| ----------------------------------------------- | ----------------------------------- |
+| Pearson correlation based                       | [[fig_2904241636]]                  |

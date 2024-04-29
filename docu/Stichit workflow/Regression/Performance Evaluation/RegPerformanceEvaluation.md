@@ -12,7 +12,7 @@ Erkläre was grundlegend assessed wird
   [[ElNetCoeffCounts_elasticnet_modelStructure]]
 
 ## Plot types
-Marcel told me to focus only on the Pearson driven feature (segment) preselection at the end of the segmentation and the Pearson values of the cross validation (Spearman less relevant). Laura thinks this might be because we use a linear model and Pearson measures linear relationship. I think this might be maybe because we are searching for Segment that directly have an influence on the gene Expression - if there are non linear relationships, there might be other processes involved and thus the effect might be more difficult to understand based on the data we have - we are focusing on detecting simple DNA accessibility driven correlations.
+Marcel told to focus only on the Pearson driven feature (segment) preselection at the end of the segmentation and the Pearson values of the cross validation (Spearman less relevant). Laura thinks this might be because we use a linear model and Pearson measures linear relationship. I think this might be maybe because we are searching for Segment that directly have an influence on the gene Expression - if there are non linear relationships, there might be other processes involved and thus the effect might be more difficult to understand based on the data we have - we are focusing on detecting simple DNA accessibility driven correlations.
 ### Pearson values multi-violin
 [[PearsonValMulti]]
 ### MSE vaLues multi-violin
@@ -24,13 +24,9 @@ Marcel told me to focus only on the Pearson driven feature (segment) preselectio
 ### Person values x Pearson variance paired-dotplot
 [[PearsonValXVariance]]
 ### Number of features x number of nonzero feature coefficients
-[[RegFeaturesXnzero]] ==Example structure==
+[[RegFeaturesXnzero]]
 ### Number of nonzero feature coefficients x Pearson values
 [[NzeroXpearson]]
 
 ## Finished plots
-Entweder für jeden erstellten plot einen Knoten erstellen und diese dann alle in einen overview canvas laden ODER die jeweiligen in/out params/pfade in eine Tabelle eintragen und nicht unheimlich viele Knoten erstellen ODER in Liste hier zu den jeweiligen Knoten linken und die Knoten linken zu hier + dem Sample? ODER für die plottypes ebenfalls knoten erstellen un diese dann verlinken anstelle alles hierher zu verlinken ODER die Plottypes Knoten sin der jeweils verwendete code und stellen eine bridge zwischen diesem file und den Plotfiles dar.
-
-
-## Exception cases
-Die Sonderfälle, welche top el-net performance haben, aber alle OLS coeffs null sind - was ist der Grund dafür 
+[[RegPlotOverview.canvas|Overview]]
