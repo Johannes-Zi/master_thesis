@@ -1,3 +1,9 @@
 {
-    "editor.fontSize": 11
+    "editor.fontSize": 11,
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "css.format.maxPreserveNewLines": 120,
 }
+
