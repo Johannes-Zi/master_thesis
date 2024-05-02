@@ -22,7 +22,7 @@ process_regression_performance_evaluation_df <- function(input_df) {
     extracted_gene_names <- sapply(filename_parts, function(x) paste(x[2], x[3], sep = "_"))
     adapted_df$Sample_Name <- extracted_gene_names
 
-    adapted_df <- rename(adapted_df, gene_name = Sample_Name)
+    adapted_df <- rename(adapted_df, gene_name = Sample_Name) # nolint: object_usage_linter.
 
     return(adapted_df)
 }
@@ -40,12 +40,12 @@ process_file <- function(file_path) {
   filename <- tools::file_path_sans_ext(basename(file_path))
 
   # Get ident of lambda min based on the list with all lambdas
-  lambda_min_value <- elasticnet_model$model$lambda.min
-  lambda_min_index <- which(elasticnet_model$model$lambda == lambda_min_value)
+  lambda_min_value <- elasticnet_model$model$lambda.min # nolint: object_usage_linter.
+  lambda_min_index <- which(elasticnet_model$model$lambda == lambda_min_value) # nolint: object_usage_linter.
 
   # Get the corresponding nzero value
-  nzero_value <- elasticnet_model$model$nzero[lambda_min_index]
-  number_of_features <- elasticnet_model$model$glmnet.fit$dim[1]
+  nzero_value <- elasticnet_model$model$nzero[lambda_min_index] # nolint: object_usage_linter.
+  number_of_features <- elasticnet_model$model$glmnet.fit$dim[1] # nolint: object_usage_linter.
 
   # Create a data frame with the results
   result <- data.frame(filename = filename,
@@ -114,7 +114,7 @@ process_regression_models_df <- function(input_df) {
     extracted_gene_names <- sapply(filename_parts, function(x) paste(x[5], x[6], sep = "_"))
     merged_df$filename <- extracted_gene_names
 
-    merged_df <- rename(merged_df, gene_name = filename)
+    merged_df <- rename(merged_df, gene_name = filename) # nolint: object_usage_linter.
 
     return(merged_df)
 }

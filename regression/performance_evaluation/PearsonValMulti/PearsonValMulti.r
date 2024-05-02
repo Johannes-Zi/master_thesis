@@ -44,7 +44,7 @@ preprocess_performance_evaluation_df <- function(input_df) {
   adapted_df$Sample_Name <- extracted_gene_names
 
   # Rename the Sample_Name column to gene_name
-  adapted_df <- rename(adapted_df, gene_name = Sample_Name)
+  adapted_df <- rename(adapted_df, gene_name = Sample_Name) # nolint: object_usage_linter.
 
   return(adapted_df)
 }
@@ -79,7 +79,7 @@ create_violin_plots <- function(df_LeaveOneOut, df_standard, target_column, outp
   df_combined <- rbind(df_LeaveOneOut_new, df_standard_new)
 
   # Create violin plots
-  violinplot <- ggplot(df_combined, aes(x = CV_Type, y = target, fill = CV_Type)) +
+  violinplot <- ggplot(df_combined, aes(x = CV_Type, y = target, fill = CV_Type)) + # nolint: object_usage_linter.
     geom_violin(trim = FALSE, width = 0.5) +
     labs(title = paste(target_column, "Comparison", sep = " "), y = target_column, x = "CV Type") +
     theme_gray() +

@@ -15,12 +15,12 @@ process_file <- function(file_path) {
   filename <- tools::file_path_sans_ext(basename(file_path))
 
   # Get ident of lambda min based on the list with all lambdas
-  lambda_min_value <- elasticnet_model$model$lambda.min
-  lambda_min_index <- which(elasticnet_model$model$lambda == lambda_min_value)
+  lambda_min_value <- elasticnet_model$model$lambda.min # nolint: object_usage_linter.
+  lambda_min_index <- which(elasticnet_model$model$lambda == lambda_min_value) # nolint: object_usage_linter.
 
   # Get the corresponding nzero value
-  nzero_value <- elasticnet_model$model$nzero[lambda_min_index]
-  number_of_features <- elasticnet_model$model$glmnet.fit$dim[1]
+  nzero_value <- elasticnet_model$model$nzero[lambda_min_index] # nolint: object_usage_linter.
+  number_of_features <- elasticnet_model$model$glmnet.fit$dim[1] # nolint: object_usage_linter.
 
   # Create a data frame with the results
   result <- data.frame(filename = filename,

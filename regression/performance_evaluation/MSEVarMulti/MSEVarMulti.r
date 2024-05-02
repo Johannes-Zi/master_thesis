@@ -45,7 +45,7 @@ preprocess_performance_evaluation_df <- function(input_df) {
   adapted_df$Sample_Name <- extracted_gene_names
 
   # Rename the Sample_Name column to gene_name
-  adapted_df <- rename(adapted_df, gene_name = Sample_Name)
+  adapted_df <- rename(adapted_df, gene_name = Sample_Name) # nolint: object_usage_linter.
 
   return(adapted_df)
 }
@@ -91,7 +91,7 @@ create_boxplots <- function(df_LeaveOneOut, df_standard, target_column, output_d
   df_combined <- rbind(df_LeaveOneOut_new, df_standard_new)
 
   # Create boxplot
-  boxplot <- ggplot(df_combined, aes(x = CV_Type, y = target, fill = CV_Type)) +
+  boxplot <- ggplot(df_combined, aes(x = CV_Type, y = target, fill = CV_Type)) + # nolint: object_usage_linter.
     geom_boxplot(outlier.shape = NA) +
     labs(title = paste(target_column, "Comparison", sep = " "), y = target_column, x = "CV Type") +
     theme_gray() +
