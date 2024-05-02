@@ -1,14 +1,12 @@
-Dotplot welcher die MSE values mit der jeweiligen variance plottet
-- können  für  standard und LOO CV erzeugt werden, die LOO hat ja keine Varianz Werte - somit 4 plots (Spear/Pear Segment preselection jeweils)
-
 ## Description:
+Dotplots to put the MSE Values in relation to the respective variation between the MSE values.
 
-## Code
-https://github.com/Johannes-Zi/master_thesis/blob/main/regression_evaluation/count_model_features_multiple_files.r
+The script generates a dot plot visualization that represents the relationship between two variables, specifically `MSE` and `MSEVar`, from a given dataset. The plot is colored based on the density of the points, which helps in identifying areas of high data concentration. This is particularly useful in scenarios where the plot is crowded with many overlapping points. 
+
+https://github.com/Johannes-Zi/master_thesis/blob/main/regression/performance_evaluation/MSEValXMSEVar/MSEValXMSEVar.r
 
 ## Runs performed
-plots were only generated for the Pearson based feature (segment) preselection at the end of the segmentation process
 
 | Feature segment preselection after segmentation | Standard CV        | LeaveOneOut CV     |
 | ----------------------------------------------- | ------------------ | ------------------ |
-| Pearson correlation based                       | [[fig_2904241636]] | [[fig_dummy]] |
+| Pearson correlation based                       | [[fig_0205241539]] | [[fig_0205241540]] |

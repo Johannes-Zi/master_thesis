@@ -1,4 +1,4 @@
-Erkläre was grundlegend assessed wird
+**==GOOD IDEA: ADD test for significance to the test to check if the difference between the cv types are significant==**
 ## Used file-types
 ### Performance_Overview.txt
 * In general the "best performing" model refers to the model which has the minimum cross validation error (MSE) and can be accessed in glmnet via lambda.min.
