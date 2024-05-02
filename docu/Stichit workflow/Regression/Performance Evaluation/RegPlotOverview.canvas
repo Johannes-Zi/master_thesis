@@ -1,18 +1,31 @@
 {
 	"nodes":[
+		{"id":"4faa7fb0ea2b6b32","type":"group","x":-2440,"y":-840,"width":440,"height":840,"label":"Regression"},
 		{"id":"c1efbbb4b7b641dd","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/RegFeaturesXnzero.md","x":-1440,"y":-562,"width":692,"height":764},
-		{"id":"b7f9dbf15fac7a7e","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241635.md","x":40,"y":-28,"width":400,"height":498},
 		{"id":"74478224784b2060","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241636.md","x":-400,"y":240,"width":400,"height":480},
-		{"id":"ba67768cad47006c","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241637.md","x":40,"y":-600,"width":400,"height":500},
 		{"id":"78e3550c30d684ad","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241638.md","x":-400,"y":-1080,"width":400,"height":480},
-		{"id":"5269a4d5ce4c8d3e","x":-1440,"y":-1200,"width":680,"height":395,"type":"file","file":"Stichit workflow/Regression/Performance Evaluation/PearsonValMulti/PearsonValMulti.md"},
-		{"id":"31c858c9e161a5ef","x":-712,"y":-2120,"width":624,"height":756,"type":"file","file":"Stichit workflow/Regression/Performance Evaluation/PearsonValMulti/fig_2904241636.md"}
+		{"id":"5269a4d5ce4c8d3e","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/PearsonValMulti/PearsonValMulti.md","x":-1440,"y":-1200,"width":680,"height":395},
+		{"id":"36032bd21f2a2dbf","type":"file","file":"Stichit workflow/Regression/Runs/26_patient_dataset/LeaveOneOutCV/RegLeaveOneOutCV.md","x":-2420,"y":-820,"width":400,"height":400},
+		{"id":"1083b548770e75b2","type":"file","file":"Stichit workflow/Regression/Runs/26_patient_dataset/StandardCV/RegStandardCV.md","x":-2420,"y":-420,"width":400,"height":400},
+		{"id":"a22986787a1a6354","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/MSEValMulti/MSEValMulti.md","x":-2220,"y":-1440,"width":680,"height":360},
+		{"id":"e02c01e872d6f7d8","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/MSEValMulti/fig_0205240909.md","x":-1805,"y":-2320,"width":705,"height":723},
+		{"id":"31c858c9e161a5ef","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/PearsonValMulti/fig_2904241636.md","x":-748,"y":-2016,"width":624,"height":756},
+		{"id":"b7f9dbf15fac7a7e","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241635.md","x":40,"y":-28,"width":400,"height":498},
+		{"id":"ba67768cad47006c","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241637.md","x":40,"y":-600,"width":400,"height":500},
+		{"id":"34e0a30a2dd8a4d4","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/MSEVarMuli/MSEVarMulti.md","x":-3080,"y":-1455,"width":660,"height":375},
+		{"id":"2b1a3391065032f4","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/MSEVarMuli/fig_0205241345.md","x":-2960,"y":-2320,"width":640,"height":707}
 	],
 	"edges":[
 		{"id":"047064c0ba30bcb3","fromNode":"c1efbbb4b7b641dd","fromSide":"right","toNode":"b7f9dbf15fac7a7e","toSide":"left"},
 		{"id":"1e20a64d53a14c95","fromNode":"c1efbbb4b7b641dd","fromSide":"right","toNode":"74478224784b2060","toSide":"left"},
 		{"id":"74d5a6e94395c33e","fromNode":"c1efbbb4b7b641dd","fromSide":"right","toNode":"ba67768cad47006c","toSide":"left"},
 		{"id":"d8b194e320c0a1fe","fromNode":"c1efbbb4b7b641dd","fromSide":"right","toNode":"78e3550c30d684ad","toSide":"left"},
-		{"id":"1dc59964599f0b7e","fromNode":"5269a4d5ce4c8d3e","fromSide":"top","toNode":"31c858c9e161a5ef","toSide":"left"}
+		{"id":"1dc59964599f0b7e","fromNode":"5269a4d5ce4c8d3e","fromSide":"top","toNode":"31c858c9e161a5ef","toSide":"left"},
+		{"id":"b2ddf9f690168464","fromNode":"a22986787a1a6354","fromSide":"top","toNode":"e02c01e872d6f7d8","toSide":"bottom"},
+		{"id":"9490e26aca201c8e","fromNode":"4faa7fb0ea2b6b32","fromSide":"right","toNode":"c1efbbb4b7b641dd","toSide":"left"},
+		{"id":"41c5e82d317adcca","fromNode":"4faa7fb0ea2b6b32","fromSide":"right","toNode":"5269a4d5ce4c8d3e","toSide":"left"},
+		{"id":"c2fd9538118d3d0b","fromNode":"4faa7fb0ea2b6b32","fromSide":"right","toNode":"a22986787a1a6354","toSide":"bottom"},
+		{"id":"dbaef2a4fbdba7e8","fromNode":"4faa7fb0ea2b6b32","fromSide":"left","toNode":"34e0a30a2dd8a4d4","toSide":"bottom"},
+		{"id":"1bf9765cfca72fc9","fromNode":"34e0a30a2dd8a4d4","fromSide":"top","toNode":"2b1a3391065032f4","toSide":"bottom"}
 	]
 }

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Stichit workflow/Regression/Performance Evaluation/MSEVarMuli/MSEVarMulti.md",
+                "file": "Stichit workflow/Regression/Performance Evaluation/MSEValMulti/fig_0205240909.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Stichit workflow/Regression/Performance Evaluation/MSEValMulti/MSEValMulti.md",
+                "file": "Stichit workflow/Regression/Performance Evaluation/MSEVarMuli/MSEVarMulti.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Stichit workflow/Regression/Performance Evaluation/MSEVarMuli/MSEVarMulti.md",
+                "file": "Stichit workflow/Regression/Performance Evaluation/MSEValMulti/fig_0205240909.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Stichit workflow/Regression/Performance Evaluation/MSEVarMuli/MSEVarMulti.md",
+                "file": "Stichit workflow/Regression/Performance Evaluation/MSEValMulti/fig_0205240909.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Stichit workflow/Regression/Performance Evaluation/MSEVarMuli/MSEVarMulti.md"
+                "file": "Stichit workflow/Regression/Performance Evaluation/MSEValMulti/fig_0205240909.md"
               }
             }
           }
@@ -160,13 +160,15 @@
   },
   "active": "696b1e9209600da5",
   "lastOpenFiles": [
-    "Stichit workflow/Regression/Performance Evaluation/MSEValMulti/MSEValMulti.md",
-    "Stichit workflow/Regression/Performance Evaluation/MSEVarMuli/MSEVarMulti.md",
-    "Future Ideas/templates/fig_dummy.md",
-    "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
-    "Future Ideas/templates",
-    "Stichit workflow/Regression/Performance Evaluation/MSEValMulti/fig_0205240909.md",
     "Stichit workflow/Regression/Performance Evaluation/MSEValMulti/MSE_boxplot.png",
+    "Stichit workflow/Regression/Performance Evaluation/MSEValMulti/MSEValMulti.md",
+    "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
+    "Stichit workflow/Regression/Performance Evaluation/MSEVarMuli/MSEVarMulti.md",
+    "Stichit workflow/Regression/Performance Evaluation/MSEVarMuli/fig_0205241345.md",
+    "Stichit workflow/Regression/Performance Evaluation/MSEValMulti/fig_0205240909.md",
+    "Stichit workflow/Regression/Performance Evaluation/MSEVarMuli/MSEVar_boxplot.png",
+    "Future Ideas/templates/fig_dummy.md",
+    "Future Ideas/templates",
     "Stichit workflow/Regression/Performance Evaluation/RegPerformanceEvaluation.md",
     "Stichit workflow/Regression/Performance Evaluation/PearsonValMulti/PearsonValMulti.md",
     "Stichit workflow/Regression/Performance Evaluation/PearsonValMulti/fig_2904241636.md",
@@ -198,7 +200,6 @@
     "Stichit workflow/Regression/Performance Evaluation/MSEValXMSEVar",
     "Stichit workflow/Regression/Performance Evaluation/MSEVarMuli",
     "Stichit workflow/Regression/Performance Evaluation/MSEValMulti",
-    "Stichit workflow/Regression/Performance Evaluation/exeptionCases/ScatterplottWeirdZeroCoeffOLS.md",
     "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/spearman_plot 1.png",
     "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/plot.png",
     "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/Spearman_plot.png",

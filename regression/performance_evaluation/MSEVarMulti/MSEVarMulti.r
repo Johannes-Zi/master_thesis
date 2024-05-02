@@ -124,9 +124,9 @@ head(df_LeaveOneOut_preprocessed_1)
 df_LeaveOneOut_preprocessed_2 <- df_LeaveOneOut_preprocessed_1[df_LeaveOneOut_preprocessed_1$segmentation_preselection_corellation == "Pearson", ]
 head(df_LeaveOneOut_preprocessed_2)
 
+# Select df entries which were based on Pearson based feature selection at the end of the segementation
 df_standard_preprocessed_1 <- preprocess_performance_evaluation_df(df_standard)
 head(df_standard_preprocessed_1)
-# Select df entries which were based on Pearson based feature selection at the end of the segementation
 df_standard_preprocessed_2 <- df_standard_preprocessed_1[df_standard_preprocessed_1$segmentation_preselection_corellation == "Pearson", ]
 head(df_standard_preprocessed_2)
 

@@ -11,4 +11,4 @@ plots were only generated for the Pearson based feature (segment) preselection a
 
 | Feature segment preselection after segmentation | Standard CV        | LeaveOneOut CV     |
 | ----------------------------------------------- | ------------------ | ------------------ |
-| Pearson correlation based                       | [[fig_2904241636]] | [[fig_2904241637]] |
+| Pearson correlation based                       | [[fig_2904241636]] | [[fig_dummy]] |
