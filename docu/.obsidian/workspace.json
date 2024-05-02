@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Stichit workflow/Regression/Performance Evaluation/MSEValMulti/fig_0205240909.md",
+                "file": "Stichit workflow/Regression/Performance Evaluation/PearsonValMulti/fig_2904241636.md",
                 "mode": "source",
                 "source": false
               }
@@ -23,15 +23,19 @@
             "id": "6b5211ca00bb71c8",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Stichit workflow/Regression/Performance Evaluation/MSEVarMuli/MSEVarMulti.md",
-                "mode": "source",
-                "source": false
+                "file": "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
+                "viewState": {
+                  "x": -854.2597530657864,
+                  "y": -1063.726192879786,
+                  "zoom": -1.4761803427420381
+                }
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -97,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Stichit workflow/Regression/Performance Evaluation/MSEValMulti/fig_0205240909.md",
+                "file": "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Stichit workflow/Regression/Performance Evaluation/MSEValMulti/fig_0205240909.md",
+                "file": "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Stichit workflow/Regression/Performance Evaluation/MSEValMulti/fig_0205240909.md"
+                "file": "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas"
               }
             }
           }
@@ -158,21 +162,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "696b1e9209600da5",
+  "active": "6b5211ca00bb71c8",
   "lastOpenFiles": [
+    "Stichit workflow/Regression/Performance Evaluation/MSEVarMuli/MSEVarMulti.md",
+    "Stichit workflow/Regression/Performance Evaluation/PearsonValMulti/fig_2904241636.md",
+    "Stichit workflow/Regression/Performance Evaluation/PearsonValMulti/Pearson_violinplot.png",
+    "Stichit workflow/Regression/Performance Evaluation/PearsonValMulti/PearsonValMulti.md",
+    "Stichit workflow/Regression/Performance Evaluation/MSEValMulti/fig_0205240909.md",
     "Stichit workflow/Regression/Performance Evaluation/MSEValMulti/MSE_boxplot.png",
     "Stichit workflow/Regression/Performance Evaluation/MSEValMulti/MSEValMulti.md",
     "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
-    "Stichit workflow/Regression/Performance Evaluation/MSEVarMuli/MSEVarMulti.md",
     "Stichit workflow/Regression/Performance Evaluation/MSEVarMuli/fig_0205241345.md",
-    "Stichit workflow/Regression/Performance Evaluation/MSEValMulti/fig_0205240909.md",
     "Stichit workflow/Regression/Performance Evaluation/MSEVarMuli/MSEVar_boxplot.png",
     "Future Ideas/templates/fig_dummy.md",
     "Future Ideas/templates",
     "Stichit workflow/Regression/Performance Evaluation/RegPerformanceEvaluation.md",
-    "Stichit workflow/Regression/Performance Evaluation/PearsonValMulti/PearsonValMulti.md",
-    "Stichit workflow/Regression/Performance Evaluation/PearsonValMulti/fig_2904241636.md",
-    "Stichit workflow/Regression/Performance Evaluation/PearsonValMulti/Pearson_violinplot.png",
     "Untitled.canvas",
     "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241636.md",
     "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/RegFeaturesXnzero.md",

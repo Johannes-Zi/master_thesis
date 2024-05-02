@@ -14,21 +14,20 @@ head(df_LeaveOneOut)
 head(df_standard)
 
 
+#' Preprocesses the performance evaluation dataframe
+#'
+#' This function takes an input dataframe and performs preprocessing steps to adapt the dataframe for further analysis.
+#' It extracts information from the Sample_Name column, creates a new column for segmentation preselection correlation,
+#' extracts gene names, and renames the Sample_Name column to gene_name.
+#'
+#' @param input_df The input dataframe to be preprocessed
+#'
+#' @return The preprocessed dataframe
+#'
+#' @examples
+#' input_df <- data.frame(Sample_Name = c("gene1_condition1_sample1", "gene2_condition2_sample2"))
+#' preprocess_performance_evaluation_df(input_df)
 preprocess_performance_evaluation_df <- function(input_df) {
-   #' Preprocesses the performance evaluation dataframe
-  #'
-  #' This function takes an input dataframe and performs preprocessing steps to adapt the dataframe for further analysis.
-  #' It extracts information from the Sample_Name column, creates a new column for segmentation preselection correlation,
-  #' extracts gene names, and renames the Sample_Name column to gene_name.
-  #'
-  #' @param input_df The input dataframe to be preprocessed
-  #'
-  #' @return The preprocessed dataframe
-  #'
-  #' @examples
-  #' input_df <- data.frame(Sample_Name = c("gene1_condition1_sample1", "gene2_condition2_sample2"))
-  #' preprocess_performance_evaluation_df(input_df)
-  
   # Extracts the original filenames for each df entry based on the Sample_Name column
   filename_parts <- strsplit(as.character(input_df$Sample_Name), "_")  # Split the Sample_Name column by "_"
   #head(filename_parts)  # Print the first few filename parts
@@ -52,28 +51,27 @@ preprocess_performance_evaluation_df <- function(input_df) {
 }
 
 
+#' Create boxplots for performance evaluation
+#'
+#' This function creates boxplots to compare the performance of two datasets. 
+#'
+#' @param df_LeaveOneOut The first dataset (Leave-One-Out cross-validation).
+#' @param df_standard The second dataset (Standard cross-validation).
+#' @param target_column The name of the target column to be compared.
+#' @param output_directory The directory where the boxplot image will be saved.
+#'
+#' @return The created boxplot as a ggplot object.
+#'
+#' @details The size of the plot is scaled based on the range of the target column values. 
+#' This scaling ensures that the boxplots are visible and outliers are not excluded from displaying. 
+#' The y-axis limits are calculated based on the lower and upper whiskers of both datasets, 
+#' and the plot is scaled by multiplying the limits by 1.1. This scaling factor ensures that 
+#' the boxplots are not cut off and outliers are visible.
+#'
+#' @examples
+#' # Example usage:
+#' create_boxplots(df_LeaveOneOut, df_standard, "target_column", "output_directory")
 create_boxplots <- function(df_LeaveOneOut, df_standard, target_column, output_directory) {
-  #' Create boxplots for performance evaluation
-  #'
-  #' This function creates boxplots to compare the performance of two datasets. 
-  #'
-  #' @param df_LeaveOneOut The first dataset (Leave-One-Out cross-validation).
-  #' @param df_standard The second dataset (Standard cross-validation).
-  #' @param target_column The name of the target column to be compared.
-  #' @param output_directory The directory where the boxplot image will be saved.
-  #'
-  #' @return The created boxplot as a ggplot object.
-  #'
-  #' @details The size of the plot is scaled based on the range of the target column values. 
-  #' This scaling ensures that the boxplots are visible and outliers are not excluded from displaying. 
-  #' The y-axis limits are calculated based on the lower and upper whiskers of both datasets, 
-  #' and the plot is scaled by multiplying the limits by 1.1. This scaling factor ensures that 
-  #' the boxplots are not cut off and outliers are visible.
-  #'
-  #' @examples
-  #' # Example usage:
-  #' create_boxplots(df_LeaveOneOut, df_standard, "target_column", "output_directory")
-
   # Extract x achsis names
   df_LeaveOneOut_name <- tail(strsplit(deparse(substitute(df_LeaveOneOut)), "_")[[1]], 1)
   df_standard_name <- tail(strsplit(deparse(substitute(df_standard)), "_")[[1]], 1)

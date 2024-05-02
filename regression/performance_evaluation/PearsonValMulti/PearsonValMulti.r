@@ -13,28 +13,33 @@ df_standard <- read.table(input_directory_path_standard, header = TRUE, sep = "\
 head(df_LeaveOneOut)
 head(df_standard)
 
+#' Preprocesses the performance evaluation dataframe
+#'
+#' This function takes an input dataframe and performs preprocessing steps to adapt the dataframe for further analysis.
+#' It extracts information from the Sample_Name column, creates a new column for segmentation preselection correlation,
+#' extracts gene names, and renames the Sample_Name column to gene_name.
+#'
+#' @param input_df The input dataframe to be preprocessed
+#'
+#' @return The preprocessed dataframe
+#'
+#' @examples
+#' input_df <- data.frame(Sample_Name = c("gene1_condition1_sample1", "gene2_condition2_sample2"))
+#' preprocess_performance_evaluation_df(input_df)
 preprocess_performance_evaluation_df <- function(input_df) {
-  # This function preprocesses the performance evaluation dataframe by adapting the filename column and extracting gene names.
-  #
-  # Args:
-  #   input_df: The input dataframe containing the performance evaluation data.
-  #
-  # Returns:
-  #   The preprocessed dataframe with adapted filename column and extracted gene names.
-
-  # Adapt the filename column
+  # Extracts the original filenames for each df entry based on the Sample_Name column
   filename_parts <- strsplit(as.character(input_df$Sample_Name), "_")  # Split the Sample_Name column by "_"
-  head(filename_parts)  # Print the first few filename parts
+  #head(filename_parts)  # Print the first few filename parts
 
   # Extract the segmentation preselection correlation
   segmentation_preselection_corellation <- sapply(filename_parts, function(x) paste(substr(x[4], 1, nchar(x[4])-4), sep = "_"))
-  head(segmentation_preselection_corellation)  # Print the first few segmentation preselection correlations
+  #head(segmentation_preselection_corellation)  # Print the first few segmentation preselection correlations
 
   # Create a new column in the dataframe for the segmentation preselection correlation
   adapted_df <- input_df
   adapted_df$segmentation_preselection_corellation <- segmentation_preselection_corellation
 
-  # Extract the gene names
+  # Extract the entry specific gene names
   extracted_gene_names <- sapply(filename_parts, function(x) paste(x[2], x[3], sep = "_"))
   adapted_df$Sample_Name <- extracted_gene_names
 
@@ -45,18 +50,21 @@ preprocess_performance_evaluation_df <- function(input_df) {
 }
 
 
+#' Create violin plots for performance evaluation
+#'
+#' This function creates violin plots to compare the performance of two datasets.
+#'
+#' @param df_LeaveOneOut The first dataset (Leave-One-Out cross-validation).
+#' @param df_standard The second dataset (Standard cross-validation).
+#' @param target_column The column name of the target variable.
+#' @param output_directory The directory where the violin plots will be saved.
+#'
+#' @return The created violin plot.
+#'
+#' @examples
+#' create_violin_plots(df_LeaveOneOut, df_standard, "target_variable", "output_directory")
 create_violin_plots <- function(df_LeaveOneOut, df_standard, target_column, output_directory) {
-  # This function creates violin plots comparing the target column between two dataframes.
-  #
-  # Args:
-  #   df_LeaveOneOut: The dataframe containing the LeaveOneOut performance evaluation data.
-  #   df_standard: The dataframe containing the standard performance evaluation data.
-  #   target_column: The column to compare between the dataframes.
-  #   output_directory: The directory to save the generated plot.
-  #
-  # Returns:
-  #   A list containing the generated violin plot and the combined dataframe.
-
+  
   # Extract x axis names
   df_LeaveOneOut_name <- tail(strsplit(deparse(substitute(df_LeaveOneOut)), "_")[[1]], 1)
   df_standard_name <- tail(strsplit(deparse(substitute(df_standard)), "_")[[1]], 1)
@@ -86,16 +94,20 @@ create_violin_plots <- function(df_LeaveOneOut, df_standard, target_column, outp
   return(violinplot)
 }
 
+
+# Set the output path to the directory of the active document
 output_path <- dirname(rstudioapi::getActiveDocumentContext()$path)
 print(output_path)
 
 # Preprocess the Performance_Evaluation dataframes
-df_LeaveOneOut_preprocessed_1 <- process_regression_performance_evaluation_df(df_LeaveOneOut)
+df_LeaveOneOut_preprocessed_1 <- preprocess_performance_evaluation_df(df_LeaveOneOut)
 head(df_LeaveOneOut_preprocessed_1)
+# Select df entries which were based on Pearson based feature selection at the end of the segementation
 df_LeaveOneOut_preprocessed_2 <- df_LeaveOneOut_preprocessed_1[df_LeaveOneOut_preprocessed_1$segmentation_preselection_corellation == "Pearson", ]
 head(df_LeaveOneOut_preprocessed_2)
 
-df_standard_preprocessed_1 <- process_regression_performance_evaluation_df(df_standard)
+# Select df entries which were based on Pearson based feature selection at the end of the segementation
+df_standard_preprocessed_1 <- preprocess_performance_evaluation_df(df_standard)
 head(df_standard_preprocessed_1)
 df_standard_preprocessed_2 <- df_standard_preprocessed_1[df_standard_preprocessed_1$segmentation_preselection_corellation == "Pearson", ]
 head(df_standard_preprocessed_2)
