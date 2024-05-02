@@ -73,8 +73,8 @@ preprocess_performance_evaluation_df <- function(input_df) {
 #' create_boxplots(df_LeaveOneOut, df_standard, "target_column", "output_directory")
 create_boxplots <- function(df_LeaveOneOut, df_standard, target_column, output_directory) {
   # Extract x achsis names
-  df_LeaveOneOut_name <- tail(strsplit(deparse(substitute(df_LeaveOneOut)), "_")[[1]], 1)
-  df_standard_name <- tail(strsplit(deparse(substitute(df_standard)), "_")[[1]], 1)
+  df_LeaveOneOut_name <- strsplit(deparse(substitute(df_LeaveOneOut)), "_")[[1]][2]
+  df_standard_name <- strsplit(deparse(substitute(df_standard)), "_")[[1]][2]
   
   # Create new data frames that only contain the target column and the new CV_Type column
   df_LeaveOneOut_new <- data.frame(CV_Type = df_LeaveOneOut_name, target = df_LeaveOneOut[[target_column]])
@@ -93,7 +93,7 @@ create_boxplots <- function(df_LeaveOneOut, df_standard, target_column, output_d
   # Create boxplot
   boxplot <- ggplot(df_combined, aes(x = CV_Type, y = target, fill = CV_Type)) + # nolint: object_usage_linter.
     geom_boxplot(outlier.shape = NA) +
-    labs(title = paste(target_column, "Comparison", sep = " "), y = target_column, x = "CV Type") +
+    labs(title = paste(target_column, "across Cross-Validation Techniques", sep = " "), y = target_column, x = "Cross Validation Type") +
     theme_gray() +
     theme(plot.title = element_text(hjust = 0.5, size = 16, face = "bold"),
         axis.title = element_text(size = 14, face = "bold"),
@@ -113,18 +113,19 @@ create_boxplots <- function(df_LeaveOneOut, df_standard, target_column, output_d
 output_path <- dirname(rstudioapi::getActiveDocumentContext()$path)
 print(output_path)
 
-# Preprocess the Performance_Evaluation dataframes
+# Preprocess the LeaveOneOut CV dataframe
 df_LeaveOneOut_preprocessed_1 <- preprocess_performance_evaluation_df(df_LeaveOneOut)
 head(df_LeaveOneOut_preprocessed_1)
 # Select df entries which were based on Pearson based feature selection at the end of the segementation
 df_LeaveOneOut_preprocessed_2 <- df_LeaveOneOut_preprocessed_1[df_LeaveOneOut_preprocessed_1$segmentation_preselection_corellation == "Pearson", ]
 head(df_LeaveOneOut_preprocessed_2)
 
-# Select df entries which were based on Pearson based feature selection at the end of the segementation
+# Preprocess the standard CV dataframe
 df_standard_preprocessed_1 <- preprocess_performance_evaluation_df(df_standard)
 head(df_standard_preprocessed_1)
+# Select df entries which were based on Pearson based feature selection at the end of the segementation
 df_standard_preprocessed_2 <- df_standard_preprocessed_1[df_standard_preprocessed_1$segmentation_preselection_corellation == "Pearson", ]
 head(df_standard_preprocessed_2)
 
 # Call the function with the dataframes as arguments
-create_boxplots(df_LeaveOneOut, df_standard, target_column = "MSE", output_directory = output_path)
+create_boxplots(df_LeaveOneOut_preprocessed_2, df_standard_preprocessed_2, target_column = "MSE", output_directory = output_path)
