@@ -8,7 +8,6 @@ library(viridis)  # For color scales in plots
 
 # Import Performance_Overview files
 input_directory_path_standard <- "C:/Users/johan/Desktop/standard_regression/performance_evaluation/Performance_Overview.txt"
-
 # Create dataframes
 df_standard <- read.table(input_directory_path_standard, header = TRUE, sep = "\t")
 head(df_standard)

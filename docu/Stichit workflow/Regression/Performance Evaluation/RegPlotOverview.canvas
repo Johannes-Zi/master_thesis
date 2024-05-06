@@ -1,29 +1,31 @@
 {
 	"nodes":[
 		{"id":"4faa7fb0ea2b6b32","type":"group","x":-2680,"y":-840,"width":1000,"height":880,"label":"Regression"},
-		{"id":"74478224784b2060","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241636.md","x":-400,"y":240,"width":400,"height":480},
-		{"id":"78e3550c30d684ad","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241638.md","x":-400,"y":-1080,"width":400,"height":480},
 		{"id":"1f7ae1cf722dbd41","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/MSEValXMSEVar/fig_0205241540.md","x":-4200,"y":-1560,"width":400,"height":766},
-		{"id":"c1efbbb4b7b641dd","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/RegFeaturesXnzero.md","x":-1440,"y":-562,"width":560,"height":382},
-		{"id":"774ae71293b1729d","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/MSEValXMSEVar/MSEValXMSEVar.md","x":-3480,"y":-840,"width":620,"height":320},
 		{"id":"25a3bcddbfa93e19","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/MSEValXMSEVar/fig_0205241539.md","x":-3600,"y":-1812,"width":365,"height":706},
 		{"id":"34e0a30a2dd8a4d4","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/MSEVarMuli/MSEVarMulti.md","x":-2940,"y":-1380,"width":520,"height":240},
-		{"id":"ba67768cad47006c","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241637.md","x":40,"y":-600,"width":400,"height":500},
-		{"id":"a22986787a1a6354","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/MSEValMulti/MSEValMulti.md","x":-2115,"y":-1380,"width":620,"height":220},
 		{"id":"2b1a3391065032f4","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/MSEVarMuli/fig_0205241345.md","x":-2960,"y":-2320,"width":640,"height":707},
-		{"id":"b7f9dbf15fac7a7e","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241635.md","x":40,"y":-28,"width":400,"height":498},
-		{"id":"5269a4d5ce4c8d3e","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/PearsonValMulti/PearsonValMulti.md","x":-1340,"y":-1040,"width":480,"height":200},
 		{"id":"31c858c9e161a5ef","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/PearsonValMulti/fig_2904241636.md","x":-748,"y":-2016,"width":624,"height":756},
+		{"id":"a22986787a1a6354","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/MSEValMulti/MSEValMulti.md","x":-2115,"y":-1380,"width":620,"height":220},
 		{"id":"e02c01e872d6f7d8","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/MSEValMulti/fig_0205240909.md","x":-1762,"y":-2373,"width":645,"height":760},
-		{"id":"3ad225fc032eeeb2","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/SpearmanXSpearmanVar_test/fig_06051315.md","x":-4798,"y":192,"width":598,"height":644},
-		{"id":"7fee03132902fa9c","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/PearsonValXVariance/fig_03051923.md","x":-4600,"y":-561,"width":480,"height":521},
-		{"id":"eedfd1a35453af98","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/PearsonValXVariance/PearsonValXVariance.md","x":-3792,"y":-409,"width":692,"height":329},
-		{"id":"36032bd21f2a2dbf","type":"file","file":"Stichit workflow/Regression/Runs/26_patient_dataset/LeaveOneOutCV/RegLeaveOneOutCV.md","x":-2640,"y":-820,"width":400,"height":400},
+		{"id":"29fb1ca93c29d5cb","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/SpearmanXSpearmanVar_test/SpearmanXSpearmanVar_test.md","x":-3759,"y":70,"width":739,"height":370},
+		{"id":"3ad225fc032eeeb2","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/SpearmanXSpearmanVar_test/fig_06051315.md","x":-4659,"y":145,"width":598,"height":644},
+		{"id":"7e24afa4bd32f0f7","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/NzeroXpearson/NzeroXpearson.md","x":-2900,"y":560,"width":580,"height":187},
+		{"id":"dd44f543b6c11645","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/NzeroXpearson/fig_06051532.md","x":-3960,"y":840,"width":1241,"height":520},
+		{"id":"a443579e5511bbc3","x":-3959,"y":1400,"width":1240,"height":520,"type":"file","file":"Stichit workflow/Regression/Performance Evaluation/NzeroXpearson/fig_06051540.md"},
+		{"id":"7fee03132902fa9c","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/PearsonValXVariance/fig_03051923.md","x":-4541,"y":-669,"width":621,"height":670},
+		{"id":"74478224784b2060","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241636.md","x":-400,"y":240,"width":400,"height":480},
 		{"id":"1083b548770e75b2","type":"file","file":"Stichit workflow/Regression/Runs/26_patient_dataset/StandardCV/RegStandardCV.md","x":-2640,"y":-361,"width":400,"height":362},
 		{"id":"7240ad72851e16f4","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/RegPerformanceEvaluation.md","x":-2205,"y":-820,"width":505,"height":821},
-		{"id":"72398947d1738d6a","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/exeptionCases/ScatterplottWeirdZeroCoeffOLS.md","x":-1849,"y":789,"width":819,"height":486},
-		{"id":"29fb1ca93c29d5cb","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/SpearmanXSpearmanVar_test/SpearmanXSpearmanVar_test.md","x":-3759,"y":70,"width":739,"height":370},
-		{"id":"7e24afa4bd32f0f7","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/NzeroXpearson/NzeroXpearson.md","x":-3194,"y":593,"width":668,"height":392}
+		{"id":"eedfd1a35453af98","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/PearsonValXVariance/PearsonValXVariance.md","x":-3792,"y":-409,"width":692,"height":329},
+		{"id":"c1efbbb4b7b641dd","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/RegFeaturesXnzero.md","x":-1440,"y":-562,"width":560,"height":382},
+		{"id":"ba67768cad47006c","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241637.md","x":40,"y":-600,"width":400,"height":500},
+		{"id":"b7f9dbf15fac7a7e","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241635.md","x":40,"y":-28,"width":400,"height":498},
+		{"id":"36032bd21f2a2dbf","type":"file","file":"Stichit workflow/Regression/Runs/26_patient_dataset/LeaveOneOutCV/RegLeaveOneOutCV.md","x":-2640,"y":-820,"width":400,"height":400},
+		{"id":"774ae71293b1729d","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/MSEValXMSEVar/MSEValXMSEVar.md","x":-3480,"y":-840,"width":620,"height":320},
+		{"id":"78e3550c30d684ad","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241638.md","x":-400,"y":-1080,"width":400,"height":480},
+		{"id":"5269a4d5ce4c8d3e","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/PearsonValMulti/PearsonValMulti.md","x":-1340,"y":-1040,"width":480,"height":200},
+		{"id":"72398947d1738d6a","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/exeptionCases/ScatterplottWeirdZeroCoeffOLS.md","x":-1849,"y":597,"width":819,"height":486}
 	],
 	"edges":[
 		{"id":"047064c0ba30bcb3","fromNode":"c1efbbb4b7b641dd","fromSide":"right","toNode":"b7f9dbf15fac7a7e","toSide":"left"},
@@ -43,6 +45,10 @@
 		{"id":"4084f965934ed4d0","fromNode":"eedfd1a35453af98","fromSide":"left","toNode":"7fee03132902fa9c","toSide":"right"},
 		{"id":"359daeb323369442","fromNode":"4faa7fb0ea2b6b32","fromSide":"left","toNode":"eedfd1a35453af98","toSide":"right"},
 		{"id":"fd236722f66ef7c7","fromNode":"4faa7fb0ea2b6b32","fromSide":"bottom","toNode":"29fb1ca93c29d5cb","toSide":"right"},
-		{"id":"fcf54a5f376e2a06","fromNode":"29fb1ca93c29d5cb","fromSide":"left","toNode":"3ad225fc032eeeb2","toSide":"right"}
+		{"id":"fcf54a5f376e2a06","fromNode":"29fb1ca93c29d5cb","fromSide":"left","toNode":"3ad225fc032eeeb2","toSide":"right"},
+		{"id":"b0a2c85daa51ad53","fromNode":"4faa7fb0ea2b6b32","fromSide":"bottom","toNode":"7e24afa4bd32f0f7","toSide":"top"},
+		{"id":"546dd5a7fbeb86d4","fromNode":"7e24afa4bd32f0f7","fromSide":"bottom","toNode":"dd44f543b6c11645","toSide":"right"},
+		{"id":"299f0b86ecdf5708","fromNode":"7e24afa4bd32f0f7","fromSide":"bottom","toNode":"a443579e5511bbc3","toSide":"right"},
+		{"id":"88269b5c60061973","fromNode":"4faa7fb0ea2b6b32","fromSide":"bottom","toNode":"72398947d1738d6a","toSide":"top"}
 	]
 }

@@ -15,9 +15,9 @@
               "state": {
                 "file": "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
                 "viewState": {
-                  "x": -3235.5,
-                  "y": 381,
-                  "zoom": -1
+                  "x": -2761.3340782762607,
+                  "y": 316.01418595120646,
+                  "zoom": -0.7878211192212001
                 }
               }
             }
@@ -151,10 +151,16 @@
   },
   "active": "60f6e838aaaee164",
   "lastOpenFiles": [
-    "Stichit workflow/Regression/Performance Evaluation/PearsonValXVariance/PearsonValXVariance.md",
+    "Stichit workflow/Regression/Performance Evaluation/NzeroXpearson/fig_06051540.md",
     "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
-    "Stichit workflow/Regression/Performance Evaluation/SpearmanXSpearmanVar_test/fig_06051315_p.png",
+    "Stichit workflow/Regression/Performance Evaluation/NzeroXpearson/fig_06051540_p.png",
+    "Stichit workflow/Regression/Performance Evaluation/NzeroXpearson/fig_06051532.md",
+    "Stichit workflow/Regression/Performance Evaluation/NzeroXpearson/NzeroXpearson.md",
+    "Stichit workflow/Regression/Performance Evaluation/MSEValXMSEVar/fig_0205241539.md",
     "Stichit workflow/Regression/Performance Evaluation/SpearmanXSpearmanVar_test/fig_06051315.md",
+    "Stichit workflow/Regression/Performance Evaluation/NzeroXpearson/fig_06051532_p.png",
+    "Stichit workflow/Regression/Performance Evaluation/PearsonValXVariance/PearsonValXVariance.md",
+    "Stichit workflow/Regression/Performance Evaluation/SpearmanXSpearmanVar_test/fig_06051315_p.png",
     "Stichit workflow/Regression/Performance Evaluation/ElNetCoeffCounts_elasticnet_modelStructure.md",
     "Stichit workflow/Regression/Performance Evaluation/PearsonValXVariance/fig_03051923_p.png",
     "Stichit workflow/Regression/Performance Evaluation/PearsonValXVariance/fig_03051923.md",
@@ -171,7 +177,6 @@
     "Stichit workflow/Regression/Performance Evaluation/PearsonValMulti/fig_2904241636.md",
     "Stichit workflow/Regression/Performance Evaluation/MSEVarMuli/fig_0205241345.md",
     "Stichit workflow/Regression/Performance Evaluation/MSEValXMSEVar/fig_0205241540_p.png",
-    "Stichit workflow/Regression/Performance Evaluation/MSEValXMSEVar/fig_0205241539.md",
     "Stichit workflow/Regression/Performance Evaluation/MSEValMulti/fig_0205240909.md",
     "Stichit workflow/Regression/Performance Evaluation/MSEValMulti/fig_0205240909_p.png",
     "Stichit workflow/Regression/Performance Evaluation/MSEValXMSEVar/MSEValXMSEVar.md",
@@ -179,16 +184,12 @@
     "dotplot_standard_cv.png",
     "Stichit workflow/Regression/Performance Evaluation/PearsonValMulti/PearsonValMulti.md",
     "Stichit workflow/Regression/Performance Evaluation/PearsonValMulti/fig_2904241636_p.png",
-    "Stichit workflow/Regression/Performance Evaluation/PearsonValMulti/fig_2904241636_p.png",
     "Future Ideas/templates/fig_dummy.md",
     "Stichit workflow/Regression/Performance Evaluation/MSEVarMuli/MSEVarMulti.md",
     "Stichit workflow/Regression/Performance Evaluation/MSEValMulti/MSEValMulti.md",
     "Future Ideas/templates",
     "Untitled.canvas",
     "Stichit workflow/Regression/Runs/26_patient_dataset/StandardCV/RegStandardCV.md",
-    "Stichit workflow/Regression/Runs/26_patient_dataset/LeaveOneOutCV/RegLeaveOneOutCV.md",
-    "Stichit workflow/Regression/Runs/26_patient_dataset/RegRunsN26Dataset.md",
-    "Stichit workflow/Regression/Runs/RegRuns.md",
     "Stichit workflow/Regression/Performance Evaluation/SpearmanValXSpearmanVar",
     "Stichit workflow/Regression/Performance Evaluation/SpearmanValMulti",
     "Stichit workflow/Regression/Performance Evaluation/PearsonValXVariance",
