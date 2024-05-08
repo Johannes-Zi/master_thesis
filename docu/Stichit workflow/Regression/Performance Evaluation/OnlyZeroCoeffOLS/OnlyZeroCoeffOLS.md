@@ -1,4 +1,11 @@
-* There are OLS Models that have on zero coefficients, but have a gut elastic-net performance - ==**we want to get an idea whats happening because it is against the expectation**==
+Als erstes eine df erzeugen, welcher die ols feature and nzero counts läd und dann die dazugehörigen elasticnet modelle -gene specific
+dann die modelle mit nzero = anzahl der features und guten pvalues in den elasticnet anschauen und die coeffs der modelle + die Expressions im datensatz anschauen
+
+erst mal mit der standard regression testen - war da glaube ich aufgefallen
+
+## Description:
+
+* There are OLS Models that have on zero coefficients, but have a good elastic-net performance - ==**we want to get an idea whats happening because it is against the expectation**==
 	* Create scatterplot with predicted and actual expression values for 5-10 of the gene-specific OLS models
 	* How to create the plot?
 		* .RData represent the models (List - first entry is model (specific glmnet datatype))
@@ -24,3 +31,13 @@
 						* the transfomed dataframe can be then used as input for the model based prediction
 						* Stichit scales, centers and log transforms the data
 				* the predicted RNASeq expression values can be directly compared to the transformed RNASeq values, or can be transformed back to be compared to the original values from the segmentation. (to compare the log transformed ones is a bit nicer vor the visualization)
+## Code
+https://github.com/Johannes-Zi/master_thesis/blob/main/regression/performance_evaluation/NzeroXpearson/NzeroXpearson.r
+
+## Runs performed
+plots were only generated for the Pearson based feature (segment) preselection at the end of the segmentation process
+
+| Feature segment preselection after segmentation | Standard CV      | LeaveOneOut CV   |
+| ----------------------------------------------- | ---------------- | ---------------- |
+| Pearson correlation based                       | [[fig_06051532]] | [[fig_06051540]] |
+

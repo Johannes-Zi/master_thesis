@@ -5,7 +5,7 @@ Performs OLS and [[ElasticnetBasics | elastic-net]] (using [[glmnetBasics | glmn
 [[RegRuns]]
 ## Performance evaluation
 [[RegPerformanceEvaluation]]
-[[ScatterplottWeirdZeroCoeffOLS]]
+[[OnlyZeroCoeffOLS]]
 ## Related questions
 [[QuestionCollectionStichitRegression]]
 
