@@ -1,43 +1,54 @@
-Als erstes eine df erzeugen, welcher die ols feature and nzero counts läd und dann die dazugehörigen elasticnet modelle -gene specific
-dann die modelle mit nzero = anzahl der features und guten pvalues in den elasticnet anschauen und die coeffs der modelle + die Expressions im datensatz anschauen
-
-erst mal mit der standard regression testen - war da glaube ich aufgefallen
-
+It occurred to us that there are OLS Models that have only zero coefficients, but their elastic net counterpart has normal coefficients. This is in contrast to the fact that both methods are based on  the same gene specific feature segment set, pre-selected at the en of the segmentation step.
 ## Description:
+To check how often that occurs and what might be the reason for this, I gathered the data of the Pearson based segment feature preselection of the OLS and ElNet models and created a  [[OnlyZeroCoeffOLS_entries.csv | combined dataset]] with gene id specific entries.
 
-* There are OLS Models that have on zero coefficients, but have a good elastic-net performance - ==**we want to get an idea whats happening because it is against the expectation**==
-	* Create scatterplot with predicted and actual expression values for 5-10 of the gene-specific OLS models
-	* How to create the plot?
-		* .RData represent the models (List - first entry is model (specific glmnet datatype))
-			* the dataframe contains all models of all alpha and all lambdas that were generated/ evaluated during the training process
-		* Use glmnet onboard shipped functions 
-			- ==see tutorial== https://cran.r-project.org/web/packages/glmnet/glmnet.pdf
-			* predict function
-				* perform it for the 5-10 genes for all 26 samples
-				* use min-lambda
-					* There is a function/ parameter in glmnet to extract the model with the minimum lambda
-					* The model with the minimum lambda represents the model that had the smallest cross validation MSE(predicted and actual RNASeq values) across all the different outer folds
-						* the best model is evaluated bottom up - first between the inner folds, that are used for the parameter tuning via alpha and the the best performing model is used to predict the outer fold (the innerfold is obviously also fold specific thus the model is individual)
-					* the model with the minimum lambda is not always the best - it can also be a crappy model that is very good at predicting a crappy outer fold test expression (eg. 0) - the more samples the lower the probability to get such crappy models
-				* use as input the output of the segmentation: 
-					* ATAC and RNASeq
-						* samples as rows and columns are the regions(represent  optimized reduced intrinsic variation of the ATACSeq signal as segements)
-						* last row are the RNASeq expression values
-					* ==the segmentation output has to be transformed/scaled to work as input for the model!!==
-						* the ATAC has to be and  the RNA can be transfomed(if you want want to compare the predicted directly) ( in the same way)
-						* The transformation can be seen in the RScript around Line 191
-						* The RScript functions can be directly applied on the segmentation dataframe
-						* The dataframe has also be normalized with the same scaling parameters like used during the training - (mean and varaince - has to be retreived by running the traing again and printing it - is currently not stored in the output)
-						* the transfomed dataframe can be then used as input for the model based prediction
-						* Stichit scales, centers and log transforms the data
-				* the predicted RNASeq expression values can be directly compared to the transformed RNASeq values, or can be transformed back to be compared to the original values from the segmentation. (to compare the log transformed ones is a bit nicer vor the visualization)
+The combined dataset of the standard cross validation was then filtered for entries that have OLS with only zero coefficients and p_val and q_value respectively < 0,05. (LeaveOneOut could't be used, due to p and q val are not calculated in that type of cross validation).
+The resulting entries were sorted descending based on their Pearson correlation and a subset of 5 [[OnlyZeroCoeffOLS_entries.csv_reduced| test samples]] was selected.
+
+Next, for the [[PredictedVsActualExpression]], the [[Performance_Overview.txt | Performance Evaluation]], for each text sample additional data was gathered in form of the [[counts.matrix.norm.tsv | RNASeq expression data]], the gene specific models with their lambda.min feature coefficients, the gene specific feature segments that were used as input by the regression.
+## Observations/ Comments
+ * If the RNA Seq counts are pretty small, it can occur that during the normalization, upstream of the ElNet training, the values can be transformed to negative representations within the "normalized values training space" and this can lead to negative coefficients.
+ * 
+## Data
+### input
+### Performance Evaluations
+```bash
+input_directory_path_LeaveOneOut <- 
+"C:\Users\johan\OneDrive\dateien_cloud\Master\Semester_4\Masterarbeit\data\pulmanory_hypertension\regression\leaveOneOut_regression/performance_evaluation/Performance_Overview.txt"
+
+input_directory_path_standard <- 
+"C:\Users\johan\OneDrive\dateien_cloud\Master\Semester_4\Masterarbeit\data\pulmanory_hypertension\regression\standard_regression/performance_evaluation/Performance_Overview.txt"
+```
+## output
+ * [[OnlyZeroCoeffOLS_entries.csv]]
+```bash
+# Path
+"C:\Users\johan\OneDrive\dateien_cloud\Master\Semester_4\Masterarbeit\data\pulmanory_hypertension\regression\OnlyZeroCoeffOLS\OnlyZeroCoeffOLS_entries.csv"
+```
+* **ElNet lambda.min feature coefficients**
+```
+# eg.
+"C:\Users\johan\OneDrive\dateien_cloud\Master\Semester_4\Masterarbeit\data\pulmanory_hypertension\OnlyZeroCoeffOLS\ENSG00000125629_10\feature_coefficients_ENSG00000125629_10.txt"
+```
+## additional
+ * [[counts.matrix.norm.tsv | RNASeq expression data]]
+```bash
+"C:\Users\johan\OneDrive\dateien_cloud\Master\Semester_4\Masterarbeit\data\pulmanory_hypertension\raw_data\RNA\counts.matrix.norm.tsv"
+```
+* **gene specific models**
+```bash
+"C:\Users\johan\OneDrive\dateien_cloud\Master\Semester_4\Masterarbeit\data\pulmanory_hypertension\regression\leaveOneOut_regression\output_data\regression_output.zip/*_Pearson.Rdata"
+
+"C:\Users\johan\OneDrive\dateien_cloud\Master\Semester_4\Masterarbeit\data\pulmanory_hypertension\regression\standard_regression\output_data\regression_output.zip/*_Pearson.Rdata"
+```
+* **gene specific segmentation feature sets**
+```
+Output of the segmentation
+eg. Segmentation_ENSG00000125629_10_Pearson.txt
+```
 ## Code
-https://github.com/Johannes-Zi/master_thesis/blob/main/regression/performance_evaluation/NzeroXpearson/NzeroXpearson.r
+https://github.com/Johannes-Zi/master_thesis/blob/main/regression/performance_evaluation/OnlyZeroCoeffOLS/OnlyZeroCoeffOLS.r
 
 ## Runs performed
-plots were only generated for the Pearson based feature (segment) preselection at the end of the segmentation process
-
-| Feature segment preselection after segmentation | Standard CV      | LeaveOneOut CV   |
-| ----------------------------------------------- | ---------------- | ---------------- |
-| Pearson correlation based                       | [[fig_06051532]] | [[fig_06051540]] |
-
+### Combined dataset
+[[OnlyZeroCoeffOLS_entries.csv]]

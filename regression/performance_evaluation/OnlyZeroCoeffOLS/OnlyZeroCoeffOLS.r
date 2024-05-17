@@ -63,7 +63,7 @@ process_file <- function(file_path) {
 
   # Get ident of lambda min based on the list with all lambdas
   lambda_min_value <- elasticnet_model$model$lambda.min # nolint: object_usage_linter.
-  lambda_min_index <- which(elasticnet_model$model$lambda == lambda_min_value) # nolint: object_usage_linter.
+  lambda_min_index <- which(c == lambda_min_value) # nolint: object_usage_linter.
 
   # Get the corresponding nzero value
   nzero_value <- elasticnet_model$model$nzero[lambda_min_index] # nolint: object_usage_linter.
@@ -355,7 +355,7 @@ process_ols_data <- function(directory_path, import_limit, file_pattern) {
 }
 
 
-#' Combine OLS and Elastic Net Data
+#' Combine OLS and elastic net data
 #'
 #' This function merges the performance evaluation and regression models dataframes.
 #'
@@ -371,12 +371,21 @@ process_ols_data <- function(directory_path, import_limit, file_pattern) {
 #' print(combined_data)
 #'
 combine_ols_and_elnet_data <- function(ols_df, elnet_df) {
-    # Merge the performance evaluation and regression models dataframes
-    combined_df <- merge(elnet_df, ols_df, by = c("gene_name"), all = TRUE)
+  # Merge the performance evaluation and regression models dataframes
+  combined_df <- merge(elnet_df, ols_df, by = c("gene_name"), all = TRUE)
     
-    return(combined_df)
+  return(combined_df)
 }
 
+
+#' Extract model specific elastic net model coefficients
+extract_elasticnet_model_coefficients <- function(elasticnet_file_path){
+  load(elasticnet_file_path) # Load the .RData file - accessible as 'elasticnet_model'
+  print(elasticnet_model$model$lambda.min)
+  coefficients <- coef(elasticnet_model$model, s = elasticnet_model$model$lambda.min)
+  print(coefficients)
+  return(coefficients)
+}
 
 
 #' Main workflow 
@@ -419,12 +428,27 @@ final_df_LeaveOneOut <- combine_ols_and_elnet_data(ols_df_LeaveOneOut, combined_
 print(head(final_df_standard))
 print(head(final_df_LeaveOneOut))
 
+
+
 # Save final_df as a TSV file
 #write.table(final_df_standard, file = "file.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
 
-# Select entries that are potentially problematic
-selected_weird_entries <- subset(final_df_standard, only_zero_coefficients_ols == 1 & Pearson < 0.05)
-print(nrow(selected_weird_entries))
-
+# Select standrd entries that are potentially problematic
+selected_weird_entries_standard <- subset(final_df_standard, only_zero_coefficients_ols == 1 & pVal < 0.05 & qVal < 0.05)
+print(nrow(selected_weird_entries_standard))
 # Save weird OLS Models as file
-write.table(selected_weird_entries, file = "selected_weird_entries.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
+write.table(selected_weird_entries_standard, file = "selected_weird_entries_standard.csv", sep = ",", quote = FALSE, row.names = FALSE)
+
+
+# NOT POSSIBLE - NO pVal column in LeaveOneOut
+# # Select leaveOneOut entries that are potentially problematic
+# selected_weird_entries_leaveOneOut <- subset(final_df_LeaveOneOut, only_zero_coefficients_ols == 1 & pVal < 0.05)
+# print(nrow(selected_weird_entries_leaveOneOut))
+
+# # Save weird OLS Models as file
+# write.table(selected_weird_entries_leaveOneOut, file = "selected_weird_entries_leaveOneOut.csv", sep = ",", quote = FALSE, row.names = FALSE)
+
+
+# Access single elastic net model coefficients
+elasticnet_path <- "C:/Users/johan/Desktop/standard_regression/regression_output/regression_output/ENSG00000125629_10/Elasticnet_Regression_Model_Segmentation_ENSG00000125629_10_Pearson.RData"
+extract_elasticnet_model_coefficients(elasticnet_path)

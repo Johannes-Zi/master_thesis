@@ -1,3 +1,5 @@
+standardized Glmnet format - easy to access via the respective package functionalities.
+
 ```
 # Example contetn of elasticnet_model
 

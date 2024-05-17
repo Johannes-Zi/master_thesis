@@ -1,0 +1,13 @@
+{
+	"nodes":[
+		{"id":"2690fa10ae02f87f","x":-370,"y":-302,"width":630,"height":122,"type":"file","file":"Stichit workflow/Discretization/Discretization.md"},
+		{"id":"5f82f8e8e96204bc","x":-370,"y":-120,"width":630,"height":120,"type":"file","file":"Stichit workflow/Preprocessing/Preprocessing.md"},
+		{"id":"7dcc7b973ba91c36","x":-370,"y":60,"width":630,"height":120,"type":"file","file":"Stichit workflow/Segmentation/Segmentation.md"},
+		{"id":"642b95c21cb45325","x":-370,"y":240,"width":630,"height":120,"type":"file","file":"Stichit workflow/Regression/Regression.md"}
+	],
+	"edges":[
+		{"id":"2735ab0d266a7f72","fromNode":"2690fa10ae02f87f","fromSide":"bottom","toNode":"5f82f8e8e96204bc","toSide":"top"},
+		{"id":"f4bdd200b1c0085c","fromNode":"5f82f8e8e96204bc","fromSide":"bottom","toNode":"7dcc7b973ba91c36","toSide":"top"},
+		{"id":"268b15f70c5dc1e2","fromNode":"7dcc7b973ba91c36","fromSide":"bottom","toNode":"642b95c21cb45325","toSide":"top"}
+	]
+}
