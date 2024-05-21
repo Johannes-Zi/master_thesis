@@ -8,46 +8,21 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3349735e04a23d41",
+            "id": "236caf9da2d1a252",
             "type": "leaf",
             "state": {
               "type": "canvas",
               "state": {
                 "file": "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
                 "viewState": {
-                  "x": -952.8095054606617,
-                  "y": 760.4131646057938,
-                  "zoom": -0.6697065555662927
+                  "x": -1831.3172028721463,
+                  "y": 1480.8971552659768,
+                  "zoom": 0.25156832538959145
                 }
               }
             }
-          },
-          {
-            "id": "65e36b25f509c065",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Stichit workflow/Regression/Performance Evaluation/OnlyZeroCoeffOLS/OnlyZeroCoeffOLS.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d0535113a0a83cf9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/PredictedVsActualExpression.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -92,6 +67,18 @@
               "type": "bookmarks",
               "state": {}
             }
+          },
+          {
+            "id": "8769a09cc7237670",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/fig_2105242319.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ]
       }
@@ -113,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/PredictedVsActualExpression.md",
+                "file": "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/PredictedVsActualExpression.md",
+                "file": "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -153,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/PredictedVsActualExpression.md"
+                "file": "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas"
               }
             }
           }
@@ -174,11 +161,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d0535113a0a83cf9",
+  "active": "236caf9da2d1a252",
   "lastOpenFiles": [
-    "Stichit workflow/Regression/Performance Evaluation/OnlyZeroCoeffOLS/OnlyZeroCoeffOLS.md",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/PredictedVsActualExpression.md",
+    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/fig_2105242323.md",
     "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
+    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/fig_2105242323_p.png",
+    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/fig_2105242322.md",
+    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/fig_2105242322_p.png",
+    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/fig_2105242321_p.png",
+    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/fig_2105242321.md",
+    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/fig_2105242320_p.png",
+    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/fig_2105242320.md",
+    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/fig_2105242319.md",
+    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/fig_2105242319_p.png",
+    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/PredictedVsActualExpression.md",
+    "Stichit workflow/Regression/Performance Evaluation/OnlyZeroCoeffOLS/OnlyZeroCoeffOLS.md",
     "Stichit workflow/Regression/Performance Evaluation/OnlyZeroCoeffOLS/OnlyZeroCoeffOLS_entries.csv.md",
     "feature_coefficients_ENSG00000125629_10.txt",
     "Input data/PHClinicalData/RNASeq/counts.matrix.norm.tsv.md",
@@ -197,7 +194,6 @@
     "Stichit workflow/StichitWorkflow.md",
     "Stichit workflow/Regression/CollapsedSegmentation",
     "Stichit workflow/Regression/Performance Evaluation/OnlyZeroCoeffOLS/OnlyZeroCoeffOLS_entries.csv",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/Untitled.md",
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression",
     "Stichit workflow/Regression/Regression.md",
     "Stichit workflow/Regression/Performance Evaluation/PearsonValMulti/PearsonValMulti.md",
@@ -208,20 +204,11 @@
     "Stichit workflow/Regression/Side knowledge; questions/Model Fitting for single lambda or alpha.md",
     "Future Ideas/templates/fig_dummy.md",
     "Stichit workflow/Regression/Performance Evaluation/NzeroXpearson/NzeroXpearson.md",
-    "Stichit workflow/Regression/Runs/26_patient_dataset/LeaveOneOutCV/RegLeaveOneOutCV.md",
-    "Stichit workflow/Regression/Performance Evaluation/MSEVarMuli/MSEVarMulti.md",
     "Stichit workflow/Regression/Performance Evaluation/NzeroXpearson/fig_06051532_p.png",
-    "Stichit workflow/Regression/Performance Evaluation/NzeroXpearson/fig_06051532.md",
-    "Stichit workflow/Regression/Performance Evaluation/SpearmanXSpearmanVar_test/SpearmanXSpearmanVar_test.md",
     "Stichit workflow/Regression/Performance Evaluation/NzeroXpearson/fig_06051540_p.png",
     "Stichit workflow/Regression/Performance Evaluation/SpearmanXSpearmanVar_test/fig_06051315_p.png",
     "Stichit workflow/Regression/Performance Evaluation/PearsonValXVariance/fig_03051923_p.png",
     "Stichit workflow/Regression/Performance Evaluation/SpearmanXSpearmanVar_test",
-    "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241637_p.png",
-    "Stichit workflow/Regression/Performance Evaluation/MSEValXMSEVar/fig_0205241540_p.png",
-    "Stichit workflow/Regression/Performance Evaluation/MSEValMulti/fig_0205240909_p.png",
-    "Stichit workflow/Regression/Performance Evaluation/MSEValXMSEVar/fig_0205241539_p.png",
-    "dotplot_standard_cv.png",
     "Future Ideas/templates",
     "Stichit workflow/Regression/Performance Evaluation/SpearmanValXSpearmanVar",
     "Stichit workflow/Regression/Performance Evaluation/SpearmanValMulti",

@@ -1,57 +1,93 @@
 library(glmnet)
 library(ggplot2)
 
-segmentation_path_1 <- "C:/Users/johan/Desktop/PredictedVsActualExpression/ENSG00000125629_10/Segmentation_ENSG00000125629_10_Pearson.txt"
-elnet_path_1 <- "C:/Users/johan/Desktop/PredictedVsActualExpression/ENSG00000125629_10/Elasticnet_Regression_Model_Segmentation_ENSG00000125629_10_Pearson.RData"
+#' Input paths for the gene specific models
 
-segmentation_path_2 <- "C:/Users/johan/Desktop/PredictedVsActualExpression/ENSG00000156232_10/Segmentation_ENSG00000156232_10_Pearson.txt"
-elnet_path_2 <- "C:/Users/johan/Desktop/PredictedVsActualExpression/ENSG00000156232_10/Elasticnet_Regression_Model_Segmentation_ENSG00000156232_10_Pearson.RData"
+# Path to the segmentation output file
+segmentation_path_1 <- "C:/Users/johan/Desktop/local_master_thesis_data/PredictedVsActualExpression/ENSG00000125629_10/Segmentation_ENSG00000125629_10_Pearson.txt"
+# Path to the elastic net model file
+elnet_path_1 <- "C:/Users/johan/Desktop/local_master_thesis_data/PredictedVsActualExpression/ENSG00000125629_10/Elasticnet_Regression_Model_Segmentation_ENSG00000125629_10_Pearson.RData"
 
-segmentation_path_3 <- "C:/Users/johan/Desktop/PredictedVsActualExpression/ENSG00000249092_10/Segmentation_ENSG00000249092_10_Pearson.txt"
-elnet_path_3 <- "C:/Users/johan/Desktop/PredictedVsActualExpression/ENSG00000249092_10/Elasticnet_Regression_Model_Segmentation_ENSG00000249092_10_Pearson.RData"
+segmentation_path_2 <- "C:/Users/johan/Desktop/local_master_thesis_data/PredictedVsActualExpression/ENSG00000156232_10/Segmentation_ENSG00000156232_10_Pearson.txt"
+elnet_path_2 <- "C:/Users/johan/Desktop/local_master_thesis_data/PredictedVsActualExpression/ENSG00000156232_10/Elasticnet_Regression_Model_Segmentation_ENSG00000156232_10_Pearson.RData"
 
-segmentation_path_4 <- "C:/Users/johan/Desktop/PredictedVsActualExpression/ENSG00000259056_10/Segmentation_ENSG00000259056_10_Pearson.txt"
-elnet_path_4 <- "C:/Users/johan/Desktop/PredictedVsActualExpression/ENSG00000259056_10/Elasticnet_Regression_Model_Segmentation_ENSG00000259056_10_Pearson.RData"
+segmentation_path_3 <- "C:/Users/johan/Desktop/local_master_thesis_data/PredictedVsActualExpression/ENSG00000249092_10/Segmentation_ENSG00000249092_10_Pearson.txt"
+elnet_path_3 <- "C:/Users/johan/Desktop/local_master_thesis_data/PredictedVsActualExpression/ENSG00000249092_10/Elasticnet_Regression_Model_Segmentation_ENSG00000249092_10_Pearson.RData"
 
-segmentation_path_5 <- "C:/Users/johan/Desktop/PredictedVsActualExpression/ENSG00000211788_10/Segmentation_ENSG00000211788_10_Pearson.txt"
-elnet_path_5 <- "C:/Users/johan/Desktop/PredictedVsActualExpression/ENSG00000211788_10/Elasticnet_Regression_Model_Segmentation_ENSG00000211788_10_Pearson.RData"
+segmentation_path_4 <- "C:/Users/johan/Desktop/local_master_thesis_data/PredictedVsActualExpression/ENSG00000259056_10/Segmentation_ENSG00000259056_10_Pearson.txt"
+elnet_path_4 <- "C:/Users/johan/Desktop/local_master_thesis_data/PredictedVsActualExpression/ENSG00000259056_10/Elasticnet_Regression_Model_Segmentation_ENSG00000259056_10_Pearson.RData"
+
+segmentation_path_5 <- "C:/Users/johan/Desktop/local_master_thesis_data/PredictedVsActualExpression/ENSG00000211788_10/Segmentation_ENSG00000211788_10_Pearson.txt"
+elnet_path_5 <- "C:/Users/johan/Desktop/local_master_thesis_data/PredictedVsActualExpression/ENSG00000211788_10/Elasticnet_Regression_Model_Segmentation_ENSG00000211788_10_Pearson.RData"
 
 
 # Load elasticnet model
 load(elnet_path_5)
 # Load segmentation data
-M<-read.table(segmentation_path_5,header=TRUE,sep="",row.names=1)
-print(M)
+segmentation_data<-read.table(segmentation_path_5,header=TRUE,sep="",row.names=1)
+print(segmentation_data)
 
-# Normailize
-M<-unique(M)
-M<-data.frame(M)
-M<-log2(M+1)
-M<-data.frame(scale(M,center=TRUE, scale=TRUE))
-print(M)
+# Remove duplicated rows
+segmentation_data<-unique(segmentation_data)
 
-M_new <- M[, -ncol(M)]
+# Transform the data into a dataframe
+segmentation_data_df<-data.frame(segmentation_data)
+
+# Log2 transformation to normalize the data (+1 to avoid log of 0)
+segmentation_data_df<-log2(segmentation_data_df+1)
+
+# Center and scale the data
+segmentation_data_df<-data.frame(scale(segmentation_data_df,center=TRUE, scale=TRUE))
+print(segmentation_data_df)
+
+# Remove RNAseq column from the dataframe
+segmentation_data_df_normalized <- segmentation_data_df[, -ncol(segmentation_data_df)]
 
 
 lambda_min <- elasticnet_model$model$lambda.min
 #coefficients <- coef(elasticnet_model$model, s = elasticnet_model$model$lambda.min)
 
-
-predictions <- predict(elasticnet_model$model, newx = as.matrix(M_new), s = lambda_min)
+# Generate predictions
+predictions <- predict(elasticnet_model$model, 
+                       newx = as.matrix(segmentation_data_df_normalized),
+                       s = lambda_min)
 print(predictions)
 
-last_column_M = M[, ncol(M)]
-df = data.frame(last_column_M, predictions)
-print(df)
+# Extract original segement specific RNAseq data
+rna_seq_data = segmentation_data_df[, ncol(segmentation_data_df)]
+
+# Create combined dataframe
+df_combined = data.frame(rna_seq_data, predictions)
+print(df_combined)
 
 
 # Create a dotplot with a line of best fit
-ggplot(df, aes(x = last_column_M, y = predictions)) +
+ggplot(df_combined, aes(x = rna_seq_data, y = predictions)) +
     geom_point() +
     geom_smooth(method = "lm", se = FALSE, color = "red") +
-    xlab("Normalized actual expression values") +
-    ylab("Normalized Predictions") +
-    ggtitle("Predicted vs Actual expression values ENSG00000211788") +
+    xlab("normalized and scaled original expression") +
+    ylab("normalized and scaled predicted expression") +
+    ggtitle("Predicted vs Original Expression Values ENSG00000211788") +
     theme(plot.title = element_text(hjust = 0.5))
 
-    ggsave("plot.png", plot = last_plot(), device = "png", path = getwd())
+ggsave("PredictedVsActualExpression_ENSG00000211788.png", plot = last_plot(),
+       device = "png", path = getwd(), width = 5.5, height = 6.5)
+
+
+
+#'
+#' gather some additional data for the gene specific models
+#'
+
+#' Extract model specific elastic net model coefficients
+extract_elasticnet_model_coefficients <- function(elasticnet_file_path){
+  load(elasticnet_file_path) # Load the .RData file - accessible as 'elasticnet_model'
+  print(elasticnet_model$model$lambda.min)
+  coefficients <- coef(elasticnet_model$model, s = elasticnet_model$model$lambda.min)
+  print(coefficients)
+  return(coefficients)
+}
+
+# Access elastic net model coefficients for a specific gene model
+elasticnet_path <- "C:/Users/johan/Desktop/standard_regression/regression_output/regression_output/ENSG00000125629_10/Elasticnet_Regression_Model_Segmentation_ENSG00000125629_10_Pearson.RData"
+extract_elasticnet_model_coefficients(elasticnet_path)
