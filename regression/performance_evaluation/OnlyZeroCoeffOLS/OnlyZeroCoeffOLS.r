@@ -378,18 +378,8 @@ combine_ols_and_elnet_data <- function(ols_df, elnet_df) {
 }
 
 
-#' Extract model specific elastic net model coefficients
-extract_elasticnet_model_coefficients <- function(elasticnet_file_path){
-  load(elasticnet_file_path) # Load the .RData file - accessible as 'elasticnet_model'
-  print(elasticnet_model$model$lambda.min)
-  coefficients <- coef(elasticnet_model$model, s = elasticnet_model$model$lambda.min)
-  print(coefficients)
-  return(coefficients)
-}
-
-
 #' Main workflow 
-# Set the input directory paths for standard and LeaveOneOut regression
+# Set the input directory paths for standard and LeaveOneOut regression performance evaluation data
 input_directory_path_standard <- "C:/Users/johan/Desktop/standard_regression/performance_evaluation/Performance_Overview.txt"
 input_directory_path_LeaveOneOut <- "C:/Users/johan/Desktop/LOneOCV_regression/performance_evaluation/Performance_Overview.txt"
 
@@ -399,7 +389,7 @@ df_standard_preprocessed_2 <- import_and_preprocess_performance_evaluation_data(
 df_LeaveOneOut_preprocessed_2 <- import_and_preprocess_performance_evaluation_data(input_directory_path_LeaveOneOut)
 
 
-# Set the input directory paths for standard and LeaveOneOut regression output
+# Set the input directory paths for standard and LeaveOneOut regression models
 input_directory_path_standard <- "C:/Users/johan/Desktop/standard_regression/regression_output/regression_output/"
 #input_directory_path_standard <- "C:/Users/johan/Desktop/standard_regression/regression_output_example/"
 input_directory_path_LeaveOneOut <- "C:/Users/johan/Desktop/LOneOCV_regression/regression_output/"
@@ -447,8 +437,3 @@ write.table(selected_weird_entries_standard, file = "selected_weird_entries_stan
 
 # # Save weird OLS Models as file
 # write.table(selected_weird_entries_leaveOneOut, file = "selected_weird_entries_leaveOneOut.csv", sep = ",", quote = FALSE, row.names = FALSE)
-
-
-# Access single elastic net model coefficients
-elasticnet_path <- "C:/Users/johan/Desktop/standard_regression/regression_output/regression_output/ENSG00000125629_10/Elasticnet_Regression_Model_Segmentation_ENSG00000125629_10_Pearson.RData"
-extract_elasticnet_model_coefficients(elasticnet_path)

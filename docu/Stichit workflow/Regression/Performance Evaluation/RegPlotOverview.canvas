@@ -6,7 +6,6 @@
 		{"id":"25a3bcddbfa93e19","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/MSEValXMSEVar/fig_0205241539.md","x":-3680,"y":-1786,"width":400,"height":766},
 		{"id":"1f7ae1cf722dbd41","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/MSEValXMSEVar/fig_0205241540.md","x":-4120,"y":-1786,"width":400,"height":766},
 		{"id":"2b1a3391065032f4","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/MSEVarMuli/fig_0205241345.md","x":-2820,"y":-2140,"width":640,"height":707},
-		{"id":"74478224784b2060","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241636.md","x":-760,"y":40,"width":400,"height":480},
 		{"id":"b7f9dbf15fac7a7e","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241635.md","x":-320,"y":-209,"width":400,"height":498},
 		{"id":"7240ad72851e16f4","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/RegPerformanceEvaluation.md","x":-2205,"y":-820,"width":505,"height":821},
 		{"id":"1083b548770e75b2","type":"file","file":"Stichit workflow/Regression/Runs/26_patient_dataset/StandardCV/RegStandardCV.md","x":-2640,"y":-361,"width":400,"height":362},
@@ -25,9 +24,10 @@
 		{"id":"a443579e5511bbc3","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/NzeroXpearson/fig_06051540.md","x":-4260,"y":1360,"width":1240,"height":500},
 		{"id":"dd44f543b6c11645","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/NzeroXpearson/fig_06051532.md","x":-4261,"y":840,"width":1241,"height":520},
 		{"id":"7e24afa4bd32f0f7","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/NzeroXpearson/NzeroXpearson.md","x":-2800,"y":600,"width":580,"height":187},
-		{"id":"69d4c64ed04ab532","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/PredictedVsActualExpression.md","x":-1495,"y":540,"width":656,"height":320},
-		{"id":"72398947d1738d6a","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/OnlyZeroCoeffOLS/OnlyZeroCoeffOLS.md","x":-2658,"y":860,"width":1040,"height":460},
-		{"id":"21e565745548b02f","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/OnlyZeroCoeffOLS/OnlyZeroCoeffOLS_entries.csv_reduced.md","x":-2781,"y":1416,"width":1286,"height":194}
+		{"id":"72398947d1738d6a","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/OnlyZeroCoeffOLS/OnlyZeroCoeffOLS.md","x":-2560,"y":860,"width":738,"height":360},
+		{"id":"21e565745548b02f","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/OnlyZeroCoeffOLS/OnlyZeroCoeffOLS_entries.csv_reduced.md","x":-2834,"y":1320,"width":1286,"height":194},
+		{"id":"74478224784b2060","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241636.md","x":-760,"y":40,"width":400,"height":480},
+		{"id":"69d4c64ed04ab532","type":"file","file":"Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/PredictedVsActualExpression.md","x":-1680,"y":520,"width":656,"height":320}
 	],
 	"edges":[
 		{"id":"047064c0ba30bcb3","fromNode":"c1efbbb4b7b641dd","fromSide":"right","toNode":"b7f9dbf15fac7a7e","toSide":"left"},
