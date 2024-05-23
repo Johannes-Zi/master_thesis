@@ -14,6 +14,10 @@ The normalization is done by log transforming the data:
 log(value +1); +1 to avoid log of zero
 
 Finally, the data is being scaled. The values are standardized by subtracting the column mean and dividing by the column standard deviation. This results in data where each column has a mean of 0 and a standard deviation of 1.
+
+# Observations
+* the small RNA Seq expression variation in gene ENSG00000259056 and ENSG00000249092, leads in the dotplot to accommodations on specific x axis locations (original gene expression values)
+* The segmentation of ENSG00000156232 seems to 
 # Data
 
 ### input
@@ -65,10 +69,10 @@ https://github.com/Johannes-Zi/master_thesis/blob/main/regression/performance_ev
 
 # Runs
 
-| gene            | figure             |
-| --------------- | ------------------ |
-| ENSG00000125629 | [[fig_2105242319]] |
-| ENSG00000156232 | [[fig_2105242320]] |
-| ENSG00000249092 | [[fig_2105242321]] |
-| ENSG00000259056 | [[fig_2105242322]] |
-| ENSG00000211788 |                    |
+| gene            | figure             | inital RNA Seq                                          | feature coefficients                            | normalized ATAC/ RNA Seq                        | normalized, scaled, centered ATAC/ RNA Seq           |
+| --------------- | ------------------ | ------------------------------------------------------- | ----------------------------------------------- | ----------------------------------------------- | ---------------------------------------------------- |
+| ENSG00000125629 | [[fig_2105242319]] | [[counts.matrix.norm.tsv_ENSG00000125629_10.txt]]       | [[feature_coefficients_ENSG00000125629_10.txt]] | [[segmentation_normalized_ENSG00000125629.tsv]] | [[segmentation_scaled_centered_ENSG00000125629.tsv]] |
+| ENSG00000156232 | [[fig_2105242320]] | [[counts.matrix.norm.tsv_entry_ENSG00000156232_10.txt]] | [[feature_coefficients_ENSG00000156232_10.txt]] | [[segmentation_normalized_ENSG00000156232.tsv]] | [[segmentation_scaled_centered_ENSG00000156232.tsv]] |
+| ENSG00000249092 | [[fig_2105242321]] | [[counts.matrix.norm.tsv_ENSG00000249092_10.txt]]       | [[feature_coefficients_ENSG00000249092_10.txt]] | [[segmentation_normalized_ENSG00000249092.tsv]] | [[segmentation_scaled_centered_ENSG00000249092.tsv]] |
+| ENSG00000259056 | [[fig_2105242322]] | [[counts.matrix.norm.tsv_ENSG00000259056_10.txt]]       | [[feature_coefficients_ENSG00000259056_10.txt]] | [[segmentation_normalized_ENSG00000259056.tsv]] | [[segmentation_scaled_centered_ENSG00000259056.tsv]] |
+| ENSG00000211788 | [[fig_2105242323]] | [[counts.matrix.norm.tsv_ENSG00000211788_10.txt]]       | [[feature_coefficients_ENSG00000211788_10.txt]] | [[segmentation_normalized_ENSG00000211788.tsv]] | [[segmentation_scaled_centered_ENSG00000211788.tsv]] |

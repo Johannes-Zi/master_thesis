@@ -22,27 +22,30 @@ elnet_path_5 <- "C:/Users/johan/Desktop/local_master_thesis_data/PredictedVsActu
 
 
 # Load elasticnet model
-load(elnet_path_5)
+load(elnet_path_4)
 # Load segmentation data
-segmentation_data<-read.table(segmentation_path_5,header=TRUE,sep="",row.names=1)
+segmentation_data<-read.table(segmentation_path_4,header=TRUE,sep="",row.names=1)
 print(segmentation_data)
 
 # Remove duplicated rows
-segmentation_data<-unique(segmentation_data)
+segmentation_data <- unique(segmentation_data)
+write.table(segmentation_data, file = "segmentation_normalized_ENSG00000259056.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
 
 # Transform the data into a dataframe
-segmentation_data_df<-data.frame(segmentation_data)
+segmentation_data_df <- data.frame(segmentation_data)
 
 # Log2 transformation to normalize the data (+1 to avoid log of 0)
-segmentation_data_df<-log2(segmentation_data_df+1)
+segmentation_data_df <- log2(segmentation_data_df+1)
 
 # Center and scale the data
-segmentation_data_df<-data.frame(scale(segmentation_data_df,center=TRUE, scale=TRUE))
+segmentation_data_df <- data.frame(scale(segmentation_data_df,center=TRUE, scale=TRUE))
 print(segmentation_data_df)
+
+# Export the normalized data
+write.table(segmentation_data_df, file = "segmentation_scaled_centered_ENSG00000259056.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
 
 # Remove RNAseq column from the dataframe
 segmentation_data_df_normalized <- segmentation_data_df[, -ncol(segmentation_data_df)]
-
 
 lambda_min <- elasticnet_model$model$lambda.min
 #coefficients <- coef(elasticnet_model$model, s = elasticnet_model$model$lambda.min)
