@@ -85,8 +85,8 @@ ggsave("PredictedVsActualExpression_ENSG00000211788.png", plot = last_plot(),
 #' Extract model specific elastic net model coefficients
 extract_elasticnet_model_coefficients <- function(elasticnet_file_path){
   load(elasticnet_file_path) # Load the .RData file - accessible as 'elasticnet_model'
-  print(elasticnet_model$model$lambda.min)
-  coefficients <- coef(elasticnet_model$model, s = elasticnet_model$model$lambda.min)
+  print(elasticnet_model$model$lambda.min) # nolint
+  coefficients <- coef(elasticnet_model$model, s = elasticnet_model$model$lambda.min)   #nolint
   print(coefficients)
   return(coefficients)
 }
