@@ -92,5 +92,5 @@ extract_elasticnet_model_coefficients <- function(elasticnet_file_path){
 }
 
 # Access elastic net model coefficients for a specific gene model
-elasticnet_path <- "C:/Users/johan/Desktop/standard_regression/regression_output/regression_output/ENSG00000125629_10/Elasticnet_Regression_Model_Segmentation_ENSG00000125629_10_Pearson.RData"
+elasticnet_path <- "C:/Users/johan/Desktop/local_master_thesis_data/regression/LOneOCV_regression/regression_output/Elasticnet_Regression_Model_Segmentation_ENSG00000002587_10_Pearson.RData"
 extract_elasticnet_model_coefficients(elasticnet_path)

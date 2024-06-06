@@ -4,41 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "199e4ed0dc7198bb",
-        "type": "tabs",
-        "dimension": 22.852028639618137,
-        "children": [
-          {
-            "id": "5bc0c352b2dc94a9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/PredictedVsActualExpression.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ]
-      },
-      {
         "id": "1411da89ff77d2dc",
         "type": "tabs",
-        "dimension": 77.14797136038186,
         "children": [
           {
             "id": "d2fc4f7ed3589708",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
-                "viewState": {
-                  "x": 287.20536090070937,
-                  "y": 2581.9384124806884,
-                  "zoom": 0.6666666666666667
-                }
+                "file": "AssociationAnalysis/AssociationAnalysis.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -120,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
+                "file": "AssociationAnalysis/AssociationAnalysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
+                "file": "AssociationAnalysis/AssociationAnalysis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas"
+                "file": "AssociationAnalysis/AssociationAnalysis.md"
               }
             }
           }
@@ -183,8 +160,12 @@
   },
   "active": "d2fc4f7ed3589708",
   "lastOpenFiles": [
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/PredictedVsActualExpression.md",
+    "AssociationAnalysis/AssociationAnalysis.canvas",
+    "AssociationAnalysis/AssociationAnalysis.md",
     "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
+    "AssociationAnalysis/BasicCorrelation",
+    "AssociationAnalysis",
+    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/PredictedVsActualExpression.md",
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/feature_coefficients_ENSG00000259056_10.txt.md",
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/counts.matrix.norm.tsv_ENSG00000259056_10.txt.md",
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/feature_coefficients_ENSG00000249092_10.txt.md",
@@ -219,7 +200,6 @@
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/segmentation_scaled_centered_ENSG00000211788.md",
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/segmentation_normalized_ENSG00000259056.md",
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/pictures",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/fig_2105242323.md",
     "feature_coefficients_ENSG00000125629_10.txt",
     "Input data/PHClinicalData/RNASeq",
     "Input data/PHClinicalData",
@@ -230,8 +210,6 @@
     "Stichit workflow/Regression/Performance Evaluation/OnlyZeroCoeffOLS/OnlyZeroCoeffOLS_entries.csv",
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression",
     "Stichit workflow/Regression/Performance Evaluation/SpearmanXSpearmanVar_test",
-    "Future Ideas/templates",
-    "Stichit workflow/Regression/Performance Evaluation/SpearmanValXSpearmanVar",
     "Stichit workflow/Steps.canvas",
     "Regression/Untitled.canvas"
   ]
