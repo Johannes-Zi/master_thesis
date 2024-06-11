@@ -286,7 +286,7 @@ create_elnet_segment_df <- function(elnet_model_dir, file_limit = Inf, segmentat
 #' Load all segements that were considered in the regression models via cofficients into a single dataframe
 elnet_model_dir <- "C:/Users/johan/Desktop/local_master_thesis_data/regression/LOneOCV_regression/regression_output/"
 segmentation_outptut_dir <- "C:/Users/johan/Desktop/local_master_thesis_data/segmentation/combined_segmentation_output"
-elnet_model_segments_df <- create_elnet_segment_df(elnet_model_dir, file_limit = 999999999999, segmentation_outptut_dir = segmentation_outptut_dir)
+elnet_model_segments_df <- create_elnet_segment_df(elnet_model_dir, file_limit = 500, segmentation_outptut_dir = segmentation_outptut_dir)
 
 # Put segment column to the first column
 elnet_model_segments_df <- elnet_model_segments_df[, c("segment", setdiff(names(elnet_model_segments_df), "segment"))]
