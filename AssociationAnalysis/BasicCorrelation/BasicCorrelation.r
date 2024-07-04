@@ -1,5 +1,3 @@
-
-
 library(qvalue)
 library(ggplot2)
 library(crayon)
@@ -209,20 +207,31 @@ perform_spearman_correlation <- function(output_path, clinical_metadata_rna_ids,
   print(paste("->", output_file_path))
 
   # Create and save histogram plot of the p_values
-  p_value_hist <- ggplot(spearman_correlations_df, aes(x = p_value)) + geom_histogram(bins = 100) + ggtitle("Distribution of p_values") + xlab("p_value") + theme_light()
+  p_value_hist <- ggplot(spearman_correlations_df, aes(x = p_value)) +
+  geom_histogram(bins = 100) +
+  scale_x_continuous(limits = c(0, 1), oob = scales::oob_squish) +
+  ggtitle("Distribution of p_values") +
+  xlab("p_value") +
+  theme_light()
   output_file_path <- paste(output_dir, paste(clinical_metadata_column_name, "p_value_hist.png", sep = "_"), sep = "/")
   ggsave(output_file_path, p_value_hist)
   print(paste("->", output_file_path))
 
   # Create and save histogram plot of the q_values
-  q_value_hist <- ggplot(spearman_correlations_df, aes(x = q_value)) + geom_histogram(bins = 100) + ggtitle("Distribution of q_values") + xlab("q_value") + theme_light()
+  q_value_hist <- ggplot(spearman_correlations_df, aes(x = q_value)) +
+  geom_histogram(bins = 100) +
+  scale_x_continuous(limits = c(0, 1), oob = scales::oob_squish) +
+  ggtitle("Distribution of q_values") +
+  xlab("q_value") +
+  theme_light()
   output_file_path <- paste(output_dir, paste(clinical_metadata_column_name, "q_value_hist.png", sep = "_"), sep = "/")
   ggsave(output_file_path, q_value_hist)
   print(paste("->", output_file_path))
 
   # Create and save density plot of the spearman_correlations
   spearman_corr_density <- ggplot(spearman_correlations_df, aes(x = spearman_corr)) + 
-    geom_density(fill = "#4dbf67",alpha = 0.4) +
+    geom_density(fill = "#4dbf67", alpha = 0.4) +
+    xlim(-1, 1) +
     ggtitle("Density plot of spearman_correlations") +
     xlab("spearman_corr") +
     theme_light()
@@ -235,6 +244,7 @@ perform_spearman_correlation <- function(output_path, clinical_metadata_rna_ids,
   spearman_correlations_filtered_df <- spearman_correlations_df %>% filter(p_value < 0.05)
   spearman_corr_density <- ggplot(spearman_correlations_filtered_df, aes(x = spearman_corr)) + 
     geom_density(fill = "#4dbf67",alpha = 0.4) + 
+    xlim(-1, 1) +
     ggtitle("Density distribution of Spearman correlations with p_value < 0.05") +
     xlab("spearman_corr") +
     theme_light()
@@ -244,6 +254,7 @@ perform_spearman_correlation <- function(output_path, clinical_metadata_rna_ids,
 
   # Create and save density plot of the spearman_correlations seperated by p_value < 0.05
   spearman_corr_density_p_value <- ggplot(spearman_correlations_df, aes(x = spearman_corr, fill = p_value < 0.05)) +
+    xlim(-1, 1) +
     geom_density(alpha = 0.5) + ggtitle("Density plot of spearman_correlations")
   output_file_path <- paste(output_dir, paste(clinical_metadata_column_name, "spearman_corr_density_p_value.png", sep = "_"), sep = "/")
   ggsave(output_file_path, spearman_corr_density_p_value)
@@ -302,6 +313,13 @@ load_performance_evaluation <- function(LeaveOneOutCV_performance_path) {
 #' 
 if (TRUE) {
   #'
+  #' Start logging
+  #' 
+  # Path to the log file
+  #log_file_path <- paste(getwd(), "AssociationAnalysis/BasicCorrelation/combined_correlations", "log.txt", sep = "/")
+  #sink(log_file_path, append = FALSE, split = TRUE)
+
+  #'
   #' Import required data
   if (TRUE) {
     cat(paste(bold(cyan("\nImport required data\n"))))
@@ -323,7 +341,8 @@ if (TRUE) {
     # Create a density plot of the Pearson correlations
     ggplot(LeaveOneOutCV_performance, aes(x = Pearson)) + geom_density(fill = "#4dbf67",alpha = 0.4) + ggtitle("Density plot of Pearson correlations") + xlab("Pearson") + theme_light()
     # Save the plot at cwd
-    #ggsave("C:/Users/johan/Desktop/local_master_thesis_data/AssociationAnalysis/BasicCorrelation/pearson_density_plot.png")
+    image_path <- paste(getwd(), "AssociationAnalysis/BasicCorrelation/combined_correlations", "outer_cross_validation_pearson_density_plot.png", sep = "/")
+    ggsave(image_path)
   }
 
   #'
@@ -342,22 +361,25 @@ if (TRUE) {
   }
 
   #'
-  #' Create a list of genes which have a Pearson correlation above thresx
+  #' Create a list of genes which have a Pearson correlation above a defined threshold
   if (TRUE) {
-    thresx <- 0.4 # Defines the threshold for the outer cross validation threshold to filter out the gene models below the threshold
-    cat(paste(bold(cyan("\nApply cross validation based pearson correlation filtering\n"))))
-    cat(paste( "with threshold Pearson > :", red(thresx), "\n"))
-    cat(paste("Number of genes before filtering: ", magenta(nrow(LeaveOneOutCV_performance), "\n")))
-    genes_with_cv_pearson_correlation_over_thresx <- LeaveOneOutCV_performance[LeaveOneOutCV_performance$Pearson > thresx,]$gene_name 
+    thresx <- 0.6 # Defines the threshold for the outer cross validation threshold to filter out the gene models below the threshold
+    cat(paste(bold(cyan("\nApply elnet outer cross validation based pearson correlation filtering\n"))))
+    cat(paste( "with threshold Pearson >=", red(thresx), "or <=", red(-thresx), "\n"))
+    cat(paste("Number of unique genes represented in LeaveOneOutCV_performance: ", magenta(length(unique(LeaveOneOutCV_performance$gene_name)), "\n")))
+    cat(paste("Number of entries with negative Pearson correlation: ", magenta(nrow(LeaveOneOutCV_performance[LeaveOneOutCV_performance$Pearson < 0,]), "\n")))
+    # Filter out the genes with a amount of Pearson correlation below the threshold
+    genes_with_cv_pearson_correlation_over_thresx <- LeaveOneOutCV_performance[LeaveOneOutCV_performance$Pearson >= thresx | LeaveOneOutCV_performance$Pearson <= -thresx, ]$gene_name
     cat(paste("Number of genes after filtering: ", magenta(length(genes_with_cv_pearson_correlation_over_thresx), "\n")))
   }
 
   #'
-  #' Filter the elnet segments atac data based on the elnet outer cv PEarson filtered gene list
+  #' Filter the elnet segments atac data based on the elnet outer cv Pearson filtered gene list
   if (TRUE) {
     cat(paste(bold(cyan("\nFilter the elnet segments atac data based on the elnet outer cv Pearson filtered gene list.\n"))))
+    cat(paste("Number of unique genes represented by elnet segments: ", magenta(length(unique(elnet_segments_atac$gene_id)), "\n")))
     cat(paste("Number of elnet segments before filtering: ", magenta(nrow(elnet_segments_atac), "\n")))
-    # Use the genes with a Pearson correlation > 0.5 to filter the elnet segments atac data
+    # Filter the elnet segments atac data based on the elnet outer cv Pearson filtered gene list
     elnet_segments_atac_filtered <- elnet_segments_atac[elnet_segments_atac$gene_id %in% genes_with_cv_pearson_correlation_over_thresx,]
     cat(paste("Number of elnet segments after filtering: ", magenta(nrow(elnet_segments_atac_filtered), "\n")))
   }
@@ -372,5 +394,7 @@ if (TRUE) {
     # Run Correlations with filtered elnet segments atac data
     list_with_all_correlation_dfs_filtered <- iterate_over_clinical_metadata(output_path = output_path, reduced_clinical_metadata, elnet_segments_atac_filtered)
   }
-
+  
+  # Stop logging
+  #sink()
 }
