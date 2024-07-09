@@ -13,13 +13,32 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AssociationAnalysis/AssociationAnalysis.md",
+                "file": "Stichit workflow/Regression/Runs/Performance_Overview.txt.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "a2d79d90c7183aa6",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          },
+          {
+            "id": "406f004a40e1da54",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241637_p.png"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -81,7 +100,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 358.5
   },
   "right": {
     "id": "5b31fd771786262b",
@@ -97,7 +116,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AssociationAnalysis/AssociationAnalysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +132,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AssociationAnalysis/AssociationAnalysis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,9 +153,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "AssociationAnalysis/AssociationAnalysis.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -158,11 +173,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d2fc4f7ed3589708",
+  "active": "a2d79d90c7183aa6",
   "lastOpenFiles": [
-    "AssociationAnalysis/AssociationAnalysis.canvas",
-    "AssociationAnalysis/AssociationAnalysis.md",
+    "Stichit workflow/Regression/Performance Evaluation/RegPerformanceEvaluation.md",
+    "Stichit workflow/Regression/Performance Evaluation/PearsonValMulti/PearsonValMulti.md",
     "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
+    "Stichit workflow/Regression/Runs/26_patient_dataset/LeaveOneOutCV/RegLeaveOneOutCV.md",
+    "Stichit workflow/Regression/Runs/Performance_Overview.txt.md",
+    "Stichit workflow/Regression/Performance Evaluation/NzeroXpearson/fig_06051540_p.png",
+    "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241637_p.png",
+    "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241637.md",
+    "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/RegFeaturesXnzero.md",
+    "AssociationAnalysis/AssociationAnalysis.md",
+    "AssociationAnalysis/AssociationAnalysis.canvas",
     "AssociationAnalysis/BasicCorrelation",
     "AssociationAnalysis",
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/PredictedVsActualExpression.md",
@@ -176,7 +199,6 @@
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/counts.matrix.norm.tsv_entry_ENSG00000156232_10.txt.md",
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/feature_coefficients_ENSG00000125629_10.txt.md",
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/counts.matrix.norm.tsv_ENSG00000125629_10.txt.md",
-    "Stichit workflow/Regression/Performance Evaluation/RegPerformanceEvaluation.md",
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/segmentation_normalized_ENSG00000249092.tsv.md",
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/segmentation_scaled_centered_ENSG00000249092.tsv.md",
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/pictures/Pasted image 20240523154413.png",
@@ -193,12 +215,6 @@
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/pictures/Pasted image 20240523153625.png",
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/pictures/Pasted image 20240523153429.png",
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/segmentation_normalized_ENSG00000125629.tsv.md",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/segmentation_normalized_ENSG00000156232.tsv.md",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/pictures/Pasted image 20240523144405.png",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/segmentation_scaled_centered_ENSG00000259056.tsv.md",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/pictures/Pasted image 20240523144141.png",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/segmentation_scaled_centered_ENSG00000211788.md",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/segmentation_normalized_ENSG00000259056.md",
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/pictures",
     "feature_coefficients_ENSG00000125629_10.txt",
     "Input data/PHClinicalData/RNASeq",
