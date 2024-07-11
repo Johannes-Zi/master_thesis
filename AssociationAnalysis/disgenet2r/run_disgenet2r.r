@@ -1,10 +1,12 @@
-#library(enrichplot)
-#library(gprofiler2)
-#library(org.Hs.eg.db)
-#library(DOSE)
+library(enrichplot)
+library(clusterProfiler)
+library(gprofiler2)
+library(org.Hs.eg.db)
+library(DOSE)
 library(crayon)
 library(ggplot2)
 library(svglite)
+library(dplyr)
 
 
 #'
@@ -204,6 +206,9 @@ create_reduced_correlation_datasets <- function(correlation_results_list, correl
   # Create a ggplot histogram plot with the gene counts
   ggplot(data = data.frame(gene = names(gene_counts), count = as.numeric(gene_counts)), aes(x = count)) +
     geom_histogram(binwidth = 1) +
+    xlab("Number of gene specific segments across all clinical parameters") +
+    ylab("Number of genes") +
+    ggtitle("Gene count distribution of gene specific segment counts")
     theme(axis.text.x = element_text(angle = 90, hjust = 1))
   # Save the plot as a svg file using file.path
   ggsave(file.path(output_dir, "segments_per_gene_across_all_params.svg"))
@@ -211,18 +216,22 @@ create_reduced_correlation_datasets <- function(correlation_results_list, correl
   # Create a ggplot histogram plot with number of genes above threshold for each clinical parameter
   ggplot(filter_df, aes(x = clinical_parameter, y = num_correlation_results_above_threshold)) +
     geom_bar(stat = "identity") +
-    theme(axis.text.x = element_text(angle = 90, hjust = 1)) 
+    xlab("Clinical parameter") +
+    ylab("Number of genes above the correlation threshold") +
+    theme(axis.text.x = element_text(angle = 50, hjust = 1)) 
   # Create the output path for the plot
-  plot_output_path <- paste0(parameter_otput_dir, "num_genes_above_threshold_per_clinical_parameter.svg")
+  plot_output_path <- file.path(output_dir, "num_genes_above_threshold_per_clinical_parameter.svg")
   # Save the plot as a svg file based on the parameter_otput_dir
   ggsave(plot_output_path)
 
   # Create a ggplot histogram plot with number of genes represented by more than one segment for each clinical parameter
   ggplot(filter_df, aes(x = clinical_parameter, y = num_genes_more_than_one_segment)) +
     geom_bar(stat = "identity") +
-    theme(axis.text.x = element_text(angle = 90, hjust = 1))
+    xlab("Clinical parameter") +
+    ylab("Number of genes represented by more than one segment") +
+    theme(axis.text.x = element_text(angle = 50, hjust = 1))
   # Create the output path for the plot
-  plot_output_path <- paste0(parameter_otput_dir, "num_genes_more_than_one_segment_per_clinical_parameter.svg")
+  plot_output_path <- file.path(output_dir, "num_genes_more_than_one_segment_per_clinical_parameter.svg")
   # Save the plot as a svg file based on the parameter_otput_dir
   ggsave(plot_output_path)
 
@@ -232,7 +241,8 @@ create_reduced_correlation_datasets <- function(correlation_results_list, correl
 
 #'
 #'  Run DisGeNET analysis for each clinical parameter
-run_digenet_analysis <- function(reduced_correlation_datasets_list){
+run_digenet_analysis <- function(reduced_correlation_datasets_list, output_dir, qvalue_cutoff, pvalue_cutoff, 
+                                 query_strings){
   # Initialize list to store DisGeNET results
   disgenet_results_list <- list()
 
@@ -246,65 +256,177 @@ run_digenet_analysis <- function(reduced_correlation_datasets_list){
   for (i in 1:length(reduced_correlation_datasets_list)) {
     # Current clinical parameter name
     clinical_parameter <- clinical_parameters[i]
+    message(underline(clinical_parameter))
 
-    message("\n##################")
-    message(paste("current parameter:", cyan(clinical_parameter)))
-    message("##################\n")
+    # Create output directory for parameter specific DisGeNET results
+    parameter_otput_dir <- file.path(output_dir, clinical_parameter)
+    dir.create(parameter_otput_dir, recursive = TRUE, showWarnings = FALSE)
 
-    # gene_names <- reduced_correlation_datasets_list[[clinical_parameter]]$gene
-    # gene_names_str <- paste(gene_names, collapse = ", ")
-    # message(cyan("\nGene list:"), gene_names_str)
-
-    # Current reduced correlation results
+    # Extract current genes of correlation results
     reduced_correlation_results <- reduced_correlation_datasets_list[[clinical_parameter]]
 
-    # Extract gene names
-    gene_names <- reduced_correlation_results$gene
-    #print(gene_names)
+    # Extract gene names and translate them to varios other gene id formats
+    if (TRUE) {
+      # Extract gene names
+      gene_names <- reduced_correlation_results$gene
+      message(paste("Number of genes represented in the correlation results: ", nrow(reduced_correlation_results)))
 
-    # Traslate the Ensemble ids to NCBI gene names
-    translated_ids = bitr(gene_names, fromType="ENSEMBL", toType="ENTREZID", OrgDb="org.Hs.eg.db")
+      # Traslate the Ensemble ids to NCBI gene names
+      translated_ENTREZ_ids <- suppressMessages(suppressWarnings(bitr(gene_names, fromType = "ENSEMBL", toType = "ENTREZID", OrgDb = "org.Hs.eg.db")))
+      translated_ALIAS_ids <- suppressMessages(suppressWarnings(bitr(gene_names, fromType = "ENSEMBL", toType = "ALIAS", OrgDb = "org.Hs.eg.db")))
+      translated_GENENAME_ids <- suppressMessages(suppressWarnings(bitr(gene_names, fromType = "ENSEMBL", toType = "GENENAME", OrgDb = "org.Hs.eg.db")))
+      translated_SYMBOL_ids <- suppressMessages(suppressWarnings(bitr(gene_names, fromType = "ENSEMBL", toType = "SYMBOL", OrgDb = "org.Hs.eg.db")))
 
-    # Extract the NCBI gene names
-    ncbi_gene_names <- translated_ids$ENTREZID
+      # Calculate failed mapping rate
+      entrez_gene_names <- translated_ENTREZ_ids$ENTREZID
+      failed_mappings <- length(gene_names) - length(entrez_gene_names)
+      failed_mapping_percentage <- (failed_mappings / length(gene_names)) * 100
+      message(paste("Failed to map ", failed_mappings, "gene names to NCBI gene names (", failed_mapping_percentage, "% )"))
+      message(paste("Number of genes used for DisGeNet analysis (translated from ENSEMBL to ENTRZIDs): ", length(entrez_gene_names)))
 
-    #print(length(ncbi_gene_names))
+      # Group the ALIAS ids by ENSEMBL ids
+      translated_ALIAS_ids_grouped <- translated_ALIAS_ids %>%
+        group_by(ENSEMBL) %>%
+        summarise(ALIAS = paste(ALIAS, collapse = "/")) %>%
+        ungroup()
+    }
 
-    #x <- gconvert(gene_names, organism = "hsapiens", target="ENTREZGENE_ACC")
+    # Gather metadata of DisGeNET input and save as csv
+    if (TRUE) {
+      # Merge the metadata with the translated gene ids to a df based on the gene names
+      # Create a data frame with all gene_names
+      input_genes_metadata_df <- data.frame(ENSEMBL = gene_names)
+      # Match and fill in the ids, use NA for unmatched
+      input_genes_metadata_df <- merge(input_genes_metadata_df, translated_ENTREZ_ids, by.x = "ENSEMBL", by.y = "ENSEMBL", all.x = TRUE)
+      input_genes_metadata_df <- merge(input_genes_metadata_df, translated_ALIAS_ids_grouped, by.x = "ENSEMBL", by.y = "ENSEMBL", all.x = TRUE)
+      input_genes_metadata_df <- merge(input_genes_metadata_df, translated_GENENAME_ids, by.x = "ENSEMBL", by.y = "ENSEMBL", all.x = TRUE)
+      input_genes_metadata_df <- merge(input_genes_metadata_df, translated_SYMBOL_ids, by.x = "ENSEMBL", by.y = "ENSEMBL", all.x = TRUE)
 
-    #ncbi_gene_names <- x$target
-    #print(ncbi_gene_names)
+      # Merge in the information of the input reduced correlation results
+      input_genes_metadata_df <- merge(input_genes_metadata_df, reduced_correlation_results, by.x = "ENSEMBL", by.y = "gene_id", all.x = TRUE)
+
+      # Rename the columns of the metadata df
+      input_genes_metadata_df <- input_genes_metadata_df %>%
+        rename(
+          corr_p_value = p_value,
+          corr_q_value = q_value
+        )
+
+      # Reorder the DataFrame columns
+      cols <- colnames(input_genes_metadata_df)
+
+      # Remove 'SYMBOL' to avoid duplication
+      cols <- cols[cols != 'SYMBOL']
+
+      # Insert 'SYMBOL' at the third position
+      cols <- c(cols[1:2], 'SYMBOL', cols[3:length(cols)])
+
+      # Reorder the DataFrame columns
+      input_genes_metadata_df <- input_genes_metadata_df[, cols]
+
+      # Save the metadata df as a csv file using file.path
+      gene_names_output_path <- file.path(parameter_otput_dir, paste0(clinical_parameter, "_DisGeNet_input_genes_metadata.csv"))
+      write.csv(input_genes_metadata_df, gene_names_output_path, row.names = FALSE)
+    }
 
     # Run DisGeNET analysis
-    current_results <- enrichDGN(gene = ncbi_gene_names, qvalueCutoff  = 0.4, pvalueCutoff  = 0.4)
-    #       pvalueCutoff  = 0.2,
-    #       pAdjustMethod = "BH",
-    #       minGSSize     = 5,
-    #       maxGSSize     = 500,
-    #       qvalueCutoff  = 0.2,
-    #       readable      = FALSE)
-    message(cyan("number of used gene ids used:"))
-    message(paste(length(ncbi_gene_names), "\n"))
+    if (TRUE) {
+      # Run DisGeNET analysis
+      current_results <- enrichDGN(gene = entrez_gene_names, qvalueCutoff  = qvalue_cutoff, pvalueCutoff  = pvalue_cutoff)
+      #       pAdjustMethod = "BH",
+      #       minGSSize     = 5,
+      #       maxGSSize     = 500,
+      #       readable      = FALSE)
 
-    print(current_results)
+      message("DisGeNET result insight:")
+      print(current_results)
+      flush.console()
 
-    # Append DisGeNET results to list
-    disgenet_results_list[[clinical_parameter]] <- current_results
+      # Append DisGeNET results to list
+      disgenet_results_list[[clinical_parameter]] <- current_results
 
-    # Extract result df
-    current_result_df <- current_results@result
+      # Extract result df
+      current_result_df <- current_results@result
+    }
 
-    # Remove rownames and use standard rownames
-    rownames(current_result_df) <- NULL
+    # Export unfiltered DisGeNET results as csv file
+    if (TRUE) {
+      # Chnage the rowname geneID to ENTREZID
+      current_result_df <- current_result_df %>% 
+        rename(
+          ENTREZID = geneID,
+          DisGeNET_GeneRatio = GeneRatio,
+          DisGeNEt_Count = Count,
+          DisGeNet_pvalue = pvalue,
+          DisGeNet_qvalue = qvalue,
+          DisGeNet_p.adjust = p.adjust,
+          DisGeNet_BgRatio = BgRatio
+        )
 
-    # Add cluster column and set to clinical parameter
-    current_result_df$Cluster <- clinical_parameter
+      # Save DisGeNET results as a csv file using file.path
+      disgenet_output_path <- file.path(parameter_otput_dir, paste0(clinical_parameter, "_DisGeNet_results.csv"))
+      write.csv(current_result_df, disgenet_output_path, row.names = FALSE)	
+    }
 
-    # Move cluster column to first position
-    current_result_df <- current_result_df[,c(ncol(current_result_df), 1:(ncol(current_result_df)-1))]
+    # Filter out potentially interesting DisGeNet results and save as csv
+    if (TRUE) {
+      # Create refined DisGeNET results df with the row which have strings from a predifined list in their Description column
+      # Create a logical matrix (one column per query) with TRUE for each row which contains one of the search strings in the Description column
+      search_results <- sapply(query_strings, function(query_strings) {
+        grepl(query_strings, current_result_df$Description, ignore.case = TRUE)
+      })
+      # Combine the logical columns with an OR condition
+      combined_search_results <- apply(search_results, 1, function(row) {
+        any(row)
+      })
+      # Extract the rows which contain one of the search strings in the Description column
+      filtered_disgenet_results_df <- current_result_df[combined_search_results,]
 
-    # Append DisGeNET result df to combined df
-    combined_disgenet_results_df <- rbind(combined_disgenet_results_df, current_result_df)
+      # Save the filtered DisGeNET results as a csv file using file.path
+      refined_disgenet_output_path <- file.path(parameter_otput_dir, paste0(clinical_parameter, "_filtered_DisGeNet_results.csv"))
+      write.csv(filtered_disgenet_results_df, refined_disgenet_output_path, row.names = FALSE)
+    }
+
+    # Determine gene abundacies in the filtered DisGeNET results
+    if (TRUE) {
+      # Split the ENTREZID column on '/'
+      split_ids <- strsplit(as.character(filtered_disgenet_results_df$ENTREZID), "/")
+
+      # Create a single vector of all ids
+      all_ids <- unlist(split_ids)
+
+      # Count id occurrencies
+      id_counts <- table(all_ids)
+
+      # Store in df
+      df_counts <- as.data.frame(id_counts, stringsAsFactors = FALSE)
+      names(df_counts) <- c("ENTREZID", "DisGeNet.results.id.abundance.count")
+
+      # Add additional gene metadata to the results
+      df_counts <- merge(df_counts, input_genes_metadata_df, by.x = "ENTREZID", by.y = "ENTREZID", all.x = TRUE)
+      
+      # Sort the df by the abundance count
+      df_counts <- df_counts[order(df_counts$DisGeNet.results.id.abundance.count, decreasing = TRUE),]
+
+      # Save the gene abundancies as a csv file using file.path
+      gene_abundancies_output_path <- file.path(parameter_otput_dir, paste0(clinical_parameter, "_filtered_DisGeNet_results_gene_abundancies.csv"))
+      write.csv(df_counts, gene_abundancies_output_path, row.names = FALSE)
+    }
+
+    # Append DisGeNET results to combined results df
+    if (TRUE) {
+      # Remove rownames and use standard rownames
+      rownames(current_result_df) <- NULL
+
+      # Add cluster column and set to clinical parameter
+      current_result_df$Cluster <- clinical_parameter
+
+      # Move cluster column to first position
+      current_result_df <- current_result_df[,c(ncol(current_result_df), 1:(ncol(current_result_df)-1))]
+
+      # Append DisGeNET result df to combined df
+      combined_disgenet_results_df <- rbind(combined_disgenet_results_df, current_result_df)
+    }
   }
 
   # Return list with DisGeNET results
@@ -356,8 +478,18 @@ if (TRUE) {
   }
 
   # Run DisGeNET analysis
-  if (FALSE) {
-    DisGeNETresults <- run_digenet_analysis(reduced_correlation_datasets_list)
+  if (TRUE) {
+    output_dir <- "C:/Users/johan/VSCode_projects/bioinf_master/AssociationAnalysis/disgenet2r/runs/combined_corr_cv_pear_04_thres/spear_thres_05_up_to_500/DisGeNet_results/"
+    qvalue_cutoff <- 0.4
+    pvalue_cutoff <- 0.4
+    query_strings <- c("pulmo", "arter", "hypertension")    # Keywords to create filtered DisGeNET results
+    message(bold(cyan("\nRunning DisGeNET analysis")))
+    message(underline("Output directory:\n"), output_dir)
+    message(paste(underline("Querry strings: "), magenta(paste(query_strings, collapse = ", "))))
+    message(paste(underline("Q-value cutoff: "), magenta(qvalue_cutoff)))
+    message(paste(underline("P-value cutoff: "), magenta(pvalue_cutoff), "\n"))
+
+    DisGeNETresults <- run_digenet_analysis(reduced_correlation_datasets_list, output_dir = output_dir, qvalue_cutoff = qvalue_cutoff, pvalue_cutoff = pvalue_cutoff, query_strings = query_strings)
   }
 
   # Save the DisGeNET results df as csv
