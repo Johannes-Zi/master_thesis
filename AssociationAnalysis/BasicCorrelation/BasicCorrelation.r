@@ -172,7 +172,7 @@ perform_spearman_correlation <- function(output_path, clinical_metadata_rna_ids,
   # Extract clinical metadata column
   #
 
-  # Combine data nd create df with the handed over column of the clinical metadata and the RNA ids
+  # Combine data and create df with the handed over column of the clinical metadata and the RNA ids
   clinical_metadata_column_df <- data.frame(clinical_metadata_rna_ids, clinical_metadata_column)
 
   # Sort rows by patient ids
@@ -363,7 +363,7 @@ if (TRUE) {
   #'
   #' Create a list of genes which have a Pearson correlation above a defined threshold
   if (TRUE) {
-    thresx <- 0.6 # Defines the threshold for the outer cross validation threshold to filter out the gene models below the threshold
+    thresx <- 0.4 # Defines the threshold for the outer cross validation threshold to filter out the gene models below the threshold
     cat(paste(bold(cyan("\nApply elnet outer cross validation based pearson correlation filtering\n"))))
     cat(paste( "with threshold Pearson >=", red(thresx), "or <=", red(-thresx), "\n"))
     cat(paste("Number of unique genes represented in LeaveOneOutCV_performance: ", magenta(length(unique(LeaveOneOutCV_performance$gene_name)), "\n")))
