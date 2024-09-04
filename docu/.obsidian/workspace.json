@@ -4,41 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "1411da89ff77d2dc",
+        "id": "b3225ae3aa487736",
         "type": "tabs",
         "children": [
           {
-            "id": "d2fc4f7ed3589708",
+            "id": "2e4c27a6eb0898cc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Stichit workflow/Regression/Runs/Performance_Overview.txt.md",
+                "file": "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md",
                 "mode": "source",
                 "source": false
               }
             }
-          },
-          {
-            "id": "a2d79d90c7183aa6",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
-            }
-          },
-          {
-            "id": "406f004a40e1da54",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241637_p.png"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -116,6 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,6 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -153,7 +136,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md"
+              }
             }
           }
         ]
@@ -173,59 +158,58 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a2d79d90c7183aa6",
+  "active": "2e4c27a6eb0898cc",
   "lastOpenFiles": [
+    "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
+    "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md",
+    "AssociationAnalysis/DisGeNet2r",
+    "AssociationAnalysis/AssociationAnalysis.canvas",
+    "AssociationAnalysis/AssociationAnalysis.md",
+    "Stichit workflow/Segmentation/Segmentation.md",
+    "Future Ideas/ComparisonWithIHECDataset.md",
+    "Future Ideas/DownstreamAnalysis.md",
+    "Future Ideas/CorrelationAnalysis.md",
+    "LiteratureResearch/Disease/disease_xyz.md",
+    "LiteratureResearch/Genes/gene_XYZ.md",
+    "LiteratureResearch/clinical_parameters",
+    "LiteratureResearch/Publications/bilasCisregulatoryElementsUsed2016/@bilasCisregulatoryElementsUsed2016.md",
+    "LiteratureResearch/Mechanism/mechanism_xyz.md",
+    "LiteratureResearch/Publications/bilasCisregulatoryElementsUsed2016/Biłas et al. - 2016 - Cis-regulatory elements used to control gene expre.pdf",
+    "LiteratureResearch/Genes/gene_list.md",
+    "LiteratureResearch/Statement/geneXYZ_assotiated_with_diseaseXYZ.md",
+    "LiteratureResearch/Publications/bilasCisregulatoryElementsUsed2016/mod_Biłas et al. - 2016 - Cis-regulatory elements used to control gene expre .pdf",
+    "LiteratureResearch/Publications/bilasCisregulatoryElementsUsed2016",
+    "LiteratureResearch/Ideas.md",
+    "LiteratureResearch/Disease",
+    "LiteratureResearch/Genes.md",
+    "LiteratureResearch/Mechanism",
+    "LiteratureResearch/Genes",
+    "LiteratureResearch/Statement",
+    "LiteratureResearch/Zotero/ConfigStuff/template1_info.md",
+    "LiteratureResearch/Zotero/ConfigStuff/template1_metadata",
+    "LiteratureResearch/Zotero/ConfigStuff/template1.md",
+    "Stichit workflow/Preprocessing/Preprocessing.md",
+    "Stichit workflow/Regression/Runs/Performance_Overview.txt.md",
+    "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/RegFeaturesXnzero.md",
+    "Stichit workflow/StichitWorkflow.canvas",
+    "Stichit workflow/Regression/Performance Evaluation/NzeroXpearson/NzeroXpearson.md",
+    "Stichit workflow/Regression/Performance Evaluation/MSEValMulti/MSEValMulti.md",
     "Stichit workflow/Regression/Performance Evaluation/RegPerformanceEvaluation.md",
     "Stichit workflow/Regression/Performance Evaluation/PearsonValMulti/PearsonValMulti.md",
-    "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
     "Stichit workflow/Regression/Runs/26_patient_dataset/LeaveOneOutCV/RegLeaveOneOutCV.md",
-    "Stichit workflow/Regression/Runs/Performance_Overview.txt.md",
     "Stichit workflow/Regression/Performance Evaluation/NzeroXpearson/fig_06051540_p.png",
     "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241637_p.png",
     "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241637.md",
-    "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/RegFeaturesXnzero.md",
-    "AssociationAnalysis/AssociationAnalysis.md",
-    "AssociationAnalysis/AssociationAnalysis.canvas",
-    "AssociationAnalysis/BasicCorrelation",
-    "AssociationAnalysis",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/PredictedVsActualExpression.md",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/feature_coefficients_ENSG00000259056_10.txt.md",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/counts.matrix.norm.tsv_ENSG00000259056_10.txt.md",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/feature_coefficients_ENSG00000249092_10.txt.md",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/counts.matrix.norm.tsv_ENSG00000249092_10.txt.md",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/feature_coefficients_ENSG00000211788_10.txt.md",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/counts.matrix.norm.tsv_ENSG00000211788_10.txt.md",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/feature_coefficients_ENSG00000156232_10.txt.md",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/counts.matrix.norm.tsv_entry_ENSG00000156232_10.txt.md",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/feature_coefficients_ENSG00000125629_10.txt.md",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/counts.matrix.norm.tsv_ENSG00000125629_10.txt.md",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/segmentation_normalized_ENSG00000249092.tsv.md",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/segmentation_scaled_centered_ENSG00000249092.tsv.md",
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/pictures/Pasted image 20240523154413.png",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/segmentation_scaled_centered_ENSG00000211788.tsv.md",
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/pictures/Pasted image 20240523154251.png",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/segmentation_scaled_centered_ENSG00000156232.tsv.md",
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/pictures/Pasted image 20240523154143.png",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/segmentation_normalized_ENSG00000259056.tsv.md",
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/pictures/Pasted image 20240523154011.png",
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/pictures/Pasted image 20240523153947.png",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/segmentation_normalized_ENSG00000211788.tsv.md",
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/pictures/Pasted image 20240523153742.png",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/segmentation_scaled_centered_ENSG00000125629.tsv.md",
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/pictures/Pasted image 20240523153625.png",
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/pictures/Pasted image 20240523153429.png",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/segmentation_normalized_ENSG00000125629.tsv.md",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/pictures",
-    "feature_coefficients_ENSG00000125629_10.txt",
-    "Input data/PHClinicalData/RNASeq",
-    "Input data/PHClinicalData",
     "Untitled 1.canvas",
     "Untitled.canvas",
-    "Stichit workflow/StichitWorkflow.canvas",
-    "Stichit workflow/Regression/CollapsedSegmentation",
-    "Stichit workflow/Regression/Performance Evaluation/OnlyZeroCoeffOLS/OnlyZeroCoeffOLS_entries.csv",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression",
-    "Stichit workflow/Regression/Performance Evaluation/SpearmanXSpearmanVar_test",
     "Stichit workflow/Steps.canvas",
     "Regression/Untitled.canvas"
   ]

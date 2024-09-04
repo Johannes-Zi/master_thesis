@@ -1,0 +1,24 @@
+{
+  "database": "Zotero",
+  "noteImportFolder": "LiteratureResearch/ZoteroNotes/",
+  "pdfExportImageDPI": 120,
+  "pdfExportImageFormat": "jpg",
+  "pdfExportImageQuality": 90,
+  "citeFormats": [
+    {
+      "name": "Cite",
+      "format": "pandoc"
+    }
+  ],
+  "exportFormats": [
+    {
+      "name": "Create Literature Note",
+      "outputPathTemplate": "LiteratureResearch/Papers/@{{citekey}}.md",
+      "imageOutputPathTemplate": "LiteratureResearch/Zotero/ConfigStuff/template1_metadata/{{citekey}}/",
+      "imageBaseNameTemplate": "image"
+    }
+  ],
+  "citeSuggestTemplate": "[[{{citekey}}]]",
+  "openNoteAfterImport": false,
+  "whichNotesToOpenAfterImport": "first-imported-note"
+}

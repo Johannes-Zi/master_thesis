@@ -1,7 +1,7 @@
 {
   "collapse-filter": false,
   "search": "",
-  "showTags": false,
+  "showTags": true,
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
@@ -13,9 +13,23 @@
         "a": 1,
         "rgb": 12644285
       }
+    },
+    {
+      "query": "geneid",
+      "color": {
+        "a": 1,
+        "rgb": 6084202
+      }
+    },
+    {
+      "query": "disease",
+      "color": {
+        "a": 1,
+        "rgb": 14048372
+      }
     }
   ],
-  "collapse-display": true,
+  "collapse-display": false,
   "showArrow": false,
   "textFadeMultiplier": -0.9,
   "nodeSizeMultiplier": 1.02404844290657,
@@ -25,6 +39,6 @@
   "repelStrength": 17.2664359861592,
   "linkStrength": 0.932525951557093,
   "linkDistance": 172,
-  "scale": 0.5144767828010205,
-  "close": true
+  "scale": 1.0027984779008794,
+  "close": false
 }
