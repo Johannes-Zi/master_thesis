@@ -158,9 +158,51 @@ create_reduced_correlation_datasets <- function(correlation_results_list, correl
     # Filter out duplication in the gene column - retrieve unique gene ids
     reduced_correlation_results <- reduced_correlation_results[!duplicated(reduced_correlation_results$gene),]
 
+    # Filter out noncoding genes
+    if (TRUE) {
+      message(paste("Number of genes before filtering out noncoding genes: ", nrow(reduced_correlation_results)))
+      # Extract gene names
+      gene_names <- reduced_correlation_results$gene_id
+
+      translated_GENETYPE_ids <- suppressMessages(suppressWarnings(bitr(gene_names, fromType = "ENSEMBL", toType = "GENETYPE", OrgDb = "org.Hs.eg.db")))
+
+      # Merge the gene types with the reduced correlation results
+      reduced_correlation_results <- merge(reduced_correlation_results, translated_GENETYPE_ids, by.x = "gene_id", by.y = "ENSEMBL", all.x = TRUE)
+
+      # Filter out noncoding genes
+      reduced_correlation_results <- reduced_correlation_results[reduced_correlation_results$GENETYPE == "protein-coding",]
+
+      # Remove the GENETYPE column from the dataframe - Replaces by NA
+      reduced_correlation_results <- subset(reduced_correlation_results, select = -GENETYPE)  
+      # Throw out entries with NA in gene type column
+      reduced_correlation_results <- reduced_correlation_results[!is.na(reduced_correlation_results$gene_id),]
+      # Reset rownames
+      rownames(reduced_correlation_results) <- NULL
+
+      message(paste("Number of genes after filtering out noncoding genes: ",nrow(reduced_correlation_results)))
+    }
+
+    # Filter out coding-genes that cant be translated to NCBI gene names
+    if (TRUE) {
+      message(paste("Number of coding genes before filtering out genes that cant be tranlated to ENTRZID: ", nrow(reduced_correlation_results)))
+      # Extract gene names
+      gene_names <- reduced_correlation_results$gene_id
+
+      translated_ENTREZID_ids <- suppressMessages(suppressWarnings(bitr(gene_names, fromType = "ENSEMBL", toType = "ENTREZID", OrgDb = "org.Hs.eg.db")))
+
+      # Merge the gene types with the reduced correlation results
+      reduced_correlation_results <- merge(reduced_correlation_results, translated_ENTREZID_ids, by.x = "gene_id", by.y = "ENSEMBL", all.x = TRUE)
+
+      # Filter out genes with NA in the ENTRZID column
+      reduced_correlation_results <- reduced_correlation_results[!is.na(reduced_correlation_results$ENTREZID),]
+
+      # Remove the GENETYPE column from the dataframe
+      reduced_correlation_results <- subset(reduced_correlation_results, select = -ENTREZID)
+      message(paste("Number of coding genes before filtering out genes that cant be tranlated to ENTRZID: ",nrow(reduced_correlation_results)))
+    }
     # Create a reduced correlation df and use only up to the top n_top_correlations absolute correlations
     reduced_correlation_results <- head(reduced_correlation_results, n = min(nrow(reduced_correlation_results), n_top_correlations))
-    message(paste("Number of genes in the final set (unique + above threshold + max top n correlations): ",
+    message(paste("Number of genes in the final set (unique + above threshold + coding gene + max top n correlations): ",
                   nrow(reduced_correlation_results), "\n"))
 
     # Append reduced correlation results df to list
@@ -253,7 +295,7 @@ run_digenet_analysis <- function(reduced_correlation_datasets_list, output_dir, 
   clinical_parameters <- names(reduced_correlation_datasets_list)
 
   # Iterate over all clinical parameters
-  for (i in 1:4){ #length(reduced_correlation_datasets_list)) {
+  for (i in 1:length(reduced_correlation_datasets_list)) {
     # Current clinical parameter name
     clinical_parameter <- clinical_parameters[i]
     message(underline(clinical_parameter))
@@ -285,7 +327,7 @@ run_digenet_analysis <- function(reduced_correlation_datasets_list, output_dir, 
       message(paste("Failed to map ", failed_mappings, "gene names to NCBI gene names (", failed_mapping_percentage, "% )"))
       message(paste("Number of genes used for DisGeNet analysis (translated from ENSEMBL to ENTRZIDs): ", length(entrez_gene_names)))
 
-      # Group the ALIAS ids by ENSEMBL ids
+      # Group the ALIAS ids by ENSEMBL ids - collapse multiple Alias ids to one string entry
       translated_ALIAS_ids_grouped <- translated_ALIAS_ids %>%
         group_by(ENSEMBL) %>%
         summarise(ALIAS = paste(ALIAS, collapse = "/")) %>%
@@ -469,9 +511,9 @@ if (TRUE) {
 
   # Create reduced correlation datasets and save results as output
   if (TRUE) {
-    output_dir <- "C:/Users/johan/VSCode_projects/bioinf_master/AssociationAnalysis/disgenet2r/runs/combined_corr_cv_pear_04_thres/spear_thres_04_up_to_200/corr_based_gene_filtering/"
+    output_dir <- "C:/Users/johan/VSCode_projects/bioinf_master/AssociationAnalysis/disgenet2r/runs/combined_corr_cv_pear_04_thres/spear_thres_04_up_to_250/corr_based_gene_filtering/"
     correlation_threshold = 0.4  # Defines the correlation threshold to filter out low correlations
-    n_top_correlations = 200  # Defines the number of top correlations to be included in the reduced correlation datasets
+    n_top_correlations = 250  # Defines the number of top correlations to be included in the reduced correlation datasets
     message(bold(cyan("\nCreating reduced correlation datasets")))
     message(paste("Filtered out segments with correlation > ", magenta(correlation_threshold), "or <", magenta(-correlation_threshold)))
     message(paste("Included up to top", magenta(n_top_correlations), "correlations\n"))
@@ -481,7 +523,7 @@ if (TRUE) {
 
   # Run DisGeNET analysis
   if (TRUE) {
-    output_dir <- "C:/Users/johan/VSCode_projects/bioinf_master/AssociationAnalysis/disgenet2r/runs/combined_corr_cv_pear_04_thres/spear_thres_04_up_to_200/DisGeNet_results/"
+    output_dir <- "C:/Users/johan/VSCode_projects/bioinf_master/AssociationAnalysis/disgenet2r/runs/combined_corr_cv_pear_04_thres/spear_thres_04_up_to_250/DisGeNet_results/"
     qvalue_cutoff <- 0.4
     pvalue_cutoff <- 0.4
     query_strings <- c("pulmo", "arter", "hypertension")    # Keywords to create filtered DisGeNET results
@@ -496,6 +538,6 @@ if (TRUE) {
 
   # Save the DisGeNET results df as csv
   if (FALSE) {
-    write.csv(DisGeNETresults$combined_disgenet_results_df, "DisGeNETresults_0.4pqcutoff_uptotop225correlations.csv", row.names = FALSE)
+    #write.csv(DisGeNETresults$combined_disgenet_results_df, "DisGeNETresults_0.4pqcutoff_uptotop225correlations.csv", row.names = FALSE)
   }
 }

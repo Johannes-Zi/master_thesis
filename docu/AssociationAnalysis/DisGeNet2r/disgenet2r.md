@@ -18,7 +18,9 @@ The idea is to use the gene-set of the top correlating (potentially regulatory) 
 2.1 Filter out correlations below |corr| < 0.4
 2.2 Extract list of genes that are represented by the segments
 2.3 Extract genes that are represented by more than one segment
-2.4 Use top XXX genes (based on segment correlations) for DisGeNet
+2.4 Filter out non-coding genes
+2.5 Filter out genes that cant be translated from ENSEBL to ENTRZ ID
+2.5 Use ==top 250 genes== (based on segment correlations) for DisGeNet
 
 
 Output
@@ -40,7 +42,7 @@ Output
 
 ## 3. Run DisGeNet
 
-2.3 Filter out non-coding genes
+==The input gene list can contain multiple representations of the same gene, because there can be multiple ENTREZ ids for the same ENSEBL id - this is no problem because DisGeNet handles that. This is also the reason for less than 250 genes in the DisGeNet analysis==
 ##### Input filters
 
 # Output
