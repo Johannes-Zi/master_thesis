@@ -102,7 +102,7 @@ create_reduced_correlation_datasets <- function(correlation_results_list, correl
     message(paste(underline(clinical_parameter)))
     # Extract current correlation results
     correlation_results <- correlation_results_list[[clinical_parameter]]
-    message(paste("Number of correlation results: ", nrow(correlation_results)))
+    message(paste("Number of segmental correlations: ", nrow(correlation_results)))
 
     # Transform the correlation results into a df
     correlation_results <- as.data.frame(correlation_results)
@@ -115,7 +115,7 @@ create_reduced_correlation_datasets <- function(correlation_results_list, correl
                                                        correlation_threshold,]
 
     num_correlation_results_above_threshold <- nrow(reduced_correlation_results)
-    message(paste("Number of correlation results above threshold: ", num_correlation_results_above_threshold))
+    message(paste("Number of segmental correlations above threshold: ", num_correlation_results_above_threshold))
 
     # Sort the reduced correlation results by the absolute correlation
     reduced_correlation_results <- reduced_correlation_results[order(reduced_correlation_results$absolute_spearman_corr,
@@ -159,7 +159,7 @@ create_reduced_correlation_datasets <- function(correlation_results_list, correl
     reduced_correlation_results <- reduced_correlation_results[!duplicated(reduced_correlation_results$gene),]
 
     # Create a reduced correlation df and use only up to the top n_top_correlations absolute correlations
-    reduced_correlation_results <- head(reduced_correlation_results, n = min(nrow(reduced_correlation_results), 500))
+    reduced_correlation_results <- head(reduced_correlation_results, n = min(nrow(reduced_correlation_results), n_top_correlations))
     message(paste("Number of genes in the final set (unique + above threshold + max top n correlations): ",
                   nrow(reduced_correlation_results), "\n"))
 
@@ -203,7 +203,7 @@ create_reduced_correlation_datasets <- function(correlation_results_list, correl
   gene_counts_output_path <- file.path(output_dir, "number_of_segments_per_gene_across_all_params.csv")
   write.csv(data.frame(gene = names(gene_counts), count = as.numeric(gene_counts)), gene_counts_output_path, 
                        row.names = FALSE)
-  # Create a ggplot histogram plot with the gene counts
+  # Creates a ggplot histogram plot with the gene counts
   ggplot(data = data.frame(gene = names(gene_counts), count = as.numeric(gene_counts)), aes(x = count)) +
     geom_histogram(binwidth = 1) +
     xlab("Number of gene specific segments across all clinical parameters") +
@@ -213,29 +213,29 @@ create_reduced_correlation_datasets <- function(correlation_results_list, correl
   # Save the plot as a svg file using file.path
   ggsave(file.path(output_dir, "segments_per_gene_across_all_params.svg"))
   
-  # Create a ggplot histogram plot with number of genes above threshold for each clinical parameter
+  # Creates a ggplot histogram plot with number of genes above threshold for each clinical parameter
   ggplot(filter_df, aes(x = clinical_parameter, y = num_correlation_results_above_threshold)) +
     geom_bar(stat = "identity") +
     xlab("Clinical parameter") +
     ylab("Number of genes above the correlation threshold") +
     theme(axis.text.x = element_text(angle = 50, hjust = 1)) 
-  # Create the output path for the plot
+  # Creates the output path for the plot
   plot_output_path <- file.path(output_dir, "num_genes_above_threshold_per_clinical_parameter.svg")
   # Save the plot as a svg file based on the parameter_otput_dir
   ggsave(plot_output_path)
 
-  # Create a ggplot histogram plot with number of genes represented by more than one segment for each clinical parameter
+  # Creates a ggplot histogram plot with number of genes represented by more than one segment for each clinical parameter
   ggplot(filter_df, aes(x = clinical_parameter, y = num_genes_more_than_one_segment)) +
     geom_bar(stat = "identity") +
     xlab("Clinical parameter") +
     ylab("Number of genes represented by more than one segment") +
     theme(axis.text.x = element_text(angle = 50, hjust = 1))
-  # Create the output path for the plot
+  # Creates the output path for the plot
   plot_output_path <- file.path(output_dir, "num_genes_more_than_one_segment_per_clinical_parameter.svg")
   # Save the plot as a svg file based on the parameter_otput_dir
   ggsave(plot_output_path)
 
-  # Return list with reduced correlation datasets
+  # Returns list with reduced correlation datasets
   return(reduced_correlation_dfs_list)
 }
 
@@ -253,7 +253,7 @@ run_digenet_analysis <- function(reduced_correlation_datasets_list, output_dir, 
   clinical_parameters <- names(reduced_correlation_datasets_list)
 
   # Iterate over all clinical parameters
-  for (i in 1:length(reduced_correlation_datasets_list)) {
+  for (i in 1:4){ #length(reduced_correlation_datasets_list)) {
     # Current clinical parameter name
     clinical_parameter <- clinical_parameters[i]
     message(underline(clinical_parameter))
@@ -276,6 +276,7 @@ run_digenet_analysis <- function(reduced_correlation_datasets_list, output_dir, 
       translated_ALIAS_ids <- suppressMessages(suppressWarnings(bitr(gene_names, fromType = "ENSEMBL", toType = "ALIAS", OrgDb = "org.Hs.eg.db")))
       translated_GENENAME_ids <- suppressMessages(suppressWarnings(bitr(gene_names, fromType = "ENSEMBL", toType = "GENENAME", OrgDb = "org.Hs.eg.db")))
       translated_SYMBOL_ids <- suppressMessages(suppressWarnings(bitr(gene_names, fromType = "ENSEMBL", toType = "SYMBOL", OrgDb = "org.Hs.eg.db")))
+      translated_GENETYPE_ids <- suppressMessages(suppressWarnings(bitr(gene_names, fromType = "ENSEMBL", toType = "GENETYPE", OrgDb = "org.Hs.eg.db")))
 
       # Calculate failed mapping rate
       entrez_gene_names <- translated_ENTREZ_ids$ENTREZID
@@ -301,6 +302,7 @@ run_digenet_analysis <- function(reduced_correlation_datasets_list, output_dir, 
       input_genes_metadata_df <- merge(input_genes_metadata_df, translated_ALIAS_ids_grouped, by.x = "ENSEMBL", by.y = "ENSEMBL", all.x = TRUE)
       input_genes_metadata_df <- merge(input_genes_metadata_df, translated_GENENAME_ids, by.x = "ENSEMBL", by.y = "ENSEMBL", all.x = TRUE)
       input_genes_metadata_df <- merge(input_genes_metadata_df, translated_SYMBOL_ids, by.x = "ENSEMBL", by.y = "ENSEMBL", all.x = TRUE)
+      input_genes_metadata_df <- merge(input_genes_metadata_df, translated_GENETYPE_ids, by.x = "ENSEMBL", by.y = "ENSEMBL", all.x = TRUE)
 
       # Merge in the information of the input reduced correlation results
       input_genes_metadata_df <- merge(input_genes_metadata_df, reduced_correlation_results, by.x = "ENSEMBL", by.y = "gene_id", all.x = TRUE)
@@ -467,11 +469,11 @@ if (TRUE) {
 
   # Create reduced correlation datasets and save results as output
   if (TRUE) {
-    output_dir <- "C:/Users/johan/VSCode_projects/bioinf_master/AssociationAnalysis/disgenet2r/runs/combined_corr_cv_pear_04_thres/spear_thres_05_up_to_500/corr_based_gene_filtering/"
-    correlation_threshold = 0.5  # Defines the correlation threshold to filter out low correlations
-    n_top_correlations = 500  # Defines the number of top correlations to be included in the reduced correlation datasets
+    output_dir <- "C:/Users/johan/VSCode_projects/bioinf_master/AssociationAnalysis/disgenet2r/runs/combined_corr_cv_pear_04_thres/spear_thres_04_up_to_200/corr_based_gene_filtering/"
+    correlation_threshold = 0.4  # Defines the correlation threshold to filter out low correlations
+    n_top_correlations = 200  # Defines the number of top correlations to be included in the reduced correlation datasets
     message(bold(cyan("\nCreating reduced correlation datasets")))
-    message(paste("Filtered out genes with correlation > ", magenta(correlation_threshold), "or <", magenta(-correlation_threshold)))
+    message(paste("Filtered out segments with correlation > ", magenta(correlation_threshold), "or <", magenta(-correlation_threshold)))
     message(paste("Included up to top", magenta(n_top_correlations), "correlations\n"))
     reduced_correlation_datasets_list <- create_reduced_correlation_datasets(correlation_results_list, 
     correlation_threshold = correlation_threshold , n_top_correlations = n_top_correlations, output_dir = output_dir)
@@ -479,7 +481,7 @@ if (TRUE) {
 
   # Run DisGeNET analysis
   if (TRUE) {
-    output_dir <- "C:/Users/johan/VSCode_projects/bioinf_master/AssociationAnalysis/disgenet2r/runs/combined_corr_cv_pear_04_thres/spear_thres_05_up_to_500/DisGeNet_results/"
+    output_dir <- "C:/Users/johan/VSCode_projects/bioinf_master/AssociationAnalysis/disgenet2r/runs/combined_corr_cv_pear_04_thres/spear_thres_04_up_to_200/DisGeNet_results/"
     qvalue_cutoff <- 0.4
     pvalue_cutoff <- 0.4
     query_strings <- c("pulmo", "arter", "hypertension")    # Keywords to create filtered DisGeNET results

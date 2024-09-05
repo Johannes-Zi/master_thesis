@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md",
+                "file": "AssociationAnalysis/DisGeNet2r/disgenet2r.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md",
+                "file": "AssociationAnalysis/DisGeNet2r/disgenet2r.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md",
+                "file": "AssociationAnalysis/DisGeNet2r/disgenet2r.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md"
+                "file": "AssociationAnalysis/DisGeNet2r/disgenet2r.md"
               }
             }
           }
@@ -160,8 +160,9 @@
   },
   "active": "2e4c27a6eb0898cc",
   "lastOpenFiles": [
-    "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
     "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md",
+    "AssociationAnalysis/DisGeNet2r/disgenet2r.md",
+    "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
     "AssociationAnalysis/DisGeNet2r",
     "AssociationAnalysis/AssociationAnalysis.canvas",
     "AssociationAnalysis/AssociationAnalysis.md",
