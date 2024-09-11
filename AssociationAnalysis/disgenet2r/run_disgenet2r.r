@@ -537,7 +537,7 @@ if (TRUE) {
   }
 
   # Save the DisGeNET results df as csv
-  if (FALSE) {
-    #write.csv(DisGeNETresults$combined_disgenet_results_df, "DisGeNETresults_0.4pqcutoff_uptotop225correlations.csv", row.names = FALSE)
+  if (TRUE) {
+    write.csv(DisGeNETresults$combined_disgenet_results_df, "DisGeNETresults_0.4pqcutoff_uptotop250correlations_latest_version.csv", row.names = FALSE)
   }
 }
