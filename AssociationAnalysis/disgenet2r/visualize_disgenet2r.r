@@ -9,8 +9,8 @@ convert_ratio_to_numeric <- function(ratio) {
 }
 
 # Load the DisGeNET results df from csv
-disgenet_output_df_path <- "C:/Users/johan/VSCode_projects/bioinf_master/AssociationAnalysis/disgenet2r/runs/combined_corr_cv_pear_04_thres/spear_thres_04_up_to_250/DisGeNet_results/DisGeNETresults_0.4pqcutoff_uptotop250correlations_latest_version.csv"
-combined_disgenet_results_df <- read.csv(disgenet_output_df_path, header = TRUE, sep = ",", stringsAsFactors = FALSE)
+#disgenet_output_df_path <- "C:/Users/johan/VSCode_projects/bioinf_master/AssociationAnalysis/disgenet2r/runs/combined_corr_cv_pear_04_thres/spear_thres_04_up_to_250/DisGeNet_results/DisGeNETresults_0.4pqcutoff_uptotop250correlations_latest_version.csv"
+combined_disgenet_results_df <- read.csv("DisGeNETresults_0.2pqcutoff_uptotop100correlations.csv", header = TRUE, sep = ",", stringsAsFactors = FALSE)
 # Convert ratio columns to numeric
 combined_disgenet_results_df$GeneRatio <- convert_ratio_to_numeric(combined_disgenet_results_df$GeneRatio)
 str(combined_disgenet_results_df)
@@ -99,7 +99,6 @@ combined_disgenet_results_df_merged_2_filtered <- combined_disgenet_results_df_m
 # print(nrow(combined_disgenet_results_df_merged_2))
 
 library(ggplot2)
-
 # Create the plot
 ggplot(combined_disgenet_results_df_merged_1_filtered, aes(x = Cluster, y = Description)) +
   geom_point(aes(size = GeneRatio, color = p.adjust)) +
@@ -110,6 +109,5 @@ ggplot(combined_disgenet_results_df_merged_1_filtered, aes(x = Cluster, y = Desc
        x = "Cluster", y = "Disease") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
-
 # Save the plot
-#ggsave("disgenet_results_filtered.png", width = 10, height = 10)
+ggsave("disgenet_results_filtered.png", width = 10, height = 10)

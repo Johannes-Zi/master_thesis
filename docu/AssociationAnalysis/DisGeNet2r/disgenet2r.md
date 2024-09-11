@@ -2,6 +2,8 @@
 
 # Idea
 The idea is to use the gene-set of the top correlating (potentially regulatory) segments (ATAC vs clinical parameters), to determine if in there are subset of genes that are associated with specific disease and over represented in the geneset.
+#### Comment to data interpretation / Reminder
+==for many genes there are several segments that show correlations, these should all be considered, for this look into the data of the filter step before DisGeNet==
 # Input
 ```
 	# Import clinical metadata and extract column names
@@ -82,9 +84,11 @@ C:\Users\johan\VSCode_projects\bioinf_master\AssociationAnalysis\disgenet2r\runs
 # Runlog
 ```
 # Logfile location
-"C:\Users\johan\OneDrive\dateien_cloud\Master\Semester_4\Masterarbeit\data\pulmanory_hypertension\disgenet_data\spear_thres_04_up_to_250\run_disgenet2r.r_runlog_091124.log"
+"C:\Users\johan\OneDrive\dateien_cloud\Master\Semester_4\Masterarbeit\data\pulmanory_hypertension\disgenet_data\spear_thres_04_up_to_250\run_disgenet2r.r_runlog_091124.log".
 
 C:\Users\johan\VSCode_projects\bioinf_master\AssociationAnalysis\disgenet2r\runs\combined_corr_cv_pear_04_thres\spear_thres_04_up_to_250\run_disgenet2r.r_runlog_091124.log
 ```
 
 # Visualization
+
+The current visualization module visualize_disgenet2r.r wasn't used for this run because the information content ist useful at all and should be replaced by a clusterprofiler analysis to create interpretable results.

@@ -1,2 +1,13 @@
 # Ignore the specified directory
-bioinf_master/AssociationAnalysis/BasicCorrelation/combined_corr_cv_pear_04_thres/
+AssociationAnalysis/BasicCorrelation/combined_corr_cv_pear_04_thres/
+AssociationAnalysis/BasicCorrelation/combined_corr_cv_pear_06_thres/
+AssociationAnalysis/BasicCorrelation/combined_corr_cv_pear_07_thres/
+AssociationAnalysis/BasicCorrelation/combined_corr_no_filtering/
+
+AssociationAnalysis/disgenet2r/runs/
+
+.gitignore
+DisGeNETresults_0.4pqcutoff_uptotop250correlations.csv
+DisGeNETresults_0.4pqcutoff_uptotop225correlations.csv
+DisGeNETresults_0.2pqcutoff_uptotop100correlations.csv
+DisGeNETresults_0.2pqcutoff_uptotop50correlations.csv
