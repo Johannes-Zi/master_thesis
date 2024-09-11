@@ -3,15 +3,14 @@ library(clusterProfiler)
 library(ggplot2)
 
 
-
-
 # Function to convert ratio character to numeric
 convert_ratio_to_numeric <- function(ratio) {
   sapply(strsplit(ratio, "/"), function(x) as.numeric(x[1]) / as.numeric(x[2]))
 }
 
 # Load the DisGeNET results df from csv
-combined_disgenet_results_df <- read.csv("DisGeNETresults_0.4pqcutoff_uptotop225correlations.csv", header = TRUE, sep = ",", stringsAsFactors = FALSE)
+disgenet_output_df_path <- "C:/Users/johan/VSCode_projects/bioinf_master/AssociationAnalysis/disgenet2r/runs/combined_corr_cv_pear_04_thres/spear_thres_04_up_to_250/DisGeNet_results/DisGeNETresults_0.4pqcutoff_uptotop250correlations_latest_version.csv"
+combined_disgenet_results_df <- read.csv(disgenet_output_df_path, header = TRUE, sep = ",", stringsAsFactors = FALSE)
 # Convert ratio columns to numeric
 combined_disgenet_results_df$GeneRatio <- convert_ratio_to_numeric(combined_disgenet_results_df$GeneRatio)
 str(combined_disgenet_results_df)
@@ -111,3 +110,6 @@ ggplot(combined_disgenet_results_df_merged_1_filtered, aes(x = Cluster, y = Desc
        x = "Cluster", y = "Disease") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
+
+# Save the plot
+#ggsave("disgenet_results_filtered.png", width = 10, height = 10)
