@@ -285,11 +285,11 @@ create_reduced_correlation_datasets <- function(correlation_results_list, correl
 #'  Run GoEnrichment analysis for each clinical parameter
 run_digenet_analysis <- function(reduced_correlation_datasets_list, output_dir, qvalue_cutoff, pvalue_cutoff, 
                                  query_strings){
-  # Initialize list to store DisGeNET results
-  disgenet_results_list <- list()
+  # Initialize list to store GoEnrich results
+  GoEnrich_results_list <- list()
 
-  # Initialize empty df to  store combined DisGeNET results
-  combined_disgenet_results_df <- data.frame()
+  # Initialize empty df to  store combined GoEnrich results
+  combined_GoEnrich_results_df <- data.frame()
 
   # Extract clinical parameters
   clinical_parameters <- names(reduced_correlation_datasets_list)
@@ -300,7 +300,7 @@ run_digenet_analysis <- function(reduced_correlation_datasets_list, output_dir, 
     clinical_parameter <- clinical_parameters[i]
     message(underline(clinical_parameter))
 
-    # Create output directory for parameter specific DisGeNET results
+    # Create output directory for parameter specific GoEnrich results
     parameter_otput_dir <- file.path(output_dir, clinical_parameter)
     dir.create(parameter_otput_dir, recursive = TRUE, showWarnings = FALSE)
 
@@ -325,7 +325,7 @@ run_digenet_analysis <- function(reduced_correlation_datasets_list, output_dir, 
       failed_mappings <- length(gene_names) - length(entrez_gene_names)
       failed_mapping_percentage <- (failed_mappings / length(gene_names)) * 100
       message(paste("Failed to map ", failed_mappings, "gene names to NCBI gene names (", failed_mapping_percentage, "% )"))
-      message(paste("Number of genes used for DisGeNet analysis (translated from ENSEMBL to ENTRZIDs): ", length(entrez_gene_names)))
+      message(paste("Number of genes used for GoEnrich analysis (translated from ENSEMBL to ENTRZIDs): ", length(entrez_gene_names)))
 
       # Group the ALIAS ids by ENSEMBL ids - collapse multiple Alias ids to one string entry
       translated_ALIAS_ids_grouped <- translated_ALIAS_ids %>%
@@ -334,7 +334,7 @@ run_digenet_analysis <- function(reduced_correlation_datasets_list, output_dir, 
         ungroup()
     }
 
-    # Gather metadata of DisGeNET input and save as csv
+    # Gather metadata of GoEnrich input and save as csv
     if (TRUE) {
       # Merge the metadata with the translated gene ids to a df based on the gene names
       # Create a data frame with all gene_names
@@ -369,98 +369,48 @@ run_digenet_analysis <- function(reduced_correlation_datasets_list, output_dir, 
       input_genes_metadata_df <- input_genes_metadata_df[, cols]
 
       # Save the metadata df as a csv file using file.path
-      gene_names_output_path <- file.path(parameter_otput_dir, paste0(clinical_parameter, "_DisGeNet_input_genes_metadata.csv"))
+      gene_names_output_path <- file.path(parameter_otput_dir, paste0(clinical_parameter, "_GoEnrich_input_genes_metadata.csv"))
       write.csv(input_genes_metadata_df, gene_names_output_path, row.names = FALSE)
     }
 
-    # Run DisGeNET analysis
+    # Run GoEnrich analysis
     if (TRUE) {
-      # Run DisGeNET analysis
-      current_results <- enrichDGN(gene = entrez_gene_names, qvalueCutoff  = qvalue_cutoff, pvalueCutoff  = pvalue_cutoff)
-      #       pAdjustMethod = "BH",
-      #       minGSSize     = 5,
-      #       maxGSSize     = 500,
-      #       readable      = FALSE)
+      # Run GoEnrich analysis
+      current_results <- enrichGO(gene = entrez_gene_names, OrgDb = org.Hs.eg.db, pvalueCutoff = pvalue_cutoff, qvalueCutoff = qvalue_cutoff)
 
-      message("DisGeNET result insight:")
+      message("GoEnrich result insight:")
       print(current_results)
       flush.console()
 
-      # Jump to next loop iteration
-      next
-
-      # Append DisGeNET results to list
-      disgenet_results_list[[clinical_parameter]] <- current_results
+      # Append GoEnrich results to list
+      GoEnrich_results_list[[clinical_parameter]] <- current_results
 
       # Extract result df
       current_result_df <- current_results@result
     }
 
-    # Export unfiltered DisGeNET results as csv file
-    if (FALSE) {
-      # Chnage the rowname geneID to ENTREZID
+    # Export unfiltered GoEnrich results as csv file
+    if (TRUE) {
+      # Change the rowname ID to GOid
       current_result_df <- current_result_df %>% 
         rename(
-          ENTREZID = geneID,
-          DisGeNET_GeneRatio = GeneRatio,
-          DisGeNEt_Count = Count,
-          DisGeNet_pvalue = pvalue,
-          DisGeNet_qvalue = qvalue,
-          DisGeNet_p.adjust = p.adjust,
-          DisGeNet_BgRatio = BgRatio
+          GO_id = ID,
+          GO_descreption = Description,
+          GO_GeneRatio = GeneRatio,
+          GO_BgRatio = BgRatio,
+          GO_pvalue = pvalue,
+          GO_p.adjust = p.adjust,
+          GO_qvalue = qvalue,
+          ENTREZIDs = geneID,
+          GO_count = Count
         )
 
-      # Save DisGeNET results as a csv file using file.path
-      disgenet_output_path <- file.path(parameter_otput_dir, paste0(clinical_parameter, "_DisGeNet_results.csv"))
-      write.csv(current_result_df, disgenet_output_path, row.names = FALSE)	
+      # Save GoEnrich results as a csv file using file.path
+      GoEnrich_output_path <- file.path(parameter_otput_dir, paste0(clinical_parameter, "_GO_enrichment_results.csv"))
+      write.csv(current_result_df, GoEnrich_output_path, row.names = FALSE)	
     }
 
-    # Filter out potentially interesting DisGeNet results and save as csv
-    if (TRUE) {
-      # Create refined DisGeNET results df with the row which have strings from a predifined list in their Description column
-      # Create a logical matrix (one column per query) with TRUE for each row which contains one of the search strings in the Description column
-      search_results <- sapply(query_strings, function(query_strings) {
-        grepl(query_strings, current_result_df$Description, ignore.case = TRUE)
-      })
-      # Combine the logical columns with an OR condition
-      combined_search_results <- apply(search_results, 1, function(row) {
-        any(row)
-      })
-      # Extract the rows which contain one of the search strings in the Description column
-      filtered_disgenet_results_df <- current_result_df[combined_search_results,]
-
-      # Save the filtered DisGeNET results as a csv file using file.path
-      refined_disgenet_output_path <- file.path(parameter_otput_dir, paste0(clinical_parameter, "_filtered_DisGeNet_results.csv"))
-      write.csv(filtered_disgenet_results_df, refined_disgenet_output_path, row.names = FALSE)
-    }
-
-    # Determine gene abundacies in the filtered DisGeNET results
-    if (TRUE) {
-      # Split the ENTREZID column on '/'
-      split_ids <- strsplit(as.character(filtered_disgenet_results_df$ENTREZID), "/")
-
-      # Create a single vector of all ids
-      all_ids <- unlist(split_ids)
-
-      # Count id occurrencies
-      id_counts <- table(all_ids)
-
-      # Store in df
-      df_counts <- as.data.frame(id_counts, stringsAsFactors = FALSE)
-      names(df_counts) <- c("ENTREZID", "DisGeNet.results.id.abundance.count")
-
-      # Add additional gene metadata to the results
-      df_counts <- merge(df_counts, input_genes_metadata_df, by.x = "ENTREZID", by.y = "ENTREZID", all.x = TRUE)
-      
-      # Sort the df by the abundance count
-      df_counts <- df_counts[order(df_counts$DisGeNet.results.id.abundance.count, decreasing = TRUE),]
-
-      # Save the gene abundancies as a csv file using file.path
-      gene_abundancies_output_path <- file.path(parameter_otput_dir, paste0(clinical_parameter, "_filtered_DisGeNet_results_gene_abundancies.csv"))
-      write.csv(df_counts, gene_abundancies_output_path, row.names = FALSE)
-    }
-
-    # Append DisGeNET results to combined results df
+    # Append GoEnrich results to combined results df
     if (TRUE) {
       # Remove rownames and use standard rownames
       rownames(current_result_df) <- NULL
@@ -471,13 +421,13 @@ run_digenet_analysis <- function(reduced_correlation_datasets_list, output_dir, 
       # Move cluster column to first position
       current_result_df <- current_result_df[,c(ncol(current_result_df), 1:(ncol(current_result_df)-1))]
 
-      # Append DisGeNET result df to combined df
-      combined_disgenet_results_df <- rbind(combined_disgenet_results_df, current_result_df)
+      # Append GoEnrich result df to combined df
+      combined_GoEnrich_results_df <- rbind(combined_GoEnrich_results_df, current_result_df)
     }
   }
 
-  # Return list with DisGeNET results
-  return(list(disgenet_results_list = disgenet_results_list, combined_disgenet_results_df = combined_disgenet_results_df))
+  # Return list with GoEnrich results
+  return(list(GoEnrich_results_list = GoEnrich_results_list, combined_GoEnrich_results_df = combined_GoEnrich_results_df))
 }
 
 
@@ -524,23 +474,23 @@ if (TRUE) {
     correlation_threshold = correlation_threshold , n_top_correlations = n_top_correlations, output_dir = output_dir)
   }
 
-  # Run DisGeNET analysis
+  # Run GoEnrich analysis
   if (TRUE) {
-    output_dir <- "C:/Users/johan/VSCode_projects/bioinf_master/AssociationAnalysis/disgenet2r/runs/combined_corr_cv_pear_04_thres/spear_thres_04_up_to_250/DisGeNet_results/"
-    qvalue_cutoff <- 0.4
-    pvalue_cutoff <- 0.4
-    query_strings <- c("pulmo", "arter", "hypertension")    # Keywords to create filtered DisGeNET results
-    message(bold(cyan("\nRunning DisGeNET analysis")))
+    output_dir <- "C:/Users/johan/VSCode_projects/bioinf_master/AssociationAnalysis/GoEnrich/runs/spear_thres_04_up_to_250/GoEnrich_results/"
+    qvalue_cutoff <- 0.6
+    pvalue_cutoff <- 0.6
+    query_strings <- c("pulmo", "arter", "hypertension")    # Keywords to create filtered GoEnrich results
+    message(bold(cyan("\nRunning GoEnrich analysis")))
     message(underline("Output directory:\n"), output_dir)
     message(paste(underline("Querry strings: "), magenta(paste(query_strings, collapse = ", "))))
     message(paste(underline("Q-value cutoff: "), magenta(qvalue_cutoff)))
     message(paste(underline("P-value cutoff: "), magenta(pvalue_cutoff), "\n"))
 
-    DisGeNETresults <- run_digenet_analysis(reduced_correlation_datasets_list, output_dir = output_dir, qvalue_cutoff = qvalue_cutoff, pvalue_cutoff = pvalue_cutoff, query_strings = query_strings)
+    GoEnrichresults <- run_digenet_analysis(reduced_correlation_datasets_list, output_dir = output_dir, qvalue_cutoff = qvalue_cutoff, pvalue_cutoff = pvalue_cutoff, query_strings = query_strings)
   }
 
-  # Save the DisGeNET results df as csv
-  if (TRUE) {
-    write.csv(DisGeNETresults$combined_disgenet_results_df, "DisGeNETresults_0.4pqcutoff_uptotop250correlations_latest_version.csv", row.names = FALSE)
+  # Save the GoEnrich results df as csv
+  if (TRUE) {	
+    write.csv(GoEnrichresults$combined_GoEnrich_results_df, "GoEnrichresults_0.4pqcutoff_uptotop250correlations_latest_version.csv", row.names = FALSE)
   }
 }

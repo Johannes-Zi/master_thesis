@@ -1,13 +1,17 @@
-# Ignore the specified directory
+# Ignore the correlations
 AssociationAnalysis/BasicCorrelation/combined_corr_cv_pear_04_thres/
 AssociationAnalysis/BasicCorrelation/combined_corr_cv_pear_06_thres/
 AssociationAnalysis/BasicCorrelation/combined_corr_cv_pear_07_thres/
 AssociationAnalysis/BasicCorrelation/combined_corr_no_filtering/
 
+# Ignore disgenet2r results
 AssociationAnalysis/disgenet2r/runs/
-
 .gitignore
 DisGeNETresults_0.4pqcutoff_uptotop250correlations.csv
 DisGeNETresults_0.4pqcutoff_uptotop225correlations.csv
 DisGeNETresults_0.2pqcutoff_uptotop100correlations.csv
 DisGeNETresults_0.2pqcutoff_uptotop50correlations.csv
+DisGeNETresults_0.4pqcutoff_uptotop250correlations_latest_version.csv
+
+# Ignore the GoEnrich results
+AssociationAnalysis/GoEnrich/runs/
