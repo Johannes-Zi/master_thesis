@@ -4,7 +4,7 @@
 The idea is to use the gene-set of the top correlating (potentially regulatory) segments (ATAC vs clinical parameters), to determine if in there are subset of genes that are associated with specific disease and over represented in the geneset.
 #### Comment to data interpretation / Reminder
 ==for many genes there are several segments that show correlations, these should all be considered, for this look into the data of the filter step before DisGeNet==
-# Input
+# Input Data
 ```
 	# Import clinical metadata and extract column names
 	clinical_metadata_path <- "C:/Users/johan/OneDrive/dateien_cloud/Master/Semester_4/Masterarbeit/data/pulmanory_hypertension/clinical_data/version_26.05.24/isolated_metadata.csv"
@@ -14,7 +14,7 @@ The idea is to use the gene-set of the top correlating (potentially regulatory) 
 * Import clinical metadata to extract he column names
 * Import clinical parameter specific segmental correlations
 ## 2. Filter Correlations / transform to genes
-2.1 Filter out correlations below |corr| < 0.4
+2.1 Filter out correlations below ==|corr| < 0.4==
 2.2 Extract list of genes that are represented by the segments
 2.3 Extract genes that are represented by more than one segment
 2.4 Filter out non-coding genes
@@ -46,16 +46,15 @@ Output
 
 #### Workflow
 1. The gene names are translated from ENSEBL to NCBI ENRZ IDS to fit as DisGeNet input
-2. Additional information is collected for Each gene (Alias, gene name, gene type, etc.)
+2. Additional information is collected for each gene (Alias, gene name, gene type, etc.)
 3. The rate of failed mappings is calculated (now always zero because previous filter kick out exceptions)
 4. Run DisGeNet - ==p and q value cutoff of 0.4 (because of much noise and small input gene set)==
-5. Save whole DisGeNet results for clinical parameter
+5. Save whole DisGeNet results for each clinical parameter
 6. Extract result entries which contain the ==substrings "pulmo", "arter" or "hypertension"== and save them as separate output (potentially associated disease)
 7. Count for each gene that occurs in the potentially associated disease  how often they are assigned to a disease and save those gene list as output 
 # Output
 #### General output directories
 ```
-# General output directories
 # Inside VSC
 
 C:\Users\johan\VSCode_projects\bioinf_master\AssociationAnalysis\disgenet2r\runs\combined_corr_cv_pear_04_thres\spear_thres_04_up_to_250\DisGeNet_results/
@@ -65,10 +64,10 @@ C:\Users\johan\VSCode_projects\bioinf_master\AssociationAnalysis\disgenet2r\runs
 ```
 #### Parameter specific output
 ```
-# Input used for DisGeNet run
+# Input geneset with metadata used for DisGeNet run
 <clinical_parameter>_DisGeNet_input_genes_metadata.csv
 
-# All DisGeNet results
+# All DisGeNet results for this clinical parameter
 <clinical_parameter>_DisGeNet_results.csv
 
 # Filtered DisGeNet results that are disease that might be assotiated to pulmanory hypertension
