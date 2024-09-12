@@ -386,6 +386,9 @@ run_digenet_analysis <- function(reduced_correlation_datasets_list, output_dir, 
       print(current_results)
       flush.console()
 
+      # Jump to next loop iteration
+      next
+
       # Append DisGeNET results to list
       disgenet_results_list[[clinical_parameter]] <- current_results
 
@@ -394,7 +397,7 @@ run_digenet_analysis <- function(reduced_correlation_datasets_list, output_dir, 
     }
 
     # Export unfiltered DisGeNET results as csv file
-    if (TRUE) {
+    if (FALSE) {
       # Chnage the rowname geneID to ENTREZID
       current_result_df <- current_result_df %>% 
         rename(
@@ -511,7 +514,7 @@ if (TRUE) {
 
   # Create reduced correlation datasets and save results as output
   if (TRUE) {
-    output_dir <- "C:/Users/johan/VSCode_projects/bioinf_master/AssociationAnalysis/disgenet2r/runs/combined_corr_cv_pear_04_thres/spear_thres_04_up_to_250/corr_based_gene_filtering/"
+    output_dir <- "C:/Users/johan/VSCode_projects/bioinf_master/AssociationAnalysis/GoEnrich/runs/spear_thres_04_up_to_250/corr_based_gene_filtering/"
     correlation_threshold = 0.4  # Defines the correlation threshold to filter out low correlations
     n_top_correlations = 250  # Defines the number of top correlations to be included in the reduced correlation datasets
     message(bold(cyan("\nCreating reduced correlation datasets")))
