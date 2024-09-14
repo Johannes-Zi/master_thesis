@@ -3,34 +3,6 @@ library(ggplot2)
 library(crayon)
 library(dplyr)
 
-if (FALSE){
-  # To be ignored
-  # create_new_library <- function() {
-  # new_library_path <- "C:/Users/johan/Desktop/local_master_thesis_data/temp_library/"
-  # dir.create(new_library_path, recursive = TRUE)
-
-  # # Add to PATH
-  # .libPaths(c(new_library_path, .libPaths()))
-
-  # if (!require("BiocManager", quietly = TRUE))
-  #     install.packages("BiocManager", lib = new_library_path)
-
-  # BiocManager::install("qvalue", lib = new_library_path, force = TRUE)
-  # }
-  #create_new_library()
-
-
-  # Create new library
-
-  #if (!require("BiocManager", quietly = TRUE))
-  #    install.packages("BiocManager")
-
-  #BiocManager::install("qvalue")
-
-  #install.packages("devtools")
-  #library("devtools")
-  #install_github("jdstorey/qvalue")
-}
 
 #'
 #' Import clinical metadata
@@ -75,12 +47,31 @@ reduced_clinical_metadata <- function(clinical_metadata, patient_ids) {
 
   # Reset rownames
   rownames(reduced_clinical_metadata) <- 1:nrow(reduced_clinical_metadata)
-
+  
+  #
+  # Extract patient ids and disease type here and return it as additional output
+  #
+  
   return(reduced_clinical_metadata)
 }
 
+
+
 #'
-#' Create df with  spearman correlation across all elnet segments and the handed over clinical metadata column
+#' Load ENSEBL gene ids of top correlations between clinical parameteres and segmental ATAC valeus for all clinical 
+#' parameters.
+load_filtered_correlations_gene_ids <- function(filtered_correlations_top_directory_path) {
+  return(NONE)
+} 
+
+#'
+#' Load patient ids and healthy or disease status of the patients
+#' ex
+
+
+
+#'
+#' Create df with  spearman correlation between all elnet segments and the handed over clinical metadata column
 create_spearman_correlations_df <- function(clinical_vector, elnet_segments_atac_data){
 
   # Initialize progress bar
@@ -98,6 +89,12 @@ create_spearman_correlations_df <- function(clinical_vector, elnet_segments_atac
     # Extract segment and gene_id
     current_segment <- current_segment_atac$segment
     current_gene_id <- current_segment_atac$gene_id
+
+
+    #
+    # Skip segment if not in the filtered gene ids list of this clinical parameter
+    #
+
 
     # Remove segment and gene_id from the elnet segments atac data
     current_segment_atac <- current_segment_atac[-c(1,2)]
@@ -144,6 +141,11 @@ create_spearman_correlations_df <- function(clinical_vector, elnet_segments_atac
 
     # Update progress bar
     setTxtProgressBar(pb, i)
+
+
+    #
+    # Create Correlation visualization for that segment
+    #
   }
 
   # Close progress bar
@@ -264,7 +266,7 @@ perform_spearman_correlation <- function(output_path, clinical_metadata_rna_ids,
 }
 
 #'
-#' Iterate over all columns of the clinical metadata and perform spearman correlation
+#' Iterate over all columns of the clinical metadata and perform the spearman correlations
 iterate_over_clinical_metadata <- function(output_path, clinical_metadata, elnet_segments_atac_data){
   
 
@@ -289,6 +291,9 @@ iterate_over_clinical_metadata <- function(output_path, clinical_metadata, elnet
   # Return list with all spearman_correlations_df_final
   return(spearman_correlations_df_final_list)
 }
+
+
+
 
 #'
 #' Load the gene model specific outer cross validation performance estimations
