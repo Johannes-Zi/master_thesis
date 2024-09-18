@@ -15,3 +15,6 @@ DisGeNETresults_0.4pqcutoff_uptotop250correlations_latest_version.csv
 
 # Ignore the GoEnrich results
 AssociationAnalysis/GoEnrich/runs/
+
+# Ignore correlation plots
+AssociationAnalysis/CorrelationVisualization/runs/
