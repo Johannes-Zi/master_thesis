@@ -48,28 +48,40 @@ reduced_clinical_metadata <- function(clinical_metadata, patient_ids) {
   # Reset rownames
   rownames(reduced_clinical_metadata) <- 1:nrow(reduced_clinical_metadata)
   
-  #
-  # Extract patient ids and disease type here and return it as additional output
-  #
-  
   return(reduced_clinical_metadata)
 }
-
 
 
 #'
 #' Load ENSEBL gene ids of top correlations between clinical parameteres and segmental ATAC valeus for all clinical 
 #' parameters.
 load_filtered_correlations_gene_ids <- function(filtered_correlations_top_directory_path) {
-  return(NONE)
-} 
+  # Extract directories in the filtered_correlations_top_directory_path
+  directories <- list.dirs(filtered_correlations_top_directory_path, full.names = FALSE, recursive = FALSE)
 
-#'
-#' Load patient ids and healthy or disease status of the patients
-#' ex
+  # Iterate over the directories and load the results.csv files
+  filtered_correlations_gene_ids <- c()
+  for (directory in directories) {
+    # Load the results.csv file
+    results_file_path <- paste(filtered_correlations_top_directory_path, paste(directory, paste(directory, "_reduced_correlation_results.csv", sep = ""), sep = "/"), sep = "")
+    results_df <- read.csv(results_file_path, header = TRUE, sep = ",", stringsAsFactors = FALSE)
+
+    # Extract the gene ids
+    gene_ids <- results_df$gene_id
+
+    # Add the gene ids to the filtered_correlations_gene_ids current vector
+    filtered_correlations_gene_ids <- c(filtered_correlations_gene_ids, gene_ids)
+
+    # Drop the duplicated gene ids
+    filtered_correlations_gene_ids <- unique(filtered_correlations_gene_ids)
+  }
+
+  # Return the filtered_correlations_gene_ids vector
+  return(filtered_correlations_gene_ids)
+}
 
 
-
+# Iteriert über die segmente eine klinischen Parameters
 #'
 #' Create df with  spearman correlation between all elnet segments and the handed over clinical metadata column
 create_spearman_correlations_df <- function(clinical_vector, elnet_segments_atac_data){
@@ -93,6 +105,7 @@ create_spearman_correlations_df <- function(clinical_vector, elnet_segments_atac
 
     #
     # Skip segment if not in the filtered gene ids list of this clinical parameter
+    #
     #
 
 
@@ -120,15 +133,6 @@ create_spearman_correlations_df <- function(clinical_vector, elnet_segments_atac
     # Extract the numeric vector from current_segment_atac
     atac_vector <- as.numeric(current_segment_atac$ATAC)
 
-    # if (current_segment == "chr7.26617805.26617894"){
-    #   print("clinical_vector\n")
-    #   cat(paste(clinical_vector, ","))
-    #   print("\n")
-    #   print("atac_vector\n")
-    #   cat(paste(atac_vector, ","))
-    #   print("\n")
-    # }
-
     # Calculate spearman correlation between the two dfs
     spearman_correlation <- suppressWarnings(cor.test(clinical_vector, atac_vector, method = "spearman"))
 
@@ -146,6 +150,7 @@ create_spearman_correlations_df <- function(clinical_vector, elnet_segments_atac
     #
     # Create Correlation visualization for that segment
     #
+    #
   }
 
   # Close progress bar
@@ -157,6 +162,9 @@ create_spearman_correlations_df <- function(clinical_vector, elnet_segments_atac
   return(spearman_correlations_df)
 }
 
+
+
+# Erstellt directory und segment spezifische correlation visualisierungen
 #'
 #' Function calculates Spearman correlation between a handed over column of the clinical metadata and the atac data
 #' represented as rows in the elnet segments atac data
@@ -172,6 +180,7 @@ perform_spearman_correlation <- function(output_path, clinical_metadata_rna_ids,
 
   #
   # Extract clinical metadata column
+  #
   #
 
   # Combine data and create df with the handed over column of the clinical metadata and the RNA ids
@@ -199,76 +208,20 @@ perform_spearman_correlation <- function(output_path, clinical_metadata_rna_ids,
   #
   # Create output files
   #
-
-  # message(cyan("\nCreated the following output files:\n"))
-  # flush.console()
   
   # Save spearman_correlations_df as csv file with seperator ;
   output_file_path <- paste(output_dir, paste(clinical_metadata_column_name, "spearman_correlations.tsv", sep = "_"), sep = "/")
   write.table(spearman_correlations_df, output_file_path, row.names = FALSE, sep = ";")
   print(paste("->", output_file_path))
 
-  # Create and save histogram plot of the p_values
-  p_value_hist <- ggplot(spearman_correlations_df, aes(x = p_value)) +
-  geom_histogram(bins = 100) +
-  scale_x_continuous(limits = c(0, 1), oob = scales::oob_squish) +
-  ggtitle("Distribution of p_values") +
-  xlab("p_value") +
-  theme_light()
-  output_file_path <- paste(output_dir, paste(clinical_metadata_column_name, "p_value_hist.png", sep = "_"), sep = "/")
-  ggsave(output_file_path, p_value_hist)
-  print(paste("->", output_file_path))
-
-  # Create and save histogram plot of the q_values
-  q_value_hist <- ggplot(spearman_correlations_df, aes(x = q_value)) +
-  geom_histogram(bins = 100) +
-  scale_x_continuous(limits = c(0, 1), oob = scales::oob_squish) +
-  ggtitle("Distribution of q_values") +
-  xlab("q_value") +
-  theme_light()
-  output_file_path <- paste(output_dir, paste(clinical_metadata_column_name, "q_value_hist.png", sep = "_"), sep = "/")
-  ggsave(output_file_path, q_value_hist)
-  print(paste("->", output_file_path))
-
-  # Create and save density plot of the spearman_correlations
-  spearman_corr_density <- ggplot(spearman_correlations_df, aes(x = spearman_corr)) + 
-    geom_density(fill = "#4dbf67", alpha = 0.4) +
-    xlim(-1, 1) +
-    ggtitle("Density plot of spearman_correlations") +
-    xlab("spearman_corr") +
-    theme_light()
-  output_file_path <- paste(output_dir, paste(clinical_metadata_column_name, "spearman_corr_density.png", sep = "_"), sep = "/")
-  ggsave(output_file_path, spearman_corr_density)
-  print(paste("->", output_file_path))
-
-  # Create density plot of the spearman_correlations over the p_value < 0.05
-  # Filter the dataframe to include only rows where spearman_corr is below 0.05
-  spearman_correlations_filtered_df <- spearman_correlations_df %>% filter(p_value < 0.05)
-  spearman_corr_density <- ggplot(spearman_correlations_filtered_df, aes(x = spearman_corr)) + 
-    geom_density(fill = "#4dbf67",alpha = 0.4) + 
-    xlim(-1, 1) +
-    ggtitle("Density distribution of Spearman correlations with p_value < 0.05") +
-    xlab("spearman_corr") +
-    theme_light()
-  output_file_path <- paste(output_dir, paste(clinical_metadata_column_name, "spearman_corr_density_smaller_than_005_Spearman.png", sep = "_"), sep = "/")
-  ggsave(output_file_path, spearman_corr_density)
-  print(paste("->", output_file_path))
-
-  # Create and save density plot of the spearman_correlations seperated by p_value < 0.05
-  spearman_corr_density_p_value <- ggplot(spearman_correlations_df, aes(x = spearman_corr, fill = p_value < 0.05)) +
-    xlim(-1, 1) +
-    geom_density(alpha = 0.5) + ggtitle("Density plot of spearman_correlations")
-  output_file_path <- paste(output_dir, paste(clinical_metadata_column_name, "spearman_corr_density_p_value.png", sep = "_"), sep = "/")
-  ggsave(output_file_path, spearman_corr_density_p_value)
-  print(paste("->", output_file_path))
-
   return(spearman_correlations_df)
 }
 
+
+# Iteriert über die klinischen Parameter
 #'
 #' Iterate over all columns of the clinical metadata and perform the spearman correlations
-iterate_over_clinical_metadata <- function(output_path, clinical_metadata, elnet_segments_atac_data){
-  
+iterate_over_clinical_metadata <- function(output_path, clinical_metadata, elnet_segments_atac_data) {
 
   # Initialize empty list to store the spearman_correlations_df_final of each clinical metadata column
   spearman_correlations_df_final_list <- list()
@@ -282,7 +235,8 @@ iterate_over_clinical_metadata <- function(output_path, clinical_metadata, elnet
 
     # Perform spearman correlation
     message(paste(bold(cyan("\nPerform spearman correlations for:")), magenta(colnames(clinical_metadata)[i])))
-    current_spearman_correlations_df_final <- perform_spearman_correlation(output_path = output_path, clinical_metadata$rna.final.ids, current_column, elnet_segments_atac_data, clinical_metadata_column_name=colnames(clinical_metadata)[i])
+    current_spearman_correlations_df_final <- perform_spearman_correlation(output_path = output_path, clinical_metadata$rna.final.ids, 
+                                                                           current_column, elnet_segments_atac_data, clinical_metadata_column_name=colnames(clinical_metadata)[i])
     
     # Append current spearman_correlations_df_final to the list
     spearman_correlations_df_final_list[[i]] <- current_spearman_correlations_df_final
@@ -291,8 +245,6 @@ iterate_over_clinical_metadata <- function(output_path, clinical_metadata, elnet
   # Return list with all spearman_correlations_df_final
   return(spearman_correlations_df_final_list)
 }
-
-
 
 
 #'
@@ -343,11 +295,11 @@ if (TRUE) {
     LeaveOneOutCV_performance <- load_performance_evaluation(LeaveOneOutCV_performance_path)  # Load the data
     message(paste("Imported gene model specific outer cross validation performance estimations from: \n", LeaveOneOutCV_performance_path))
 
-    # Create a density plot of the Pearson correlations
-    ggplot(LeaveOneOutCV_performance, aes(x = Pearson)) + geom_density(fill = "#4dbf67",alpha = 0.4) + ggtitle("Density plot of Pearson correlations") + xlab("Pearson") + theme_light()
-    # Save the plot at cwd
-    image_path <- paste(getwd(), "AssociationAnalysis/BasicCorrelation/combined_correlations", "outer_cross_validation_pearson_density_plot.png", sep = "/")
-    ggsave(image_path)
+    # Import filtered correlations gene ids (DisGeNet/ GO-enrichment input set)
+    filtered_correlations_top_directory_path <- "C:/Users/johan/OneDrive/dateien_cloud/Master/Semester_4/Masterarbeit/data/pulmanory_hypertension/go_enrichment/spear_thres_04_up_to_250/corr_based_gene_filtering/"
+    filtered_correlations_gene_ids <- load_filtered_correlations_gene_ids(filtered_correlations_top_directory_path)
+    message(paste("Imported filtered correlations gene ids from: \n", filtered_correlations_top_directory_path))
+    message(paste("Total numer of unique gene ids extracted from all prefiltered clinical parameter gene sets: ", magenta(length(filtered_correlations_gene_ids))))
   }
 
   #'
@@ -362,7 +314,8 @@ if (TRUE) {
     message(paste("Number of patients represented in the clinical metadata with RNA Seq ids: ", magenta(length(unique(clinical_metadata$rna.final.ids)))))
     # Reduce clinical metadata to the patient ids which are represented in the elnet segments atac data
     reduced_clinical_metadata <- reduced_clinical_metadata(clinical_metadata, patient_ids)
-    message(paste("Patients represented in the reduced clinical metadata: ", magenta(nrow(reduced_clinical_metadata))))
+    print(head(reduced_clinical_metadata))
+    message(paste("Number of patients represented in the reduced clinical metadata: ", magenta(nrow(reduced_clinical_metadata))))
   }
 
   #'
@@ -390,16 +343,31 @@ if (TRUE) {
   }
 
   #'
+  #' Filter the elnet segments atac data based on the filtered correlations gene ids (gene ids represented in the DisGeNet or GO-enrichment input set)
+  #' for a reduced correlation analysis set that can be automatically visualized
+  if (TRUE) {
+    cat(paste(bold(cyan("\nFilter the elnet segments down to the genes represented in the GO enrichment and DisGeNet input fo a comprehensive visualization.\n"))))
+    cat(paste("Number of unique genes represented by elnet segments: ", magenta(length(unique(elnet_segments_atac$gene_id)), "\n")))
+    cat(paste("Numebr of genes represented in the merged GO enrichmen clinical parameter gene sets: ", magenta(length(filtered_correlations_gene_ids), "\n")))
+    cat(paste("Number of elnet segments before filtering: ", magenta(nrow(elnet_segments_atac), "\n")))
+    print(head(genes_with_cv_pearson_correlation_over_thresx))
+    print(head(filtered_correlations_gene_ids))
+    # Filter the elnet segments atac data based on the elnet outer cv Pearson filtered gene list
+    elnet_segments_atac_filtered <- elnet_segments_atac[elnet_segments_atac$gene_id %in% filtered_correlations_gene_ids,]
+    cat(paste("Number of elnet segments after filtering: ", magenta(nrow(elnet_segments_atac_filtered), "\n")))
+  }
+
+  #'
   #' Run the correlation analysis with the filtered elnet segments atac data together with the clinical metadata over 
   #' all clinical parameters
-  if (TRUE) {
+  if (FALSE) {
     cat(paste(bold(cyan("\nRun the correlation analysis with the filtered elnet segments atac data together with the clinical metadata over all clinical parameters.\n"))))
     # Create output_path based on cwd
     output_path <- paste(getwd(), "AssociationAnalysis/BasicCorrelation/combined_correlations", sep = "/")
     # Run Correlations with filtered elnet segments atac data
     list_with_all_correlation_dfs_filtered <- iterate_over_clinical_metadata(output_path = output_path, reduced_clinical_metadata, elnet_segments_atac_filtered)
   }
-  
+
   # Stop logging
   #sink()
 }
