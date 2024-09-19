@@ -81,6 +81,27 @@ load_filtered_correlations_gene_ids <- function(filtered_correlations_top_direct
 }
 
 
+#' Function to read, sort, open, and close files in a directory because Windows sort is dumb and i need to use sort
+#' by creation date
+process_and_sort_files_in_directory <- function(directory_path) {
+  # List all files in the directory
+  filenames <- list.files(directory_path, full.names = TRUE)
+  
+  # Sort filenames by name
+  sorted_filenames <- sort(filenames)
+  
+  # Loop through each file
+  for (filename in sorted_filenames) {
+    # Rename the file by adding a leading "X" to the filename
+    new_filename <- file.path(dirname(filename), paste0("X", basename(filename)))
+
+    # Copy the file to the new filename
+    file.copy(filename, new_filename)
+    
+    # Delete the original file
+    file.remove(filename)
+  }
+}
 
 
 # Iteriert über die segmente eine klinischen Parameters
@@ -96,7 +117,7 @@ create_spearman_correlations_df <- function(clinical_vector, elnet_segments_atac
                                          p_value = numeric(), stringsAsFactors = FALSE)
 
   # Iterate over the elnet segments atac data
-  for (i in 1:30){#nrow(elnet_segments_atac_data)){
+  for (i in 1:nrow(elnet_segments_atac_data)){
     # Extract current row of the elnet segments atac data
     current_segment_atac <- elnet_segments_atac_data[i,]
 
@@ -143,10 +164,9 @@ create_spearman_correlations_df <- function(clinical_vector, elnet_segments_atac
 
     # Create dataframe with the patient_id vector, the atac_vector and the clinical_vector
     data_df <- data.frame(patient_id = patient_vector, atac_vector = atac_vector, clinical_vector = clinical_vector, condition_vector = condition_vector)
-    print(data_df)
 
     # Create dotplot to visualize the correlation
-    suppressWarnings({
+    suppressWarnings(suppressMessages(({
       p <- ggplot(data = data_df, aes(x = atac_vector, y = clinical_vector, color = condition_vector)) +
         geom_point() +
         geom_smooth(aes(x = atac_vector, y = clinical_vector), method = "lm", se = TRUE, color = "black") +
@@ -156,14 +176,17 @@ create_spearman_correlations_df <- function(clinical_vector, elnet_segments_atac
             x = "ATAC-seq signal",
             y = clinical_parameter) +
         theme_minimal()
-    })
+    })))
 
     # Save plot as png with white background
-    suppressWarnings({
+    suppressWarnings(suppressMessages({
       plot_output_file_path_png <- paste(plot_output_dir, paste(paste(spearman_correlation$estimate, current_gene_id, current_segment, sep = "_"), ".png", sep = ""), sep = "/")
       ggsave(plot_output_file_path_png, plot = p, width = 10, height = 10, dpi = 150, bg = "white")
-    })
+    }))
   }
+
+  # Sort files for windows by opening them enabling sort by date option
+  process_and_sort_files_in_directory(plot_output_dir)
 
   # Close progress bar
   close(pb)
@@ -256,10 +279,16 @@ iterate_over_clinical_metadata <- function(output_path, clinical_metadata, elnet
     # Extract current column
     current_column <- clinical_metadata[,i]
 
+    # Create temporary sorted df based on patient ids to hand over the condition vector in the rigth order
+    temp_df <- data.frame(clinical_metadata$rna.final.ids, clinical_metadata$condition)
+    temp_df <- temp_df[order(clinical_metadata$rna.final.ids),]
+    condition_vector <- temp_df$clinical_metadata.condition
+
+
     # Perform spearman correlation
     message(paste(bold(cyan("\nPerform spearman correlations for:")), magenta(colnames(clinical_metadata)[i])))
     current_spearman_correlations_df_final <- perform_spearman_correlation(output_path = output_path, clinical_metadata$rna.final.ids, 
-                                                                           current_column, elnet_segments_atac_data, clinical_metadata_column_name=colnames(clinical_metadata)[i], clinical_metadata$condition)
+                                                                           current_column, elnet_segments_atac_data, clinical_metadata_column_name=colnames(clinical_metadata)[i], condition_vector)
     
     # Append current spearman_correlations_df_final to the list
     spearman_correlations_df_final_list[[i]] <- current_spearman_correlations_df_final
