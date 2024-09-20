@@ -274,7 +274,6 @@ iterate_over_clinical_metadata <- function(output_path, clinical_metadata, elnet
 
   # Iterate over columns of the clinical metadata and perform spearman correlation and save output files
   for (i in 4:ncol(clinical_metadata)){
-    #print(colnames(clinical_metadata))
 
     # Extract current column
     current_column <- clinical_metadata[,i]
@@ -283,7 +282,6 @@ iterate_over_clinical_metadata <- function(output_path, clinical_metadata, elnet
     temp_df <- data.frame(clinical_metadata$rna.final.ids, clinical_metadata$condition)
     temp_df <- temp_df[order(clinical_metadata$rna.final.ids),]
     condition_vector <- temp_df$clinical_metadata.condition
-
 
     # Perform spearman correlation
     message(paste(bold(cyan("\nPerform spearman correlations for:")), magenta(colnames(clinical_metadata)[i])))

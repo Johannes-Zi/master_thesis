@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "9d8f8a4a3d4ffb39",
+        "id": "36844869c053393b",
         "type": "tabs",
         "children": [
           {
-            "id": "74d286a2473d2432",
+            "id": "e3fd528433e7ec23",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "LiteratureResearch/Approaches/CheckTopCorrelationsOfEnrichInput.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -97,7 +93,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "LiteratureResearch/Approaches/CheckTopCorrelationsOfEnrichInput.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +109,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "LiteratureResearch/Approaches/CheckTopCorrelationsOfEnrichInput.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,9 +130,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "LiteratureResearch/Approaches/CheckTopCorrelationsOfEnrichInput.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -158,10 +150,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "74d286a2473d2432",
+  "active": "e3fd528433e7ec23",
   "lastOpenFiles": [
-    "LiteratureResearch/Approaches/CheckTopCorrelationsOfEnrichInput.md",
     "AssociationAnalysis/CorrelationVisualization/visualize_top_correlations.r.md",
+    "LiteratureResearch/Approaches/CheckTopCorrelationsOfEnrichInput.md",
     "LiteratureResearch/Approaches",
     "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md",
     "AssociationAnalysis/GoEnrich/goEnrichment.r.md",

@@ -31,7 +31,7 @@ It has to be noted that the visualized linear correlations were computed with th
 #### General output directories
 ```
 # Cloud
-INSERT
+C:\Users\johan\OneDrive\dateien_cloud\Master\Semester_4\Masterarbeit\data\pulmanory_hypertension\CorrelationVisualization\runs\v1\
 
 # VSC
 C:\Users\johan\VSCode_projects\bioinf_master\AssociationAnalysis\CorrelationVisualization\runs\v1
