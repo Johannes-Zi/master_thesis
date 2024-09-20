@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "95ac5b00bae8f9c3",
+        "id": "9d8f8a4a3d4ffb39",
         "type": "tabs",
         "children": [
           {
-            "id": "82acc49601ade7f1",
+            "id": "74d286a2473d2432",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -77,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 358.5
+    "width": 200
   },
   "right": {
     "id": "5b31fd771786262b",
@@ -150,13 +150,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "82acc49601ade7f1",
+  "active": "74d286a2473d2432",
   "lastOpenFiles": [
-    "AssociationAnalysis/DisGeNet2r/disgenet2r.md",
+    "LiteratureResearch/Approaches/CheckTopCorrelationsOfEnrichInput.md",
+    "AssociationAnalysis/CorrelationVisualization/visualize_top_correlations.r.md",
+    "LiteratureResearch/Approaches",
+    "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md",
     "AssociationAnalysis/GoEnrich/goEnrichment.r.md",
+    "AssociationAnalysis/CorrelationVisualization",
+    "LiteratureResearch/Genes/LIF ENSG00000128342.md",
+    "LiteratureResearch/Genes/gene_XYZ.md",
+    "AssociationAnalysis/DisGeNet2r/disgenet2r.md",
     "Stichit workflow/Regression/Runs/26_patient_dataset/StandardCV/RegStandardCV.md",
     "AssociationAnalysis/GoEnrich",
-    "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md",
     "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
     "AssociationAnalysis/DisGeNet2r",
     "AssociationAnalysis/AssociationAnalysis.canvas",
@@ -166,7 +172,6 @@
     "Future Ideas/DownstreamAnalysis.md",
     "Future Ideas/CorrelationAnalysis.md",
     "LiteratureResearch/Disease/disease_xyz.md",
-    "LiteratureResearch/Genes/gene_XYZ.md",
     "LiteratureResearch/clinical_parameters",
     "LiteratureResearch/Publications/bilasCisregulatoryElementsUsed2016/@bilasCisregulatoryElementsUsed2016.md",
     "LiteratureResearch/Mechanism/mechanism_xyz.md",
@@ -179,8 +184,6 @@
     "LiteratureResearch/Disease",
     "LiteratureResearch/Genes.md",
     "LiteratureResearch/Mechanism",
-    "LiteratureResearch/Genes",
-    "LiteratureResearch/Statement",
     "LiteratureResearch/Zotero/ConfigStuff/template1_info.md",
     "LiteratureResearch/Zotero/ConfigStuff/template1.md",
     "Stichit workflow/Preprocessing/Preprocessing.md",
@@ -188,9 +191,6 @@
     "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/RegFeaturesXnzero.md",
     "Stichit workflow/StichitWorkflow.canvas",
     "Stichit workflow/Regression/Performance Evaluation/NzeroXpearson/NzeroXpearson.md",
-    "Stichit workflow/Regression/Performance Evaluation/MSEValMulti/MSEValMulti.md",
-    "Stichit workflow/Regression/Performance Evaluation/RegPerformanceEvaluation.md",
-    "Stichit workflow/Regression/Performance Evaluation/PearsonValMulti/PearsonValMulti.md",
     "Stichit workflow/Regression/Performance Evaluation/NzeroXpearson/fig_06051540_p.png",
     "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241637_p.png",
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/pictures/Pasted image 20240523154413.png",
