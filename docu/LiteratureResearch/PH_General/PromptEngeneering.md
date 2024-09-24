@@ -1,7 +1,7 @@
 The goal is to get a better unerstanding of pulmanory hypertension to extract a set of keywords, which can be used for high trougput literature mining by assotiating candidate gene names with keywords.
 ## ==General Keywords==
 ```
-Pulamnory hypertension, inflammation, epitel, immune , Angiogenese, vascular, cytokine, oxidative stress, BMPR2
+Pulamnory hypertension, inflammation, epitel, immune , Angiogenese, vascular, cytokine, oxidative stress, BMPR2, TGF-ß signaling
 ```
 
 # General Connection between blood cells and pulmanory hypertension
@@ -94,4 +94,37 @@ There is a significant connection between blood cells and pulmonary arterial hyp
 
 ```
 lymphocyte, CD8+, cytotoxic effector-memory cells, nitric oxide synthase (eNOS), nitric oxide (NO), Rho-Kinase (ROCK), vasoconstriction, BMPR2, mTOR, and toll-like receptor signaling, miR-7110
+```
+
+# Genetic dispositions
+cited: [[@montaniPulmonaryArterialHypertension2013]]
+```
+BMPR2, ACVRL1, Smad8, Smad1, Smad5, caveolin-1
+```
+## Potentially affected pathway
+```
+TGF-β signaling pathway
+```
+This supports the hypothesis that mutations in genes involved in the TGF-β signaling pathway may be a trigger for pulmon ary vascular remodeling. Moreover, this signaling path way controls growth, differentiation and apoptosis of various cell types like pulmonary vascular endothelial cells (ECs) and smooth muscle cells (SMCs). Thereby, mutations in genes involved in the TGF-β signaling pathway may be responsible for abnormal proliferation of pulmonary vascular SMCs and may promote ECs apoptosis, which might lead to the selection of apoptosis resistant cells and formation of plexiform lesions, the hallmark of idiopathic PAH [131,132].
+# ==Keywords==
+```
+BMPR2, ACVRL1, Smad8, Smad1, Smad5, caveolin-1, TGF-β signaling pathway
+```
+# Cellular Factors
+Cellular factors Proliferation of smooth muscular cells in the small per ipheral pulmonary arteries is a common characteristic in all forms of PAH. In hypoxic models, fibroblasts of the adventitia migrate to the media and intima, where prolif eration and production of matrix proteins are observed [138]. Neovascularization, mainly of the adventitia, oc curs concomitantly to the thickening of the vascular walls [139]. In response
+
+The stimuli for endothelial prolif eration is still unknown but several factors have been in criminated such as hypoxia, inflammation, shear stress, drugs, viral infections and genetic susceptibility.
+The CXCL12/CXCR4 axis may play an important role in the pulmonary recruitment of these circulating progenitors and can be therapeutically targeted
+
+Inflammatory mechanisms seems to play an important role in certain forms of PAH such as PAH associated with auto immune diseases or HIV infection
+
+Thirty to 40% of patients with PAH have circulating auto-antibodies and elevated plasma concentrations of pro-inflammatory cytokines such as interleukin 1 (IL-1) and interleukin-6 (IL-6), and chemokines such as fractalkine and MCP-1 [145,146]. Inflammatory cells, such as lymphocytes B and T, mac rophages, mastocytes and dendritic cells, can also be found in plexiform lesions of severe PAH [147,148]. Chemokines, like RANTES and fractalkine are also overly expressed in the pulmonary vascular endothelium of PAH patients [145].
+
+In response to certain stimuli, platelets can produce prothrombotic, vasoactive or mitogenic factors, such as thromboxane A2 (TXA2), platelet-derived growth factor (PDGF), serotonin (5 hydroxytryptamine, 5-HT), transforming growth factor beta (TGF-β) and vascular endothelial growth factor (VEGF) that participate in vasoconstriction and vascular remodeling
+
+cited: [[@montaniPulmonaryArterialHypertension2013]]
+
+# ==Keywords==
+```
+CXCL12, CXCR4, auto immune, auto-antibodies, plasma concentrations, interleukin 1 (IL-1), interleukin-6 (IL-6), fractalkine, MCP-1, RANTES, fractalkine, thrombosis, shear stress, A2 (TXA2), PDGF, serotonin, TGF-β, VEGF
 ```

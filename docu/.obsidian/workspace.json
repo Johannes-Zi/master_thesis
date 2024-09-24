@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "path:\"LiteratureResearch/PH_General/Publications/montaniPulmonaryArterialHypertension2013/\" ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -158,7 +158,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b84df78cc2e224be",
+  "active": "01a1ccf26329c2f6",
   "lastOpenFiles": [
     "LiteratureResearch/TargetGenes/CheckTopCorrelationsOfEnrichInput.md",
     "LiteratureResearch/PH_General/PromptEngeneering.md",
