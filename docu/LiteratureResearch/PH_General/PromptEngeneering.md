@@ -1,9 +1,73 @@
 The goal is to get a better unerstanding of pulmanory hypertension to extract a set of keywords, which can be used for high trougput literature mining by assotiating candidate gene names with keywords.
-## ==General Keywords==
+
+# Concept that can be described in the Master thesis
+This approach is a semi manual light version of what could be done for high throughput literature research for candidates. It can function as a proof of concept for the usage of consenus as data mining tool that provides an output which can be further processed by another Language model to extract and filter the relevance and compare and filter the different outputs for single gene. 
+But its has to be noted that consensus is only based on public access publication and thus can be only a part of a bigger data mining application which is based on different sources and approaches like a pubmed crawler.
+# ==General Keywords==
 ```
-Pulamnory hypertension, inflammation, epitel, immune , Angiogenese, vascular, cytokine, oxidative stress, BMPR2, TGF-ß signaling
+Pulamnory hypertension, inflammation, epitel, immune , Angiogenese, vascular, cytokine, oxidative stress, BMPR2, TGF-ß signaling,  vasodilator, vasoconstrictor
 ```
 
+# Research from Soni
+==In this step i screened systematically the top 1720 correlations (DisGeNet and Go enrich input) if they are part of the top gene dataset.==
+
+We hypothesize that ADAR1-mediated RNA editing via MDA5-PKR IFN-β activation plays a critical role in abnormal SMC proliferation and autoimmune inflammation during vascular remodeling.
+*(Kim, Y., et al. "PKR Activation Caused by ADAR1 Deficeincy Contributes to Vascular Remodeling in PAH." D95. SURVEYING THE ZOO:-OMICS FOR MECHANISTIC DISCOVERY IN PULMONARY VASCULAR DISEASE. American Thoracic Society, 2024. A7244-A7244.)*
+
+We hypothesized that NLRP3 inflammasome activation mediates RVCM contractile dysfunction and that this is attenuated by E2 via estrogen receptor (ER) α.
+*(Sobrano Fais, R., et al. "NLRP3-induced Contractile Dysfunction in Right Ventricle Cardiomyocytes Is Sexually Dimorphic and Modified by 17β-estradiol Via Estrogen Receptor α." B95. SURFING IN THE GREEN ROOM: DEFINING MOLECULAR MECHANISMS OF PULMONARY VASCULAR DISEASE. American Thoracic Society, 2024. A4695-A4695.)*
+
+Single-cell RNA sequencing on sorted lineage-labeled GLI1+ cells revealed an _Acta2__high_ fraction of cells with pathways in cancer and MAPK (mitogen-activated protein kinase) signaling as potential players in reprogramming these cells during vascular remodeling. Our data highlight GLI1+ cells as an alternative cellular source of VSMCs (Vascular smooth muscle cell) in pulmonary hypertension and suggest that these cells and the associated signaling pathways represent an important therapeutic target for further studies.
+*(Chu, Xuran, et al. "GLI1+ Cells Contribute to Vascular Remodeling in Pulmonary Hypertension." Circulation Research 134.11 (2024): e133-e149.)*
+
+Genetic diagnostics and molecular approaches in pulmonary arterial hypertension
+![[Pasted image 20240925142515.png]]
+(BMPR2, ATP13A3, AQP1, ABCC8, KCNK3, SMAD9, SOX17, CAV1, TBX4, EIF2AK4, KDR, ENG, ACVRL1, GDF2)
+*(Eichstaedt, Christina A., et al. "Genetische Diagnostik und molekulare Ansätze bei pulmonalarterieller Hypertonie." Pneumologie 77.11 (2023): 862-870.)*
+
+The circulating levels of several extracellular matrix proteins deregulated in decompensated RV subgroups were assessed in two independent cohorts of individuals with pulmonary arterial hypertension, revealing that NID1, C1QTNF1 and CRTAC1 predicted the development of a maladaptive RV state, as defined by magnetic resonance imaging parameters, and were associated with worse clinical outcomes.
+*(Khassafi, Fatemeh, et al. "Transcriptional profiling unveils molecular subgroups of adaptive and maladaptive right ventricular remodeling in pulmonary hypertension." Nature cardiovascular research 2.10 (2023): 917-936.)*
+
+# ==Keywords==
+==Ive checked for the following genes if they were found in the set of 1720 target genes (DisGeNet input)==
+```
+# REspective ENSEMBL IDs OR of IDs of related genes
+
+ADAR1, ENSG00000160710
+MDA5-PKR IFN-β, ENSG00000115267
+SMC, ENSG00000231822/ENSG00000268364/ENSG00000270332
+NLRP3, ENSG00000162711
+estrogen,
+GLI1+, ENSG00000111087
+Acta2, ENSG00000107796
+MAPK, ENSG00000250062/ ENSG00000259438/ ENSG00000261399/ ENSG00000157833/ ENSG00000282110/ ENSG00000225663/ ENSG00000141441/ ENSG00000168175/ 
+VSMCs,
+NID1, ENSG00000116962
+C1QTNF1, ENSG00000173918
+CRTAC1, ENSG00000095713
+PKA, ENSG00000095713
+NOCT, ENSG00000151014
+IL6, ENSG00000136244
+IFNa2 and IFNAR2, ENSG00000188379 and ENSG00000159110
+MTC1, ENSG00000232119,
+
+# From the treatment guidelines
+BMPR2, ENSG00000204217
+ATP13A3, ENSG00000133657
+AQP1, ENSG00000240583
+ABCC8, ENSG00000006071
+KCNK3, ENSG00000171303
+SMAD9, ENSG00000120693
+SOX17, ENSG00000164736
+CAV1, ENSG00000105974
+TBX4, ENSG00000121075
+EIF2AK4, ENSG00000128829
+KDR, ENSG00000128052
+ENG, ENSG00000106991
+ACVRL1, ENSG00000139567
+GDF2, ENSG00000263761
+
+```
 # General Connection between blood cells and pulmanory hypertension
 ### Introduction
 
@@ -34,7 +98,6 @@ The research indicates a significant connection between blood cells, particularl
 ```
 Immune cells, lymphocytes, monocytes, neutrophils, blood pressure, macrophages, T cells, dendritic cells, interferon, mTOR/p70S6K, stress kinase, toll-like receptor signaling
 ```
-
 # Current treatment targets
 ```
 	Is there a conncetion between geneXXX and the endothelin system or endothelin receptors?
@@ -51,7 +114,6 @@ These drug classes have significantly improved the management of PAH, enhancing 
 ```
 Endothelin, Phosphodiesterase, Guanylate Cyclase, Prostacyclin
 ```
-
 # Emerging Therapies:
 - **Novel Targets**: Research is focusing on targeting pathways involved in vascular remodeling, including GPCRs, ion channels, metabolism, epigenetics, growth factor receptors, and inflammation[3](https://consensus.app/results/?q=pulmonary%20hypertension%20treatments&synthesize=on&copilot=on&lang=en#result-3) [8](https://consensus.app/results/?q=pulmonary%20hypertension%20treatments&synthesize=on&copilot=on&lang=en#result-8).
 - **Phytochemicals and Medicinal Plants**: These have shown potential due to their antiproliferative, antioxidant, antivascular remodeling, anti-inflammatory, vasodilatory, and apoptosis-inducing actions[5](https://consensus.app/results/?q=pulmonary%20hypertension%20treatments&synthesize=on&copilot=on&lang=en#result-5).
@@ -95,7 +157,6 @@ There is a significant connection between blood cells and pulmonary arterial hyp
 ```
 lymphocyte, CD8+, cytotoxic effector-memory cells, nitric oxide synthase (eNOS), nitric oxide (NO), Rho-Kinase (ROCK), vasoconstriction, BMPR2, mTOR, and toll-like receptor signaling, miR-7110
 ```
-
 # Genetic dispositions
 cited: [[@montaniPulmonaryArterialHypertension2013]]
 ```
@@ -122,9 +183,23 @@ Thirty to 40% of patients with PAH have circulating auto-antibodies and elevated
 
 In response to certain stimuli, platelets can produce prothrombotic, vasoactive or mitogenic factors, such as thromboxane A2 (TXA2), platelet-derived growth factor (PDGF), serotonin (5 hydroxytryptamine, 5-HT), transforming growth factor beta (TGF-β) and vascular endothelial growth factor (VEGF) that participate in vasoconstriction and vascular remodeling
 
+One can propose that deregulated and unresolved pulmonary inflammation on the background of a genetic predispos ition, could result in persisting vascular remodelling leading to PAH. An initial acute inflammation that is normally expected to resolve with return to homeostasis, could conduct the production of auto-antibodies against vascular wall components, and would shift to chronic persisting and chronic inflammation, endothelial barrier breakdown, infiltration by immune cells, local and chronic autoimmunity, and vascular remodeling culmin ating in PAH
+
+Vasoconstriction has been associated with an abnormal function or Page 10 of 28 Montani et al. Orphanet Journal of Rare Diseases 2013, 8:97 http://www.ojrd.com/content/8/1/97 expression of potassium channels and with endothelial dysfunction [107]. Endothelial dysfunction results in a decreased production of vasodilators such as nitric oxide (NO) and prostacyclin and an increased production of vasoconstrictors such as endothelin-1 [153]. Prostacyclin (prostaglandin I2) is a potent pulmon ary vasodilator that acts via the cyclic adenosine monophosphate (cAMP) pathway. It inhibits the pro liferation of smooth muscle cells and decreases plate let aggregation. Production of prostacyclin is reduced in endothelial cells of patients with PAH [154]
+
+NO is also a pulmonary vasodilator which acts via the cyclic guanosine monophosphate (cGMP) pathway. To increase pulmonary vasodilatation de pendant on NO, a recent therapeutic strategy has targeted type 5 phosphodiesterase which degrades cGMP. Sildenafil or tadalafil, type 5 phosphodiesterase inhibitors, have proven their efficacy in patients with PAH [155]. Vasoactive intestinal peptide (VIP) is a neurotransmitter that has systemic and pulmonary vasodilator properties. It also inhibits smooth cell proliferation and decreases platelet aggregation and acts via the activation of the cAMP and cGMP sys tems [156].
+
+By ligating the ETRA, ET-1 intracellular calcium concentrations increase and activates the protein kinase C pathway [157]. ET-1 is a potent pul monary vasoconstrictor and stimulates mitosis of arterial smooth muscle cells, thus contributing to pulmonary vascu lar remodeling.
+
+Rho protein A and Rho kinases in the vasoconstriction and vascular remod eling of PAH, 5-HTT/RhoA/Rho
+
+Hypoxia inducible factor-1 (HIF-1) is a transcription factor that principally regulates cellular adaptation to hypoxia but also regulates several genes implicated in angiogenesis, erythropoiesis, cellular metabolism and survival [168].
+
+==In conclusion, the pathophysiology of PAH is hetero geneous and multifactorial. The genetic mutations found in familial PAH and in a proportion of sporadic PAH are neither necessary nor sufficient for the development of PAH. Therefore, the current hypothesis is that of a gen etic predisposition for PAH followed by a superimposed environmental factor (infection, inflammation, auto immunity).==
+
 cited: [[@montaniPulmonaryArterialHypertension2013]]
 
 # ==Keywords==
 ```
-CXCL12, CXCR4, auto immune, auto-antibodies, plasma concentrations, interleukin 1 (IL-1), interleukin-6 (IL-6), fractalkine, MCP-1, RANTES, fractalkine, thrombosis, shear stress, A2 (TXA2), PDGF, serotonin, TGF-β, VEGF
+CXCL12, CXCR4, auto immune, auto-antibodies, plasma concentrations, interleukin 1 (IL-1), interleukin-6 (IL-6), fractalkine, MCP-1, RANTES, fractalkine, thrombosis, shear stress, A2 (TXA2), PDGF, serotonin, TGF-β, VEGF, potassium, Prostacyclin, vasodilator, vasoconstrictor, cGMP, phosphodiesterase, Vasoactive intestinal peptide, Rho
 ```
