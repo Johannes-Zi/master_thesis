@@ -1,14 +1,21 @@
 The goal is to get a better unerstanding of pulmanory hypertension to extract a set of keywords, which can be used for high trougput literature mining by assotiating candidate gene names with keywords.
 
 # Concept that can be described in the Master thesis
+## Overview
 This approach is a semi manual light version of what could be done for high throughput literature research for candidates. It can function as a proof of concept for the usage of consenus as data mining tool that provides an output which can be further processed by another Language model to extract and filter the relevance and compare and filter the different outputs for single gene. 
 But its has to be noted that consensus is only based on public access publication and thus can be only a part of a bigger data mining application which is based on different sources and approaches like a pubmed crawler.
-# ==General Keywords==
+
+### From the 2013 review
+Blood tests Serological tests for HIV, hepatitis B or C serology should be performed to screen for associated diseases. The thyroid hormone measurement may reveal either hyperthyroid dysfunction or autoimmune thyroiditis, fre quently encountered in PAH.
+
+Many different treatments target prostacyclin and its receptors as well as endothelin and its receptor due to its role as vasoconstrictor. Also targeted with PDE-5 inhibitor
+## ==General Keywords==
 ```
-Pulamnory hypertension, inflammation, epitel, immune , Angiogenese, vascular, cytokine, oxidative stress, BMPR2, TGF-ß signaling,  vasodilator, vasoconstrictor
+Pulamnory hypertension, inflammation, epitel, immune , Angiogenese, vascular, cytokine, oxidative stress, TGF-ß signaling, vasodilator, vasoconstrictor, thyroid, prostacyclin, endothelin, PDE-5
 ```
 
 # Research from Soni
+## Overview
 ==In this step i screened systematically the top 1720 correlations (DisGeNet and Go enrich input) if they are part of the top gene dataset.==
 
 We hypothesize that ADAR1-mediated RNA editing via MDA5-PKR IFN-β activation plays a critical role in abnormal SMC proliferation and autoimmune inflammation during vascular remodeling.
@@ -28,7 +35,7 @@ Genetic diagnostics and molecular approaches in pulmonary arterial hypertension
 The circulating levels of several extracellular matrix proteins deregulated in decompensated RV subgroups were assessed in two independent cohorts of individuals with pulmonary arterial hypertension, revealing that NID1, C1QTNF1 and CRTAC1 predicted the development of a maladaptive RV state, as defined by magnetic resonance imaging parameters, and were associated with worse clinical outcomes.
 *(Khassafi, Fatemeh, et al. "Transcriptional profiling unveils molecular subgroups of adaptive and maladaptive right ventricular remodeling in pulmonary hypertension." Nature cardiovascular research 2.10 (2023): 917-936.)*
 
-# ==Keywords==
+## ==Keywords==
 ==Ive checked for the following genes if they were found in the set of 1720 target genes (DisGeNet input)==
 ```
 # REspective ENSEMBL IDs OR of IDs of related genes
@@ -68,7 +75,8 @@ ACVRL1, ENSG00000139567
 GDF2, ENSG00000263761
 
 ```
-# General Connection between blood cells and pulmanory hypertension
+# CONSENSUS - Connection between blood cells and pulmanory hypertension
+## Overview
 ### Introduction
 
 Pulmonary hypertension (PH) is a complex and multifactorial disease characterized by elevated blood pressure in the pulmonary arteries, leading to right heart failure and other severe complications. Recent research has explored the potential role of blood cells, particularly immune cells, in the pathogenesis and progression of PH.
@@ -94,11 +102,12 @@ Pulmonary hypertension (PH) is a complex and multifactorial disease characterize
 
 The research indicates a significant connection between blood cells, particularly immune cells, and pulmonary hypertension. Immune cells such as lymphocytes, monocytes, neutrophils, and specific T cell subsets contribute to the inflammatory processes that underlie both systemic and pulmonary hypertension. These findings suggest that targeting immune cell-mediated inflammation could be a potential therapeutic strategy for managing pulmonary hypertension.
 
-# ==Keywords==
+## ==Keywords==
 ```
 Immune cells, lymphocytes, monocytes, neutrophils, blood pressure, macrophages, T cells, dendritic cells, interferon, mTOR/p70S6K, stress kinase, toll-like receptor signaling
 ```
-# Current treatment targets
+# CONSENSUS - Current treatment targets
+## Overview
 ```
 	Is there a conncetion between geneXXX and the endothelin system or endothelin receptors?
 ```
@@ -109,23 +118,25 @@ These drug classes have significantly improved the management of PAH, enhancing 
 - Soluble Guanylate Cyclase Stimulators,
 - Prostacyclin Analogues,
 - Prostacyclin Receptor Agonists
-# ==Keywords==
+## ==Keywords==
 
 ```
 Endothelin, Phosphodiesterase, Guanylate Cyclase, Prostacyclin
 ```
-# Emerging Therapies:
+# CONSENSUS - Emerging Therapies:
+## Overview
 - **Novel Targets**: Research is focusing on targeting pathways involved in vascular remodeling, including GPCRs, ion channels, metabolism, epigenetics, growth factor receptors, and inflammation[3](https://consensus.app/results/?q=pulmonary%20hypertension%20treatments&synthesize=on&copilot=on&lang=en#result-3) [8](https://consensus.app/results/?q=pulmonary%20hypertension%20treatments&synthesize=on&copilot=on&lang=en#result-8).
 - **Phytochemicals and Medicinal Plants**: These have shown potential due to their antiproliferative, antioxidant, antivascular remodeling, anti-inflammatory, vasodilatory, and apoptosis-inducing actions[5](https://consensus.app/results/?q=pulmonary%20hypertension%20treatments&synthesize=on&copilot=on&lang=en#result-5).
 *(Sommer, Natascha, et al. "Current and future treatments of pulmonary arterial hypertension." British journal of pharmacology 178.1 (2021): 6-30.;*
 *Baliga, Reshma S., Raymond J. MacAllister, and Adrian J. Hobbs. "New perspectives for the treatment of pulmonary hypertension." British journal of pharmacology 163.1 (2011): 125-140.)*
-# ==Keywords==
+## ==Keywords==
 
 ```
 vascular remodeling, GPCRs, ion channels, epigenetics, growth factor receptors, inflammation, apoptosis
 ```
 
-# Blood cells and pulmanory arterial hypertension V2
+# CONSENSUS - Blood cells and pulmanory arterial hypertension V2
+## Overview
 ### Introduction
 
 Pulmonary arterial hypertension (PAH) is a severe condition characterized by increased blood pressure in the pulmonary arteries, leading to right heart failure and premature death. Recent research has explored the role of various blood cells in the pathogenesis and progression of PAH, aiming to identify potential biomarkers and therapeutic targets.
@@ -152,13 +163,16 @@ Pulmonary arterial hypertension (PAH) is a severe condition characterized by inc
 
 There is a significant connection between blood cells and pulmonary arterial hypertension. Inflammatory and immune cells, particularly T lymphocytes, play a critical role in the disease's pathogenesis. Additionally, red blood cells exhibit altered nitric oxide production, contributing to vascular dysfunction. Endothelial cell dysfunction and genetic factors further exacerbate the condition. Understanding these cellular and molecular mechanisms can help in developing targeted therapies for PAH.
 
-# ==Keywords==
+## ==Keywords==
 
 ```
 lymphocyte, CD8+, cytotoxic effector-memory cells, nitric oxide synthase (eNOS), nitric oxide (NO), Rho-Kinase (ROCK), vasoconstriction, BMPR2, mTOR, and toll-like receptor signaling, miR-7110
 ```
-# Genetic dispositions
+
+# Review 2013
 cited: [[@montaniPulmonaryArterialHypertension2013]]
+## ==Keywords== Genetic dispositions
+
 ```
 BMPR2, ACVRL1, Smad8, Smad1, Smad5, caveolin-1
 ```
@@ -167,11 +181,11 @@ BMPR2, ACVRL1, Smad8, Smad1, Smad5, caveolin-1
 TGF-β signaling pathway
 ```
 This supports the hypothesis that mutations in genes involved in the TGF-β signaling pathway may be a trigger for pulmon ary vascular remodeling. Moreover, this signaling path way controls growth, differentiation and apoptosis of various cell types like pulmonary vascular endothelial cells (ECs) and smooth muscle cells (SMCs). Thereby, mutations in genes involved in the TGF-β signaling pathway may be responsible for abnormal proliferation of pulmonary vascular SMCs and may promote ECs apoptosis, which might lead to the selection of apoptosis resistant cells and formation of plexiform lesions, the hallmark of idiopathic PAH [131,132].
-# ==Keywords==
+## ==Keywords==
 ```
 BMPR2, ACVRL1, Smad8, Smad1, Smad5, caveolin-1, TGF-β signaling pathway
 ```
-# Cellular Factors
+## Cellular Factors
 Cellular factors Proliferation of smooth muscular cells in the small per ipheral pulmonary arteries is a common characteristic in all forms of PAH. In hypoxic models, fibroblasts of the adventitia migrate to the media and intima, where prolif eration and production of matrix proteins are observed [138]. Neovascularization, mainly of the adventitia, oc curs concomitantly to the thickening of the vascular walls [139]. In response
 
 The stimuli for endothelial prolif eration is still unknown but several factors have been in criminated such as hypoxia, inflammation, shear stress, drugs, viral infections and genetic susceptibility.
@@ -199,7 +213,51 @@ Hypoxia inducible factor-1 (HIF-1) is a transcription factor that principally re
 
 cited: [[@montaniPulmonaryArterialHypertension2013]]
 
-# ==Keywords==
+## ==Keywords==
 ```
 CXCL12, CXCR4, auto immune, auto-antibodies, plasma concentrations, interleukin 1 (IL-1), interleukin-6 (IL-6), fractalkine, MCP-1, RANTES, fractalkine, thrombosis, shear stress, A2 (TXA2), PDGF, serotonin, TGF-β, VEGF, potassium, Prostacyclin, vasodilator, vasoconstrictor, cGMP, phosphodiesterase, Vasoactive intestinal peptide, Rho
+```
+
+## Known therapeutic targets
+Several specific therapeutic agents were developed for the medical man agement of PAH including prostanoids, endothelin receptor antagonists and phosphodiesterase type 5 inhibitors. Furthermore, emerging treatments such as tyrosine kinase inhibitors, soluble guanylate cyclase activators (riociguat) and prostacyclin receptor agonists (selexipag) are cur rently being evaluated in PAH
+## ==Keywords==
+```
+endothelin, phosphodiesterase type 5, tyrosine kinase, soluble guanylate cyclase, prostacyclin (+ receptor)
+```
+
+Calcium channel blockers (CCB) are indicated in pa tients with a positive vasodilatation challenge test after inhaled NO. CCB are vasodilators and were initially
+
+Endothelium-derived prostaglandin I2 (PGI2), or prostacyc lin, is an arachidonic acid produced by endothelial cells. Prostacyclin is a powerful systemic and pulmonary vaso dilator and an inhibitor of platelet aggregation through the increase in intracellular cyclic adenosine monophosphate (cAMP)
+
+There are two existing isoforms of ET-1 recep tors: endothelin A (ETRA) and endothelin B (ETRB). Activation of ETRA and ETRB on pulmonary artery smooth muscle cells induce proliferation and vasoconstriction, whereas activation of ETRB on pulmonary endothelial cells leads to release of NO and prostacyclin and partici pate to the clearance of circulating ET-1
+
+Phosphodiesterase type-5 inhibitors NO is a potent pulmonary arteries SMC relaxant that disposed vasodilator activity through up-regulation of its associated down-stream signalling molecule, cyclic GMP (cGMP), metabolism of which is dependent on the activation of a number of PDEs [208]. Phospho diesterase type 3, 4 and 5 are the three main types of this enzyme found in pulmonary artery contractive cells. PDE-5 is the most abundantly expressed isoform in pulmonary circulation which was confirmed by several experimental investigations showing a benefi cial effect of PDE-5 inhibitors on vascular remodel ling and vasodilatation [234,235].
+
+Sildenafil is an oral PDE-5 inhibitor that is available in Europe since 2005
+
+Riociguat is a first in-class drug that augments cGMP biosynthesis through direct stimulation of the enzyme soluble guanylate cyclase (sGC) promoting vasodilatation by direct stimulation of sGC in an NO-independent fashion, and by sensitization of sGC to low endogenous NO levels [250].
+
+Selexipag is an orally active prodrug metabolized to the highly selective prostacyclin IP receptor agonist ACT-333679
+
+One of the most promising targets in PAH is platelet derived growth factor (PDGF). PDGF has been implicated in endothelial cell dysfunction and prolifera tion and migration of smooth muscle cells.
+
+## ==Keywords==
+```
+Calcium channel, cAMP, 
+ET-1 as EDN1 Endothelin 1, ENSG00000078401
+ETRA, Endothelin receptor type A, ENSG00000151617
+ETRB, Endothelin receptor type B, ENSG00000136160
+
+
+
+# All checked and added to the interesting gene results
+# Assotiated genes to soluble guanylate cyclase
+soluble guanylate cyclase, GUCY1A1 ENSG00000164116, GUCY1A2 ENSG00000152402, GUCY1B1 ENSG00000061918, GUCD1 ENSG00000138867, GUCY1B2 ENSG00000293412, GUCA1B ENSG00000112599,  GUCY1B2 ENSG00000123201, GUCY2C ENSG00000070019, GUCA1C ENSG00000138472, GUCA1A ENSG00000048545, GUCY2F ENSG00000101890, GUCY2D ENSG00000132518, NPPB ENSG00000120937, NPR2 ENSG00000159899, NPPC ENSG00000163273, NPPA ENSG00000175206, NHERF4 ENSG00000172367
+
+# Genes assotiated to prostacyclin/ prostaglandin
+# ALL ALREADY CHECKED IF IN TOP CORRELATIONS
+# PTGIR ENSG00000160013, # GNG10 ENSG00000242616, # PTGIS ENSG00000124212, # GNG11 ENSG00000127920, # GNG4 ENSG00000168243, # GNG12 ENSG00000172380, # GNG5 ENSG00000174021, # GNGT2 ENSG00000167083, # GNG8 ENSG00000167414, # GNG7 ENSG00000176533, # PTGIR ENSG00000160013, # GNG10 ENSG00000242616, # GNGT1 ENSG00000127928, # IGFBP7 ENSG00000163453, # GNB2 ENSG00000172354, # GNB5 ENSG00000069966, # GNB3 ENSG00000111664, # GNB4 ENSG00000114450, # GNG2 ENSG00000186469, # GNAS ENSG00000087460, # GNB1 ENSG00000078369
+
+# Genes assotiated to Tyrosine kinase
+-> noch via ensembl suche hinzufügen
 ```
