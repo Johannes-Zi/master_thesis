@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "1b1adf6ab6e9330d",
+        "id": "d26bc690a7649994",
         "type": "tabs",
         "children": [
           {
-            "id": "b84df78cc2e224be",
+            "id": "1aa9836d553d8a75",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LiteratureResearch/PH_General/PromptEngeneering.md",
+                "file": "LiteratureResearch/TargetGenes/PromptEngeneering.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "LiteratureResearch/PH_General/PromptEngeneering.md",
+                "file": "LiteratureResearch/TargetGenes/PromptEngeneering.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "LiteratureResearch/PH_General/PromptEngeneering.md",
+                "file": "LiteratureResearch/TargetGenes/PromptEngeneering.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LiteratureResearch/PH_General/PromptEngeneering.md"
+                "file": "LiteratureResearch/TargetGenes/PromptEngeneering.md"
               }
             }
           }
@@ -158,11 +158,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b84df78cc2e224be",
+  "active": "1aa9836d553d8a75",
   "lastOpenFiles": [
-    "Pasted image 20240925142515.png",
     "LiteratureResearch/TargetGenes/CheckTopCorrelationsOfEnrichInput.md",
-    "LiteratureResearch/PH_General/PromptEngeneering.md",
+    "LiteratureResearch/TargetGenes/PotentialGenesAndPathwaysOfInterest.md",
+    "Prostacyclin.md",
+    "LiteratureResearch/GenesDump/SPRY2.md",
+    "GUCY1A1.md",
+    "LiteratureResearch/Disease/disease_xyz.md",
+    "Pasted image 20240925142515.png",
+    "LiteratureResearch/GenesDump/ENG.md",
+    "LiteratureResearch/GenesDump/GLI1.md",
+    "LiteratureResearch/GenesDump/ACVRL1.md",
+    "LiteratureResearch/GenesDump/LIF.md",
+    "LiteratureResearch/Genes/gene_XYZ.md",
+    "LiteratureResearch/Genes/gene_list.md",
+    "LiteratureResearch/TargetGenes/PromptEngeneering.md",
     "LiteratureResearch/PH_General/Publications/montaniPulmonaryArterialHypertension2013/@montaniPulmonaryArterialHypertension2013.md",
     "LiteratureResearch/PH_General/Publications/simonneauClinicalClassificationPulmonary2004/@simonneauClinicalClassificationPulmonary2004.md",
     "LiteratureResearch/PH_General/Publications/simonneauClinicalClassificationPulmonary2004/mod_simonneauClinicalClassificationPulmonary2004.pdf",
@@ -183,21 +194,11 @@
     "AssociationAnalysis/CorrelationVisualization/visualize_top_correlations.r.md",
     "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md",
     "AssociationAnalysis/GoEnrich/goEnrichment.r.md",
-    "LiteratureResearch/Genes/LIF ENSG00000128342.md",
-    "LiteratureResearch/Genes/gene_XYZ.md",
     "AssociationAnalysis/DisGeNet2r/disgenet2r.md",
     "Stichit workflow/Regression/Runs/26_patient_dataset/StandardCV/RegStandardCV.md",
     "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
     "AssociationAnalysis/AssociationAnalysis.canvas",
     "AssociationAnalysis/AssociationAnalysis.md",
-    "Stichit workflow/Segmentation/Segmentation.md",
-    "Future Ideas/ComparisonWithIHECDataset.md",
-    "Future Ideas/DownstreamAnalysis.md",
-    "Future Ideas/CorrelationAnalysis.md",
-    "LiteratureResearch/Disease/disease_xyz.md",
-    "LiteratureResearch/Mechanism/mechanism_xyz.md",
-    "LiteratureResearch/Genes/gene_list.md",
-    "LiteratureResearch/Statement/geneXYZ_assotiated_with_diseaseXYZ.md",
     "Stichit workflow/StichitWorkflow.canvas",
     "Stichit workflow/Regression/Performance Evaluation/NzeroXpearson/fig_06051540_p.png",
     "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241637_p.png",
@@ -208,7 +209,6 @@
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/pictures/Pasted image 20240523153947.png",
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/pictures/Pasted image 20240523153742.png",
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/pictures/Pasted image 20240523153625.png",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/pictures/Pasted image 20240523153429.png",
     "Untitled 1.canvas",
     "Untitled.canvas",
     "Stichit workflow/Steps.canvas",
