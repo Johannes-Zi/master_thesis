@@ -2,7 +2,7 @@ The [[CheckTopCorrelationsOfEnrichInput | checking of the top correlations]]  fo
 
 The contrary approach described here aims to establish associations by finding already established connections  of PH and genes/pathways/mechanisms as well as already established and upcoming treatment targets. This was done by extracting information of:
 
-* PH reviews ([[@montaniPulmonaryArterialHypertension2013]], ==other new review to be checked==)
+* PH reviews ([[@montaniPulmonaryArterialHypertension2013]], [[@sommerCurrentFutureTreatments2021]])
 * Consensus mining ([[Consensus overview]])
 * Recent publications of Soni ([[ResearchSoni]])
 
@@ -16,11 +16,14 @@ The goal is to get a better unerstanding of pulmanory hypertension to extract a 
 This approach is a semi manual light version of what could be done for high throughput literature research for candidates. It can function as a proof of concept for the usage of consenus as data mining tool that provides an output which can be further processed by another Language model to extract and filter the relevance and compare and filter the different outputs for single gene. 
 But its has to be noted that consensus is only based on public access publication and thus can be only a part of a bigger data mining application which is based on different sources and approaches like a pubmed crawler.
 
-### (From the 2013 review)
-Blood tests Serological tests for HIV, hepatitis B or C serology should be performed to screen for associated diseases. The thyroid hormone measurement may reveal either hyperthyroid dysfunction or autoimmune thyroiditis, fre quently encountered in PAH.
-
+### (From [[@montaniPulmonaryArterialHypertension2013]])
+Blood tests Serological tests for HIV, hepatitis B or C serology should be performed to screen for associated diseases. The thyroid hormone measurement may reveal either hyperthyroid dysfunction or autoimmune thyroiditis, frequently encountered in PAH.
 Many different treatments target prostacyclin and its receptors as well as endothelin and its receptor due to its role as vasoconstrictor. Also targeted with PDE-5 inhibitor
+### (From [[@sommerCurrentFutureTreatments2021]])
+The advent of pharmacological therapies targeting the prostacyclin, endothelin, and NO pathways has significantly improved outcomes.
+Current research focuses  on targeting the underlying pathways of aberrant proliferation, migration, and apoptosis. Despitesuccess in preclinical models, using a plethora of novel approaches targeting cellular GPCRs,  ion channels, metabolism, epigenetics, growth factor receptors, transcription factors, and inflammation, successful transfer to human disease with positive outcomes  in clinical trials is limited.
+
 # ==General Keywords==
 ```
-Pulamnory hypertension, inflammation, epitel, immune , Angiogenese, vascular, cytokine, oxidative stress, TGF-ß signaling, vasodilator, vasoconstrictor, thyroid, prostacyclin, endothelin, PDE-5
+Pulamnory hypertension, inflammation, epitel, immune , Angiogenese, vascular, cytokine, TGF-ß signaling, vasoconstriction, vascular remodelling, NO pathways, prostacyclin, endothelin, PDE-5, proliferation, apoptosis
 ```
