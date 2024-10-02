@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "1aa9836d553d8a75",
+            "id": "d1e12a59a16e9ce2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LiteratureResearch/TargetGenes/PromptEngeneering.md",
+                "file": "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/@sommerCurrentFutureTreatments2021.md",
                 "mode": "source",
                 "source": false
               }
@@ -81,7 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 222.50152587890625
+    "width": 243.50469589233398
   },
   "right": {
     "id": "5b31fd771786262b",
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "LiteratureResearch/TargetGenes/PromptEngeneering.md",
+                "file": "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/@sommerCurrentFutureTreatments2021.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "LiteratureResearch/TargetGenes/PromptEngeneering.md",
+                "file": "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/@sommerCurrentFutureTreatments2021.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LiteratureResearch/TargetGenes/PromptEngeneering.md"
+                "file": "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/@sommerCurrentFutureTreatments2021.md"
               }
             }
           }
@@ -158,47 +158,46 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1aa9836d553d8a75",
+  "active": "d1e12a59a16e9ce2",
   "lastOpenFiles": [
-    "LiteratureResearch/TargetGenes/CheckTopCorrelationsOfEnrichInput.md",
-    "LiteratureResearch/TargetGenes/PotentialGenesAndPathwaysOfInterest.md",
-    "Prostacyclin.md",
-    "LiteratureResearch/GenesDump/SPRY2.md",
-    "GUCY1A1.md",
-    "LiteratureResearch/Disease/disease_xyz.md",
-    "Pasted image 20240925142515.png",
-    "LiteratureResearch/GenesDump/ENG.md",
-    "LiteratureResearch/GenesDump/GLI1.md",
-    "LiteratureResearch/GenesDump/ACVRL1.md",
-    "LiteratureResearch/GenesDump/LIF.md",
-    "LiteratureResearch/Genes/gene_XYZ.md",
-    "LiteratureResearch/Genes/gene_list.md",
-    "LiteratureResearch/TargetGenes/PromptEngeneering.md",
     "LiteratureResearch/PH_General/Publications/montaniPulmonaryArterialHypertension2013/@montaniPulmonaryArterialHypertension2013.md",
-    "LiteratureResearch/PH_General/Publications/simonneauClinicalClassificationPulmonary2004/@simonneauClinicalClassificationPulmonary2004.md",
-    "LiteratureResearch/PH_General/Publications/simonneauClinicalClassificationPulmonary2004/mod_simonneauClinicalClassificationPulmonary2004.pdf",
-    "LiteratureResearch/PH_General/Publications/simonneauClinicalClassificationPulmonary2004/simonneauClinicalClassificationPulmonary2004 - Kopie.pdf",
-    "LiteratureResearch/PH_General/Publications/simonneauClinicalClassificationPulmonary2004/simonneauClinicalClassificationPulmonary2004.pdf",
-    "LiteratureResearch/PH_General/Publications/simonneauClinicalClassificationPulmonary2004/Simonneau et al. - 2004 - Clinical classification of pulmonary hypertension.pdf",
-    "templates/@template.md",
-    "LiteratureResearch/PH_General/Publications/thenappanPulmonaryArterialHypertension2018/@thenappanPulmonaryArterialHypertension2018.md",
-    "LiteratureResearch/Ideas.md",
-    "LiteratureResearch/PH_General/Publications/simonneauClinicalClassificationPulmonary2004",
-    "LiteratureResearch/Promotor/publications/bilasCisregulatoryElementsUsed2016/@bilasCisregulatoryElementsUsed2016.md",
-    "LiteratureResearch/Promotor/publications",
-    "LiteratureResearch/Promotor",
-    "LiteratureResearch/PH_General/Publications/montaniPulmonaryArterialHypertension2013/mod_montaniPulmonaryArterialHypertension2013.pdf",
-    "LiteratureResearch/PH_General/Publications/montaniPulmonaryArterialHypertension2013/montaniPulmonaryArterialHypertension2013.pdf",
-    "LiteratureResearch/PH_General/Publications/montaniPulmonaryArterialHypertension2013/Montani et al. - 2013 - Pulmonary arterial hypertension - Kopie.pdf",
-    "LiteratureResearch/Publications/template/@template.md",
-    "AssociationAnalysis/CorrelationVisualization/visualize_top_correlations.r.md",
-    "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md",
-    "AssociationAnalysis/GoEnrich/goEnrichment.r.md",
-    "AssociationAnalysis/DisGeNet2r/disgenet2r.md",
-    "Stichit workflow/Regression/Runs/26_patient_dataset/StandardCV/RegStandardCV.md",
+    "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/@sommerCurrentFutureTreatments2021.md",
+    "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/mod_sommerCurrentFutureTreatments2021.pdf",
+    "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/sommerCurrentFutureTreatments2021 - Kopie.pdf",
+    "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/sommerCurrentFutureTreatments2021.pdf",
+    "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/Sommer et al. - 2021 - Current and future treatments of pulmonary arteria.pdf",
+    "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021",
+    "LiteratureResearch/Targets/PotentialHitsOfInterest.md",
+    "LiteratureResearch/KeywordDump/PDGF.md",
+    "LiteratureResearch/KeywordDump/Tyrosine kinase receptor.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/IFITM3.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/PKMYT1.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/Untitled.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/TMEM9.md",
+    "LiteratureResearch/KeywordDump/Calcium Channel.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/CCND1.md",
+    "LiteratureResearch/GeneDump/GUCY1A1.md",
+    "LiteratureResearch/Targets/ExtractFromLiterature.md",
+    "LiteratureResearch/GeneDumpIndirectConnection",
+    "LiteratureResearch/KeywordDump/Phosphodiesterase.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/ENPP2.md",
+    "LiteratureResearch/KeywordDump/Prostacyclin.md",
+    "LiteratureResearch/KeywordDump/Endothelin.md",
+    "LiteratureResearch/KeywordDump",
+    "LiteratureResearch/Untitled.md",
+    "LiteratureResearch/PH_General/Publications/thenappanPulmonaryArterialHypertension2018/mod_thenappanPulmonaryArterialHypertension2018.pdf",
+    "LiteratureResearch/PH_General/ResearchSoni/ResearchSoni.md",
+    "LiteratureResearch/PH_General/Consensus/Consensus overview.md",
+    "LiteratureResearch/Targets/KeywordExtraction.md",
+    "LiteratureResearch/Targets/Reviews.md",
+    "LiteratureResearch/Targets/CheckTopCorrelationsOfEnrichInput.md",
+    "LiteratureResearch/GenesDump/GenesDump.md",
+    "LiteratureResearch/GeneDump/ACVRL1.md",
+    "LiteratureResearch/PH_General/ResearchSoni/Pasted image 20240925142515.png",
+    "LiteratureResearch/PH_General/ResearchSoni",
+    "LiteratureResearch/PH_General/Consensus",
     "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
     "AssociationAnalysis/AssociationAnalysis.canvas",
-    "AssociationAnalysis/AssociationAnalysis.md",
     "Stichit workflow/StichitWorkflow.canvas",
     "Stichit workflow/Regression/Performance Evaluation/NzeroXpearson/fig_06051540_p.png",
     "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241637_p.png",
