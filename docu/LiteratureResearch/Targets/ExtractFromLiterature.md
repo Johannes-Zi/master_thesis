@@ -23,7 +23,24 @@ Many different treatments target prostacyclin and its receptors as well as endot
 The advent of pharmacological therapies targeting the prostacyclin, endothelin, and NO pathways has significantly improved outcomes.
 Current research focuses  on targeting the underlying pathways of aberrant proliferation, migration, and apoptosis. Despitesuccess in preclinical models, using a plethora of novel approaches targeting cellular GPCRs,  ion channels, metabolism, epigenetics, growth factor receptors, transcription factors, and inflammation, successful transfer to human disease with positive outcomes  in clinical trials is limited.
 
+... However, interest in the field has been revived by an improved understanding of immune regulation in PAH and the notion that perivascular inflammatory infiltrates (macrophages, B-cells, T-cells, and dendritic cells) often precede structural pulmonary vascu lar remodelling (Tamosiuniene et al., 2011)
+
 # ==General Keywords==
 ```
-Pulamnory hypertension, inflammation, epitel, immune , Angiogenese, vascular, cytokine, TGF-ß signaling, vasoconstriction, vascular remodelling, NO pathways, prostacyclin, endothelin, PDE-5, proliferation, apoptosis
+Pulamnory hypertension, inflammation, epitel, immune , Angiogenese, vascular, cytokine, TGF-ß signaling, vasoconstrictive/vasodilatory, vascular remodelling, NO pathways, prostacyclin, endothelin, PDE-5, proliferative/mitogenic, apoptosis, Coagulation, adhesion, growth factors, macrophages, B-cells, T-cells, dendritic cells, neutrophils, lymphocytes
+```
+
+==Maybe check also connection to Inflammatory mediators==
+```
+FOCUS FOCUS FOCUS
+### Inflammatory mediators
+## IL-1
+## IL-6 
+## LTB4
+## macrophage migration inhibitory factor
+## leptin
+## TNF-α
+## CD20
+## elafin
+## neutrophil derived serine proteases elastase and proteinase-3
 ```
