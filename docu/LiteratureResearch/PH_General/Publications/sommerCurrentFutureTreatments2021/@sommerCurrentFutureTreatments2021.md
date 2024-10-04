@@ -56,7 +56,7 @@ top corr hit for KCNH2 ENSG00000055118
 
 ## KCNK3
 ```
-### Expression of adhesion molecules 
+### Expression of adhesion molecules  important for inflammation
 ```
 ## E-selectin
 
@@ -157,8 +157,20 @@ Several immune modulatory approaches have been successfully tested in animal mod
 A different approach uses the endogenous protein elafin which inhibits the neutrophil derived serine proteases elastase and proteinase-3.
 Recently, it was reported that fucoidan, a polysaccharidic ligand of the adhesion molecule P-selectin, exhibits anti-proliferative properties and can attenuate hypoxia-induced PH in mice.
 Moreover, the damage associated high mobility group box-1 (HMGB1)—which is secreted from immune cells, activates macrophages as well as lymphocytes, and triggers autoimmunity by binding to the toll-like receptor 4 ( TLR4)—was shown to be involved in development of PH.
-##### Growthfactor receptors
+##### Growth factor receptors
+Receptor TKs (RTKs) and the TGFβ superfamily of growth factor receptors are both critically involved in PAH.
+RTKs are cell surface receptors for growth factors, ==cytokines== and hormones. RTKs which have been implicated in PAH include PDGF, EGF, FGF, VEGF, and nerve growth factor receptors.
+Binding of factors such as Src and PLCγ leads to activation of several downstream kinases including PI3K/PKB (Akt), MAPKs, PKC, JAK, STAT, and cyclin-dependent kinases (Lemmon & Schlessinger, 2010).
 
+TGFβ superfamily of growth factors
+An imbalance in TGFβ/bone morphogenetic protein (BMP) signalling has long been known as an important pathogenetic mechanism in PAH, since mutations in BMPR2, a TGFβ receptor (TGFβR) subtype, were identified in heritable PAH in 2000 (Lane et al., 2000). Recently, heterozygous mutations of BMPR2 were identified in 15.3% of patients from a U.K. PAH cohort (76% in familial PAH, 12% in spo radic cases, and 8% in anorexigen-exposed PAH cases; Graf et al., 2018). Decreased BMPR2 signalling has also been detected in patients with PAH without BMPR2 mutations. However, attempts to addressTGFβ pathways therapeutically have only recently been trans ferred to the clinic.
+TGFβ/BMP signalling is transduced by a combination of different type I (ALK1 to ALK7) and type II (e.g., TGFβR2, BMPR2, and activin 2A and 2B receptors) receptors as well as co-receptors (betaglycan and endoglin). These multicomponent receptors activate canonical downstream signalling via either Smad 2/3 (e.g., through TGFβR2 or activin receptors together with ALK1, ALK2, ALK3, or ALK6) or Smad 1/5/8 (e.g., through BMPR2 or activin receptors together with ALK4, ALK5, or ALK7), or non-canonical signalling via different kinases 14765381, 2021, 1, Downloaded from https://bpspubs.onlinelibrary.wiley.com/doi/10.1111/bph.15016 by Ub Frankfurt/Main Universitaet, Wiley Online Library on [02/10/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License 22 SOMMERETAL. (e.g., LIM domain kinase 1). Different ligands (e.g., TGFβ, BMPs, and activin) can activate the receptors with different affinity and induce partially opposing effects with regard to development of PAH. While activation of Smad 2/3 signalling (e.g., by TGFβ) results in gene expression promoting PAH, activation of Smad 1/5/8 signalling (e.g., by BMPs) inhibits alterations associated with PAH such as vascu lar smooth muscle growth (Rol, Kurakula, Happe, Bogaard, & Goumans, 2018). Thus, inhibition or activation of the respective receptor pathway may represent a promising strategy to treat PAH, although balancing the response might be challenging due to over lapping ligand and receptor functions.
+##### Transcription factors
+PPAR-γ belongs to a group of nuclear receptor proteins and functions as a transcription factor. When activated, PPAR-γ improves insulin sensitivity and has anti-inflammatory properties.
+
+Hypoxia causes pulmonary vasoconstriction, and hypoxic signalling is also suspected to play a role in PAH. This concept is supported by the finding of decreased expression of prolyl hydroxylase domain containing protein 2 (PHD2), which inhibits HIF, in PAEC from plexi form lesions, and by the fact that PHD2-deficient mice develop severe, HIF-2α-dependent PH (Dai, Li, Wharton, Zhu, & Zhao, 2016).
+
+Inhibition of mTOR reduced PH in several animal models (Goncharov et al., 2014; Paddenberg et al., 2007).
 ## ==Keywords - future treatment targets==
 ### Keywords
 ```
@@ -217,6 +229,7 @@ FOCUS FOCUS FOCUS
 ## IL-1
 ## IL-6 
 ## LTB4
+## CtBP1 (aus humbert paper)
 ## macrophage migration inhibitory factor
 ## leptin
 ## TNF-α
@@ -227,4 +240,55 @@ FOCUS FOCUS FOCUS
 ## HMGB1
 ## toll-like receptor 4 ( TLR4)
 
+
+FOCUS FOCUS FOCUS
+#### Growth factor receptors
+
+### RTKs
+## EGF
+## PDGF (+receptor)
+## FGF
+## VEGF
+## nerve growth factor receptors
+## Src (binding factor)
+## PLCγ (binding factor)
+## PI3K/PKB (Akt)  (downstream kinase)
+## MAPKs (downstream kinase)
+## PKC (downstream kinase)
+## JAK (downstream kinase)
+## STAT (downstream kinase)
+## cyclin-dependent kinases (downstream kinase)
+## BCR-ABL TK ??
+## SAMHD1 (from humbert paper)
+
+### TGFβ superfamily of growth factors
+## BMP bone morphogenetic protein
+## BMPR2 TGFβ receptor
+## ALK1 to ALK7 (receptors)
+## TGFβR2 (receptor)
+## BMPR2  (receptor)
+## activin 2A and 2B (receptors)
+## betaglycan (co-receptor)
+## endoglin (co-receptor)
+## Smad1 - Smad8
+## SMURF-1 (Smad regulatory factor)
+## BMP9
+
+#### Transcription factors
+## PPAR-γ
+## PHD2 (prolyl hydroxylase domain containing protein 2)
+## HIF
+## mTOR
+
+#### Novelpreclinical targets
+## Notch receptor 3 (important and connected to angionese)
+## STAT3
+## large tumour suppressor 1
+## myocyte enhancer factor 2
+## CCAAT-enhancer binding proteins,
+## RUNX2
+##
 ```
+
+# Outlook
+... Identifying the patient population which may profit most from a specific treatment (“enrichment”) and applying individualised medicine will allow successful targeting of very specific pathways (Sitbon et al., 2019). Great efforts have been made in the past years using genomics, epigenomics, and metabolomics to identify sub-clusters within patient groups (Pulmonary Vascular Disease Phenomics [PVDOMICS]; ClinicalTrials.gov identifier: NCT02980887). Thus, it will be more important for future clinical trials to utilise biomarkers to focus on specific patient subgroups (although this will further limit the number of patients eligible for enrolment). Moreover, detailed patient phenotyping can help to find pathways in common with animal stud ies and thus prioritise targets. Finally, specific effects of treatment on the pulmonary vasculature and RV have to be taken into account in future.

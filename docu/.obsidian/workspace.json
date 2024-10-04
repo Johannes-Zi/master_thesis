@@ -4,43 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "d26bc690a7649994",
+        "id": "3b1ee69f8331317d",
         "type": "tabs",
         "children": [
           {
-            "id": "d1e12a59a16e9ce2",
+            "id": "b8fac65f08132093",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/@sommerCurrentFutureTreatments2021.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1596cfb2812ea07c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "LiteratureResearch/Targets/PotentialHitsOfInterest.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "27e25e8ea12ccceb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "LiteratureResearch/Targets/ExtractFromLiterature.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -121,7 +93,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/@sommerCurrentFutureTreatments2021.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +109,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/@sommerCurrentFutureTreatments2021.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,9 +130,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/@sommerCurrentFutureTreatments2021.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -182,13 +150,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d1e12a59a16e9ce2",
+  "active": "b8fac65f08132093",
   "lastOpenFiles": [
     "LiteratureResearch/Targets/ExtractFromLiterature.md",
     "LiteratureResearch/Targets/PotentialHitsOfInterest.md",
     "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/@sommerCurrentFutureTreatments2021.md",
-    "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/Pasted image 20241003170408.png",
     "LiteratureResearch/PH_General/Publications/humbertPathologyPathobiologyPulmonary2019/@humbertPathologyPathobiologyPulmonary2019.md",
+    "LiteratureResearch/PH_General/Publications/humbertPathologyPathobiologyPulmonary2019/Pasted image 20241004220853.png",
+    "LiteratureResearch/PH_General/Publications/humbertPathologyPathobiologyPulmonary2019/Pasted image 20241004220553.png",
+    "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/Pasted image 20241003170408.png",
     "LiteratureResearch/PH_General/Publications/humbertPathologyPathobiologyPulmonary2019/mod_humbertPathologyPathobiologyPulmonary2019.pdf",
     "LiteratureResearch/PH_General/Publications/humbertPathologyPathobiologyPulmonary2019/humbertPathologyPathobiologyPulmonary2019 - Kopie.pdf",
     "LiteratureResearch/PH_General/Publications/humbertPathologyPathobiologyPulmonary2019/humbertPathologyPathobiologyPulmonary2019.pdf",
@@ -230,8 +200,6 @@
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/pictures/Pasted image 20240523154251.png",
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/pictures/Pasted image 20240523154143.png",
     "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/pictures/Pasted image 20240523154011.png",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/pictures/Pasted image 20240523153947.png",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/pictures/Pasted image 20240523153742.png",
     "Untitled 1.canvas",
     "Untitled.canvas",
     "Stichit workflow/Steps.canvas",

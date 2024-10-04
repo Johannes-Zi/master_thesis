@@ -1,0 +1,31 @@
+The paper was checked if it provides additional information to [[@sommerCurrentFutureTreatments2021]] to identify potential gene and pathway targets for the keyword search.
+
+# Relevant content
+
+... "==but also by loss of pre-capillary arteries and by an exaggerated perivascular infiltration of inflammatory cells (B- and T-lymphocytes, mast cells, dendritic cells, macrophages, etc.).==" 
+*(intermediate vessels called precapillaries, or metarterioles, that, unlike the capillaries, have muscle fibres that permit them to contract; thus the precapillaries are able to control the emptying and filling of the capillaries.)*
+Because current PAH treatments do not specifically target pulmonary vascular remodelling and inflammation, there is an urgent need to better identify the pathobiological mechanisms underlying the progressive narrowing of the pulmonary arterial lumen and perivascular inflammation and the loss of vessels in order to support therapeutic innovation aimed at reversing these features and regenerating normal pulmonary vessels.
+
+In PAH, a pro-inflammatory phenotype of pulmonary endothelial cells characterised by an increase in surface expression of E-selectin, ICAM1 and VCAM1 together with an excessive release of various key cytokines and chemokines has been reported [12].
+
+Additional insights into the altered pulmonary endothelial communication with both resident vascular cells (PA-SMCs, myofibroblasts, pericytes) and circulating cells (immune cells) are also a prerequisite for a better understanding of PH/PAH pathogenesis.
+
+The endothelium is also critical for the development of a functional vascular network that is dependent upon signals exchanged between the different cell types responsible for coordinating this process. In experimental and human PH/PAH, angiogenesis is disturbed with loss and progressive obliteration of pre-capillary arteries leading to a pattern of pulmonary vascular rarefaction (“dead-tree” picture), even if several pro-angiogenic factors are overabundant and/or overactive and an overexpression of Notch3 signalling in PA-SMCs has been reported.
+
+In PAH, it is also established that the dynamic and unadapted remodelling of the extracellular matrix forms a permissive milieu that not only favours cell motility, proliferation, apoptosis, and differentiation of resident vascular cells and recruitment of inflammatory cells, but can also have a considerable effect on vessel stiffness [48–51]. Owing to their close locations, and because there are several lines of evidence that indicate the existence of a complex interrelationship between pulmonary arterial cells and perivascular monocytes and macrophages [52, 53], a more complete understanding of these complex interrelationships is needed.
+
+**Dysregulation of the innate and adaptive immune system**
+==In experimental PH, perivascular inflammatory infiltrates of mixed inflammatory cells often precede the structural pulmonary vascular remodelling, supporting the notion that maladaptation of the inflammatory and immune systems exists and contributes to remodelling. Consistent with this notion, small lymphoid aggregates to large accumulations of lymphocytes resembling highly organised lymphoid follicles can be observed in lungs of patients with PAH. Similarly, it is now established that circulating levels of inflammatory mediators correlate with a worse clinical outcome in PAH and that alterations of circulating cell subsets can be observed [54–56]. As a result, therapies that directly modulate inflammatory processes have become a recent focus of clinical studies in PAH. The fact that steroid or aspirin treatment is not effectiv==e
+
+==The fact that steroid or aspirin treatment is not effective in IPAH and HPAH, and that prostacyclin, which has anti-inflammatory properties [57], does not reverse the pulmonary vascular remodelling underscores the fact that additional insights into the roles played by the immune cells and key cytokines/chemokines are a prerequisite for developing novel therapeutic strategies. Recent investigations provide evidence that pulmonary vascular cells are important local sources of soluble signals in PAH that contribute to pulmonary vascular remodelling. Indeed, PA-SMCs, endothelial cells, fibroblasts and myofibroblasts from patients with PAH exhibit a marked pro-inflammatory signature characterised by heightened expression of various cytokines and chemokines, and of key inflammatory cell adhesion molecules, such as ICAM1. The excessive local secretion of IL-1, IL-6, LTB4, macrophage migration inhibitory factor, leptin and TNF-α, and the inactivation of FoxO1, play an integral role in mediating the structural and functional changes in the pulmonary vasculature in PAH [12, 40, 43–46, 58].==
+
+Unadapted immunity and inflammation appear to play an active role in pulmonary endothelial dysfunction and vascular remodelling in PH/PAH, and are also likely to have a detrimental effect on cardiac function. However, there are subtleties and complexities that require further investigation to determine whether and which anti-inflammatory strategies will be best suited to treat PAH
+
+**Recent advances**
+We propose that the genetic, epigenetic and environmental factors lead to deregulation of growth factors, ion channels, hormones and cytokines that subsequently activate a complex cascade of signalling pathways causing abnormalities in vascular cell phenotype, including proliferation, differentiation/de-differentiation and inflammation
+
+![[Pasted image 20241004220553.png]]
+test
+![[Pasted image 20241004220853.png]]==Considerable advances are possible by interrogating large datasets to find novel pathways, critical transcription factors, microRNAs, biomarkers and metabolic mediators of PAH as well as points of intersection that can help develop better targeted therapies. Bioinformatic approaches with established datasets can generate a PAH signature and an anti-signature that can be used to find novel or repurposed therapies, as well as to deliver them.==
+
+==Another appealing approach could be to move away from common pathways to, instead, phenotype patients into “responder” and “non-responder” groups. Here, the challenge is discovering patient groups, within a group that is already small to start with, who are particularly well suited to adjuvant therapy.==
