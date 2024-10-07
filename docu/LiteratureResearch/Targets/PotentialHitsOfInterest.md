@@ -1,13 +1,15 @@
 ==The genes described in this file are represented by at least one segment in the [[CheckTopCorrelationsOfEnrichInput | top correlations]] .==
 # Association to PH
 
-| Gene         | Description                                        |
-| ------------ | -------------------------------------------------- |
-| [[ACVRL1]]   | Activin A Receptor Like Type 1                     |
-| [[GLI1]]     | GLI Family Zinc Finger 1                           |
-| [[ENG]]      | Endoglin                                           |
-| [[SPRY2]]    | Sprouty RTK Signaling Antagonist 2                 |
-| [[GUCY1A1 ]] | Guanylate Cyclase 1 Soluble Subunit Alpha 1        |
+| Gene         | Description                                 |
+| ------------ | ------------------------------------------- |
+| [[ACVRL1]]   | Activin A Receptor Like Type 1              |
+| [[GLI1]]     | GLI Family Zinc Finger 1                    |
+| [[ENG]]      | Endoglin                                    |
+| [[SPRY2]]    | Sprouty RTK Signaling Antagonist 2          |
+| [[GUCY1A1 ]] | Guanylate Cyclase 1 Soluble Subunit Alpha 1 |
+|              |                                             |
+
 
 # Indirect association to PH
 
@@ -18,7 +20,12 @@
 | [[PKMYT1]] | protein kinase, membrane associated tyrosine/threonine 1 |
 | [[TMEM9]]  | transmembrane protein 9                                  |
 | [[IFITM3]] | interferon induced transmembrane protein 3               |
-|            |                                                          |
+| [[SDK2]]   | Sidekick Cell Adhesion Molecule 2                        |
+| [[ICAM4]]  | Landsteiner-Wiener/intercellular adhesion molecule-4     |
+| [[KLRD1]]  | Killer Cell Lectin Like Receptor D                       |
+| [[ECM1 ]]  | ==Extracellular Matrix Protein 1==                       |
+| [[PARD3 ]] | Gene - Par-3 Family Cell Polarity Regulator              |
+| [[CADM1]]  | Cell Adhesion Molecule 1                                 |
 
 # Association to pathways
 

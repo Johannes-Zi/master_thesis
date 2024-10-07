@@ -64,7 +64,7 @@ top corr hit for KCNH2 ENSG00000055118
 
 ## VCAM1 (adhesion)
 ```
-### Inflammatory mediators
+### ==Inflammatory mediators==
 ```
 ##  peri vascular infiltration of inflammatory cells (B- and T-lymphocytes, mast cells, dendritic cells, macrophages, etc
 
