@@ -210,7 +210,7 @@ Inhibition of mTOR reduced PH in several animal models (Goncharov et al., 2014; 
 ## SIRT1 (...)
 ## PARP1 (...)
 
-### BRD4 - importent - connection to inflammatory
+### BRD4 - important - connection to inflammatory
 ## BRD4
 ## cyclin-dependent kinase inhibitor 1 (p21)
 ## cyclin-dependent kinase inhibitor 1B (p27)
@@ -228,51 +228,55 @@ FOCUS FOCUS FOCUS
 ### Inflammatory mediators
 ## IL-1
 ## IL-6 
-## LTB4
-## CtBP1 (aus humbert paper)
+## LTB4  ENSG00000213903
+## CtBP1 (aus humbert paper)  ENSG00000159692
 ## macrophage migration inhibitory factor
-## leptin
-## TNF-α
-## CD20
-## elafin
-## neutrophil derived serine proteases elastase and proteinase-3
-## P-selectin
-## HMGB1
-## toll-like receptor 4 ( TLR4)
+## leptin  ENSG00000174697
+## TNF-α  ENSG00000232810
+## CD20  MS4A1  ENSG00000156738
+## elafin  PI3  ENSG00000124102
+## neutrophil derived serine proteases elastase ELANE ENSG00000197561
+## proteinase-3 PRTN3  ENSG00000196415
+## P-selectin  ENSG00000174175
+## HMGB1  ENSG00000189403
+## toll-like receptor 4 ( TLR4)  ENSG00000136869
 
 
 FOCUS FOCUS FOCUS
 #### Growth factor receptors
 
-### RTKs
-## EGF
-## PDGF (+receptor)
-## FGF
-## VEGF
+### RTKs ENSG00000136158 
+## EGF  ENSG00000138798
+## PDGF (+receptor)  no hits
+## FGF checked all 50 assotited genes - no hit
+## VEGF  ENSG00000112715
 ## nerve growth factor receptors
-## Src (binding factor)
-## PLCγ (binding factor)
-## PI3K/PKB (Akt)  (downstream kinase)
-## MAPKs (downstream kinase)
-## PKC (downstream kinase)
-## JAK (downstream kinase)
-## STAT (downstream kinase)
-## cyclin-dependent kinases (downstream kinase)
-## BCR-ABL TK ??
-## SAMHD1 (from humbert paper)
+## Src (binding factor)  ENSG00000197122
+## PLCγ (binding factor) ENSG00000124181, ENSG00000197943
+## PI3K/PKB (Akt)  (downstream kinase)  no hits (a few checked)
+## MAPKs (downstream kinase) already checked
+## PKC (downstream kinase) unspecific
+## JAK (downstream kinase) ENSG00000162434 ENSG00000096968 ENSG00000105639
+## STAT (downstream kinase) unspecific
+## cyclin-dependent kinases (downstream kinase) unspecific
+## BCR-ABL TK ?? ENSG00000186716
+## SAMHD1 (from humbert paper)  ENSG00000101347 
 
-### TGFβ superfamily of growth factors
-## BMP bone morphogenetic protein
-## BMPR2 TGFβ receptor
-## ALK1 to ALK7 (receptors)
-## TGFβR2 (receptor)
-## BMPR2  (receptor)
-## activin 2A and 2B (receptors)
-## betaglycan (co-receptor)
-## endoglin (co-receptor)
-## Smad1 - Smad8
-## SMURF-1 (Smad regulatory factor)
-## BMP9
+### TGFβ superfamily of growth factors  already checked
+## BMP bone morphogenetic protein  unspecific
+## BMPR2 TGFβ receptor ENSG00000204217
+## ALK1 to ALK7 (receptors)  ENSG00000171094, ENSG00000115170, ENSG00000107779, ENSG00000135503, ENSG00000106799, ENSG00000138696, ENSG00000123612
+## TGFβR2 (receptor)  ENSG00000163513
+## BMPR2  (receptor)  already checked
+## activin 2A and 2B (receptors)  ENSG00000121989, ENSG00000114739
+## betaglycan (co-receptor) ENSG00000069702
+## endoglin (co-receptor) ENSG00000106991
+## Smad1 - Smad8 all checked
+## SMURF-1 (Smad regulatory factor)  ENSG00000198742
+## BMP9  ENSG00000263761
+
+
+
 
 #### Transcription factors
 ## PPAR-γ
@@ -281,13 +285,13 @@ FOCUS FOCUS FOCUS
 ## mTOR
 
 #### Novelpreclinical targets
-## Notch receptor 3 (important and connected to angionese)
-## STAT3
-## large tumour suppressor 1
-## myocyte enhancer factor 2
-## CCAAT-enhancer binding proteins,
-## RUNX2
-##
+## Notch receptor 3 (important and connected to angionese)  ENSG00000074181
+## STAT3  ENSG00000168610
+## large tumour suppressor 1  ENSG00000131023
+## myocyte enhancer factor 2  ENSG00000068305
+## CCAAT-enhancer binding proteins, not hit
+## RUNX2  ENSG00000124813
+## 
 ```
 
 # Outlook

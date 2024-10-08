@@ -29,6 +29,7 @@ Current research focuses  on targeting the underlying pathways of aberrant proli
 ```
 Pulamnory hypertension, inflammation, epitel, immune , Angiogenese, vascular, cytokine, TGF-ß signaling, vasoconstrictive/vasodilatory, vascular remodelling, NO pathways, prostacyclin, endothelin, PDE-5, proliferative/mitogenic, apoptosis, Coagulation, adhesion, growth factors, macrophages, B-cells, T-cells, dendritic cells, neutrophils, lymphocytes
 ```
+Substring of those words were also used (usualy first three chars) to check the top correlation enrich input datasets for occurrence.
 
 ==Maybe check also connection to Inflammatory mediators==
 ```
