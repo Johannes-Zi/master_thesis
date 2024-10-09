@@ -1,17 +1,20 @@
 ==The genes described in this file are represented by at least one segment in the [[CheckTopCorrelationsOfEnrichInput | top correlations]] .==
 # Association to PH
 
-| Gene         | Description                                          |
-| ------------ | ---------------------------------------------------- |
-| [[ACVRL1]]   | Activin A Receptor Like Type 1                       |
-| [[GLI1]]     | GLI Family Zinc Finger 1                             |
-| [[ENG]]      | Endoglin                                             |
-| [[SPRY2]]    | Sprouty RTK Signaling Antagonist 2                   |
-| [[GUCY1A1 ]] | Guanylate Cyclase 1 Soluble Subunit Alpha 1          |
-| [[EGR1]]     | Early Growth Response 1                              |
-| [[ICAM4]]    | Landsteiner-Wiener/intercellular adhesion molecule-4 |
-| [[MAOB]]     | monoamine oxidase B                                  |
-| [[AOC3]]     | Amine Oxidase Copper Containing 3                    |
+| Gene         | Description                                          | ENSEMBL_ID      | correlation |     |
+| ------------ | ---------------------------------------------------- | --------------- | ----------- | --- |
+| [[ACVRL1]]   | Activin A Receptor Like Type 1                       |                 |             |     |
+| [[GLI1]]     | GLI Family Zinc Finger 1                             |                 |             |     |
+| [[ENG]]      | Endoglin                                             |                 |             |     |
+| [[SPRY2]]    | Sprouty RTK Signaling Antagonist 2                   |                 |             |     |
+| [[GUCY1A1 ]] | Guanylate Cyclase 1 Soluble Subunit Alpha 1          |                 |             |     |
+| [[EGR1]]     | Early Growth Response 1                              |                 |             |     |
+| [[ICAM4]]    | Landsteiner-Wiener/intercellular adhesion molecule-4 |                 |             |     |
+| [[MAOB]]     | monoamine oxidase B                                  |                 |             |     |
+| [[AOC3]]     | Amine Oxidase Copper Containing 3                    |                 |             |     |
+| [[AVP]]      | arginine vasopressin                                 | ENSG00000101200 |             |     |
+| [[ADM2]]     | adrenomedullin 2                                     | ENSG00000128165 |             |     |
+| [[GATA6]]    | GATA binding protein 6                               | ENSG00000141448 |             |     |
 
 
 # Hits with indirect or no reported association to PH
@@ -46,11 +49,32 @@
 | [[PJA1]]      | praja ring finger ==ubiquitin== ligase 1                         | ENSG00000181191 |                               |
 | [[USP28]]     | ==ubiquitin== specific peptidase 28                              | ENSG00000048028 |                               |
 | [[PDGFD]]     | Platelet Derived Growth Factor D                                 | ENSG00000170962 |                               |
-|               |                                                                  |                 |                               |
+| [[BSPRY]]     | B Box And SPRY Domain-Containing Protein (==ubiqutin== related)  | ENSG00000119411 |                               |
 | [[NDUFB1]]    | NADH:ubiquinone oxidoreductase subunit B1                        | ENSG00000183648 |                               |
 | [[BLK]]       | BLK proto-oncogene, Src family tyrosine kinase                   | ENSG00000136573 | bad corr - check other params |
 | [[BCR]]       | BCR Activator Of RhoGEF And GTPase                               | ENSG00000186716 |                               |
 | [[ACVR1B]]    | Activin A Receptor Type 1B                                       | ENSG00000135503 | ALK3 also hit (BMPR1A)        |
+| [[BATF3]]     | basic leucine zipper ATF-like transcription factor 3             | ENSG00000123685 |                               |
+| [[MYC]]       | MYC proto-oncogene, bHLH transcription factor                    | ENSG00000136997 |                               |
+| [[TRAF5]]     | TNF receptor associated factor 5                                 | ENSG00000082512 |                               |
+| [[JPH4]]      | junctophilin 4                                                   | ENSG00000092051 |                               |
+| [[CCR2]]      | C-C motif chemokine receptor 2                                   | ENSG00000121807 |                               |
+| [[PROK2]]     | prokineticin 2 (associated to GPCR downstream signaling)         | ENSG00000163421 |                               |
+| [[FBLN2]]     | fibulin 2                                                        | ENSG00000163520 |                               |
+| [[DEPP1]]     | DEPP autophagy regulator 1                                       | ENSG00000165507 |                               |
+| [[UBE2E3]]    | ==ubiquitin== conjugating enzyme E2 E3                           | ENSG00000170035 |                               |
+| [[RND1]]      | Rho family GTPase 1                                              | ENSG00000172602 |                               |
+| [[C1QB]]      | complement C1q B chain                                           | ENSG00000173369 |                               |
+| [[C1QA]]      | complement C1q A chain                                           | ENSG00000173372 |                               |
+| [[SPACA6]]    | sperm acrosome associated 6                                      | ENSG00000182310 |                               |
+| [[SRI]]       | sorcin                                                           | ENSG00000075142 |                               |
+| [[MYBL2]]     | MYB proto-oncogene like 2                                        | ENSG00000101057 |                               |
+| [[SIRPB1]]    | signal regulatory protein beta 1 (tyrosine kinase associated)    | ENSG00000101307 |                               |
+| [[NEFM]]      | neurofilament medium chain                                       | ENSG00000104722 |                               |
+| [[SDC1]]      | syndecan 1 (cardiac firbrosis related)                           | ENSG00000115884 |                               |
+| [[TMCC2]]     | transmembrane and coiled-coil domain family 2                    | ENSG00000133069 |                               |
+| [[CCDC117]]   | coiled-coil domain containing 117                                | ENSG00000159873 |                               |
+|               |                                                                  |                 |                               |
 # No reported association
 
 | Gene      | Description                                        |

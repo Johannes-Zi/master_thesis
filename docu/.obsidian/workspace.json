@@ -115,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/@sommerCurrentFutureTreatments2021.md",
+                "file": "LiteratureResearch/Targets/PotentialHitsOfInterest.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/@sommerCurrentFutureTreatments2021.md",
+                "file": "LiteratureResearch/Targets/PotentialHitsOfInterest.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/@sommerCurrentFutureTreatments2021.md"
+                "file": "LiteratureResearch/Targets/PotentialHitsOfInterest.md"
               }
             }
           }
@@ -176,11 +176,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "439be0bb6800aaa5",
+  "active": "b8fac65f08132093",
   "lastOpenFiles": [
-    "LiteratureResearch/Targets/PotentialHitsOfInterest.md",
-    "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/@sommerCurrentFutureTreatments2021.md",
     "ubiqitin_pathways.md",
+    "LiteratureResearch/Targets/PotentialHitsOfInterest.md",
+    "PROK2.md",
+    "AVP.md",
+    "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/@sommerCurrentFutureTreatments2021.md",
     "UBR4.md",
     "NDUFB1.md",
     "ERCC8.md",
@@ -202,8 +204,6 @@
     "LiteratureResearch/Targets/ExtractFromLiterature.md",
     "LiteratureResearch/GeneDump/EGR1.md",
     "LiteratureResearch/GeneDumpIndirectConnection/TNFRSF13C.md",
-    "LiteratureResearch/GeneDump/LIF.md",
-    "NECTIN3.md",
     "LiteratureResearch/PH_General/Publications/humbertPathologyPathobiologyPulmonary2019/Pasted image 20241004220853.png",
     "LiteratureResearch/PH_General/Publications/humbertPathologyPathobiologyPulmonary2019/Pasted image 20241004220553.png",
     "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/Pasted image 20241003170408.png",
