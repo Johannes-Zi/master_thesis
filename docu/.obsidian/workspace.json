@@ -6,6 +6,7 @@
       {
         "id": "e252de91b70e708a",
         "type": "tabs",
+        "dimension": 28.289473684210524,
         "children": [
           {
             "id": "439be0bb6800aaa5",
@@ -24,6 +25,7 @@
       {
         "id": "3b1ee69f8331317d",
         "type": "tabs",
+        "dimension": 71.71052631578947,
         "children": [
           {
             "id": "b8fac65f08132093",
@@ -178,8 +180,12 @@
   },
   "active": "b8fac65f08132093",
   "lastOpenFiles": [
-    "ubiqitin_pathways.md",
+    "LiteratureResearch/KeywordDump/Prostacyclin.md",
     "LiteratureResearch/Targets/PotentialHitsOfInterest.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/ECM1.md",
+    "LiteratureResearch/GeneDump/ACVRL1.md",
+    "LiteratureResearch/GeneDump/ENG.md",
+    "ubiqitin_pathways.md",
     "PROK2.md",
     "AVP.md",
     "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/@sommerCurrentFutureTreatments2021.md",
@@ -200,10 +206,6 @@
     "LiteratureResearch/KeywordDump/Endothelin.md",
     "LiteratureResearch/GeneDumpIndirectConnection/KCNC3.md",
     "LiteratureResearch/GeneDumpIndirectConnection/ICAM4.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/MCF2L.md",
-    "LiteratureResearch/Targets/ExtractFromLiterature.md",
-    "LiteratureResearch/GeneDump/EGR1.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/TNFRSF13C.md",
     "LiteratureResearch/PH_General/Publications/humbertPathologyPathobiologyPulmonary2019/Pasted image 20241004220853.png",
     "LiteratureResearch/PH_General/Publications/humbertPathologyPathobiologyPulmonary2019/Pasted image 20241004220553.png",
     "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/Pasted image 20241003170408.png",

@@ -1,4 +1,3 @@
-ENSG00000106991,  Endoglin
 This gene encodes a homodimeric transmembrane protein which is a major glycoprotein of the vascular endothelium. This protein is a component of the transforming growth factor beta receptor complex and it binds to the beta1 and beta3 peptides with high affinity. Mutations in this gene cause hereditary hemorrhagic telangiectasia, also known as Osler-Rendu-Weber syndrome 1, an autosomal dominant multisystemic vascular dysplasia. This gene may also be involved in preeclampsia and several types of cancer. Alternatively spliced transcript variants encoding different isoforms have been found for this gene. [provided by RefSeq, May 2013]
 
 “The endoglin (ENG) gene, which encodes a transmembrane glycoprotein involved in vascular integrity and angiogenesis, has been implicated in the pathogenesis of PAH.” 

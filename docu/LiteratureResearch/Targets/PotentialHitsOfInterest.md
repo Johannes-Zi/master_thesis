@@ -1,20 +1,20 @@
 ==The genes described in this file are represented by at least one segment in the [[CheckTopCorrelationsOfEnrichInput | top correlations]] .==
 # Association to PH
 
-| Gene         | Description                                          | ENSEMBL_ID      | correlation |     |
-| ------------ | ---------------------------------------------------- | --------------- | ----------- | --- |
-| [[ACVRL1]]   | Activin A Receptor Like Type 1                       |                 |             |     |
-| [[GLI1]]     | GLI Family Zinc Finger 1                             |                 |             |     |
-| [[ENG]]      | Endoglin                                             |                 |             |     |
-| [[SPRY2]]    | Sprouty RTK Signaling Antagonist 2                   |                 |             |     |
-| [[GUCY1A1 ]] | Guanylate Cyclase 1 Soluble Subunit Alpha 1          |                 |             |     |
-| [[EGR1]]     | Early Growth Response 1                              |                 |             |     |
-| [[ICAM4]]    | Landsteiner-Wiener/intercellular adhesion molecule-4 |                 |             |     |
-| [[MAOB]]     | monoamine oxidase B                                  |                 |             |     |
-| [[AOC3]]     | Amine Oxidase Copper Containing 3                    |                 |             |     |
-| [[AVP]]      | arginine vasopressin                                 | ENSG00000101200 |             |     |
-| [[ADM2]]     | adrenomedullin 2                                     | ENSG00000128165 |             |     |
-| [[GATA6]]    | GATA binding protein 6                               | ENSG00000141448 |             |     |
+| Gene         | Description                                          | ENSEMBL_ID      | correlation |                          |
+| ------------ | ---------------------------------------------------- | --------------- | ----------- | ------------------------ |
+| [[ACVRL1]]   | Activin A Receptor Like Type 1                       | ENSG00000139567 |             | chr12.51907898.51908147  |
+| [[GLI1]]     | GLI Family Zinc Finger 1                             |                 |             |                          |
+| [[ENG]]      | Endoglin                                             | ENSG00000106991 |             | chr9.127853598.127853857 |
+| [[SPRY2]]    | Sprouty RTK Signaling Antagonist 2                   |                 |             |                          |
+| [[GUCY1A1 ]] | Guanylate Cyclase 1 Soluble Subunit Alpha 1          |                 |             |                          |
+| [[EGR1]]     | Early Growth Response 1                              |                 |             |                          |
+| [[ICAM4]]    | Landsteiner-Wiener/intercellular adhesion molecule-4 |                 |             |                          |
+| [[MAOB]]     | monoamine oxidase B                                  |                 |             |                          |
+| [[AOC3]]     | Amine Oxidase Copper Containing 3                    |                 |             |                          |
+| [[AVP]]      | arginine vasopressin                                 | ENSG00000101200 |             |                          |
+| [[ADM2]]     | adrenomedullin 2                                     | ENSG00000128165 |             |                          |
+| [[GATA6]]    | GATA binding protein 6                               | ENSG00000141448 |             |                          |
 
 
 # Hits with indirect or no reported association to PH
@@ -74,7 +74,9 @@
 | [[SDC1]]      | syndecan 1 (cardiac firbrosis related)                           | ENSG00000115884 |                               |
 | [[TMCC2]]     | transmembrane and coiled-coil domain family 2                    | ENSG00000133069 |                               |
 | [[CCDC117]]   | coiled-coil domain containing 117                                | ENSG00000159873 |                               |
-|               |                                                                  |                 |                               |
+| [[FLYWCH1]]   | FLYWCH-type zinc finger 1                                        | ENSG00000059122 |                               |
+| [[ZNF691]]    | zinc finger protein 691                                          | ENSG00000164011 |                               |
+| [[ZNF662]]    | zinc finger protein 66                                           | ENSG00000182983 |                               |
 # No reported association
 
 | Gene      | Description                                        |
