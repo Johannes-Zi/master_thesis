@@ -1,5 +1,3 @@
-ENSG00000160191, phosphodiesterase 9A
-
 ### NCBI Gene Summary for PDE9A Gene
 
 [](https://www.ncbi.nlm.nih.gov/gene/5152)

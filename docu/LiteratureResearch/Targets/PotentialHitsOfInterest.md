@@ -1,55 +1,48 @@
 ==The genes described in this file are represented by at least one segment in the [[CheckTopCorrelationsOfEnrichInput | top correlations]] .==
 # Association to PH
 
-| Gene         | Description                                          | ENSEMBL_ID      | correlation |                          |
-| ------------ | ---------------------------------------------------- | --------------- | ----------- | ------------------------ |
-| [[ACVRL1]]   | Activin A Receptor Like Type 1                       | ENSG00000139567 |             | chr12.51907898.51908147  |
-| [[GLI1]]     | GLI Family Zinc Finger 1                             |                 |             |                          |
-| [[ENG]]      | Endoglin                                             | ENSG00000106991 |             | chr9.127853598.127853857 |
-| [[SPRY2]]    | Sprouty RTK Signaling Antagonist 2                   |                 |             |                          |
-| [[GUCY1A1 ]] | Guanylate Cyclase 1 Soluble Subunit Alpha 1          |                 |             |                          |
-| [[EGR1]]     | Early Growth Response 1                              |                 |             |                          |
-| [[ICAM4]]    | Landsteiner-Wiener/intercellular adhesion molecule-4 |                 |             |                          |
-| [[MAOB]]     | monoamine oxidase B                                  |                 |             |                          |
-| [[AOC3]]     | Amine Oxidase Copper Containing 3                    |                 |             |                          |
-| [[AVP]]      | arginine vasopressin                                 | ENSG00000101200 |             |                          |
-| [[ADM2]]     | adrenomedullin 2                                     | ENSG00000128165 |             |                          |
-| [[GATA6]]    | GATA binding protein 6                               | ENSG00000141448 |             |                          |
+| Gene         | Description                                          | ENSEMBL_ID      | correlation |                                                                                 |
+| ------------ | ---------------------------------------------------- | --------------- | ----------- | ------------------------------------------------------------------------------- |
+| [[ACVRL1]]   | Activin A Receptor Like Type 1                       | ENSG00000139567 |             | chr12.51907898.51908147                                                         |
+| [[GLI1]]     | GLI Family Zinc Finger 1                             | ENSG00000111087 |             |                                                                                 |
+| [[ENG]]      | Endoglin                                             | ENSG00000106991 |             | chr9.127853598.127853857                                                        |
+| [[SPRY2]]    | Sprouty RTK Signaling Antagonist 2                   | ENSG00000136158 |             |                                                                                 |
+| [[GUCY1A1 ]] | Guanylate Cyclase 1 Soluble Subunit Alpha 1          | ENSG00000164116 |             | # Other associated hits in top correlations<br>ENSG00000112599, ENSG00000172367 |
+| [[EGR1]]     | Early Growth Response 1                              | ENSG00000120738 |             |                                                                                 |
+| [[ICAM4]]    | Landsteiner-Wiener/intercellular adhesion molecule-4 | ENSG00000105371 |             |                                                                                 |
+| [[MAOB]]     | monoamine oxidase B                                  | ENSG00000069535 |             |                                                                                 |
+| [[AOC3]]     | Amine Oxidase Copper Containing 3                    | ENSG00000131471 |             |                                                                                 |
+| [[AVP]]      | arginine vasopressin                                 | ENSG00000101200 |             |                                                                                 |
+| [[ADM2]]     | adrenomedullin 2                                     | ENSG00000128165 |             |                                                                                 |
+| [[GATA6]]    | GATA binding protein 6                               | ENSG00000141448 |             |                                                                                 |
+| [[GUCY1A2]]  |                                                      | ENSG00000152402 |             |                                                                                 |
 
 
 # Hits with indirect or no reported association to PH
 
 | Gene          | Description                                                      | ENSEMBL_ID      | correlation                   |
 | ------------- | ---------------------------------------------------------------- | --------------- | ----------------------------- |
-| [[ENPP2]]     | ectonucleotide pyrophosphatase/phosphodiesterase 2               |                 | +                             |
-| [[CCND1]]     | cyclin D1                                                        |                 | ++                            |
-| [[PKMYT1]]    | protein kinase, membrane associated tyrosine/threonine 1         |                 | +++                           |
-| [[TMEM9]]     | transmembrane protein 9                                          |                 | ++++                          |
-| [[IFITM3]]    | interferon induced transmembrane protein 3                       |                 |                               |
-| [[SDK2]]      | Sidekick Cell Adhesion Molecule 2                                |                 |                               |
-| [[KLRD1]]     | Killer Cell Lectin Like Receptor D                               |                 |                               |
-| [[ECM1 ]]     | ==Extracellular Matrix Protein 1==                               |                 |                               |
-| [[PARD3 ]]    | Gene - Par-3 Family Cell Polarity Regulator                      |                 |                               |
-| [[CADM1]]     | Cell Adhesion Molecule 1                                         |                 |                               |
-| [[LIF]]       | LIF interleukin 6 family cytokine                                |                 |                               |
-| [[TNFRSF13C]] | TNF Receptor Superfamily Member 13C                              |                 |                               |
-| [[MCF2L ]]    | MCF.2 Cell Line Derived Transforming Sequence                    |                 |                               |
-| [[KCNC3]]     | potassium voltage-gated channel subfamily C member 3             |                 |                               |
-| [[PDE9A]]     | phosphodiesterase 9A                                             |                 |                               |
-| [[ADM2]]      | Adrenomedullin 2                                                 |                 |                               |
-| [[TPH1]]      | Tryptophan Hydroxylase 1                                         |                 |                               |
-| [[FFAR1]]     | Free Fatty Acid Receptor 1                                       |                 |                               |
-| [[TXNL4A]]    | thioredoxin like 4A                                              |                 |                               |
-| [[IL31RA]]    | interleukin 31 receptor A                                        |                 |                               |
-| [[IL18R1]]    | interleukin 18 receptor 1                                        |                 |                               |
-| [[ERCC8]]     | ERCC excision repair 8, CSA ==ubiquitin== ligase complex subunit | ENSG00000049167 |                               |
-| [[UBE3D]]     | ==ubiquitin== protein ligase E3D                                 | ENSG00000118420 |                               |
-| [[USP44]]     | ==ubiquitin== specific peptidase 44                              | ENSG00000136014 |                               |
-| [[UBR4]]      | ==ubiquitin== protein ligase E3 component n-recognin 4           | ENSG00000127481 |                               |
-| [[PJA1]]      | praja ring finger ==ubiquitin== ligase 1                         | ENSG00000181191 |                               |
-| [[USP28]]     | ==ubiquitin== specific peptidase 28                              | ENSG00000048028 |                               |
-| [[PDGFD]]     | Platelet Derived Growth Factor D                                 | ENSG00000170962 |                               |
-| [[BSPRY]]     | B Box And SPRY Domain-Containing Protein (==ubiqutin== related)  | ENSG00000119411 |                               |
+| [[ENPP2]]     | ectonucleotide pyrophosphatase/phosphodiesterase 2               | ENSG00000136960 | +                             |
+| [[CCND1]]     | cyclin D1                                                        | ENSG00000110092 | ++                            |
+| [[PKMYT1]]    | protein kinase, membrane associated tyrosine/threonine 1         | ENSG00000127564 | +++                           |
+| [[TMEM9]]     | transmembrane protein 9                                          | ENSG00000116857 | ++++                          |
+| [[IFITM3]]    | interferon induced transmembrane protein 3                       | ENSG00000142089 |                               |
+| [[SDK2]]      | Sidekick Cell Adhesion Molecule 2                                | ENSG00000069188 |                               |
+| [[KLRD1]]     | Killer Cell Lectin Like Receptor D                               | ENSG00000134539 |                               |
+| [[ECM1 ]]     | ==Extracellular Matrix Protein 1==                               | ENSG00000143369 |                               |
+| [[PARD3 ]]    | Gene - Par-3 Family Cell Polarity Regulator                      | ENSG00000148498 |                               |
+| [[CADM1]]     | Cell Adhesion Molecule 1                                         | ENSG00000182985 |                               |
+| [[LIF]]       | LIF interleukin 6 family cytokine                                | ENSG00000128342 |                               |
+| [[TNFRSF13C]] | TNF Receptor Superfamily Member 13C                              | ENSG00000159958 |                               |
+| [[MCF2L ]]    | MCF.2 Cell Line Derived Transforming Sequence                    | ENSG00000101977 |                               |
+| [[KCNC3]]     | potassium voltage-gated channel subfamily C member 3             | ENSG00000131398 |                               |
+| [[PDE9A]]     | phosphodiesterase 9A                                             | ENSG00000160191 |                               |
+| [[ADM2]]      | Adrenomedullin 2                                                 | ENSG00000128165 |                               |
+| [[TPH1]]      | Tryptophan Hydroxylase 1                                         | ENSG00000129167 |                               |
+| [[FFAR1]]     | Free Fatty Acid Receptor 1                                       | ENSG00000126266 |                               |
+| [[TXNL4A]]    | thioredoxin like 4A                                              | ENSG00000141759 |                               |
+| [[IL31RA]]    | interleukin 31 receptor A                                        | ENSG00000115604 |                               |
+| [[IL18R1]]    | interleukin 18 receptor 1                                        | ENSG00000115604 |                               |
 | [[NDUFB1]]    | NADH:ubiquinone oxidoreductase subunit B1                        | ENSG00000183648 |                               |
 | [[BLK]]       | BLK proto-oncogene, Src family tyrosine kinase                   | ENSG00000136573 | bad corr - check other params |
 | [[BCR]]       | BCR Activator Of RhoGEF And GTPase                               | ENSG00000186716 |                               |
@@ -82,6 +75,18 @@
 | Gene      | Description                                        |
 | --------- | -------------------------------------------------- |
 | [[ENPP2]] | ectonucleotide pyrophosphatase/phosphodiesterase 2 |
+
+# Ubiquitin related
+| Gene      | Description                                                      | ENSEMBL_ID      | correlation |
+| --------- | ---------------------------------------------------------------- | --------------- | ----------- |
+| [[ERCC8]] | ERCC excision repair 8, CSA ==ubiquitin== ligase complex subunit | ENSG00000049167 |             |
+| [[UBE3D]] | ==ubiquitin== protein ligase E3D                                 | ENSG00000118420 |             |
+| [[USP44]] | ==ubiquitin== specific peptidase 44                              | ENSG00000136014 |             |
+| [[UBR4]]  | ==ubiquitin== protein ligase E3 component n-recognin 4           | ENSG00000127481 |             |
+| [[PJA1]]  | praja ring finger ==ubiquitin== ligase 1                         | ENSG00000181191 |             |
+| [[USP28]] | ==ubiquitin== specific peptidase 28                              | ENSG00000048028 |             |
+| [[PDGFD]] | Platelet Derived Growth Factor D                                 | ENSG00000170962 |             |
+| [[BSPRY]] | B Box And SPRY Domain-Containing Protein (==ubiqutin== related)  | ENSG00000119411 |             |
 # Association to pathways
 
 | Keyword                      | Consensus                                                                                                                                                                                                                                                     |

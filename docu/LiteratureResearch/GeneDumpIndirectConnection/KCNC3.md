@@ -1,5 +1,3 @@
-ENSG00000131398, potassium voltage-gated channel subfamily C member 3
-
 ### NCBI Gene Summary for KCNC3 Gene
 
 [](https://www.ncbi.nlm.nih.gov/gene/3748)

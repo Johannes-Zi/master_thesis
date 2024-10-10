@@ -1,5 +1,5 @@
 # General 
-* ENSG00000182985, cell adhesion molecule 1
+
 * ==very good separation and correlation==
 
 # GeneCards

@@ -1,5 +1,3 @@
-ENSG00000129167, Tryptophan Hydroxylase 1
-
 ### NCBI Gene Summary for TPH1 Gene
 
 [](https://www.ncbi.nlm.nih.gov/gene/7166)

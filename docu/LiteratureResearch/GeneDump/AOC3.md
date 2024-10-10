@@ -1,4 +1,3 @@
-ENSG00000131471, Amine Oxidase Copper Containing 3
 
 ### NCBI Gene Summary for AOC3 Gene
 

@@ -1,5 +1,3 @@
-ENSG00000134539, Killer Cell Lectin Like Receptor D
-
 good condition group separation
 
 Association to pulmonary embolism

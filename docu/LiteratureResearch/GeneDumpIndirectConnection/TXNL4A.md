@@ -1,5 +1,3 @@
-ENSG00000141759, thioredoxin like 4A
-
 weak correlation, interesting condition group ATAC separation
 
 TXNL4B also represented in top correlations, but weak correlation and condition seperation.

@@ -1,4 +1,4 @@
-monoamine oxidase B, ENSG00000069535
+
 ### NCBI Gene Summary for MAOB Gene
 
 [](https://www.ncbi.nlm.nih.gov/gene/4129)

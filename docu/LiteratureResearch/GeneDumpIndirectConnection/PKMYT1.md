@@ -1,4 +1,3 @@
-ENSG00000127564, protein kinase, membrane associated tyrosine/threonine 1
 
 # Consensus
 In pulmonary hypertension, miR-124 regulates PTBP1 expression, which controls the PKM2/PKM1 ratio, affecting glycolysis, proliferation, and inflammatory responses.

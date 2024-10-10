@@ -1,4 +1,3 @@
-ENSG00000116857
 good separation of patient groups in correlation visualization. Seven potential regulatory segments found.
 # Consensus
 TMEM9 plays a significant role in TNF-induced IL-6 and IL-1 secretion in LX-2 cells, and its overexpression may increase the expression of the canonical Wnt/&bgr;-catenin signaling pathway.

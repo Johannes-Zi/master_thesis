@@ -1,5 +1,3 @@
-ENSG00000126266, Free Fatty Acid Receptor 1
-
 ### NCBI Gene Summary for FFAR1 Gene
 
 [](https://www.ncbi.nlm.nih.gov/gene/2864)

@@ -1,5 +1,3 @@
-ENSG00000069188, The ATAC accessibilities have a good separation.
-
 SDK2 is associated to idiopathic inflammatory myopathies.
 (*Rothwell, Simon, et al. "Genome-wide imputation identifies novel associations and localises signals in idiopathic inflammatory myopathies." Arthritis & rheumatology 75.6 (2023): 1021-1027.*) 
 

@@ -1,5 +1,3 @@
-ENSG00000159958, TNF Receptor Superfamily Member 13C
-
 interesting corr with mPAP
 
 # NCBI Gene Summary for TNFRSF13C Gene
