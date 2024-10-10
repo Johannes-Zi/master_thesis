@@ -111,7 +111,7 @@ create_spearman_correlations_df <- function(clinical_vector, elnet_segments_atac
     plot_output_dir, clinical_parameter, patient_vector, condition_vector, gene_id_to_visualize, segment_to_visualize) {
 
   # Initialize progress bar
-  pb <- txtProgressBar(min = 0, max = nrow(elnet_segments_atac_data), style = 3)
+  #pb <- txtProgressBar(min = 0, max = nrow(elnet_segments_atac_data), style = 3)
 
   # Initialize empty df for the spearman correlations
   spearman_correlations_df <- data.frame(segment = character(), gene_id = character(), spearman_corr = numeric(),
@@ -167,31 +167,19 @@ create_spearman_correlations_df <- function(clinical_vector, elnet_segments_atac
     rownames(spearman_correlations_df) <- 1:nrow(spearman_correlations_df)
 
     # Update progress bar
-    setTxtProgressBar(pb, i)
+    #setTxtProgressBar(pb, i)
 
     # Create dataframe with the patient_id vector, the atac_vector and the clinical_vector
     data_df <- data.frame(patient_id = patient_vector, atac_vector = atac_vector, clinical_vector = clinical_vector, condition_vector = condition_vector)
 
-    # # Create dotplot to visualize the correlation
-    # suppressWarnings(suppressMessages(({
-    #   p <- ggplot(data = data_df, aes(x = atac_vector, y = clinical_vector, color = condition_vector)) +
-    #     geom_point() +
-    #     geom_smooth(aes(x = atac_vector, y = clinical_vector), method = "lm", se = TRUE, color = "black") +
-    #     geom_smooth(method = "lm", se = FALSE) +
-    #     labs(title = paste("Correlation between ATAC-seq signal and", clinical_parameter, "for", current_gene_id, "in",
-    #                        current_segment),
-    #         x = "ATAC-seq signal",
-    #         y = clinical_parameter) +
-    #     theme_minimal()
-    # })))
-
+    # Create dotplot to visualize the correlation with larger font and bigger dots
     # Create dotplot to visualize the correlation with larger font and bigger dots
     suppressWarnings(suppressMessages(({
       p <- ggplot(data = data_df, aes(x = atac_vector, y = clinical_vector, color = condition_vector, shape = condition_vector)) +
         geom_smooth(aes(group = 1), method = "lm", se = TRUE, color = "black", linetype = "dashed", show.legend = FALSE) +  # Combined smoothing line with confidence interval
         geom_smooth(method = "lm", se = FALSE, show.legend = FALSE) +  # Group-specific smoothing lines without confidence intervals
         geom_point(size = 5) +  # Increase the size of the dots
-        labs(title = paste("Gene: ACVRL1"),
+        labs(title = paste("Gene: ENG"),
             x = "ATAC-Seq enhancer signal",
             y = "Systolic pulmonary artery pressure",
             color = "Condition",
@@ -219,12 +207,46 @@ create_spearman_correlations_df <- function(clinical_vector, elnet_segments_atac
         )
     })))
 
-
-
     # Save plot as png with white background
     suppressWarnings(suppressMessages({
-      plot_output_file_path_png <- paste(plot_output_dir, paste(paste(spearman_correlation$estimate, current_gene_id, current_segment, sep = "_"), ".svg", sep = ""), sep = "/")
+      plot_output_file_path_png <- paste(plot_output_dir, paste(paste(spearman_correlation$estimate, current_gene_id, current_segment, "dotplot", sep = "_"), ".svg", sep = ""), sep = "/")
       ggsave(plot_output_file_path_png, plot = p, width = 12, height = 10, dpi = 150, bg = "white")
+    }))
+
+
+    # Create boxplot to display the x-axis values of the different condition groups
+    suppressWarnings(suppressMessages({
+      boxplot <- ggplot(data = data_df, 
+                        aes(y = factor(condition_vector, levels = c("healthy", "ph-lung", "pah", "cteph")),  # Manually set the order of the groups
+                            x = atac_vector, 
+                            color = condition_vector, 
+                            fill = condition_vector)) +
+        geom_boxplot(outlier.shape = NA, alpha = 0.5, width = 0.8) +  # Add boxplot with semi-transparent fill and no outliers
+        geom_jitter(shape = 16, position = position_jitter(height = 0.2, width = 0), size = 5) +  # Add jittered points for better visibility
+        labs(title = paste("Gene: ENG"),
+            y = "Condition",
+            x = "ATAC-Seq enhancer signal",
+            color = "Condition",
+            fill = "Condition") +
+        theme_minimal() +
+        theme(plot.title = element_text(hjust = 0.5)) +  # Center the title
+        theme(
+          text = element_text(size = 20),  # Increase font size for all text
+          plot.title = element_text(size = 32, colour = "#161616", face = "bold"),  # Increase font size for the title
+          axis.title = element_text(size = 26, face = "bold"),  # Increase font size for axis titles
+          axis.text = element_text(size = 22),  # Increase font size for axis text
+          axis.title.x = element_text(margin = margin(t = 15), colour = "#161616"),  # Add space above the x-axis title
+          axis.title.y = element_text(margin = margin(r = 15), colour = "#161616"),  # Add space to the right of the y-axis title
+          legend.position = "none"  # Remove the legend
+        ) +
+        scale_color_manual(values = c("#000000", "#009E73", "#0072B2", "#D55E00")) +  # Specify colors for different groups
+        scale_fill_manual(values = c("#000000", "#009E73", "#0072B2", "#D55E00"))  # Specify fill colors for different groups
+    }))
+
+    # Save boxplot as svg with white background
+    suppressWarnings(suppressMessages({
+      boxplot_output_file_path_svg <- paste(plot_output_dir, paste(paste(spearman_correlation$estimate, current_gene_id, current_segment, "boxplot", sep = "_"), ".svg", sep = ""), sep = "/")
+      ggsave(boxplot_output_file_path_svg, plot = boxplot, width = 12, height = 8, dpi = 150, bg = "white")
     }))
 
     # Check if the current gene_id and the current segment are the ones which should be visualized and thus the loop can be stopped
@@ -237,7 +259,7 @@ create_spearman_correlations_df <- function(clinical_vector, elnet_segments_atac
   process_and_sort_files_in_directory(plot_output_dir)
 
   # Close progress bar
-  close(pb)
+  #close(pb)
 
   # Add q_value column to the spearman_correlations_df
   #spearman_correlations_df$q_value <- qvalue(p = spearman_correlations_df$p_value)$qvalues
@@ -481,8 +503,8 @@ if (TRUE) {
 
     # Configuration for the plot that should be visualized
     clinical_parameter_to_visualize <- "sPAP.excl..ZVD"
-    gene_id_to_visualize <- "ENSG00000139567"
-    segment_to_visualize <- "chr12.51907898.51908147"
+    gene_id_to_visualize <- "ENSG00000106991"
+    segment_to_visualize <- "chr9.127853598.127853857"
 
 
 
