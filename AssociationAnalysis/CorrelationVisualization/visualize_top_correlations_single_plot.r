@@ -172,23 +172,59 @@ create_spearman_correlations_df <- function(clinical_vector, elnet_segments_atac
     # Create dataframe with the patient_id vector, the atac_vector and the clinical_vector
     data_df <- data.frame(patient_id = patient_vector, atac_vector = atac_vector, clinical_vector = clinical_vector, condition_vector = condition_vector)
 
-    # Create dotplot to visualize the correlation
+    # # Create dotplot to visualize the correlation
+    # suppressWarnings(suppressMessages(({
+    #   p <- ggplot(data = data_df, aes(x = atac_vector, y = clinical_vector, color = condition_vector)) +
+    #     geom_point() +
+    #     geom_smooth(aes(x = atac_vector, y = clinical_vector), method = "lm", se = TRUE, color = "black") +
+    #     geom_smooth(method = "lm", se = FALSE) +
+    #     labs(title = paste("Correlation between ATAC-seq signal and", clinical_parameter, "for", current_gene_id, "in",
+    #                        current_segment),
+    #         x = "ATAC-seq signal",
+    #         y = clinical_parameter) +
+    #     theme_minimal()
+    # })))
+
+    # Create dotplot to visualize the correlation with larger font and bigger dots
     suppressWarnings(suppressMessages(({
-      p <- ggplot(data = data_df, aes(x = atac_vector, y = clinical_vector, color = condition_vector)) +
-        geom_point() +
-        geom_smooth(aes(x = atac_vector, y = clinical_vector), method = "lm", se = TRUE, color = "black") +
-        geom_smooth(method = "lm", se = FALSE) +
-        labs(title = paste("Correlation between ATAC-seq signal and", clinical_parameter, "for", current_gene_id, "in",
-                           current_segment), 
-            x = "ATAC-seq signal",
-            y = clinical_parameter) +
-        theme_minimal()
+      p <- ggplot(data = data_df, aes(x = atac_vector, y = clinical_vector, color = condition_vector, shape = condition_vector)) +
+        geom_smooth(aes(group = 1), method = "lm", se = TRUE, color = "black", linetype = "dashed", show.legend = FALSE) +  # Combined smoothing line with confidence interval
+        geom_smooth(method = "lm", se = FALSE, show.legend = FALSE) +  # Group-specific smoothing lines without confidence intervals
+        geom_point(size = 5) +  # Increase the size of the dots
+        labs(title = paste("Gene: ACVRL1"),
+            x = "ATAC-Seq enhancer signal",
+            y = "Systolic pulmonary artery pressure",
+            color = "Condition",
+            shape = "Condition") +
+        theme_minimal() +
+        theme(plot.title = element_text(hjust = 0.5)) +  # Center the title
+        theme(
+          text = element_text(size = 20),  # Increase font size for all text
+          plot.title = element_text(size = 32, colour = "#161616", face = "bold"),  # Increase font size for the title
+          axis.title = element_text(size = 26, face = "bold"),  # Increase font size for axis titles
+          axis.text = element_text(size = 22),  # Increase font size for axis text
+          axis.title.x = element_text(margin = margin(t = 15), colour = "#161616"),  # Add space above the x-axis title
+          axis.title.y = element_text(margin = margin(r = 15), colour = "#161616"),  # Add space to the right of the y-axis title
+          legend.position = c(0.9, 0.9),  # Position the legend inside the plot area
+          legend.background = element_rect(fill = alpha('#ffffffed', 0.5)),  # Semi-transparent background for the legend
+          legend.text = element_text(size = 20, colour = "#161616"),  # Increase the size of the legend text
+          legend.title = element_text(size = 22, colour = "#161616"),  # Increase the size of the legend title
+          legend.key.size = unit(1.5, "lines")  # Increase the size of the legend keys
+        ) +
+        scale_shape_manual(values = c(18, 15, 16, 17)) +  # Specify shapes for different groups
+        scale_color_manual(values = c("#000000", "#009E73", "#0072B2", "#D55E00")) +  # Specify colors for different groups
+        guides(
+          color = guide_legend(override.aes = list(shape = c(18, 15, 16, 17))),  # Combine color and shape legends
+          shape = guide_legend(override.aes = list(color = c("#000000", "#009E73", "#0072B2", "#D55E00")))  # Ensure shapes are shown in the legend
+        )
     })))
+
+
 
     # Save plot as png with white background
     suppressWarnings(suppressMessages({
-      plot_output_file_path_png <- paste(plot_output_dir, paste(paste(spearman_correlation$estimate, current_gene_id, current_segment, sep = "_"), ".png", sep = ""), sep = "/")
-      ggsave(plot_output_file_path_png, plot = p, width = 10, height = 10, dpi = 150, bg = "white")
+      plot_output_file_path_png <- paste(plot_output_dir, paste(paste(spearman_correlation$estimate, current_gene_id, current_segment, sep = "_"), ".svg", sep = ""), sep = "/")
+      ggsave(plot_output_file_path_png, plot = p, width = 12, height = 10, dpi = 150, bg = "white")
     }))
 
     # Check if the current gene_id and the current segment are the ones which should be visualized and thus the loop can be stopped
