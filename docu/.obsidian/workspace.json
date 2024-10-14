@@ -6,7 +6,7 @@
       {
         "id": "e252de91b70e708a",
         "type": "tabs",
-        "dimension": 28.28947368421053,
+        "dimension": 28.289473684210524,
         "children": [
           {
             "id": "439be0bb6800aaa5",
@@ -33,7 +33,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LiteratureResearch/Targets/PotentialHitsOfInterest.md",
+                "file": "LiteratureResearch/GeneDumpDirectConnection/SPRY2.md",
                 "mode": "source",
                 "source": false
               }
@@ -101,7 +101,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 411.504695892334
   },
   "right": {
     "id": "5b31fd771786262b",
@@ -117,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "LiteratureResearch/Targets/PotentialHitsOfInterest.md",
+                "file": "LiteratureResearch/GeneDumpDirectConnection/SPRY2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "LiteratureResearch/Targets/PotentialHitsOfInterest.md",
+                "file": "LiteratureResearch/GeneDumpDirectConnection/SPRY2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LiteratureResearch/Targets/PotentialHitsOfInterest.md"
+                "file": "LiteratureResearch/GeneDumpDirectConnection/SPRY2.md"
               }
             }
           }
@@ -178,34 +178,41 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b8fac65f08132093",
+  "active": "01a1ccf26329c2f6",
   "lastOpenFiles": [
-    "IL18R1.md",
+    "LiteratureResearch/plot_dump/X0.398768042453456_ENSG00000136158_chr13.80339126.80339195.png",
     "LiteratureResearch/Targets/PotentialHitsOfInterest.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/IL31RA.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/TXNL4A.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/FFAR1.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/TPH1.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/ADM2.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/PDE9A.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/KCNC3.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/MCF2L.md",
+    "LiteratureResearch/GeneDumpDirectConnection/SPRY2.md",
+    "LiteratureResearch/GeneDumpDirectConnection/ENG.md",
+    "LiteratureResearch/plot_dump/X-0.264086351006347_ENSG00000106991_chr9.127853598.127853857.png",
+    "LiteratureResearch/plot_dump/X-0.407618217584307_ENSG00000106991_chr9.127853598.127853857.png",
+    "LiteratureResearch/GeneDumpDirectConnection/GLI1.md",
+    "LiteratureResearch/plot_dump/X0.451623931623932_ENSG00000111087_chr12.57461045.57461604.png",
+    "LiteratureResearch/plot_dump/X0.37035795874218_ENSG00000111087_chr12.57461045.57461604.png",
+    "LiteratureResearch/GeneDumpDirectConnection/ACVRL1.md",
+    "LiteratureResearch/plot_dump/X-0.34115435227279_ENSG00000139567_chr12.51907898.51908147.png",
+    "LiteratureResearch/plot_dump/X-0.546623944697402_ENSG00000139567_chr12.51907898.51908147.png",
+    "LiteratureResearch/plot_dump",
+    "LiteratureResearch/GeneDumpIndirectConnection/HEXIM2.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/SRI.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/PROK2.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/CCR2.md",
     "LiteratureResearch/GeneDumpIndirectConnection/TNFRSF13C.md",
-    "LiteratureResearch/GeneDump/LIF.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/CADM1.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/PARD3.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/ECM1.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/KLRD1.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/SDK2.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/IFITM3.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/TMEM9.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/PKMYT1.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/CCND1.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/ENPP2.md",
-    "AVP.md",
-    "LiteratureResearch/GeneDump/AOC3.md",
-    "LiteratureResearch/GeneDump/MAOB.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/ICAM4.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/CETP.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/TRIM47.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/PEX11G.md",
+    "LiteratureResearch/GeneDumpDirectConnection/MAOB.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/USP44.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/BIN3.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/FAM124B.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/FSCN2.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/ADM2.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/BCR.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/IRF4.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/RND1.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/CD72.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/BMERB1.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/AASS.md",
     "LiteratureResearch/PH_General/Publications/humbertPathologyPathobiologyPulmonary2019/Pasted image 20241004220853.png",
     "LiteratureResearch/PH_General/Publications/humbertPathologyPathobiologyPulmonary2019/Pasted image 20241004220553.png",
     "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/Pasted image 20241003170408.png",
@@ -218,17 +225,10 @@
     "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/sommerCurrentFutureTreatments2021 - Kopie.pdf",
     "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/sommerCurrentFutureTreatments2021.pdf",
     "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/Sommer et al. - 2021 - Current and future treatments of pulmonary arteria.pdf",
-    "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021",
     "LiteratureResearch/PH_General/ResearchSoni/Pasted image 20240925142515.png",
     "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
     "AssociationAnalysis/AssociationAnalysis.canvas",
     "Stichit workflow/StichitWorkflow.canvas",
-    "Stichit workflow/Regression/Performance Evaluation/NzeroXpearson/fig_06051540_p.png",
-    "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241637_p.png",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/pictures/Pasted image 20240523154413.png",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/pictures/Pasted image 20240523154251.png",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/pictures/Pasted image 20240523154143.png",
-    "Stichit workflow/Regression/Performance Evaluation/PredictedVsActualExpression/pictures/Pasted image 20240523154011.png",
     "Untitled 1.canvas",
     "Untitled.canvas",
     "Stichit workflow/Steps.canvas",
