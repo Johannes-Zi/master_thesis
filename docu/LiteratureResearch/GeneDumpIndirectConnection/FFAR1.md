@@ -1,3 +1,12 @@
+# Plots
+## PA_sys
+![[X-0.426234756865677_ENSG00000126266_chr19.35350252.35350351.png]]
+
+## mPAP
+![[X-0.402641010620334_ENSG00000126266_chr19.35350252.35350351.png]]
+
+# Info
+
 ### NCBI Gene Summary for FFAR1 Gene
 
 [](https://www.ncbi.nlm.nih.gov/gene/2864)

@@ -13,18 +13,17 @@
 | [[ADM2]]      | adrenomedullin 2                                                        | ENSG00000128165 | +++                           |
 | [[TMEM9]]     | transmembrane protein 9                                                 | ENSG00000116857 | ++++                          |
 | [[SDK2]]      | Sidekick Cell Adhesion Molecule 2                                       | ENSG00000069188 | +++                           |
-| [[KLRD1]]     | Killer Cell Lectin Like Receptor D                                      | ENSG00000134539 | top                           |
-| [[ECM1 ]]     | ==Extracellular Matrix Protein 1==                                      | ENSG00000143369 |                               |
-| [[PARD3 ]]    | Gene - Par-3 Family Cell Polarity Regulator                             | ENSG00000148498 | top                           |
-| [[CADM1]]     | Cell Adhesion Molecule 1                                                | ENSG00000182985 |                               |
-| [[LIF]]       | LIF interleukin 6 family cytokine                                       | ENSG00000128342 | top                           |
-| [[TNFRSF13C]] | TNF Receptor Superfamily Member 13C                                     | ENSG00000159958 | top                           |
-| [[MCF2L ]]    | MCF.2 Cell Line Derived Transforming Sequence                           | ENSG00000101977 |                               |
-| [[KCNC3]]     | potassium voltage-gated channel subfamily C member 3                    | ENSG00000131398 | top                           |
-| [[PDE9A]]     | phosphodiesterase 9A                                                    | ENSG00000160191 |                               |
-| [[ADM2]]      | Adrenomedullin 2                                                        | ENSG00000128165 |                               |
-| [[TPH1]]      | Tryptophan Hydroxylase 1                                                | ENSG00000129167 |                               |
-| [[FFAR1]]     | Free Fatty Acid Receptor 1                                              | ENSG00000126266 |                               |
+| [[KLRD1]]     | Killer Cell Lectin Like Receptor D                                      | ENSG00000134539 | ++++                          |
+| [[ECM1 ]]     | Extracellular Matrix Protein 1                                          | ENSG00000143369 | ++                            |
+| [[PARD3 ]]    | Gene - Par-3 Family Cell Polarity Regulator                             | ENSG00000148498 | ++++                          |
+| [[CADM1]]     | Cell Adhesion Molecule 1                                                | ENSG00000182985 | ++                            |
+| [[LIF]]       | LIF interleukin 6 family cytokine                                       | ENSG00000128342 | +++                           |
+| [[TNFRSF13C]] | TNF Receptor Superfamily Member 13C                                     | ENSG00000159958 | +++                           |
+| [[KCNC3]]     | potassium voltage-gated channel subfamily C member 3                    | ENSG00000131398 | +++                           |
+| [[PDE9A]]     | phosphodiesterase 9A                                                    | ENSG00000160191 | ++                            |
+| [[ADM2]]      | Adrenomedullin 2                                                        | ENSG00000128165 | +++                           |
+| [[TPH1]]      | Tryptophan Hydroxylase 1                                                | ENSG00000129167 | +                             |
+| [[FFAR1]]     | Free Fatty Acid Receptor 1                                              | ENSG00000126266 | ++                            |
 | [[TXNL4A]]    | thioredoxin like 4A                                                     | ENSG00000141759 |                               |
 | [[IL31RA]]    | interleukin 31 receptor A                                               | ENSG00000164509 |                               |
 | [[IL18R1]]    | interleukin 18 receptor 1                                               | ENSG00000115604 | top                           |
