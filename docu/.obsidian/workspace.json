@@ -4,28 +4,8 @@
     "type": "split",
     "children": [
       {
-        "id": "e252de91b70e708a",
-        "type": "tabs",
-        "dimension": 28.289473684210524,
-        "children": [
-          {
-            "id": "439be0bb6800aaa5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/@sommerCurrentFutureTreatments2021.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ]
-      },
-      {
         "id": "3b1ee69f8331317d",
         "type": "tabs",
-        "dimension": 71.71052631578948,
         "children": [
           {
             "id": "b8fac65f08132093",
@@ -33,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LiteratureResearch/GeneDumpDirectConnection/SPRY2.md",
+                "file": "LiteratureResearch/Targets/PotentialHitsOfInterest.md",
                 "mode": "source",
                 "source": false
               }
@@ -117,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "LiteratureResearch/GeneDumpDirectConnection/SPRY2.md",
+                "file": "LiteratureResearch/Targets/PotentialHitsOfInterest.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "LiteratureResearch/GeneDumpDirectConnection/SPRY2.md",
+                "file": "LiteratureResearch/Targets/PotentialHitsOfInterest.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LiteratureResearch/GeneDumpDirectConnection/SPRY2.md"
+                "file": "LiteratureResearch/Targets/PotentialHitsOfInterest.md"
               }
             }
           }
@@ -178,54 +158,54 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "01a1ccf26329c2f6",
+  "active": "b8fac65f08132093",
   "lastOpenFiles": [
-    "LiteratureResearch/plot_dump/X0.398768042453456_ENSG00000136158_chr13.80339126.80339195.png",
+    "LiteratureResearch/GeneDumpIndirectConnection/TMEM9.md",
     "LiteratureResearch/Targets/PotentialHitsOfInterest.md",
-    "LiteratureResearch/GeneDumpDirectConnection/SPRY2.md",
-    "LiteratureResearch/GeneDumpDirectConnection/ENG.md",
-    "LiteratureResearch/plot_dump/X-0.264086351006347_ENSG00000106991_chr9.127853598.127853857.png",
-    "LiteratureResearch/plot_dump/X-0.407618217584307_ENSG00000106991_chr9.127853598.127853857.png",
-    "LiteratureResearch/GeneDumpDirectConnection/GLI1.md",
+    "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/@sommerCurrentFutureTreatments2021.md",
+    "LiteratureResearch/Targets/ExtractFromLiterature.md",
+    "LiteratureResearch/Targets/CheckTopCorrelationsOfEnrichInput.md",
+    "LiteratureResearch/Targets",
+    "LiteratureResearch/plot_dump/X0.587101574631927_ENSG00000136158_chr13.80339126.80339195.png",
+    "LiteratureResearch/plot_dump/X0.545278541272798_ENSG00000120738_chr5.138466759.138466998.png",
+    "LiteratureResearch/plot_dump/X0.533248115759203_ENSG00000134539_chr12.10226998.10227197.png",
+    "LiteratureResearch/plot_dump/X0.462649272489503_ENSG00000116857_chr1.201173354.201173403.png",
     "LiteratureResearch/plot_dump/X0.451623931623932_ENSG00000111087_chr12.57461045.57461604.png",
-    "LiteratureResearch/plot_dump/X0.37035795874218_ENSG00000111087_chr12.57461045.57461604.png",
-    "LiteratureResearch/GeneDumpDirectConnection/ACVRL1.md",
-    "LiteratureResearch/plot_dump/X-0.34115435227279_ENSG00000139567_chr12.51907898.51908147.png",
-    "LiteratureResearch/plot_dump/X-0.546623944697402_ENSG00000139567_chr12.51907898.51908147.png",
+    "LiteratureResearch/plot_dump/X0.435820012353856_ENSG00000134539_chr12.10226998.10227197.png",
+    "LiteratureResearch/plot_dump/X0.435820012353856_ENSG00000134539_chr12.10226998.10227197 1.png",
+    "LiteratureResearch/plot_dump/X0.418963162200026_ENSG00000101200_chr20.3082724.3082853.png",
+    "LiteratureResearch/plot_dump/X0.409566315098446_ENSG00000069188_chr17.73643905.73644104.png",
+    "LiteratureResearch/plot_dump/X0.40007768791627_ENSG00000069188_chr17.73643905.73644104.png",
     "LiteratureResearch/plot_dump",
-    "LiteratureResearch/GeneDumpIndirectConnection/HEXIM2.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/SRI.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/PROK2.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/CCR2.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/TNFRSF13C.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/CETP.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/TRIM47.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/PEX11G.md",
-    "LiteratureResearch/GeneDumpDirectConnection/MAOB.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/USP44.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/BIN3.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/FAM124B.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/FSCN2.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/ADM2.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/BCR.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/IRF4.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/RND1.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/CD72.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/BMERB1.md",
-    "LiteratureResearch/GeneDumpIndirectConnection/AASS.md",
-    "LiteratureResearch/PH_General/Publications/humbertPathologyPathobiologyPulmonary2019/Pasted image 20241004220853.png",
-    "LiteratureResearch/PH_General/Publications/humbertPathologyPathobiologyPulmonary2019/Pasted image 20241004220553.png",
-    "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/Pasted image 20241003170408.png",
-    "LiteratureResearch/PH_General/Publications/humbertPathologyPathobiologyPulmonary2019/mod_humbertPathologyPathobiologyPulmonary2019.pdf",
-    "LiteratureResearch/PH_General/Publications/humbertPathologyPathobiologyPulmonary2019/humbertPathologyPathobiologyPulmonary2019 - Kopie.pdf",
-    "LiteratureResearch/PH_General/Publications/humbertPathologyPathobiologyPulmonary2019/humbertPathologyPathobiologyPulmonary2019.pdf",
-    "LiteratureResearch/PH_General/Publications/humbertPathologyPathobiologyPulmonary2019/Humbert et al. - 2019 - Pathology and pathobiology of pulmonary hypertensi.pdf",
-    "LiteratureResearch/PH_General/Publications/humbertPathologyPathobiologyPulmonary2019",
-    "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/mod_sommerCurrentFutureTreatments2021.pdf",
-    "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/sommerCurrentFutureTreatments2021 - Kopie.pdf",
+    "LiteratureResearch/PH_General/Publications/thenappanPulmonaryArterialHypertension2018/thenappanPulmonaryArterialHypertension2018.pdf",
+    "LiteratureResearch/PH_General/Publications/thenappanPulmonaryArterialHypertension2018/mod_thenappanPulmonaryArterialHypertension2018.pdf",
+    "LiteratureResearch/PH_General/Publications/thenappanPulmonaryArterialHypertension2018/@thenappanPulmonaryArterialHypertension2018.md",
     "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/sommerCurrentFutureTreatments2021.pdf",
-    "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/Sommer et al. - 2021 - Current and future treatments of pulmonary arteria.pdf",
-    "LiteratureResearch/PH_General/ResearchSoni/Pasted image 20240925142515.png",
+    "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/mod_sommerCurrentFutureTreatments2021.pdf",
+    "LiteratureResearch/PH_General/Publications/montaniPulmonaryArterialHypertension2013/montaniPulmonaryArterialHypertension2013.pdf",
+    "LiteratureResearch/PH_General/Publications/montaniPulmonaryArterialHypertension2013/mod_montaniPulmonaryArterialHypertension2013.pdf",
+    "LiteratureResearch/PH_General/Publications/montaniPulmonaryArterialHypertension2013/@montaniPulmonaryArterialHypertension2013.md",
+    "LiteratureResearch/PH_General/Publications/simonneauClinicalClassificationPulmonary2004/simonneauClinicalClassificationPulmonary2004.pdf",
+    "LiteratureResearch/PH_General/Publications/simonneauClinicalClassificationPulmonary2004/mod_simonneauClinicalClassificationPulmonary2004.pdf",
+    "LiteratureResearch/PH_General/Publications/simonneauClinicalClassificationPulmonary2004/@simonneauClinicalClassificationPulmonary2004.md",
+    "LiteratureResearch/PH_General/Publications/humbertPathologyPathobiologyPulmonary2019/@humbertPathologyPathobiologyPulmonary2019.md",
+    "LiteratureResearch/PH_General/ResearchSoni/ResearchSoni.md",
+    "LiteratureResearch/PH_General/Consensus/Consensus overview.md",
+    "LiteratureResearch/KeywordDump/ubiqitin_pathways.md",
+    "LiteratureResearch/KeywordDump/Tyrosine kinase receptor.md",
+    "LiteratureResearch/KeywordDump/Prostacyclin.md",
+    "LiteratureResearch/KeywordDump/Phosphodiesterase.md",
+    "LiteratureResearch/KeywordDump/PDGF.md",
+    "LiteratureResearch/KeywordDump/Endothelin.md",
+    "LiteratureResearch/KeywordDump/Calcium Channel.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/WASF3.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/USP44.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/UBR4.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/UBE3D.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/TXNL4A.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/TRIM47.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/TPH1.md",
+    "LiteratureResearch/GeneDumpIndirectConnection/TNFRSF13C.md",
     "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
     "AssociationAnalysis/AssociationAnalysis.canvas",
     "Stichit workflow/StichitWorkflow.canvas",

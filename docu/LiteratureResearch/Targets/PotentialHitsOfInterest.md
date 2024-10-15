@@ -1,33 +1,18 @@
 ==The genes described in this file are represented by at least one segment in the [[CheckTopCorrelationsOfEnrichInput | top correlations]] .==
-# Association to PH
-
-| Gene         | Description                                          | ENSEMBL_ID      | correlation |                                                                                 |
-| ------------ | ---------------------------------------------------- | --------------- | ----------- | ------------------------------------------------------------------------------- |
-| [[ACVRL1]]   | Activin A Receptor Like Type 1                       | ENSG00000139567 | +           |                                                                                 |
-| [[GLI1]]     | GLI Family Zinc Finger 1                             | ENSG00000111087 | +           |                                                                                 |
-| [[ENG]]      | Endoglin                                             | ENSG00000106991 | +           |                                                                                 |
-| [[SPRY2]]    | Sprouty RTK Signaling Antagonist 2                   | ENSG00000136158 |             |                                                                                 |
-| [[GUCY1A1 ]] | Guanylate Cyclase 1 Soluble Subunit Alpha 1          | ENSG00000164116 |             | # Other associated hits in top correlations<br>ENSG00000112599, ENSG00000172367 |
-| [[EGR1]]     | Early Growth Response 1                              | ENSG00000120738 |             |                                                                                 |
-| [[ICAM4]]    | Landsteiner-Wiener/intercellular adhesion molecule-4 | ENSG00000105371 |             |                                                                                 |
-| [[MAOB]]     | monoamine oxidase B                                  | ENSG00000069535 |             | top                                                                             |
-| [[AOC3]]     | Amine Oxidase Copper Containing 3                    | ENSG00000131471 |             |                                                                                 |
-| [[AVP]]      | arginine vasopressin                                 | ENSG00000101200 |             | top                                                                             |
-| [[ADM2]]     | adrenomedullin 2                                     | ENSG00000128165 |             | top                                                                             |
-| [[GATA6]]    | GATA binding protein 6                               | ENSG00000141448 |             |                                                                                 |
-| [[GUCY1A2]]  |                                                      | ENSG00000152402 |             |                                                                                 |
-
-
-# Hits with indirect or no reported association to PH
 
 | Gene          | Description                                                             | ENSEMBL_ID      | correlation                   |
 | ------------- | ----------------------------------------------------------------------- | --------------- | ----------------------------- |
-| [[ENPP2]]     | ectonucleotide pyrophosphatase/phosphodiesterase 2                      | ENSG00000136960 | +                             |
-| [[CCND1]]     | cyclin D1                                                               | ENSG00000110092 | ++                            |
-| [[PKMYT1]]    | protein kinase, membrane associated tyrosine/threonine 1                | ENSG00000127564 | +++                           |
+| [[ACVRL1]]    | Activin A Receptor Like Type 1                                          | ENSG00000139567 | +                             |
+| [[GLI1]]      | GLI Family Zinc Finger 1                                                | ENSG00000111087 | +                             |
+| [[ENG]]       | Endoglin                                                                | ENSG00000106991 | +                             |
+| [[SPRY2]]     | Sprouty RTK Signaling Antagonist 2                                      | ENSG00000136158 | ++                            |
+| [[EGR1]]      | Early Growth Response 1                                                 | ENSG00000120738 | ++                            |
+| [[MAOB]]      | monoamine oxidase B                                                     | ENSG00000069535 | ++++                          |
+| [[AOC3]]      | Amine Oxidase Copper Containing 3                                       | ENSG00000131471 | +++                           |
+| [[AVP]]       | arginine vasopressin                                                    | ENSG00000101200 | ++                            |
+| [[ADM2]]      | adrenomedullin 2                                                        | ENSG00000128165 | +++                           |
 | [[TMEM9]]     | transmembrane protein 9                                                 | ENSG00000116857 | ++++                          |
-| [[IFITM3]]    | interferon induced transmembrane protein 3                              | ENSG00000142089 |                               |
-| [[SDK2]]      | Sidekick Cell Adhesion Molecule 2                                       | ENSG00000069188 | top                           |
+| [[SDK2]]      | Sidekick Cell Adhesion Molecule 2                                       | ENSG00000069188 | +++                           |
 | [[KLRD1]]     | Killer Cell Lectin Like Receptor D                                      | ENSG00000134539 | top                           |
 | [[ECM1 ]]     | ==Extracellular Matrix Protein 1==                                      | ENSG00000143369 |                               |
 | [[PARD3 ]]    | Gene - Par-3 Family Cell Polarity Regulator                             | ENSG00000148498 | top                           |
@@ -94,7 +79,7 @@
 | [[CETP ]]     | Cholesteryl Ester Transfer Protein                                      | ENSG00000087237 |                               |
 | [[CCR2]]      | C-C Motif Chemokine Receptor 2                                          | ENSG00000121807 |                               |
 | [[HEXIM2]]    | HEXIM P-TEFb Complex Subunit                                            | ENSG00000168517 |                               |
-# No reported association
+
 
 | Gene      | Description                                        |
 | --------- | -------------------------------------------------- |

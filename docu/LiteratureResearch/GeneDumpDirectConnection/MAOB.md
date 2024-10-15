@@ -1,3 +1,12 @@
+# Plots
+## RVEDD
+![[X-0.652888361182894_ENSG00000069535_chrX.43880900.43881199.png]]
+
+## PA_sys
+![[X-0.610392781028997_ENSG00000069535_chrX.43880900.43881199.png]]
+
+## mPAP
+![[X-0.532891867551651_ENSG00000069535_chrX.43880900.43881199.png]]
 # Info
 Increased MAO-A Activity Promotes Progression of Pulmonary Arterial Hypertension
 *Sun, Xiao-Qing, et al. "Increased MAO-A activity promotes progression of pulmonary arterial hypertension." American journal of respiratory cell and molecular biology 64.3 (2021): 331-343.*

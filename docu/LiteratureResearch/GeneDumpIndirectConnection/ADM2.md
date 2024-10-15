@@ -1,3 +1,12 @@
+
+# Plots
+## PVR
+![[X-0.674842593847891_ENSG00000128165_chr22.50479803.50479902.png]]
+## PA_sys
+![[X-0.599492420662617_ENSG00000128165_chr22.50479803.50479902.png]]
+## mPAP
+![[X-0.563450749462579_ENSG00000128165_chr22.50479803.50479902.png]]
+
 # Info
 β-adrenoceptor antagonists reported as potential future PH treatment targets - Neurohormonal regulation
 *Sommer, Natascha, et al. "Current and future treatments of pulmonary arterial hypertension." British journal of pharmacology 178.1 (2021): 6-30.*
