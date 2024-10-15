@@ -72,4 +72,4 @@
 | [[UBR4]]      | ==ubiquitin== protein ligase E3 component n-recognin 4                  | ENSG00000127481 | ++          |
 | [[BSPRY]]     | B Box And SPRY Domain-Containing Protein (==ubiqutin== related)         | ENSG00000119411 | +++         |
 | [[TRIM47]]    | E3 ==Ubiquitin==-Protein Ligase                                         | ENSG00000132481 | ++++        |
-| [[GNB4]]      | G Protein Subunit Beta 4                                                | ENSG00000114450 |             |
+| [[GNB4]]      | G Protein Subunit Beta 4                                                | ENSG00000114450 | ++          |

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LiteratureResearch/Targets/PotentialHitsOfInterest.md",
+                "file": "LiteratureResearch/Targets/StringDB.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "LiteratureResearch/Targets/PotentialHitsOfInterest.md",
+                "file": "LiteratureResearch/Targets/StringDB.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "LiteratureResearch/Targets/PotentialHitsOfInterest.md",
+                "file": "LiteratureResearch/Targets/StringDB.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LiteratureResearch/Targets/PotentialHitsOfInterest.md"
+                "file": "LiteratureResearch/Targets/StringDB.md"
               }
             }
           }
@@ -160,9 +160,13 @@
   },
   "active": "e9d3c9ce09c1950c",
   "lastOpenFiles": [
+    "LiteratureResearch/Targets/PotentialHitsOfInterest.md",
+    "LiteratureResearch/GeneDump/C1QA.md",
+    "LiteratureResearch/Targets/StringDB.md",
+    "LiteratureResearch/Targets/pictures",
+    "LiteratureResearch/Targets/pictures/Pasted image 20241015215134.png",
     "LiteratureResearch/GeneDump/GNB4.md",
     "LiteratureResearch/Pathways/ubiqitin_pathways.md",
-    "LiteratureResearch/Targets/PotentialHitsOfInterest.md",
     "LiteratureResearch/GeneDump/FAM124B.md",
     "LiteratureResearch/GeneDump/HEXIM2.md",
     "LiteratureResearch/plot_dump/X-0.744137553098035_ENSG00000137101_chr9.35647700.35647749.png",
@@ -174,7 +178,6 @@
     "LiteratureResearch/plot_dump/X0.633588318356837_ENSG00000103740_chr15.78243688.78243847 1.png",
     "LiteratureResearch/plot_dump/X-0.625000916273829_ENSG00000087237_chr16.56961923.56962152.png",
     "LiteratureResearch/plot_dump/X0.582634089574314_ENSG00000132970_chr13.26556103.26556792.png",
-    "LiteratureResearch/plot_dump/X-0.578812669346605_ENSG00000133069_chr1.205229706.205229755.png",
     "LiteratureResearch/Pathways/Prostacyclin.md",
     "LiteratureResearch/KeywordDump/PDGF.md",
     "LiteratureResearch/KeywordDump/Tyrosine kinase receptor.md",
@@ -194,8 +197,6 @@
     "LiteratureResearch/GeneDump/CCR2.md",
     "LiteratureResearch/GeneDump/CETP.md",
     "LiteratureResearch/GeneDump/TRIM47.md",
-    "LiteratureResearch/GeneDump/PEX11G.md",
-    "LiteratureResearch/GeneDump/BIN3.md",
     "LiteratureResearch/Targets",
     "LiteratureResearch/plot_dump",
     "LiteratureResearch/PH_General/Publications/thenappanPulmonaryArterialHypertension2018/thenappanPulmonaryArterialHypertension2018.pdf",
@@ -205,7 +206,6 @@
     "LiteratureResearch/PH_General/Publications/montaniPulmonaryArterialHypertension2013/montaniPulmonaryArterialHypertension2013.pdf",
     "LiteratureResearch/PH_General/Publications/montaniPulmonaryArterialHypertension2013/mod_montaniPulmonaryArterialHypertension2013.pdf",
     "LiteratureResearch/PH_General/Publications/simonneauClinicalClassificationPulmonary2004/simonneauClinicalClassificationPulmonary2004.pdf",
-    "LiteratureResearch/PH_General/Publications/simonneauClinicalClassificationPulmonary2004/mod_simonneauClinicalClassificationPulmonary2004.pdf",
     "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
     "AssociationAnalysis/AssociationAnalysis.canvas",
     "Stichit workflow/StichitWorkflow.canvas",

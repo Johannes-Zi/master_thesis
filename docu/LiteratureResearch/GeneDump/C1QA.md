@@ -4,6 +4,8 @@
 ## mPAP
 ![[X0.421320323069108_ENSG00000173372_chr1.22635348.22635397 1.png]]
 # Info
+**"Complement C1q-induced activation of β-catenin signalling causes hypertensive arterial remodelling"**
+*Sumida, Tomokazu, et al. "Complement C1q-induced activation of β-catenin signalling causes hypertensive arterial remodelling." Nature communications 6.1 (2015): 6241.*
 ### NCBI Gene Summary for C1QA Gene
 
 [](https://www.ncbi.nlm.nih.gov/gene/712)
