@@ -1,6 +1,8 @@
+# Graph visualization
+![[Pasted image 20241015215134.png]]
 # Input gene set
 used genes from [[PotentialHitsOfInterest]] which have a manual curation score of ++ or higher.
-## list
+## GeneIDs
 ```
 ENSG00000136158
 ENSG00000120738
@@ -68,5 +70,3 @@ ENSG00000119411
 ENSG00000132481
 ENSG00000114450
 ```
-## Visualization
-![[Pasted image 20241015215134.png]]

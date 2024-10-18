@@ -1,4 +1,7 @@
 ==The genes described in this file are represented by at least one segment in the [[CheckTopCorrelationsOfEnrichInput | top correlations]] .==
+
+The genes included in the list have been selected by manual curation from the top correlations of the parameter mPAP. On the gene pages there are dot plots plotting the clinical parameters against the ATAC enhancer signal. The strongest correlation across all clinical parameters and the correlation with mPAP are shown.  Due to some missing clinical parameter values, a reduced number of data points may be displayed and included in the correlation.
+Additional information about each gene can be found below the graphs.
 ****
 
 | Gene          | Description                                                             | ENSEMBL_ID      | correlation |

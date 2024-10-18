@@ -9,6 +9,10 @@ Those gene ids were then used as filter to visualize only segments that are asso
 
 The Code is an adapted version of the BasicCorrelation code that includes additionally the filter to reduce the input an thus the total correlations. And an additional Visualization for each calculated correlation.
 It has to be noted that the visualized linear correlations were computed with the ggplot geom_smooth linear model and are not/ can be based on the Spearman correlation (because its rank based and also capturing nonlinear dependencies).
+
+# Example plot
+![[AssociationAnalysis/CorrelationVisualization/X0.711765807251866_ENSG00000182310_chr19.51690548.51690747.png]]
+
 # Input Data
 ```
 	# Import clinical metadata

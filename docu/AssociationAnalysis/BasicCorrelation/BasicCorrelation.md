@@ -4,6 +4,8 @@
 The idea is to determine if the by Stichit detected potentially regulatory active segments can be associated with specific clinical parameters. This is done by correlating the accessibility of each segment together with a measured clinical parameter (like blood pressure). This can be done by using each patient as data point and correlation the ATAC Seq values of the segment with the patient specifically measured clinical parameter.
 The result of this analysis is to determine segments with a strong correlation to clinical parameter, which could mean that the accessibility of those segments could play a role in the mechanism behind pulmonary hypertension.
 
+# Example plot
+![[mPAP_spearman_corr_density_p_value.png]]
 # Input
 ```
 	# Import clinical metadata

@@ -1,6 +1,6 @@
 # Plots
 ## mPAP
-![[X0.711765807251866_ENSG00000182310_chr19.51690548.51690747.png]]
+![[AssociationAnalysis/CorrelationVisualization/X0.711765807251866_ENSG00000182310_chr19.51690548.51690747.png]]
 # Info
 ### NCBI Gene Summary for SPACA6 Gene
 

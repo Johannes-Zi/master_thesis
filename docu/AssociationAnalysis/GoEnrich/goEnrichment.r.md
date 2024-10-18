@@ -1,7 +1,7 @@
 (script: https://github.com/Johannes-Zi/master_thesis/blob/main/AssociationAnalysis/GoEnrich/goEnrichment.r)
 
 # Idea
-Performed GO enrichment analysis with similar approach to the [[disgenet2r | DisGeNet analysis]]  by using the top correlations that resulted out of the correlation between clinical parameters vs segmental ATAC accessibility.
+Performed GO enrichment analysis with similar approach to the [[disgenet2.r| DisGeNet analysis]]  by using the top correlations that resulted out of the correlation between clinical parameters vs segmental ATAC accessibility.
 
 # Input Data
 ```
@@ -10,10 +10,10 @@ Performed GO enrichment analysis with similar approach to the [[disgenet2r | Dis
 ```
 # Workflow
 ## 1. Import Correlations
-Same as [[disgenet2r | DisGeNet analysis]] 
+Same as [[disgenet2.r| DisGeNet analysis]] 
 
 ## 2. Filter Correlations / transform to genes
-Same as [[disgenet2r | DisGeNet analysis]] - usage of the ==top 250 correlations per clinical parameter==
+Same as [[disgenet2.r| DisGeNet analysis]] - usage of the ==top 250 correlations per clinical parameter==
 
 ## 3. Run GO enrichment
 1. The gene names are translated from ENSEBL to NCBI ENRZ IDS to fit as GoEnrich input
