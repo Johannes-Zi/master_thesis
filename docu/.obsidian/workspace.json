@@ -11,17 +11,14 @@
             "id": "e9d3c9ce09c1950c",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
-                "viewState": {
-                  "x": -725.5,
-                  "y": 540,
-                  "zoom": -2.7801815223273785
-                }
+                "file": "AssociationAnalysis/CorrelationVisualizationFiltered/visualize_top_correlations_filtered.r.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "RegPlotOverview"
+              "icon": "lucide-file",
+              "title": "visualize_top_correlations_filtered.r"
             }
           }
         ]
@@ -181,11 +178,13 @@
   },
   "active": "e9d3c9ce09c1950c",
   "lastOpenFiles": [
+    "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
+    "AssociationAnalysis/CorrelationVisualizationFiltered/visualize_top_correlations_filtered.r.md",
+    "AssociationAnalysis/CorrelationVisualizationFiltered",
     "Stichit workflow/StichitWorkflow.canvas",
     "AssociationAnalysis/PlotCollection.canvas",
     "AssociationAnalysis/clinicalParamCorrelations/clinical_parameters_correlation_heatmap.r.md",
     "AssociationAnalysis/GoEnrich/goEnrichment.r.md",
-    "AssociationAnalysis/Untitled",
     "AssociationAnalysis/CorrelationVisualization/X0.711765807251866_ENSG00000182310_chr19.51690548.51690747.png",
     "AssociationAnalysis/DisGeNet2r/Pasted image 20241018225613.png",
     "AssociationAnalysis/DisGeNet2r/Pasted image 20241018225437.png",
@@ -204,7 +203,6 @@
     "AssociationAnalysis/clinicalParamCorrelations/Pasted image 20241018223751.png",
     "AssociationAnalysis/clinicalParamCorrelations/clinical_parameters_correlation_heatmap.r.plot.md",
     "AssociationAnalysis/clinicalParamCorrelations",
-    "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
     "LiteratureResearch/Targets/StringDB.md",
     "LiteratureResearch/Targets/PotentialHitsOfInterest.md",
     "LiteratureResearch/GeneDump/C1QA.md",
@@ -221,7 +219,6 @@
     "LiteratureResearch/KeywordDump/Phosphodiesterase.md",
     "LiteratureResearch/KeywordDump/Endothelin.md",
     "LiteratureResearch/GeneDump/BSPRY.md",
-    "LiteratureResearch/GeneDump/UBR4.md",
     "LiteratureResearch/Targets",
     "LiteratureResearch/plot_dump",
     "LiteratureResearch/PH_General/Publications/thenappanPulmonaryArterialHypertension2018/thenappanPulmonaryArterialHypertension2018.pdf",
