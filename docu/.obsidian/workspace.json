@@ -13,15 +13,33 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AssociationAnalysis/CorrelationVisualizationFiltered/visualize_top_correlations_filtered.r.md",
+                "file": "AssociationAnalysis/CorrelationVisualizationFiltered/v_t_c_f_combined_visualization.r.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "visualize_top_correlations_filtered.r"
+              "title": "v_t_c_f_combined_visualization.r"
+            }
+          },
+          {
+            "id": "aec12d7d69bad66a",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "AssociationAnalysis/PlotCollection.canvas",
+                "viewState": {
+                  "x": 1898.0954011707786,
+                  "y": 1183.3715114808278,
+                  "zoom": -1.355800067027394
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "PlotCollection"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -176,13 +194,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e9d3c9ce09c1950c",
+  "active": "aec12d7d69bad66a",
   "lastOpenFiles": [
-    "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
+    "AssociationAnalysis/PlotCollection.canvas",
+    "AssociationAnalysis/CorrelationVisualizationFiltered/v_t_c_f_combined_visualization.r.md",
+    "AssociationAnalysis/CorrelationVisualizationFiltered/string_graph.png",
+    "AssociationAnalysis/CorrelationVisualizationFiltered/gene_frequency_distribution.png",
+    "AssociationAnalysis/CorrelationVisualizationFiltered/number_of_entries_per_param.png",
     "AssociationAnalysis/CorrelationVisualizationFiltered/visualize_top_correlations_filtered.r.md",
+    "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
     "AssociationAnalysis/CorrelationVisualizationFiltered",
     "Stichit workflow/StichitWorkflow.canvas",
-    "AssociationAnalysis/PlotCollection.canvas",
     "AssociationAnalysis/clinicalParamCorrelations/clinical_parameters_correlation_heatmap.r.md",
     "AssociationAnalysis/GoEnrich/goEnrichment.r.md",
     "AssociationAnalysis/CorrelationVisualization/X0.711765807251866_ENSG00000182310_chr19.51690548.51690747.png",
@@ -192,7 +214,6 @@
     "AssociationAnalysis/DisGeNet2r/Pasted image 20241018224928.png",
     "AssociationAnalysis/BasicCorrelation/mPAP_spearman_corr_density_p_value.png",
     "AssociationAnalysis/CorrelationVisualization/Pasted image 20241018224355.png",
-    "AssociationAnalysis/CorrelationVisualization/Pasted image 20241018224148.png",
     "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md",
     "AssociationAnalysis/DisGeNet2r/visualize_disgenet2.r.md",
     "AssociationAnalysis/DisGeNet2r/visualize_disgenet2.r.segmentDistribution.md",
@@ -200,14 +221,12 @@
     "AssociationAnalysis/CorrelationVisualization/visualize_top_correlations_single_plot.r.md",
     "AssociationAnalysis/DisGeNet2r/disgenet2.r.md",
     "AssociationAnalysis/CorrelationVisualization/visualize_top_correlations.r.md",
-    "AssociationAnalysis/clinicalParamCorrelations/Pasted image 20241018223751.png",
     "AssociationAnalysis/clinicalParamCorrelations/clinical_parameters_correlation_heatmap.r.plot.md",
     "AssociationAnalysis/clinicalParamCorrelations",
     "LiteratureResearch/Targets/StringDB.md",
     "LiteratureResearch/Targets/PotentialHitsOfInterest.md",
     "LiteratureResearch/GeneDump/C1QA.md",
     "LiteratureResearch/Targets/pictures",
-    "LiteratureResearch/Targets/pictures/Pasted image 20241015215134.png",
     "LiteratureResearch/GeneDump/GNB4.md",
     "LiteratureResearch/Pathways/ubiqitin_pathways.md",
     "LiteratureResearch/GeneDump/FAM124B.md",
@@ -218,7 +237,6 @@
     "LiteratureResearch/KeywordDump/Calcium Channel.md",
     "LiteratureResearch/KeywordDump/Phosphodiesterase.md",
     "LiteratureResearch/KeywordDump/Endothelin.md",
-    "LiteratureResearch/GeneDump/BSPRY.md",
     "LiteratureResearch/Targets",
     "LiteratureResearch/plot_dump",
     "LiteratureResearch/PH_General/Publications/thenappanPulmonaryArterialHypertension2018/thenappanPulmonaryArterialHypertension2018.pdf",
