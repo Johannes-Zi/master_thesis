@@ -103,40 +103,61 @@ process_and_sort_files_in_directory <- function(directory_path) {
   }
 }
 
-
 #'
-#' Function to perform the permutation test by removing different radom subsets
-outlier_removal_permutation_test <- function(dataset_original, dataset_no_outliers, n_permutations = 1000) {
+#' Function to perform the permutation test by removing different random subsets
+outlier_removal_permutation_test <- function(x, y, x_no_outliers, y_no_outliers, n_permutations = 1000) {
   # Observed difference between input dataset correlations
-  cor_diff_observed <- abs(cor(dataset_original, method = "spearman") - cor(dataset_no_outliers, method = "spearman"))
+  cor_diff_observed <- abs(cor(x, y, method = "spearman") - cor(x_no_outliers, y_no_outliers, method = "spearman"))
   
   # Permutation test
   perm_diffs <- replicate(n_permutations, {
-
     # Identify original outliers
-    original_outliers <- setdiff(dataset_original, dataset_no_outliers)
+    original_outliers <- setdiff(x, x_no_outliers)
 
-    # Randomly select a sample size between 1 and observed number of outliers
-    # with a minimum max random sample size of 3. 3 ensures that there are enogh possible oulier sets 
-    # (26 values with up to 3 outliers result in around 3000 possible outlier sets)
-    number_of_outliers <- sample(1:(max(length(original_outliers), 3)), 1)
-  	
-    # Shuffle the orignal dataset
-    shuffled_dataset <- sample(dataset_original)
+    # Permutation test uses the same number of outliers as the observed number of outliers
+    # Otherwise the distribution would be driven by a different number of outliers,
+    # which could lead to a over or underestimation of the p-value thus significance
+    # of the outlier influence on the correlation
+    number_of_outliers <- length(original_outliers)
 
-    # Randomly select a outlier set of selected size
-    selected_outliers <- sample(shuffled_dataset, number_of_outliers)
+    # Randomly select an outlier set of the selected size
+    selected_outlier_indices <- sample(length(x), number_of_outliers)
     
     # Create a reduced dataset by removing the selected outliers
-    dataset_reduced <- dataset_original[!dataset_original %in% selected_outliers]
+    reduced_x <- x[-selected_outlier_indices]
+    reduced_y <- y[-selected_outlier_indices]
     
     # Recalculate correlations for the reduced dataset
-    cor_diff <- cor(dataset_reduced, method = "spearman") - cor(dataset_no_outliers, method = "spearman")
+    cor_diff <- cor(reduced_x, reduced_y, method = "spearman") - cor(x_no_outliers, y_no_outliers, method = "spearman")
     return(cor_diff)
   })
   
   # Calculate p-value based on permutation distribution
-  p_value_perm <- mean(abs(perm_diffs) >= cor_diff_observed)
+  permutated_differences <- perm_diffs
+
+  # Calculate p-value
+  p_value_perm <- mean(abs(permutated_differences) >= cor_diff_observed)
+
+  if (p_value_perm < 0.05) {
+    print("##### significant influnce on correlation!!! #####")
+
+    print("p_value_perm:")
+    print(p_value_perm)
+
+    print("cor_diff_observed:")
+    print(cor_diff_observed)
+
+    # Create a ggplot2 that shows the distribution of the differences
+    ggplot(data = data.frame(differences = permutated_differences), aes(x = differences)) +
+      geom_histogram(binwidth = 0.01, fill = "blue", color = "black") +
+      geom_vline(xintercept = cor_diff_observed, color = "red") +
+      labs(title = "Permutation test for outlier removal", x = "Difference in Spearman correlation", y = "Frequency") +
+      theme_minimal()
+
+    # Save the plot as a png file
+    ggsave("permutation_test.png", width = 10, height = 10, dpi = 150, bg = "white")
+  }
+
   return(p_value_perm)
 }
 
@@ -161,11 +182,6 @@ create_spearman_correlations_df <- function(clinical_vector, elnet_segments_atac
     # Extract segment and gene_id
     current_segment <- current_segment_atac$segment
     current_gene_id <- current_segment_atac$gene_id
-
-    # Skip if current gene_id is not chr17.47831894.47832203
-    if (current_segment != "chr17.47831894.47832203") {
-      next
-    }
 
     # Remove segment and gene_id from the elnet segments atac data
     current_segment_atac <- current_segment_atac[-c(1,2)]
@@ -194,6 +210,55 @@ create_spearman_correlations_df <- function(clinical_vector, elnet_segments_atac
     # Calculate spearman correlation between the two vectors
     spearman_correlation <- suppressWarnings(cor.test(clinical_vector, atac_vector, method = "spearman"))
 
+    # Update progress bar
+    setTxtProgressBar(pb, i)
+
+    # Create dataframe with the patient_id vector, the atac_vector and the clinical_vector
+    data_df <- data.frame(patient_id = patient_vector, atac_vector = atac_vector, clinical_vector = clinical_vector, condition_vector = condition_vector)
+
+    #
+    # First filter - Skip segment if the spearman correlation is below abs(0.4)
+    #
+
+    # Skip to next segment if the amount of the spearman correlation is below 0.4
+    if (abs(spearman_correlation$estimate) < 0.4) {
+      next
+    }
+
+    #
+    # Second filter - check if two third of the ATAC values are not zero
+    #
+
+    # Skip if more than one third of the ATAC values are zero
+    if (sum(atac_vector == 0) > length(atac_vector) / 3) {
+      next
+    }
+
+    #
+    # Third filter - check if the difference between the healthy and disease group is significant
+    #
+
+    # Extract the atac_vector values wich have a cooresponding condition_vector value of cteph, pah, pah-lung
+    pah_atac_vector <- data_df[data_df$condition_vector == "pah",]$atac_vector
+    pah_lung_atac_vector <- data_df[data_df$condition_vector == "ph-lung",]$atac_vector
+    cteph_atac_vector <- data_df[data_df$condition_vector == "cteph",]$atac_vector
+    disease_atac_vector <- c(pah_atac_vector, pah_lung_atac_vector, cteph_atac_vector)
+
+    # Extract healthy atac_vector
+    healthy_atac_vector <- data_df[data_df$condition_vector == "healthy",]$atac_vector
+
+    # Calculate paired t-test between the healthy and disease group
+    wilcox_test <- wilcox.test(healthy_atac_vector, disease_atac_vector, exact = FALSE)
+
+    # Skip to next segment if the p-value of the paired t-test is above 0.05
+    if (wilcox_test$p.value > 0.05) {
+      next
+    }
+
+    #
+    # Fourth Filter - check if the correlation is driven by outliers
+    #
+
     # Calculate IQR and outlier bounds
     Q1 <- quantile(atac_vector, 0.25)
     Q3 <- quantile(atac_vector, 0.75)
@@ -209,72 +274,46 @@ create_spearman_correlations_df <- function(clinical_vector, elnet_segments_atac
     # If there are outliers, perform permutation test to check if the influence of the outliers on the correlation 
     # is significant
     if (length(outliers) > 0) {
-      print("outliers:", outliers)
-
-      # Remove outliers from atac_vector
-      atac_vector_no_outliers <- atac_vector[!atac_vector %in% outliers]
-      # Remove corresponding values from clinical_vector
-      clinical_vector_no_outliers <- clinical_vector[!atac_vector %in% outliers]
+      # message("\nOutliers detected for geneid: ", current_gene_id, " Segment: ", current_segment)
+      # message("Outliers: ")
+      # print(outliers)
+      # print("")
+      # Determine the indices of the outliers
+      outlier_indices <- which(atac_vector %in% outliers)
       
-      p_value_perm <- outlier_removal_permutation_test(atac_vector, atac_vector_no_outliers)
+      # Remove outliers from atac_vector based on the indices
+      atac_vector_no_outliers <- atac_vector[-outlier_indices]
+      # Remove corresponding values from clinical_vector
+      clinical_vector_no_outliers <- clinical_vector[-outlier_indices]
 
-      print(paste("p_value_perm:", p_value_perm))
+      # Calculate correlation of reduced datasets
+      spearman_correlation_no_outliers <- suppressWarnings(cor.test(clinical_vector_no_outliers, atac_vector_no_outliers, method = "spearman"))
+
+      p_value_perm <- outlier_removal_permutation_test(atac_vector, clinical_vector, atac_vector_no_outliers, clinical_vector_no_outliers)
+
+      # message("Correlation without outliers: ", spearman_correlation_no_outliers$estimate)
+      # message("Correlation with outliers: ", spearman_correlation$estimate)
+      # message("P-value of permutation test: ", p_value_perm)
 
     } else {
       p_value_perm <- NA
     }
 
-    # Skip to next segment if the p-value suggests that the corrleation is outlier driven
+    # Skip to next segment if the p-value suggests that the corrleation is outlier driven and the correlation with the reduced dataset is below abs(0.4)
     if (!is.na(p_value_perm) && p_value_perm < 0.05) {
-      next
+      # Skip only if the even though the p-value is significant the correlation is higher than |0.4|
+      if (abs(spearman_correlation_no_outliers$estimate) < 0.4) {
+        message("Geneid: ", current_gene_id, " Segment: ", current_segment, " is outlier driven and the outlier excluded correlation is below |0.4|")
+        next
+      }
     }
 
-    # Add new row to the spearman_correlations_df
+    # Add new row to the spearman_correlations_df if all filters passed
     spearman_correlations_df <- rbind(spearman_correlations_df, data.frame(segment = current_segment, 
                                       gene_id = current_gene_id, spearman_corr = spearman_correlation$estimate,
                                       p_value = spearman_correlation$p.value, stringsAsFactors = FALSE))
     # Reset rownames
     rownames(spearman_correlations_df) <- 1:nrow(spearman_correlations_df)
-
-    # Update progress bar
-    setTxtProgressBar(pb, i)
-
-    # Create dataframe with the patient_id vector, the atac_vector and the clinical_vector
-    data_df <- data.frame(patient_id = patient_vector, atac_vector = atac_vector, clinical_vector = clinical_vector, condition_vector = condition_vector)
-
-    #
-    # Additional flter steps
-    #
-
-    # Skip to next segment if the amount of the spearman correlation is below 0.4
-    if (abs(spearman_correlation$estimate) < 0.4) {
-      next
-    }
-
-    # Skip if more than one third of the ATAC values are zero
-    if (sum(atac_vector == 0) > length(atac_vector) / 3) {
-      next
-    }
-
-    # Extract the atac_vector values wich have a cooresponding condition_vector value of cteph, pah, pah-lung
-    pah_atac_vector <- data_df[data_df$condition_vector == "pah",]$atac_vector
-    pah_lung_atac_vector <- data_df[data_df$condition_vector == "ph-lung",]$atac_vector
-    cteph_atac_vector <- data_df[data_df$condition_vector == "cteph",]$atac_vector
-    disease_atac_vector <- c(pah_atac_vector, pah_lung_atac_vector, cteph_atac_vector)
-
-    # Extract healthy atac_vector
-    healthy_atac_vector <- data_df[data_df$condition_vector == "healthy",]$atac_vector
-
-    # Calculate paired t-test between the healthy and disease group
-    wilcox_test <- wilcox.test(healthy_atac_vector, disease_atac_vector)
-
-    # Skip to next segment if the p-value of the paired t-test is above 0.05
-    if (wilcox_test$p.value > 0.05) {
-      next
-    }
-
-
-
 
     # Create dotplot to visualize the correlation
     suppressWarnings(suppressMessages(({
