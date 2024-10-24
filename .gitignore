@@ -19,3 +19,4 @@ AssociationAnalysis/GoEnrich/runs/
 # Ignore correlation plots
 AssociationAnalysis/CorrelationVisualization/runs/
 AssociationAnalysis/CorrelationVisualizationFiltered/runs/
+AssociationAnalysis/CorrelationVisualizationFiltered/visulizations/
