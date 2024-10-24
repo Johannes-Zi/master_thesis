@@ -176,10 +176,10 @@ create_spearman_correlations_df <- function(clinical_vector, elnet_segments_atac
     # Create dotplot to visualize the correlation with larger font and bigger dots
     suppressWarnings(suppressMessages(({
       p <- ggplot(data = data_df, aes(x = atac_vector, y = clinical_vector, color = condition_vector, shape = condition_vector)) +
-        geom_smooth(aes(group = 1), method = "lm", se = TRUE, color = "black", linetype = "dashed", show.legend = FALSE) +  # Combined smoothing line with confidence interval
-        geom_smooth(method = "lm", se = FALSE, show.legend = FALSE) +  # Group-specific smoothing lines without confidence intervals
-        geom_point(size = 5) +  # Increase the size of the dots
-        labs(title = paste("Gene: ENG"),
+        geom_smooth(aes(group = 1), method = "lm", se = TRUE, color = "black", linetype = "dashed", size = 2.5, show.legend = FALSE) +  # Combined smoothing line with confidence interval
+        geom_smooth(method = "lm", se = FALSE, size = 2.5, show.legend = FALSE) +  # Group-specific smoothing lines without confidence intervals
+        geom_point(size = 6) +  # size of the dots
+        labs(title = paste(""),
             x = "ATAC-Seq enhancer signal",
             y = "Systolic pulmonary artery pressure",
             color = "Condition",
@@ -187,22 +187,23 @@ create_spearman_correlations_df <- function(clinical_vector, elnet_segments_atac
         theme_minimal() +
         theme(plot.title = element_text(hjust = 0.5)) +  # Center the title
         theme(
-          text = element_text(size = 20),  # Increase font size for all text
-          plot.title = element_text(size = 32, colour = "#161616", face = "bold"),  # Increase font size for the title
-          axis.title = element_text(size = 26, face = "bold"),  # Increase font size for axis titles
-          axis.text = element_text(size = 22),  # Increase font size for axis text
-          axis.title.x = element_text(margin = margin(t = 15), colour = "#161616"),  # Add space above the x-axis title
-          axis.title.y = element_text(margin = margin(r = 15), colour = "#161616"),  # Add space to the right of the y-axis title
-          legend.position = c(0.9, 0.9),  # Position the legend inside the plot area
+          #plot.title = element_blank(),
+          text = element_text(size = 20), 
+          plot.title = element_text(size = 40, colour = "#161616", face = "bold"),  #  font size for the title
+          axis.title = element_text(size = 40, face = "bold"),  #  font size for axis titles
+          axis.text = element_text(size = 34),  #  font size for axis text
+          axis.title.x = element_text(margin = margin(t = 15), colour = "#161616"),  #  space above the x-axis title
+          axis.title.y = element_text(margin = margin(r = 15), colour = "#161616"),  # Ad space to the right of the y-axis title
+          legend.position = c(0.8, 0.9),  # Position the legend inside the plot area
           legend.background = element_rect(fill = alpha('#ffffffed', 0.5)),  # Semi-transparent background for the legend
-          legend.text = element_text(size = 20, colour = "#161616"),  # Increase the size of the legend text
-          legend.title = element_text(size = 22, colour = "#161616"),  # Increase the size of the legend title
-          legend.key.size = unit(1.5, "lines")  # Increase the size of the legend keys
+          legend.text = element_text(size = 38, colour = "#161616"),  #  the size of the legend text
+          legend.title = element_text(size = 40, colour = "#161616", face = "bold"),  #  the size of the legend title
+          legend.key.size = unit(1.5, "lines")  #  the size of the legend keys
         ) +
-        scale_shape_manual(values = c(18, 15, 16, 17)) +  # Specify shapes for different groups
-        scale_color_manual(values = c("#000000", "#009E73", "#0072B2", "#D55E00")) +  # Specify colors for different groups
+        scale_shape_manual(values = c(18, 15, 16, 17)) +  #  shapes for different groups
+        scale_color_manual(values = c("#000000", "#009E73", "#0072B2", "#D55E00")) +  #  colors for different groups
         guides(
-          color = guide_legend(override.aes = list(shape = c(18, 15, 16, 17))),  # Combine color and shape legends
+          color = guide_legend(override.aes = list(shape = c(18, 15, 16, 17))),  #  color and shape legends
           shape = guide_legend(override.aes = list(color = c("#000000", "#009E73", "#0072B2", "#D55E00")))  # Ensure shapes are shown in the legend
         )
     })))
@@ -217,26 +218,27 @@ create_spearman_correlations_df <- function(clinical_vector, elnet_segments_atac
     # Create boxplot to display the x-axis values of the different condition groups
     suppressWarnings(suppressMessages({
       boxplot <- ggplot(data = data_df, 
-                        aes(y = factor(condition_vector, levels = c("healthy", "ph-lung", "pah", "cteph")),  # Manually set the order of the groups
-                            x = atac_vector, 
+                        aes(x = factor(condition_vector, levels = c("healthy", "ph-lung", "pah", "cteph")),  # Manually set the order of the groups
+                            y = atac_vector, 
                             color = condition_vector, 
                             fill = condition_vector)) +
-        geom_boxplot(outlier.shape = NA, alpha = 0.5, width = 0.8) +  # Add boxplot with semi-transparent fill and no outliers
-        geom_jitter(shape = 16, position = position_jitter(height = 0.2, width = 0), size = 5) +  # Add jittered points for better visibility
-        labs(title = paste("Gene: ENG"),
-            y = "Condition",
-            x = "ATAC-Seq enhancer signal",
+        geom_boxplot(outlier.shape = NA, alpha = 0.5, width = 0.8, size=1.5, color = "#818181") +  # Add boxplot with semi-transparent fill and no outliers
+        geom_jitter(shape = 16, position = position_jitter(height = 0, width = 0.15), size = 6) +  # Add jittered points for better visibility
+        labs(title = paste(""),
+            x = "Condition",
+            y = "ATAC-Seq enhancer signal",
             color = "Condition",
             fill = "Condition") +
         theme_minimal() +
         theme(plot.title = element_text(hjust = 0.5)) +  # Center the title
         theme(
           text = element_text(size = 20),  # Increase font size for all text
-          plot.title = element_text(size = 32, colour = "#161616", face = "bold"),  # Increase font size for the title
-          axis.title = element_text(size = 26, face = "bold"),  # Increase font size for axis titles
-          axis.text = element_text(size = 22),  # Increase font size for axis text
+          plot.title = element_text(size = 40, colour = "#161616", face = "bold"),  # Increase font size for the title
+          axis.title = element_text(size = 40, face = "bold"),  # Increase font size for axis titles
+          axis.text = element_text(size = 34),  # Increase font size for axis text
           axis.title.x = element_text(margin = margin(t = 15), colour = "#161616"),  # Add space above the x-axis title
           axis.title.y = element_text(margin = margin(r = 15), colour = "#161616"),  # Add space to the right of the y-axis title
+          axis.text.x = element_text(angle = 35, vjust = 1, hjust = 1),
           legend.position = "none"  # Remove the legend
         ) +
         scale_color_manual(values = c("#000000", "#009E73", "#0072B2", "#D55E00")) +  # Specify colors for different groups
@@ -246,7 +248,7 @@ create_spearman_correlations_df <- function(clinical_vector, elnet_segments_atac
     # Save boxplot as svg with white background
     suppressWarnings(suppressMessages({
       boxplot_output_file_path_svg <- paste(plot_output_dir, paste(paste(spearman_correlation$estimate, current_gene_id, current_segment, "boxplot", sep = "_"), ".svg", sep = ""), sep = "/")
-      ggsave(boxplot_output_file_path_svg, plot = boxplot, width = 12, height = 8, dpi = 150, bg = "white")
+      ggsave(boxplot_output_file_path_svg, plot = boxplot, width = 6, height = 12, dpi = 150, bg = "white")
     }))
 
     # Check if the current gene_id and the current segment are the ones which should be visualized and thus the loop can be stopped
@@ -455,7 +457,7 @@ if (TRUE) {
   }
 
   #'
-  #' Create a list of genes which have a Pearson correlation above a defined threshold
+  #' Create a list of genes which have a CV Pearson correlation above a defined threshold
   if (TRUE) {
     thresx <- 0.4 # Defines the threshold for the outer cross validation threshold to filter out the gene models below the threshold
     cat(paste(bold(cyan("\nApply elnet outer cross validation based pearson correlation filtering\n"))))
@@ -497,15 +499,16 @@ if (TRUE) {
   if (TRUE) {
     cat(paste(bold(cyan("\nRun the correlation analysis with the filtered elnet segments atac data together with the clinical metadata over all clinical parameters.\n"))))
     # Create output_path based on cwd
-    output_path <- paste(getwd(), "AssociationAnalysis/CorrelationVisualization/runs/v1_single_plots", sep = "/")
+    output_path <- paste(getwd(), "AssociationAnalysis/CorrelationVisualization/runs/v2_single_plots", sep = "/")
 
 
 
     # Configuration for the plot that should be visualized
     clinical_parameter_to_visualize <- "sPAP.excl..ZVD"
-    gene_id_to_visualize <- "ENSG00000106991"
-    segment_to_visualize <- "chr9.127853598.127853857"
-
+    # gene_id_to_visualize <- "ENSG00000106991"
+    # segment_to_visualize <- "chr9.127853598.127853857"
+    gene_id_to_visualize <- "ENSG00000139567"
+    segment_to_visualize <- "chr12.51907898.51908147"
 
 
 
