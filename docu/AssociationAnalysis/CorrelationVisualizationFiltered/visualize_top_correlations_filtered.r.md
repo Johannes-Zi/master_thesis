@@ -25,4 +25,4 @@ The following aspects are implemented in the filters:
 
 - Add the additional filter step to the existing visualization code
 - Merge the resulting plot directories and remove duplicates
-- use resulting geneset for further analysis
+- use resulting geneset for further analysis 
