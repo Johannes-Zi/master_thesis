@@ -138,7 +138,7 @@ outlier_removal_permutation_test <- function(x, y, x_no_outliers, y_no_outliers,
   # Calculate p-value
   p_value_perm <- mean(abs(permutated_differences) >= cor_diff_observed)
 
-  if (p_value_perm < 0.05) {
+  if (!is.na(p_value_perm) && p_value_perm < 0.05) {
     print("##### significant influnce on correlation!!! #####")
 
     print("p_value_perm:")
@@ -219,6 +219,11 @@ create_spearman_correlations_df <- function(clinical_vector, elnet_segments_atac
     #
     # First filter - Skip segment if the spearman correlation is below abs(0.4)
     #
+
+    # Bug blocker for the case that the correlation is NA
+    if (is.na(spearman_correlation$estimate)) {
+      next
+    }
 
     # Skip to next segment if the amount of the spearman correlation is below 0.4
     if (abs(spearman_correlation$estimate) < 0.4) {
@@ -427,12 +432,6 @@ iterate_over_clinical_metadata <- function(output_path, clinical_metadata, elnet
 
     # Extract current column
     current_column <- clinical_metadata[,i]
-
-
-    # Skip if current column name is not mPAP
-    if (colnames(clinical_metadata)[i] != "mPAP") {
-      next
-    }
 
 
     # Create temporary sorted df based on patient ids to hand over the condition vector in the rigth order
