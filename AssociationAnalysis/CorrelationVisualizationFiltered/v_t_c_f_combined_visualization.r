@@ -1,4 +1,5 @@
 library(ggplot2)
+library(dplyr)
 
 # Function that loads the data from the input directories
 load_data <- function(input_dir) {
@@ -56,8 +57,6 @@ plot_top_gene_ids <- function(input_df, output_dir) {
 
   # Reset the row names
   rownames(gene_id_counts) <- NULL
-
-  print(gene_id_counts)
   
   # Ensure the Var1 column is a factor with levels ordered by Freq
   gene_id_counts$Var1 <- factor(gene_id_counts$Var1, levels = gene_id_counts$Var1[order(gene_id_counts$Freq, decreasing = TRUE)])
@@ -111,6 +110,66 @@ plot_top_gene_ids <- function(input_df, output_dir) {
   print(paste(gene_id_counts$Var1, collapse = ","))
   }
 
+# Function used below for the heatmap
+reorder_percentage_matrix <- function(percentage_matrix) {
+  # Use percentages between variables as distance
+  dd <- as.dist((100 - percentage_matrix) / 100)
+  hc <- hclust(dd)
+  percentage_matrix <- percentage_matrix[hc$order, hc$order]
+  return(percentage_matrix)
+}
+
+# Function that creates a heatmap of the gene_id that pairs of the clinical parameters share
+clinical_parameter_gene_assotiations_heatmap <- function(input_df, output_dir) {
+
+  # Create cross-tabulation of clinical parameters and gene IDs
+  # Simply a list matrix, with one axis beein the clinical parameters and the other the gene IDs
+  # If there is a representetion of a gene_id for a clinical parameter, the value is 1, otherwise 0
+  cross_tab <- table(input_df$clinical_parameter, input_df$gene_id)
+
+  # Calculate the co-occurrences of gene IDs for each pair of clinical parameters
+  # by performing matrix multiplication between the cross-tabulation matrix and its transpose
+  co_occurrences <- cross_tab %*% t(cross_tab)
+
+  # Calculate percentages
+  total_genes <- ncol(cross_tab)
+  message("Total genes represented in heatmap dataframe: ", total_genes)
+  percentage_matrix <- (co_occurrences / total_genes) * 100
+
+  # Reorder the percentage matrix
+  percentage_matrix <- reorder_percentage_matrix(percentage_matrix)
+
+  # Convert matrix to data frame
+  percentage_df <- as.data.frame(as.table(percentage_matrix))
+  colnames(percentage_df) <- c("Clinical_Parameter_X", "Clinical_Parameter_Y", "Percentage")
+
+  # Reverse the order of the y-axis by reordering the factor levels
+  percentage_df$Clinical_Parameter_Y <- factor(percentage_df$Clinical_Parameter_Y, levels = rev(levels(percentage_df$Clinical_Parameter_Y)))
+
+  # Set Percentage to NA for tiles above the diagonal
+  percentage_df <- percentage_df %>%
+    mutate(Percentage = ifelse(as.numeric(factor(Clinical_Parameter_X, levels = levels(Clinical_Parameter_Y))) < as.numeric(Clinical_Parameter_Y), NA, Percentage))
+
+  # Create the heatmap
+  ggplot(percentage_df, aes(x = Clinical_Parameter_X, y = Clinical_Parameter_Y, fill = Percentage)) +
+    geom_tile() +
+    scale_fill_gradient(low = "white", high = "blue", na.value = "white") +
+    theme_minimal() +
+    theme(
+      axis.text.x = element_text(angle = 45, hjust = 1),  # Rotate x-axis labels by 45 degrees
+      plot.title = element_text(hjust = 0.5),  # Center the title
+      plot.background = element_rect(fill = "white", color = NA)  # Add white background to the plot
+    ) +
+    labs(title = "Co-occurrence of Gene IDs Across Clinical Parameters",
+        x = NULL,
+        y = NULL,
+        fill = "Percentage")
+
+  # Save the plot to a file
+  ggsave(paste(output_dir, "clinical_parameter_gene_associations_heatmap.png", sep = ""))
+  
+  }
+
 if (TRUE) {
   # Path to directory with input files
   input_dir = "C:/Users/johan/VSCode_projects/bioinf_master/AssociationAnalysis/CorrelationVisualizationFiltered/runs/v1/"
@@ -132,5 +191,14 @@ if (TRUE) {
 
   # Plot the number of Gene IDs across all clinical parameters
   plot_top_gene_ids(input_df, output_dir)
+
+  # Create reduced df version without the columns segement, spearman_corr and p_value
+  reduced_df <- input_df[, c("clinical_parameter", "gene_id")]
+
+  # Drop duplicated rows
+  reduced_df <- unique(reduced_df)
+
+  # Create a heatmap of the gene_id that pairs of the clinical parameters share
+  clinical_parameter_gene_assotiations_heatmap(reduced_df, output_dir)  
 
 }

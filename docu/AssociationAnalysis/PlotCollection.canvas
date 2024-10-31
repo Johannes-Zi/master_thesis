@@ -8,7 +8,7 @@
 		{"id":"1929f59d21d4313e","type":"file","file":"AssociationAnalysis/DisGeNet2r/visualize_disgenet2.r.md","x":1251,"y":1406,"width":811,"height":1034},
 		{"id":"e049d0128cfc1cb6","type":"file","file":"AssociationAnalysis/BasicCorrelation/BasicCorrelation.md","x":-360,"y":-117,"width":749,"height":1197},
 		{"id":"4ee05771cd7258f1","type":"file","file":"AssociationAnalysis/GoEnrich/goEnrichment.r.md","x":-360,"y":1145,"width":749,"height":655},
-		{"id":"9db409f2aed1654d","type":"file","file":"AssociationAnalysis/CorrelationVisualizationFiltered/v_t_c_f_combined_visualization.r.md","x":3160,"y":-117,"width":720,"height":2417}
+		{"id":"9db409f2aed1654d","type":"file","file":"AssociationAnalysis/CorrelationVisualizationFiltered/v_t_c_f_combined_visualization.r.md","x":3160,"y":-117,"width":720,"height":3197}
 	],
 	"edges":[]
 }
