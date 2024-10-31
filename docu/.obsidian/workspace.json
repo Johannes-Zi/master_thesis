@@ -29,9 +29,9 @@
               "state": {
                 "file": "AssociationAnalysis/PlotCollection.canvas",
                 "viewState": {
-                  "x": 1898.0954011707786,
-                  "y": 1183.3715114808278,
-                  "zoom": -1.355800067027394
+                  "x": 3444.1181885797864,
+                  "y": 1307.2612551638977,
+                  "zoom": -0.5950743212473566
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -109,7 +109,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 411.504695892334
+    "width": 436.5086555480957
   },
   "right": {
     "id": "5b31fd771786262b",
@@ -196,10 +196,13 @@
   },
   "active": "aec12d7d69bad66a",
   "lastOpenFiles": [
-    "AssociationAnalysis/PlotCollection.canvas",
-    "AssociationAnalysis/CorrelationVisualizationFiltered/v_t_c_f_combined_visualization.r.md",
-    "AssociationAnalysis/CorrelationVisualizationFiltered/string_graph.png",
     "AssociationAnalysis/CorrelationVisualizationFiltered/gene_frequency_distribution.png",
+    "AssociationAnalysis/CorrelationVisualizationFiltered/gene_frequency_distribution.png",
+    "AssociationAnalysis/PlotCollection.canvas",
+    "AssociationAnalysis/CorrelationVisualizationFiltered/gene_frequency_distribution.png",
+    "AssociationAnalysis/CorrelationVisualizationFiltered/string_graph.png",
+    "AssociationAnalysis/CorrelationVisualizationFiltered/string_graph.png",
+    "AssociationAnalysis/CorrelationVisualizationFiltered/v_t_c_f_combined_visualization.r.md",
     "AssociationAnalysis/CorrelationVisualizationFiltered/number_of_entries_per_param.png",
     "AssociationAnalysis/CorrelationVisualizationFiltered/visualize_top_correlations_filtered.r.md",
     "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
@@ -211,9 +214,6 @@
     "AssociationAnalysis/DisGeNet2r/Pasted image 20241018225613.png",
     "AssociationAnalysis/DisGeNet2r/Pasted image 20241018225437.png",
     "AssociationAnalysis/DisGeNet2r/Pasted image 20241018225350.png",
-    "AssociationAnalysis/DisGeNet2r/Pasted image 20241018224928.png",
-    "AssociationAnalysis/BasicCorrelation/mPAP_spearman_corr_density_p_value.png",
-    "AssociationAnalysis/CorrelationVisualization/Pasted image 20241018224355.png",
     "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md",
     "AssociationAnalysis/DisGeNet2r/visualize_disgenet2.r.md",
     "AssociationAnalysis/DisGeNet2r/visualize_disgenet2.r.segmentDistribution.md",

@@ -12,10 +12,10 @@ load_data <- function(input_dir) {
     clinical_parameter <- dir
 
     # Build the path to the input file
-    input_file <- paste(input_dir, dir, '/', dir, '_spearman_correlations.tsv', sep = '')
+    input_file <- paste(input_dir, dir, "/", dir, "_spearman_correlations.tsv", sep = "")
 
     # Load the input tsv file to a data frame
-    input_df <- read.table(input_file, header = TRUE, sep = ';')
+    input_df <- read.table(input_file, header = TRUE, sep = ";")
 
     # Add the clinical parameter to the data frame
     input_df$clinical_parameter <- clinical_parameter
@@ -38,12 +38,12 @@ plot_entries <- function(input_df, output_dir) {
       plot.title = element_text(hjust = 0.5),  # Center the title
       plot.background = element_rect(fill = "white", color = NA)  # Add white background to the plot
     ) +
-    labs(title = 'Number of top segments for each clinical parameter',
-         x = 'Clinical parameter',
-         y = 'Number of segments')
+    labs(title = "Number of top segments for each clinical parameter",
+         x = "Clinical parameter",
+         y = "Number of segments")
 
   # Save the plot to a file 
-  ggsave(paste(output_dir, 'number_of_entries_per_param.png', sep = ''))
+  ggsave(paste(output_dir, "number_of_entries_per_param.png", sep = ""))
 }
 
 # Function that creates a barchart with the most abundand gene_id entries across all clinical parameters
@@ -64,20 +64,20 @@ plot_top_gene_ids <- function(input_df, output_dir) {
 
   # Plot the Freqency of each gene_id as a barchart
   ggplot(gene_id_counts[1:40, ], aes(y = Var1, x = Freq)) +
-    geom_bar(stat = 'identity') +
+    geom_bar(stat = "identity") +
     theme_minimal() +
     theme(
       plot.title = element_text(hjust = 0.5),  # Center the title
       plot.background = element_rect(fill = "white", color = NA)  # Add white background to the plot
     ) +
     labs(
-        title = 'Top 10 most abundant gene_ids',
-        y = 'Gene ID',
-        x = 'Number of entries'
+        title = "Top 10 most abundant gene_ids",
+        y = "Gene ID",
+        x = "Number of entries"
     )
 
   # Save the plot to a file
-  ggsave(paste(output_dir, 'top_gene_ids.png', sep = ''))
+  ggsave(paste(output_dir, "top_gene_ids.png", sep = ""))
 
 
   # Calculate the distribution of frequencies
@@ -89,38 +89,46 @@ plot_top_gene_ids <- function(input_df, output_dir) {
 
   # Plot the distribution of frequencies
   ggplot(frequency_distribution, aes(x = Frequency, y = Number_of_Genes)) +
-    geom_bar(stat = 'identity') +
+    geom_bar(stat = "identity") +
     theme_minimal() +
     theme(
       plot.title = element_text(hjust = 0.5),  # Center the title
       plot.background = element_rect(fill = "white", color = NA),  # Add white background to the plot
     ) +
     labs(
-      title = 'Distribution of Gene occurrences',
-      x = 'number of clinical parameters a gene is represented as top correlation',
-      y = 'Number of Genes'
+      title = "Distribution of Gene occurrences",
+      x = "number of clinical parameters a gene is represented as top correlation",
+      y = "Number of Genes"
     )
 
   # Save the plot to a file
-  ggsave(paste(output_dir, 'gene_frequency_distribution.png', sep = ''))
+  ggsave(paste(output_dir, "gene_frequency_distribution.png", sep = ""))
 
   # Save the gene_id_counts to a file
-  write.table(gene_id_counts, paste(output_dir, 'gene_id_counts.tsv', sep = ''), sep = '\t', row.names = FALSE)
+  write.table(gene_id_counts, paste(output_dir, "gene_id_counts.tsv", sep = ""), sep = "\t", row.names = FALSE)
   
-  # Prit the gene_id_counts to the console comma separated as a single line
-  print(paste(gene_id_counts$Var1, collapse = ','))
+  # Print the gene_id_counts to the console comma separated as a single line
+  print(paste(gene_id_counts$Var1, collapse = ","))
   }
 
 if (TRUE) {
   # Path to directory with input files
-  input_dir = 'C:/Users/johan/VSCode_projects/bioinf_master/AssociationAnalysis/CorrelationVisualizationFiltered/runs/v1/'
+  input_dir = "C:/Users/johan/VSCode_projects/bioinf_master/AssociationAnalysis/CorrelationVisualizationFiltered/runs/v1/"
 
   input_df <- load_data(input_dir)
 
-  output_dir = 'C:/Users/johan/VSCode_projects/bioinf_master/AssociationAnalysis/CorrelationVisualizationFiltered/visulizations/v1/'
-  
+  output_dir = "C:/Users/johan/VSCode_projects/bioinf_master/AssociationAnalysis/CorrelationVisualizationFiltered/visulizations/v1/"
+
   # Plot the number of segments for each clinical parameter
   plot_entries(input_df, output_dir)
+
+  # Drop the clinical parameters that have no meaningful correlations
+  clinical_params_to_drop <- c("age", "height", "weight", "NYHA", "ZVD", "heart.rate", "Paradoxe_Septumbewegung", "Perikarderguss")
+
+  # Drop the rows with the clinical parameters that have no meaningful correlations
+  input_df <- input_df[!input_df$clinical_parameter %in% clinical_params_to_drop, ]
+  # Reset the row names
+  rownames(input_df) <- NULL
 
   # Plot the number of Gene IDs across all clinical parameters
   plot_top_gene_ids(input_df, output_dir)
