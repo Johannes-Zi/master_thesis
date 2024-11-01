@@ -4,24 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "3b1ee69f8331317d",
+        "id": "fbe06dacc027c7f0",
         "type": "tabs",
         "children": [
           {
-            "id": "aec12d7d69bad66a",
+            "id": "e58c43e3d356e551",
             "type": "leaf",
             "state": {
-              "type": "canvas",
-              "state": {
-                "file": "AssociationAnalysis/PlotCollection.canvas",
-                "viewState": {
-                  "x": 3446.7754287425496,
-                  "y": 2299.776821124228,
-                  "zoom": -0.9619150597834427
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "PlotCollection"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -94,7 +87,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 214.50469589233398
+    "width": 299.504695892334
   },
   "right": {
     "id": "5b31fd771786262b",
@@ -179,16 +172,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "aec12d7d69bad66a",
+  "active": "01a1ccf26329c2f6",
   "lastOpenFiles": [
-    "AssociationAnalysis/CorrelationVisualizationFiltered/v_t_c_f_combined_visualization.r.md",
-    "AssociationAnalysis/CorrelationVisualizationFiltered/clinical_parameter_gene_associations_heatmap.png",
+    "X-0.554771183888575_ENSG00000153774_chr16.75433103.75433142.png",
+    "AssociationAnalysis/CorrelationVisualizationFiltered/string_db_graph.png",
+    "AssociationAnalysis/GWAS/GWAS.md",
+    "LiteratureResearch/Targets/StringDB.md",
     "AssociationAnalysis/PlotCollection.canvas",
-    "AssociationAnalysis/CorrelationVisualizationFiltered/gene_frequency_distribution.png",
-    "AssociationAnalysis/CorrelationVisualizationFiltered/gene_frequency_distribution.png",
-    "AssociationAnalysis/CorrelationVisualizationFiltered/gene_frequency_distribution.png",
+    "AssociationAnalysis/CorrelationVisualizationFiltered/v_t_c_f_combined_visualization.r.md",
+    "clinical_parameter_gene_associations_heatmap.png",
     "AssociationAnalysis/CorrelationVisualizationFiltered/string_graph.png",
-    "AssociationAnalysis/CorrelationVisualizationFiltered/string_graph.png",
+    "AssociationAnalysis/CorrelationVisualizationFiltered/clinical_parameter_gene_associations_heatmap.png",
+    "AssociationAnalysis/GWAS",
+    "AssociationAnalysis/CorrelationVisualizationFiltered/gene_frequency_distribution.png",
+    "AssociationAnalysis/CorrelationVisualizationFiltered/gene_frequency_distribution.png",
+    "AssociationAnalysis/CorrelationVisualizationFiltered/gene_frequency_distribution.png",
     "AssociationAnalysis/CorrelationVisualizationFiltered/number_of_entries_per_param.png",
     "AssociationAnalysis/CorrelationVisualizationFiltered/visualize_top_correlations_filtered.r.md",
     "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
@@ -198,7 +196,6 @@
     "AssociationAnalysis/GoEnrich/goEnrichment.r.md",
     "AssociationAnalysis/CorrelationVisualization/X0.711765807251866_ENSG00000182310_chr19.51690548.51690747.png",
     "AssociationAnalysis/DisGeNet2r/Pasted image 20241018225613.png",
-    "AssociationAnalysis/DisGeNet2r/Pasted image 20241018225437.png",
     "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md",
     "AssociationAnalysis/DisGeNet2r/visualize_disgenet2.r.md",
     "AssociationAnalysis/DisGeNet2r/visualize_disgenet2.r.segmentDistribution.md",
@@ -208,7 +205,6 @@
     "AssociationAnalysis/CorrelationVisualization/visualize_top_correlations.r.md",
     "AssociationAnalysis/clinicalParamCorrelations/clinical_parameters_correlation_heatmap.r.plot.md",
     "AssociationAnalysis/clinicalParamCorrelations",
-    "LiteratureResearch/Targets/StringDB.md",
     "LiteratureResearch/Targets/PotentialHitsOfInterest.md",
     "LiteratureResearch/GeneDump/C1QA.md",
     "LiteratureResearch/Targets/pictures",
@@ -221,14 +217,12 @@
     "LiteratureResearch/KeywordDump/Tyrosine kinase receptor.md",
     "LiteratureResearch/KeywordDump/Calcium Channel.md",
     "LiteratureResearch/KeywordDump/Phosphodiesterase.md",
-    "LiteratureResearch/KeywordDump/Endothelin.md",
     "LiteratureResearch/Targets",
     "LiteratureResearch/plot_dump",
     "LiteratureResearch/PH_General/Publications/thenappanPulmonaryArterialHypertension2018/thenappanPulmonaryArterialHypertension2018.pdf",
     "LiteratureResearch/PH_General/Publications/thenappanPulmonaryArterialHypertension2018/mod_thenappanPulmonaryArterialHypertension2018.pdf",
     "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/sommerCurrentFutureTreatments2021.pdf",
     "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/mod_sommerCurrentFutureTreatments2021.pdf",
-    "LiteratureResearch/PH_General/Publications/montaniPulmonaryArterialHypertension2013/montaniPulmonaryArterialHypertension2013.pdf",
     "AssociationAnalysis/AssociationAnalysis.canvas",
     "Untitled 1.canvas",
     "Untitled.canvas",

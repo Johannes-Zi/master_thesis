@@ -1,5 +1,6 @@
 library(ggplot2)
 library(dplyr)
+library(tidyr)
 
 # Function that loads the data from the input directories
 load_data <- function(input_dir) {
@@ -170,6 +171,34 @@ clinical_parameter_gene_assotiations_heatmap <- function(input_df, output_dir) {
   
   }
 
+
+# Function that exports thefiltered segments to a bed file
+export_filtered_segments <- function(input_df, output_dir) {
+  # Copy the input_df to a new data frame
+  output_df <- input_df
+  # Combine the columns gene_id, spearman_corr and p_value to a single column called name and seperate the values with a underscore
+  output_df$geneSpearmanPval <- paste(output_df$gene_id, output_df$spearman_corr, output_df$p_value, sep = "_")
+
+  # Remove the columns gene_id, spearman_corr and p_value
+  output_df <- output_df[, !(names(output_df) %in% c("gene_id", "spearman_corr", "p_value", "clinical_parameter"))]
+  
+  # Separate the segment column into chrom, chromStart, and chromEnd
+  output_df <- separate(output_df, segment, into = c("chr", "start", "end"), sep = "\\.")
+  
+  print(head(output_df))
+
+  # Drop duplicates based on chrom, chromStart, and chromEnd
+  output_df <- output_df %>% distinct(chr, start, end, .keep_all = TRUE)
+
+  # Save the output_df to a bed file
+  # Create the file path
+  file_path <- paste(output_dir, "filtered_segments.bed", sep = "/")
+  # Write the header with a #
+  writeLines(paste("#", paste(colnames(output_df), collapse = "\t"), sep = ""), con = file_path)
+  # Append the data to the file
+  write.table(output_df, file = file_path, sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE, append = TRUE)
+}
+
 if (TRUE) {
   # Path to directory with input files
   input_dir = "C:/Users/johan/VSCode_projects/bioinf_master/AssociationAnalysis/CorrelationVisualizationFiltered/runs/v1/"
@@ -182,7 +211,7 @@ if (TRUE) {
   plot_entries(input_df, output_dir)
 
   # Drop the clinical parameters that have no meaningful correlations
-  clinical_params_to_drop <- c("age", "height", "weight", "NYHA", "ZVD", "heart.rate", "Paradoxe_Septumbewegung", "Perikarderguss")
+  clinical_params_to_drop <- c("age", "height", "weight", "NYHA", "ZVD", "heart.rate", "Paradoxe_Septumbewegung", "Perikarderguss", "SMW")
 
   # Drop the rows with the clinical parameters that have no meaningful correlations
   input_df <- input_df[!input_df$clinical_parameter %in% clinical_params_to_drop, ]
@@ -199,6 +228,9 @@ if (TRUE) {
   reduced_df <- unique(reduced_df)
 
   # Create a heatmap of the gene_id that pairs of the clinical parameters share
-  clinical_parameter_gene_assotiations_heatmap(reduced_df, output_dir)  
+  clinical_parameter_gene_assotiations_heatmap(reduced_df, output_dir) 
+
+  # Export the filtered segments to a bed file
+  export_filtered_segments(input_df, output_dir)
 
 }
