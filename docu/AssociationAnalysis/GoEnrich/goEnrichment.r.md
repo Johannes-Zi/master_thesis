@@ -1,5 +1,7 @@
 (script: https://github.com/Johannes-Zi/master_thesis/blob/main/AssociationAnalysis/GoEnrich/goEnrichment.r)
 
+# V1
+
 # Idea
 Performed GO enrichment analysis with similar approach to the [[disgenet2.r| DisGeNet analysis]]  by using the top correlations that resulted out of the correlation between clinical parameters vs segmental ATAC accessibility.
 

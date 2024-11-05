@@ -8,23 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e58c43e3d356e551",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
-                "viewState": {
-                  "x": -2203.9390706034037,
-                  "y": -230.4098093482466,
-                  "zoom": -1.4391280635833108
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "RegPlotOverview"
-            }
-          },
-          {
             "id": "48073d94af9b41f3",
             "type": "leaf",
             "state": {
@@ -32,17 +15,16 @@
               "state": {
                 "file": "AssociationAnalysis/PlotCollection.canvas",
                 "viewState": {
-                  "x": 4924.9998725432415,
-                  "y": 1673.5293012907014,
-                  "zoom": -1.4999999006589295
+                  "x": 5441.688506618819,
+                  "y": 594.2871996355868,
+                  "zoom": -1.0462368784217593
                 }
               },
               "icon": "lucide-layout-dashboard",
               "title": "PlotCollection"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -199,12 +181,12 @@
   },
   "active": "48073d94af9b41f3",
   "lastOpenFiles": [
-    "Pasted image 20241105154839.png",
-    "Pasted image 20241105154803.png",
-    "Pasted image 20241105154514.png",
+    "AssociationAnalysis/DisGeNet2r/Pasted image 20241105154803.png",
+    "AssociationAnalysis/DisGeNet2r/Pasted image 20241105154839.png",
+    "AssociationAnalysis/DisGeNet2r/Pasted image 20241105154514.png",
     "AssociationAnalysis/PlotCollection.canvas",
-    "AssociationAnalysis/DisGeNet2r/DisGeNet_manual_input.r.md",
     "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
+    "AssociationAnalysis/DisGeNet2r/DisGeNet_manual_input.r.md",
     "AssociationAnalysis/DisGeNet2r/disgenet2.r.md",
     "AssociationAnalysis/GWAS/X-0.554771183888575_ENSG00000153774_chr16.75433103.75433142.png",
     "AssociationAnalysis/GoEnrich/Pasted image 20241105142233.png",
@@ -228,7 +210,6 @@
     "AssociationAnalysis/CorrelationVisualizationFiltered/v_t_c_f_combined_visualization.r.md",
     "AssociationAnalysis/CorrelationVisualizationFiltered/string_graph.png",
     "AssociationAnalysis/GWAS",
-    "AssociationAnalysis/CorrelationVisualizationFiltered/gene_frequency_distribution.png",
     "AssociationAnalysis/CorrelationVisualizationFiltered/visualize_top_correlations_filtered.r.md",
     "AssociationAnalysis/CorrelationVisualizationFiltered",
     "AssociationAnalysis/DisGeNet2r/visualize_disgenet2.r.md",
