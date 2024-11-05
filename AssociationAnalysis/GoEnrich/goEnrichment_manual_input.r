@@ -162,8 +162,8 @@ if (TRUE) {
   # Run GoEnrich analysis
   if (TRUE) {
     output_dir <- "C:/Users/johan/VSCode_projects/bioinf_master/AssociationAnalysis/GoEnrich/runs_manual_input/v1/"
-    qvalue_cutoff <- 0.6
-    pvalue_cutoff <- 0.6
+    qvalue_cutoff <- 0.1
+    pvalue_cutoff <- 0.1
     query_strings <- c("pulmo", "arter", "hypertension")    # Keywords to create filtered GoEnrich results
     message(bold(cyan("\nRunning GoEnrich analysis")))
     message(underline("Output directory:\n"), output_dir)
