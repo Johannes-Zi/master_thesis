@@ -486,11 +486,14 @@ if (TRUE) {
     message(paste(underline("Q-value cutoff: "), magenta(qvalue_cutoff)))
     message(paste(underline("P-value cutoff: "), magenta(pvalue_cutoff), "\n"))
 
+    print(head(reduced_correlation_datasets_list))
+
+    print(query_strings)
     GoEnrichresults <- run_digenet_analysis(reduced_correlation_datasets_list, output_dir = output_dir, qvalue_cutoff = qvalue_cutoff, pvalue_cutoff = pvalue_cutoff, query_strings = query_strings)
   }
 
   # Save the GoEnrich results df as csv
-  if (TRUE) {	
+  if (FALSE) {	
     write.csv(GoEnrichresults$combined_GoEnrich_results_df, "GoEnrichresults_0.4pqcutoff_uptotop250correlations_latest_version.csv", row.names = FALSE)
   }
 }
