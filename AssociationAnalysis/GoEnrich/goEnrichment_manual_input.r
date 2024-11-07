@@ -90,6 +90,13 @@ run_enrichment_analysis <- function(target_genes, output_dir, qvalue_cutoff, pva
       write.table(input_genes_metadata_df$UNIPROT, gene_names_output_path, row.names = FALSE)
       write.table(input_genes_metadata_df$UNIPROT, gene_names_output_path, row.names = FALSE, col.names = FALSE, quote = FALSE)
 
+      # Export the gene symbol  as a csv file
+      gene_symbol_output_path <- file.path(output_dir, "GoEnrich_input_genes_symbol.csv")
+      # Create df with dropped duplications
+      input_genes_metadata_df_reduced <- input_genes_metadata_df[!duplicated(input_genes_metadata_df$SYMBOL),]
+      write.table(input_genes_metadata_df_reduced$SYMBOL, gene_symbol_output_path, row.names = FALSE)
+      write.table(input_genes_metadata_df_reduced$SYMBOL, gene_symbol_output_path, row.names = FALSE, col.names = FALSE, quote = FALSE)
+
     }
 
     # Run GoEnrich analysis

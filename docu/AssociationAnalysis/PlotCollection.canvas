@@ -10,9 +10,12 @@
 		{"id":"4ee05771cd7258f1","type":"file","file":"AssociationAnalysis/GoEnrich/goEnrichment.r.md","x":-360,"y":1145,"width":749,"height":655},
 		{"id":"9db409f2aed1654d","type":"file","file":"AssociationAnalysis/CorrelationVisualizationFiltered/v_t_c_f_combined_visualization.r.md","x":3160,"y":-117,"width":720,"height":3197},
 		{"id":"f95f410a1c89b689","type":"file","file":"AssociationAnalysis/GWAS/GWAS.md","x":2120,"y":1840,"width":980,"height":760},
-		{"id":"75d0e3bdad150a09","type":"file","file":"AssociationAnalysis/GoEnrich/goEnrichmentWebsite.md","x":3920,"y":-117,"width":720,"height":1760},
+		{"id":"75d0e3bdad150a09","type":"file","file":"AssociationAnalysis/GoEnrich/goEnrichmentWebsite.md","x":3920,"y":-117,"width":720,"height":2037},
 		{"id":"1efe07fbca75d6a9","type":"file","file":"AssociationAnalysis/GoEnrich/goEnrichment_manual_input.r.md","x":4680,"y":-117,"width":1140,"height":637},
-		{"id":"ee2b7e6df4f2e2e0","x":4680,"y":560,"width":1140,"height":1820,"type":"file","file":"AssociationAnalysis/DisGeNet2r/DisGeNet_manual_input.r.md"}
+		{"id":"ee2b7e6df4f2e2e0","type":"file","file":"AssociationAnalysis/DisGeNet2r/DisGeNet_manual_input.r.md","x":4680,"y":560,"width":1140,"height":1820},
+		{"id":"9510dafca5a37595","type":"file","file":"AssociationAnalysis/Reaktome_analysis/Reaktome analysis.md","x":5880,"y":-117,"width":1600,"height":1157},
+		{"id":"ff5a383cd87f2017","x":7040,"y":1070,"width":440,"height":450,"type":"file","file":"AssociationAnalysis/EnrichR/EnrichR.md"},
+		{"id":"ffdf3de6496f6f10","type":"file","file":"AssociationAnalysis/CHEA3/CHEA3.md","x":5880,"y":1080,"width":1120,"height":1650}
 	],
 	"edges":[]
 }

@@ -11,17 +11,14 @@
             "id": "48073d94af9b41f3",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "AssociationAnalysis/PlotCollection.canvas",
-                "viewState": {
-                  "x": 4813.644382284099,
-                  "y": 1230.2213980748725,
-                  "zoom": -0.7969079498301312
-                }
+                "file": "AssociationAnalysis/Reaktome_analysis/Reaktome analysis.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "PlotCollection"
+              "icon": "lucide-file",
+              "title": "Reaktome analysis"
             }
           },
           {
@@ -30,18 +27,19 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
+                "file": "AssociationAnalysis/PlotCollection.canvas",
                 "viewState": {
-                  "x": 11.636282359573963,
-                  "y": 1208.7033308353216,
-                  "zoom": -0.4490653865905191
+                  "x": 5837.707665311814,
+                  "y": 1469.6546289723858,
+                  "zoom": -1.016656995001425
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "RegPlotOverview"
+              "title": "PlotCollection"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -196,10 +194,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "48073d94af9b41f3",
+  "active": "1bfb7491d7d096d1",
   "lastOpenFiles": [
-    "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
     "AssociationAnalysis/PlotCollection.canvas",
+    "AssociationAnalysis/EnrichR/EnrichR.md",
+    "AssociationAnalysis/EnrichR",
+    "AssociationAnalysis/CHEA3/CHEA3.md",
+    "Pasted image 20241107171507.png",
+    "Pasted image 20241107171453.png",
+    "Pasted image 20241107171437.png",
+    "AssociationAnalysis/CHEA3",
+    "AssociationAnalysis/Reaktome_analysis/Reaktome analysis.md",
+    "AssociationAnalysis/Reaktome_analysis",
+    "Pasted image 20241107164447.png",
+    "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
     "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241636_p.png",
     "Stichit workflow/StichitWorkflow.canvas",
     "AssociationAnalysis/DisGeNet2r/Pasted image 20241105154803.png",
@@ -209,9 +217,6 @@
     "AssociationAnalysis/DisGeNet2r/disgenet2.r.md",
     "AssociationAnalysis/GWAS/X-0.554771183888575_ENSG00000153774_chr16.75433103.75433142.png",
     "AssociationAnalysis/GoEnrich/Pasted image 20241105142233.png",
-    "AssociationAnalysis/GoEnrich/Pasted image 20241105142715.png",
-    "AssociationAnalysis/GoEnrich/Pasted image 20241105143355.png",
-    "AssociationAnalysis/CorrelationVisualizationFiltered/clinical_parameter_gene_associations_heatmap.png",
     "AssociationAnalysis/GoEnrich/goEnrichmentWebsite.md",
     "AssociationAnalysis/GoEnrich/goEnrichment_manual_input.r.md",
     "AssociationAnalysis/GoEnrich/goEnrichment.r.md",
@@ -223,7 +228,6 @@
     "Stichit workflow/Preprocessing/Preprocessing.md",
     "Stichit workflow/Discretization/Discretization.md",
     "AssociationAnalysis/GWAS/GWAS.md",
-    "AssociationAnalysis/CorrelationVisualizationFiltered/string_db_graph.png",
     "LiteratureResearch/Targets/StringDB.md",
     "AssociationAnalysis/CorrelationVisualizationFiltered/v_t_c_f_combined_visualization.r.md",
     "AssociationAnalysis/GWAS",
@@ -236,16 +240,10 @@
     "AssociationAnalysis/CorrelationVisualization/visualize_top_correlations.r.md",
     "AssociationAnalysis/clinicalParamCorrelations/clinical_parameters_correlation_heatmap.r.plot.md",
     "AssociationAnalysis/clinicalParamCorrelations",
-    "LiteratureResearch/Targets/PotentialHitsOfInterest.md",
-    "LiteratureResearch/GeneDump/C1QA.md",
     "LiteratureResearch/Targets/pictures",
-    "LiteratureResearch/GeneDump/GNB4.md",
     "LiteratureResearch/Targets",
     "LiteratureResearch/plot_dump",
     "LiteratureResearch/PH_General/Publications/thenappanPulmonaryArterialHypertension2018/thenappanPulmonaryArterialHypertension2018.pdf",
-    "LiteratureResearch/PH_General/Publications/thenappanPulmonaryArterialHypertension2018/mod_thenappanPulmonaryArterialHypertension2018.pdf",
-    "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/sommerCurrentFutureTreatments2021.pdf",
-    "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/mod_sommerCurrentFutureTreatments2021.pdf",
     "AssociationAnalysis/AssociationAnalysis.canvas",
     "Untitled 1.canvas",
     "Untitled.canvas",
