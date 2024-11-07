@@ -15,13 +15,30 @@
               "state": {
                 "file": "AssociationAnalysis/PlotCollection.canvas",
                 "viewState": {
-                  "x": 5441.688506618819,
-                  "y": 594.2871996355868,
-                  "zoom": -1.0462368784217593
+                  "x": 4813.644382284099,
+                  "y": 1230.2213980748725,
+                  "zoom": -0.7969079498301312
                 }
               },
               "icon": "lucide-layout-dashboard",
               "title": "PlotCollection"
+            }
+          },
+          {
+            "id": "1bfb7491d7d096d1",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
+                "viewState": {
+                  "x": 11.636282359573963,
+                  "y": 1208.7033308353216,
+                  "zoom": -0.4490653865905191
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "RegPlotOverview"
             }
           }
         ]
@@ -94,7 +111,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 299.504695892334
+    "width": 212.5069465637207
   },
   "right": {
     "id": "5b31fd771786262b",
@@ -181,11 +198,13 @@
   },
   "active": "48073d94af9b41f3",
   "lastOpenFiles": [
+    "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
+    "AssociationAnalysis/PlotCollection.canvas",
+    "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241636_p.png",
+    "Stichit workflow/StichitWorkflow.canvas",
     "AssociationAnalysis/DisGeNet2r/Pasted image 20241105154803.png",
     "AssociationAnalysis/DisGeNet2r/Pasted image 20241105154839.png",
     "AssociationAnalysis/DisGeNet2r/Pasted image 20241105154514.png",
-    "AssociationAnalysis/PlotCollection.canvas",
-    "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
     "AssociationAnalysis/DisGeNet2r/DisGeNet_manual_input.r.md",
     "AssociationAnalysis/DisGeNet2r/disgenet2.r.md",
     "AssociationAnalysis/GWAS/X-0.554771183888575_ENSG00000153774_chr16.75433103.75433142.png",
@@ -198,7 +217,6 @@
     "AssociationAnalysis/GoEnrich/goEnrichment.r.md",
     "AssociationAnalysis/clinicalParamCorrelations/clinical_parameters_correlation_heatmap.r.md",
     "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md",
-    "Stichit workflow/StichitWorkflow.canvas",
     "Stichit workflow/StichitWorkflow.md",
     "Stichit workflow/Segmentation/Segmentation.md",
     "Stichit workflow/Regression/Performance Evaluation/RegPerformanceEvaluation.md",
@@ -208,7 +226,6 @@
     "AssociationAnalysis/CorrelationVisualizationFiltered/string_db_graph.png",
     "LiteratureResearch/Targets/StringDB.md",
     "AssociationAnalysis/CorrelationVisualizationFiltered/v_t_c_f_combined_visualization.r.md",
-    "AssociationAnalysis/CorrelationVisualizationFiltered/string_graph.png",
     "AssociationAnalysis/GWAS",
     "AssociationAnalysis/CorrelationVisualizationFiltered/visualize_top_correlations_filtered.r.md",
     "AssociationAnalysis/CorrelationVisualizationFiltered",
