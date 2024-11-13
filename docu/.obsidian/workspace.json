@@ -4,42 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "fbe06dacc027c7f0",
+        "id": "a7680abf0067399e",
         "type": "tabs",
         "children": [
           {
-            "id": "48073d94af9b41f3",
+            "id": "62a6204dfd2016ce",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "AssociationAnalysis/Reaktome_analysis/Reaktome analysis.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Reaktome analysis"
-            }
-          },
-          {
-            "id": "1bfb7491d7d096d1",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "AssociationAnalysis/PlotCollection.canvas",
-                "viewState": {
-                  "x": 5837.707665311814,
-                  "y": 1469.6546289723858,
-                  "zoom": -1.016656995001425
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "PlotCollection"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -194,22 +172,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1bfb7491d7d096d1",
+  "active": "62a6204dfd2016ce",
   "lastOpenFiles": [
+    "Pasted image 20241107171507.png",
+    "Pasted image 20241107171453.png",
+    "Pasted image 20241107171437.png",
+    "Stichit workflow/Discretization/Discretization.md",
+    "Stichit workflow/StichitWorkflow.md",
+    "Stichit workflow/StichitWorkflow.canvas",
     "AssociationAnalysis/PlotCollection.canvas",
     "AssociationAnalysis/EnrichR/EnrichR.md",
     "AssociationAnalysis/EnrichR",
     "AssociationAnalysis/CHEA3/CHEA3.md",
-    "Pasted image 20241107171507.png",
-    "Pasted image 20241107171453.png",
-    "Pasted image 20241107171437.png",
     "AssociationAnalysis/CHEA3",
     "AssociationAnalysis/Reaktome_analysis/Reaktome analysis.md",
     "AssociationAnalysis/Reaktome_analysis",
     "Pasted image 20241107164447.png",
     "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
     "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241636_p.png",
-    "Stichit workflow/StichitWorkflow.canvas",
     "AssociationAnalysis/DisGeNet2r/Pasted image 20241105154803.png",
     "AssociationAnalysis/DisGeNet2r/Pasted image 20241105154839.png",
     "AssociationAnalysis/DisGeNet2r/Pasted image 20241105154514.png",
@@ -222,11 +202,9 @@
     "AssociationAnalysis/GoEnrich/goEnrichment.r.md",
     "AssociationAnalysis/clinicalParamCorrelations/clinical_parameters_correlation_heatmap.r.md",
     "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md",
-    "Stichit workflow/StichitWorkflow.md",
     "Stichit workflow/Segmentation/Segmentation.md",
     "Stichit workflow/Regression/Performance Evaluation/RegPerformanceEvaluation.md",
     "Stichit workflow/Preprocessing/Preprocessing.md",
-    "Stichit workflow/Discretization/Discretization.md",
     "AssociationAnalysis/GWAS/GWAS.md",
     "LiteratureResearch/Targets/StringDB.md",
     "AssociationAnalysis/CorrelationVisualizationFiltered/v_t_c_f_combined_visualization.r.md",
