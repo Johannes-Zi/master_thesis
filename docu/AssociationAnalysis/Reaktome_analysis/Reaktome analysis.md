@@ -1,9 +1,10 @@
 # Idea
 Software mentioned at MOPRED symposium
-
+Run with option "include interactions"
 # Output
-![[Pasted image 20241107164447.png]]
-# Input gene list
+![[Pasted image 20241114173300.png]]
+
+# Input gene list - UniProt ids
 genenames from [[goEnrichmentWebsite]]
 ```
 Q02790
