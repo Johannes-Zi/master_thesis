@@ -11,20 +11,35 @@
             "id": "3c9176f085a37b51",
             "type": "leaf",
             "state": {
+              "type": "markdown",
+              "state": {
+                "file": "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "BasicCorrelation"
+            }
+          },
+          {
+            "id": "6f01bc27c3c5f70d",
+            "type": "leaf",
+            "state": {
               "type": "canvas",
               "state": {
-                "file": "AssociationAnalysis/PlotCollection.canvas",
+                "file": "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
                 "viewState": {
-                  "x": 5281.2006809226405,
-                  "y": 407.86146766786203,
-                  "zoom": 0.0959536274250648
+                  "x": -4171.106493693695,
+                  "y": -277.9510170473549,
+                  "zoom": -1.2222221339190484
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "PlotCollection"
+              "title": "RegPlotOverview"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -179,11 +194,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3c9176f085a37b51",
+  "active": "6f01bc27c3c5f70d",
   "lastOpenFiles": [
+    "AssociationAnalysis/PlotCollection.canvas",
+    "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md",
     "Pasted image 20241114173300.png",
     "AssociationAnalysis/GoEnrich/goEnrichmentWebsite.md",
-    "AssociationAnalysis/PlotCollection.canvas",
     "Pasted image 20241107164447.png",
     "AssociationAnalysis/GoEnrich/goEnrichment_manual_input.r.md",
     "AssociationAnalysis/GoEnrich/goEnrichment.r.md",
@@ -208,9 +224,7 @@
     "AssociationAnalysis/DisGeNet2r/DisGeNet_manual_input.r.md",
     "AssociationAnalysis/DisGeNet2r/disgenet2.r.md",
     "AssociationAnalysis/GWAS/X-0.554771183888575_ENSG00000153774_chr16.75433103.75433142.png",
-    "AssociationAnalysis/GoEnrich/Pasted image 20241105142233.png",
     "AssociationAnalysis/clinicalParamCorrelations/clinical_parameters_correlation_heatmap.r.md",
-    "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md",
     "Stichit workflow/Segmentation/Segmentation.md",
     "Stichit workflow/Regression/Performance Evaluation/RegPerformanceEvaluation.md",
     "Stichit workflow/Preprocessing/Preprocessing.md",
