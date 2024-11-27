@@ -4,42 +4,52 @@
     "type": "split",
     "children": [
       {
-        "id": "4ea39b1cbdc20e8b",
+        "id": "1634cd964d18d613",
         "type": "tabs",
         "children": [
           {
-            "id": "3c9176f085a37b51",
+            "id": "e103062649769e8b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md",
+                "file": "AssociationAnalysis/DisGeNet2r/visualize_disgenet2.r.segmentDistribution.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "BasicCorrelation"
+              "title": "visualize_disgenet2.r.segmentDistribution"
             }
           },
           {
-            "id": "6f01bc27c3c5f70d",
+            "id": "72f412d3f7009855",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
-                "viewState": {
-                  "x": -4171.106493693695,
-                  "y": -277.9510170473549,
-                  "zoom": -1.2222221339190484
-                }
+                "file": "AssociationAnalysis/GoEnrich/goEnrichmentWebsite.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "RegPlotOverview"
+              "icon": "lucide-file",
+              "title": "goEnrichmentWebsite"
+            }
+          },
+          {
+            "id": "897e45b2e6156d8f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "AssociationAnalysis/CorrelationVisualizationFiltered/v_t_c_f_combined_visualization.r.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "v_t_c_f_combined_visualization.r"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -109,7 +119,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 212.5069465637207
+    "width": 368.5026054382324
   },
   "right": {
     "id": "5b31fd771786262b",
@@ -194,51 +204,51 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6f01bc27c3c5f70d",
+  "active": "e103062649769e8b",
   "lastOpenFiles": [
-    "AssociationAnalysis/PlotCollection.canvas",
-    "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md",
-    "Pasted image 20241114173300.png",
+    "AssociationAnalysis/DisGeNet2r/visualize_disgenet2.r.md",
+    "AssociationAnalysis/DisGeNet2r/DisGeNet_manual_input.r.md",
+    "AssociationAnalysis/DisGeNet2r/disgenet2.r.md",
+    "LiteratureResearch/Targets/CheckTopCorrelationsOfEnrichInput.md",
     "AssociationAnalysis/GoEnrich/goEnrichmentWebsite.md",
-    "Pasted image 20241107164447.png",
-    "AssociationAnalysis/GoEnrich/goEnrichment_manual_input.r.md",
     "AssociationAnalysis/GoEnrich/goEnrichment.r.md",
-    "AssociationAnalysis/CHEA3/CHEA3.md",
+    "AssociationAnalysis/GoEnrich/goEnrichment_manual_input.r.md",
+    "AssociationAnalysis/CorrelationVisualization/visualize_top_correlations.r.md",
     "AssociationAnalysis/EnrichR/EnrichR.md",
+    "AssociationAnalysis/CorrelationVisualizationFiltered/v_t_c_f_combined_visualization.r.md",
+    "AssociationAnalysis/CorrelationVisualizationFiltered/visualize_top_correlations_filtered.r.md",
+    "AssociationAnalysis/CorrelationVisualizationFiltered/string_db_graph.png",
+    "AssociationAnalysis/CorrelationVisualizationFiltered/number_of_entries_per_param.png",
+    "AssociationAnalysis/CorrelationVisualizationFiltered/gene_frequency_distribution.png",
+    "AssociationAnalysis/CorrelationVisualizationFiltered/clinical_parameter_gene_associations_heatmap.png",
+    "AssociationAnalysis/DisGeNet2r/visualize_disgenet2.r.segmentDistribution.md",
+    "AssociationAnalysis/PlotCollection.canvas",
+    "LiteratureResearch/Targets/PotentialHitsOfInterest.md",
+    "LiteratureResearch/Targets/ExtractFromLiterature.md",
+    "LiteratureResearch/Targets/StringDB.md",
+    "LiteratureResearch/PH_General/Consensus/Consensus overview.md",
+    "AssociationAnalysis/clinicalParamCorrelations/clinical_parameters_correlation_heatmap.r.md",
+    "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md",
+    "AssociationAnalysis/BasicCorrelation/mPAP_spearman_corr_density_p_value.png",
+    "AssociationAnalysis/CorrelationVisualization/Pasted image 20241018224355.png",
+    "AssociationAnalysis/CorrelationVisualization/Pasted image 20241018224148.png",
+    "AssociationAnalysis/CHEA3/CHEA3.md",
+    "Stichit workflow/Regression/Regression.md",
+    "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
+    "Pasted image 20241114173300.png",
+    "Pasted image 20241107164447.png",
     "AssociationAnalysis/GWAS/GWAS.md",
     "AssociationAnalysis/Reaktome_analysis/Reaktome analysis.md",
     "Pasted image 20241107171507.png",
-    "Pasted image 20241107171453.png",
-    "Pasted image 20241107171437.png",
     "Stichit workflow/Discretization/Discretization.md",
     "Stichit workflow/StichitWorkflow.md",
     "Stichit workflow/StichitWorkflow.canvas",
     "AssociationAnalysis/EnrichR",
     "AssociationAnalysis/CHEA3",
     "AssociationAnalysis/Reaktome_analysis",
-    "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
-    "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241636_p.png",
-    "AssociationAnalysis/DisGeNet2r/Pasted image 20241105154803.png",
-    "AssociationAnalysis/DisGeNet2r/Pasted image 20241105154839.png",
-    "AssociationAnalysis/DisGeNet2r/Pasted image 20241105154514.png",
-    "AssociationAnalysis/DisGeNet2r/DisGeNet_manual_input.r.md",
-    "AssociationAnalysis/DisGeNet2r/disgenet2.r.md",
-    "AssociationAnalysis/GWAS/X-0.554771183888575_ENSG00000153774_chr16.75433103.75433142.png",
-    "AssociationAnalysis/clinicalParamCorrelations/clinical_parameters_correlation_heatmap.r.md",
     "Stichit workflow/Segmentation/Segmentation.md",
-    "Stichit workflow/Regression/Performance Evaluation/RegPerformanceEvaluation.md",
-    "Stichit workflow/Preprocessing/Preprocessing.md",
-    "LiteratureResearch/Targets/StringDB.md",
-    "AssociationAnalysis/CorrelationVisualizationFiltered/v_t_c_f_combined_visualization.r.md",
     "AssociationAnalysis/GWAS",
-    "AssociationAnalysis/CorrelationVisualizationFiltered/visualize_top_correlations_filtered.r.md",
     "AssociationAnalysis/CorrelationVisualizationFiltered",
-    "AssociationAnalysis/DisGeNet2r/visualize_disgenet2.r.md",
-    "AssociationAnalysis/DisGeNet2r/visualize_disgenet2.r.segmentDistribution.md",
-    "AssociationAnalysis/CorrelationVisualization/visualize_top_correlations_single_plot.r.boxplot.md",
-    "AssociationAnalysis/CorrelationVisualization/visualize_top_correlations_single_plot.r.md",
-    "AssociationAnalysis/CorrelationVisualization/visualize_top_correlations.r.md",
-    "AssociationAnalysis/clinicalParamCorrelations/clinical_parameters_correlation_heatmap.r.plot.md",
     "AssociationAnalysis/clinicalParamCorrelations",
     "LiteratureResearch/Targets/pictures",
     "LiteratureResearch/Targets",
