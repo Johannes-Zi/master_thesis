@@ -28,7 +28,7 @@ It has to be noted that the visualized linear correlations were computed with th
 	filtered_correlations_top_directory_path <- "C:/Users/johan/OneDrive/dateien_cloud/Master/Semester_4/Masterarbeit/data/pulmanory_hypertension/go_enrichment/spear_thres_04_up_to_250/corr_based_gene_filtering/"
 ```
 # Workflow
-- Same workflow as [[BasicCorrelation]], but with an additional filter step (for the segments that belong to the top 1720 genes), placed after the step that filters out the gene models that performed bad in the outer cross validation of DisGeNet. (Additional filter to the Stichit outer cv filter and the filter of using only coding genes as input for the enrichment analysis)
+- Same workflow as [[BasicCorrelation]], but with an additional filter step (for the segments that belong to the top 1720 genes), placed after the step that filters out the gene models that performed bad in the outer cross validation of STITCHIT. (Additional filter to the Stichit outer cv filter and the filter of using only coding genes as input for the enrichment analysis)
 - Additional Visualization of the clinical parameter + ATAC accessability with ggplot geom smooth linear model based linear correlations.
 
 # Output
