@@ -1,6 +1,6 @@
 # Idea
 The Idea is to check up to 250 of the top correlations for each clinical parameter based on the (Stichit outer cv filter, only coding genes) prefiltering of the DisGeNet and Go enrichment analysis input creation.
-For each clinical parameter the  [[visualize_top_correlations.r |correlation visualizations]] are manually curated und the result of DisGeNet and Go enrichment are integrated. - No only done for sPAP
+For each clinical parameter the  [[visualize_top_correlations.r |correlation visualizations]] are manually curated und the result of DisGeNet and Go enrichment are integrated. - **==only done for sPAP!==**
 
 # Workflow - Concept
 **==(use obsidian data management structure for curation documentation)==**
