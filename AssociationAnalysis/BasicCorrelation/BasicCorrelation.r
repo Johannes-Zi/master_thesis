@@ -328,6 +328,11 @@ if (TRUE) {
     clinical_metadata <- import_clinical_meatadata(clinical_metadata_path)
     message(paste("Imported clinical metadata from: \n", clinical_metadata_path))
 
+    # Save the clinical metadata as csv file with seperator ;
+    clinical_metadata_output_path <- paste(getwd(), "AssociationAnalysis/BasicCorrelation/", "imported_clinical_metadata.csv", sep = "/")
+    write.table(clinical_metadata, clinical_metadata_output_path, row.names = FALSE, sep = ";")
+    message(paste("Saved clinical metadata as csv file to: \n", clinical_metadata_output_path))
+
     # Import elnet segments atac data
     elnet_segments_path <- "C:/Users/johan/OneDrive/dateien_cloud/Master/Semester_4/Masterarbeit/data/pulmanory_hypertension/regression/CollapsedSegmentation/elnet_model_segments_df.tsv"
     elnet_segments_atac <- import_elnet_segments_atac_data(elnet_segments_path)
