@@ -15,9 +15,9 @@
               "state": {
                 "file": "Result_section/MA_results.canvas",
                 "viewState": {
-                  "x": -263.107317695235,
-                  "y": 3409.811631258198,
-                  "zoom": -0.38888883369940525
+                  "x": 656.0205987346806,
+                  "y": 2856.935782940964,
+                  "zoom": -0.6704795904214895
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -32,25 +32,13 @@
               "state": {
                 "file": "AssociationAnalysis/PlotCollection.canvas",
                 "viewState": {
-                  "x": 3716.538949976503,
-                  "y": 2631.1034865516385,
-                  "zoom": -0.11022992213442151
+                  "x": 2064.1129783335487,
+                  "y": 1361.4508848069092,
+                  "zoom": -0.6657854556141836
                 }
               },
               "icon": "lucide-layout-dashboard",
               "title": "PlotCollection"
-            }
-          },
-          {
-            "id": "9117d86b77b42e6f",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "AssociationAnalysis/CorrelationVisualizationFiltered/number_of_entries_per_param.png"
-              },
-              "icon": "lucide-image",
-              "title": "number_of_entries_per_param"
             }
           },
           {
@@ -61,9 +49,9 @@
               "state": {
                 "file": "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
                 "viewState": {
-                  "x": -3962.894649003914,
-                  "y": -340.72718066520906,
-                  "zoom": -0.11111106695952416
+                  "x": -3626.211059075135,
+                  "y": -86.94535439398382,
+                  "zoom": -0.9444443671791674
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -140,7 +128,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 469.5069465637207
+    "width": 200
   },
   "right": {
     "id": "5b31fd771786262b",
@@ -227,11 +215,12 @@
   },
   "active": "0398f7be9dfe7969",
   "lastOpenFiles": [
+    "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
     "AssociationAnalysis/PlotCollection.canvas",
     "Result_section/MA_results.canvas",
+    "Stichit workflow/Regression/Performance Evaluation/MSEValXMSEVar/MSEValXMSEVar.md",
     "AssociationAnalysis/CorrelationVisualizationFiltered/number_of_entries_per_param.png",
     "AssociationAnalysis/CorrelationVisualizationFiltered/clinical_parameter_gene_associations_heatmap.png",
-    "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
     "AssociationAnalysis/clinicalParamCorrelations/clinical_parameters_correlation_heatmap.r.md",
     "AssociationAnalysis/DisGeNet2r/visualize_disgenet2.r.md",
     "AssociationAnalysis/DisGeNet2r/Pasted image 20241018225350.png",
@@ -268,7 +257,6 @@
     "LiteratureResearch/Targets/ExtractFromLiterature.md",
     "AssociationAnalysis/GoEnrich/goEnrichment.r.md",
     "LiteratureResearch/PH_General/Consensus/Consensus overview.md",
-    "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/@sommerCurrentFutureTreatments2021.md",
     "Stichit workflow/StichitWorkflow.canvas",
     "AssociationAnalysis/EnrichR",
     "AssociationAnalysis/CHEA3",
