@@ -15,8 +15,8 @@
               "state": {
                 "file": "Result_section/MA_results.canvas",
                 "viewState": {
-                  "x": 656.0205987346806,
-                  "y": 2856.935782940964,
+                  "x": 438.5015817933938,
+                  "y": 4176.639012039982,
                   "zoom": -0.6704795904214895
                 }
               },
@@ -32,9 +32,9 @@
               "state": {
                 "file": "AssociationAnalysis/PlotCollection.canvas",
                 "viewState": {
-                  "x": 2064.1129783335487,
-                  "y": 1361.4508848069092,
-                  "zoom": -0.6657854556141836
+                  "x": 6316.5443593920945,
+                  "y": 269.57248857279995,
+                  "zoom": 0.16754784460545952
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -58,7 +58,8 @@
               "title": "RegPlotOverview"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -213,11 +214,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0398f7be9dfe7969",
+  "active": "58717ee78ca9a678",
   "lastOpenFiles": [
+    "Result_section/MA_results.canvas",
     "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
     "AssociationAnalysis/PlotCollection.canvas",
-    "Result_section/MA_results.canvas",
     "Stichit workflow/Regression/Performance Evaluation/MSEValXMSEVar/MSEValXMSEVar.md",
     "AssociationAnalysis/CorrelationVisualizationFiltered/number_of_entries_per_param.png",
     "AssociationAnalysis/CorrelationVisualizationFiltered/clinical_parameter_gene_associations_heatmap.png",
