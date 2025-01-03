@@ -13,15 +13,29 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Result_section/MA_results.canvas",
+                "file": "AssociationAnalysis/PlotCollection.canvas",
                 "viewState": {
-                  "x": 438.5015817933938,
-                  "y": 4176.639012039982,
-                  "zoom": -0.6704795904214895
+                  "x": 3635.7796017389287,
+                  "y": 2536.7306806104316,
+                  "zoom": 0.0000749774822396132
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "MA_results"
+              "title": "PlotCollection"
+            }
+          },
+          {
+            "id": "1cd46e44484b914d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "AssociationAnalysis/clinicalParamCorrelations/clinical_parameters_correlation_heatmap.r.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "clinical_parameters_correlation_heatmap.r"
             }
           },
           {
@@ -32,9 +46,9 @@
               "state": {
                 "file": "AssociationAnalysis/PlotCollection.canvas",
                 "viewState": {
-                  "x": 6316.5443593920945,
-                  "y": 269.57248857279995,
-                  "zoom": 0.16754784460545952
+                  "x": 5027.568563128407,
+                  "y": 834.0777537373735,
+                  "zoom": -0.6657854556141836
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -42,24 +56,20 @@
             }
           },
           {
-            "id": "0750cb09395b454b",
+            "id": "2e21852d79b3740c",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
-                "viewState": {
-                  "x": -3626.211059075135,
-                  "y": -86.94535439398382,
-                  "zoom": -0.9444443671791674
-                }
+                "file": "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "RegPlotOverview"
+              "icon": "lucide-file",
+              "title": "BasicCorrelation"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -129,7 +139,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 292.5026054382324
   },
   "right": {
     "id": "5b31fd771786262b",
@@ -214,15 +224,72 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "58717ee78ca9a678",
+  "floating": {
+    "id": "6eae0499b849615e",
+    "type": "floating",
+    "children": [
+      {
+        "id": "39355411adca2d3a",
+        "type": "window",
+        "children": [
+          {
+            "id": "dac90792877fd876",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "0294af51173b4310",
+                "type": "leaf",
+                "state": {
+                  "type": "image",
+                  "state": {
+                    "file": "AssociationAnalysis/CorrelationVisualizationFiltered/clinical_parameter_gene_associations_heatmap.png"
+                  },
+                  "icon": "lucide-image",
+                  "title": "clinical_parameter_gene_associations_heatmap"
+                }
+              },
+              {
+                "id": "a635d0cfd4760eb2",
+                "type": "leaf",
+                "state": {
+                  "type": "empty",
+                  "state": {},
+                  "icon": "lucide-file",
+                  "title": "New tab"
+                }
+              }
+            ],
+            "currentTab": 1
+          }
+        ],
+        "direction": "vertical",
+        "x": 295,
+        "y": 0,
+        "width": 906,
+        "height": 1032,
+        "maximize": false,
+        "zoom": 1
+      }
+    ]
+  },
+  "active": "0398f7be9dfe7969",
   "lastOpenFiles": [
     "Result_section/MA_results.canvas",
-    "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
-    "AssociationAnalysis/PlotCollection.canvas",
-    "Stichit workflow/Regression/Performance Evaluation/MSEValXMSEVar/MSEValXMSEVar.md",
-    "AssociationAnalysis/CorrelationVisualizationFiltered/number_of_entries_per_param.png",
     "AssociationAnalysis/CorrelationVisualizationFiltered/clinical_parameter_gene_associations_heatmap.png",
     "AssociationAnalysis/clinicalParamCorrelations/clinical_parameters_correlation_heatmap.r.md",
+    "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md",
+    "AssociationAnalysis/BasicCorrelation/mPAP_spearman_corr_density_p_value.png",
+    "AssociationAnalysis/PlotCollection.canvas",
+    "Stichit workflow/Regression/Performance Evaluation/ElNetCoeffCounts_elasticnet_modelStructure.md",
+    "Stichit workflow/Regression/Performance Evaluation/RegPerformanceEvaluation.md",
+    "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
+    "Stichit workflow/Regression/Performance Evaluation/PearsonValMulti/PearsonValMulti.md",
+    "Stichit workflow/Regression/Performance Evaluation/MSEValMulti/MSEValMulti.md",
+    "Stichit workflow/Regression/Runs/26_patient_dataset/StandardCV/RegStandardCV.md",
+    "Stichit workflow/Regression/Runs/Performance_Overview.txt.md",
+    "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/RegFeaturesXnzero.md",
+    "Stichit workflow/Regression/Performance Evaluation/MSEValXMSEVar/MSEValXMSEVar.md",
+    "AssociationAnalysis/CorrelationVisualizationFiltered/number_of_entries_per_param.png",
     "AssociationAnalysis/DisGeNet2r/visualize_disgenet2.r.md",
     "AssociationAnalysis/DisGeNet2r/Pasted image 20241018225350.png",
     "Result_section/plots/PA_diastolic_spearman_corr_density_p_value.png",
@@ -232,14 +299,10 @@
     "Result_section/plots/PA_systolic_spearman_corr_density.png",
     "Result_section/plots/PA_systolic_q_value_hist.png",
     "Result_section/plots/Pasted image 20241218213022.png",
-    "Result_section/plots/Pasted image 20241218213009.png",
     "Stichit workflow/Regression/Regression.md",
     "Stichit workflow/Regression/Runs/26_patient_dataset/LeaveOneOutCV/RegLeaveOneOutCV.md",
     "Stichit workflow/Regression/Runs/26_patient_dataset/RegRunsN26Dataset.md",
     "Stichit workflow/Regression/Runs/RegRuns.md",
-    "Stichit workflow/Regression/Runs/Performance_Overview.txt.md",
-    "Stichit workflow/Regression/Runs/26_patient_dataset/StandardCV/RegStandardCV.md",
-    "Stichit workflow/Regression/Performance Evaluation/ElNetCoeffCounts_elasticnet_modelStructure.md",
     "Stichit workflow/Preprocessing/Preprocessing.md",
     "Stichit workflow/Discretization/Discretization.md",
     "Untitled.canvas",
@@ -253,11 +316,6 @@
     "AssociationAnalysis/CorrelationVisualization/visualize_top_correlations_single_plot.r.md",
     "LiteratureResearch/Targets/PotentialHitsOfInterest.md",
     "LiteratureResearch/PH_General/ResearchSoni/ResearchSoni.md",
-    "LiteratureResearch/GeneDump/AOC3.md",
-    "LiteratureResearch/Targets/CheckTopCorrelationsOfEnrichInput.md",
-    "LiteratureResearch/Targets/ExtractFromLiterature.md",
-    "AssociationAnalysis/GoEnrich/goEnrichment.r.md",
-    "LiteratureResearch/PH_General/Consensus/Consensus overview.md",
     "Stichit workflow/StichitWorkflow.canvas",
     "AssociationAnalysis/EnrichR",
     "AssociationAnalysis/CHEA3",
