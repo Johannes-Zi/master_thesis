@@ -8,13 +8,14 @@
 		{"id":"75d0e3bdad150a09","type":"file","file":"AssociationAnalysis/GoEnrich/goEnrichmentWebsite.md","x":3920,"y":-117,"width":720,"height":2037},
 		{"id":"1efe07fbca75d6a9","type":"file","file":"AssociationAnalysis/GoEnrich/goEnrichment_manual_input.r.md","x":4680,"y":-117,"width":1140,"height":637},
 		{"id":"ee2b7e6df4f2e2e0","type":"file","file":"AssociationAnalysis/DisGeNet2r/DisGeNet_manual_input.r.md","x":4680,"y":560,"width":1140,"height":1820},
-		{"id":"9510dafca5a37595","type":"file","file":"AssociationAnalysis/Reaktome_analysis/Reaktome analysis.md","x":5880,"y":-117,"width":1600,"height":1157},
+		{"id":"9510dafca5a37595","type":"file","file":"AssociationAnalysis/Reaktome_analysis/Reaktome analysis.md","x":5880,"y":-117,"width":1120,"height":1157},
 		{"id":"ffdf3de6496f6f10","type":"file","file":"AssociationAnalysis/CHEA3/CHEA3.md","x":5880,"y":1080,"width":1120,"height":1650},
 		{"id":"9db409f2aed1654d","type":"file","file":"AssociationAnalysis/CorrelationVisualizationFiltered/v_t_c_f_combined_visualization.r.md","x":3180,"y":-120,"width":720,"height":3197},
 		{"id":"e049d0128cfc1cb6","type":"file","file":"AssociationAnalysis/BasicCorrelation/BasicCorrelation.md","x":-400,"y":-117,"width":749,"height":1197},
 		{"id":"4ee05771cd7258f1","type":"file","file":"AssociationAnalysis/GoEnrich/goEnrichment.r.md","x":-400,"y":1145,"width":749,"height":655},
 		{"id":"123fae3bbdae7bd8","type":"file","file":"AssociationAnalysis/clinicalParamCorrelations/clinical_parameters_correlation_heatmap.r.md","x":400,"y":-117,"width":749,"height":957},
-		{"id":"750c5e80894dbf9a","type":"file","file":"AssociationAnalysis/DisGeNet2r/visualize_disgenet2.r.segmentDistribution.md","x":400,"y":880,"width":749,"height":1080}
+		{"id":"750c5e80894dbf9a","type":"file","file":"AssociationAnalysis/DisGeNet2r/visualize_disgenet2.r.segmentDistribution.md","x":400,"y":880,"width":749,"height":1080},
+		{"id":"06e128c7a01f79a7","x":7080,"y":-117,"width":1680,"height":4637,"type":"file","file":"AssociationAnalysis/StringExtended/String_extended.md"}
 	],
 	"edges":[]
 }
