@@ -13,42 +13,11 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "AssociationAnalysis/PlotCollection.canvas",
-                "viewState": {
-                  "x": 4245.427754653169,
-                  "y": 1932.65138683957,
-                  "zoom": -0.8332583227374035
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "PlotCollection"
-            }
-          },
-          {
-            "id": "1cd46e44484b914d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "AssociationAnalysis/clinicalParamCorrelations/clinical_parameters_correlation_heatmap.r.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "clinical_parameters_correlation_heatmap.r"
-            }
-          },
-          {
-            "id": "58717ee78ca9a678",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
                 "file": "Result_section/MA_results.canvas",
                 "viewState": {
-                  "x": 1233.8614844399192,
-                  "y": 2008.5362970465444,
-                  "zoom": 0.1666666997803568
+                  "x": 664.7857464764476,
+                  "y": 4085.904196295999,
+                  "zoom": 1
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -56,21 +25,50 @@
             }
           },
           {
+            "id": "1cd46e44484b914d",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "LiteratureResearch/PH_General/Publications/humbertPathologyPathobiologyPulmonary2019/humbertPathologyPathobiologyPulmonary2019.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "humbertPathologyPathobiologyPulmonary2019"
+            }
+          },
+          {
             "id": "2e21852d79b3740c",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "AssociationAnalysis/PlotCollection.canvas",
+                "viewState": {
+                  "x": 8186.572138515017,
+                  "y": 4069.732985815256,
+                  "zoom": -0.2650385793052508
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "PlotCollection"
+            }
+          },
+          {
+            "id": "8e0e48f2dc5a1afd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md",
+                "file": "LiteratureResearch/Targets/StringDB.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "BasicCorrelation"
+              "title": "StringDB"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -101,7 +99,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "PDE ",
+                "query": "IL-6",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -225,105 +223,58 @@
       "command-palette:Open command palette": false
     }
   },
-  "floating": {
-    "id": "6eae0499b849615e",
-    "type": "floating",
-    "children": [
-      {
-        "id": "39355411adca2d3a",
-        "type": "window",
-        "children": [
-          {
-            "id": "dac90792877fd876",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "0294af51173b4310",
-                "type": "leaf",
-                "state": {
-                  "type": "image",
-                  "state": {
-                    "file": "AssociationAnalysis/CorrelationVisualizationFiltered/clinical_parameter_gene_associations_heatmap.png"
-                  },
-                  "icon": "lucide-image",
-                  "title": "clinical_parameter_gene_associations_heatmap"
-                }
-              },
-              {
-                "id": "a635d0cfd4760eb2",
-                "type": "leaf",
-                "state": {
-                  "type": "empty",
-                  "state": {},
-                  "icon": "lucide-file",
-                  "title": "New tab"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 294,
-        "y": 0,
-        "width": 910,
-        "height": 1032,
-        "maximize": false,
-        "zoom": 1
-      }
-    ]
-  },
-  "active": "58717ee78ca9a678",
+  "active": "8e0e48f2dc5a1afd",
   "lastOpenFiles": [
-    "AssociationAnalysis/CorrelationVisualization/visualize_top_correlations.r.md",
-    "AssociationAnalysis/PlotCollection.canvas",
-    "AssociationAnalysis/clinicalParamCorrelations/clinical_parameters_correlation_heatmap.r.md",
+    "LiteratureResearch/Targets/CheckTopCorrelationsOfEnrichInput.md",
+    "LiteratureResearch/Targets/ExtractFromLiterature.md",
+    "LiteratureResearch/Targets/PotentialHitsOfInterest.md",
+    "LiteratureResearch/GeneDump/IRF4.md",
+    "AssociationAnalysis/CorrelationVisualizationFiltered/clinical_parameter_gene_associations_heatmap.png",
+    "LiteratureResearch/GeneDump/EGR1.md",
+    "LiteratureResearch/GeneDump/MAOB.md",
     "Result_section/MA_results.canvas",
+    "AssociationAnalysis/PlotCollection.canvas",
     "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md",
+    "LiteratureResearch/GeneDump/TMEM9.md",
+    "LiteratureResearch/PH_General/Publications/humbertPathologyPathobiologyPulmonary2019/humbertPathologyPathobiologyPulmonary2019.pdf",
+    "LiteratureResearch/PH_General/Publications/humbertPathologyPathobiologyPulmonary2019/@humbertPathologyPathobiologyPulmonary2019.md",
+    "AssociationAnalysis/clinicalParamCorrelations/clinical_parameters_correlation_heatmap.r.md",
+    "AssociationAnalysis/CorrelationVisualizationFiltered/visualize_top_correlations_filtered.r.md",
+    "AssociationAnalysis/CorrelationVisualizationFiltered/v_t_c_f_combined_visualization.r.md",
+    "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/@sommerCurrentFutureTreatments2021.md",
+    "LiteratureResearch/PH_General/Publications/montaniPulmonaryArterialHypertension2013/@montaniPulmonaryArterialHypertension2013.md",
+    "LiteratureResearch/GeneDump/PARD3.md",
+    "LiteratureResearch/GeneDump/KLRD1.md",
+    "LiteratureResearch/PH_General/Publications/simonneauClinicalClassificationPulmonary2004/@simonneauClinicalClassificationPulmonary2004.md",
+    "LiteratureResearch/PH_General/Publications/thenappanPulmonaryArterialHypertension2018/@thenappanPulmonaryArterialHypertension2018.md",
+    "LiteratureResearch/PH_General/ResearchSoni/ResearchSoni.md",
+    "LiteratureResearch/PH_General/Consensus/Consensus overview.md",
+    "AssociationAnalysis/CorrelationVisualization/visualize_top_correlations.r.md",
     "AssociationAnalysis/StringExtended/String_extended.md",
     "AssociationAnalysis/StringExtended/Pasted image 20250104183823.png",
     "AssociationAnalysis/StringExtended/Pasted image 20250104183716.png",
     "AssociationAnalysis/StringExtended/Pasted image 20250104183310.png",
     "AssociationAnalysis/StringExtended/Pasted image 20250104182501.png",
     "AssociationAnalysis/StringExtended",
-    "AssociationAnalysis/CorrelationVisualizationFiltered/clinical_parameter_gene_associations_heatmap.png",
     "AssociationAnalysis/BasicCorrelation/mPAP_spearman_corr_density_p_value.png",
     "Stichit workflow/Regression/Performance Evaluation/ElNetCoeffCounts_elasticnet_modelStructure.md",
     "Stichit workflow/Regression/Performance Evaluation/RegPerformanceEvaluation.md",
     "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
     "Stichit workflow/Regression/Performance Evaluation/PearsonValMulti/PearsonValMulti.md",
-    "Stichit workflow/Regression/Performance Evaluation/MSEValMulti/MSEValMulti.md",
-    "Stichit workflow/Regression/Runs/26_patient_dataset/StandardCV/RegStandardCV.md",
-    "Stichit workflow/Regression/Runs/Performance_Overview.txt.md",
-    "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/RegFeaturesXnzero.md",
-    "Stichit workflow/Regression/Performance Evaluation/MSEValXMSEVar/MSEValXMSEVar.md",
     "AssociationAnalysis/CorrelationVisualizationFiltered/number_of_entries_per_param.png",
-    "AssociationAnalysis/DisGeNet2r/visualize_disgenet2.r.md",
     "AssociationAnalysis/DisGeNet2r/Pasted image 20241018225350.png",
     "Result_section/plots/PA_diastolic_spearman_corr_density_p_value.png",
     "Result_section/plots/Pasted image 20241218175031.png",
     "Result_section/plots",
-    "Stichit workflow/Regression/Regression.md",
-    "Stichit workflow/Regression/Runs/26_patient_dataset/LeaveOneOutCV/RegLeaveOneOutCV.md",
-    "Stichit workflow/Regression/Runs/26_patient_dataset/RegRunsN26Dataset.md",
-    "Stichit workflow/Regression/Runs/RegRuns.md",
-    "Stichit workflow/Preprocessing/Preprocessing.md",
-    "Stichit workflow/Discretization/Discretization.md",
     "Untitled.canvas",
     "Result_section/Stitchit",
     "Result_section",
-    "AssociationAnalysis/GWAS/GWAS.md",
-    "AssociationAnalysis/CorrelationVisualizationFiltered/v_t_c_f_combined_visualization.r.md",
-    "AssociationAnalysis/CorrelationVisualizationFiltered/visualize_top_correlations_filtered.r.md",
-    "AssociationAnalysis/CorrelationVisualization/visualize_top_correlations_single_plot.r.boxplot.md",
-    "AssociationAnalysis/CorrelationVisualization/visualize_top_correlations_single_plot.r.md",
-    "LiteratureResearch/Targets/PotentialHitsOfInterest.md",
     "Stichit workflow/StichitWorkflow.canvas",
     "AssociationAnalysis/EnrichR",
     "AssociationAnalysis/CHEA3",
     "AssociationAnalysis/Reaktome_analysis",
     "AssociationAnalysis/GWAS",
     "AssociationAnalysis/CorrelationVisualizationFiltered",
-    "AssociationAnalysis/clinicalParamCorrelations",
     "AssociationAnalysis/AssociationAnalysis.canvas",
     "Untitled 1.canvas",
     "Stichit workflow/Steps.canvas",
