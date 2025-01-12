@@ -7,11 +7,17 @@ library(dplyr)  # Required for data manipulation operations
 input_directory_path_LeaveOneOut <- "C:/Users/johan/Desktop/LOneOCV_regression/performance_evaluation/Performance_Overview.txt"
 input_directory_path_standard <- "C:/Users/johan/Desktop/standard_regression/performance_evaluation/Performance_Overview.txt"
 
+# New location
+input_directory_path_LeaveOneOut <- "c:/Users/johan/OneDrive/dateien_cloud/Master/Semester_4/Masterarbeit/data/pulmanory_hypertension/regression/leaveOneOut_regression/performance_evaluation/Performance_Overview.txt"
+input_directory_path_standard <- "c:/Users/johan/OneDrive/dateien_cloud/Master/Semester_4/Masterarbeit/data/pulmanory_hypertension/regression/standard_regression/performance_evaluation/Performance_Overview.txt"
+
 # Create dataframes
 df_LeaveOneOut <- read.table(input_directory_path_LeaveOneOut, header = TRUE, sep = "\t")
 df_standard <- read.table(input_directory_path_standard, header = TRUE, sep = "\t")
-head(df_LeaveOneOut)
-head(df_standard)
+print("LeaveOneOut")
+print(head(df_LeaveOneOut))
+print("Standard")
+print(tail(df_standard))
 
 
 #' Preprocesses the performance evaluation dataframe
@@ -90,6 +96,8 @@ create_boxplots <- function(df_LeaveOneOut, df_standard, target_column, output_d
   # Combine the new data frames into one
   df_combined <- rbind(df_LeaveOneOut_new, df_standard_new)
 
+  print("Combined data frame")
+  print(tail(df_combined))
   # Create boxplot
   boxplot <- ggplot(df_combined, aes(x = CV_Type, y = target, fill = CV_Type)) + # nolint: object_usage_linter.
     geom_boxplot(outlier.shape = NA) +
@@ -118,14 +126,16 @@ df_LeaveOneOut_preprocessed_1 <- preprocess_performance_evaluation_df(df_LeaveOn
 head(df_LeaveOneOut_preprocessed_1)
 # Select df entries which were based on Pearson based feature selection at the end of the segementation
 df_LeaveOneOut_preprocessed_2 <- df_LeaveOneOut_preprocessed_1[df_LeaveOneOut_preprocessed_1$segmentation_preselection_corellation == "Pearson", ]
-head(df_LeaveOneOut_preprocessed_2)
+print("LeaveOneOut")
+print(head(df_LeaveOneOut_preprocessed_2))
 
 # Preprocess the standard CV dataframe
 df_standard_preprocessed_1 <- preprocess_performance_evaluation_df(df_standard)
 head(df_standard_preprocessed_1)
 # Select df entries which were based on Pearson based feature selection at the end of the segementation
 df_standard_preprocessed_2 <- df_standard_preprocessed_1[df_standard_preprocessed_1$segmentation_preselection_corellation == "Pearson", ]
-head(df_standard_preprocessed_2)
+print("Standard")
+print(head(df_standard_preprocessed_2))
 
 # Call the function with the dataframes as arguments
 create_boxplots(df_LeaveOneOut_preprocessed_2, df_standard_preprocessed_2, target_column = "MSEVar", output_directory = output_path)

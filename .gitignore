@@ -20,3 +20,5 @@ AssociationAnalysis/GoEnrich/runs/
 AssociationAnalysis/CorrelationVisualization/runs/
 AssociationAnalysis/CorrelationVisualizationFiltered/runs/
 AssociationAnalysis/CorrelationVisualizationFiltered/visulizations/
+
+AssociationAnalysis/plotRaw04Corrs/runs/
