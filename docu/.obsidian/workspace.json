@@ -15,9 +15,9 @@
               "state": {
                 "file": "Result_section/MA_results.canvas",
                 "viewState": {
-                  "x": 2494.9535866799292,
-                  "y": 2790.8241653965856,
-                  "zoom": -1.2222221339190484
+                  "x": 1760,
+                  "y": 1700,
+                  "zoom": -2.946438904290472
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -32,9 +32,9 @@
               "state": {
                 "file": "AssociationAnalysis/PlotCollection.canvas",
                 "viewState": {
-                  "x": 7885.2716908830125,
-                  "y": 4094.882179838558,
-                  "zoom": -0.5428163460451318
+                  "x": 8205.780760393747,
+                  "y": 2310.9313832650105,
+                  "zoom": 0.06666660043928646
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -66,8 +66,8 @@
               "state": {
                 "file": "AssociationAnalysis/PlotCollection.canvas",
                 "viewState": {
-                  "x": 3727.083223008442,
-                  "y": 64.37603615972738,
+                  "x": 1425.905472143888,
+                  "y": 1682.2699695372853,
                   "zoom": -0.22336325400575935
                 }
               },
@@ -75,8 +75,7 @@
               "title": "PlotCollection"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -107,7 +106,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "IL-6",
+                "query": "fibr",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -146,7 +145,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 292.5026054382324
+    "width": 487.5026054382324
   },
   "right": {
     "id": "5b31fd771786262b",
@@ -231,11 +230,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4ec1d699fb390d6e",
+  "active": "01a1ccf26329c2f6",
   "lastOpenFiles": [
-    "Result_section/MA_results.canvas",
-    "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
     "AssociationAnalysis/PlotCollection.canvas",
+    "Result_section/MA_results.canvas",
+    "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/@sommerCurrentFutureTreatments2021.md",
+    "LiteratureResearch/PH_General/Publications/humbertPathologyPathobiologyPulmonary2019/@humbertPathologyPathobiologyPulmonary2019.md",
+    "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
     "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241637.md",
     "LiteratureResearch/Targets/StringDB.md",
     "LiteratureResearch/PH_General/Publications/humbertPathologyPathobiologyPulmonary2019/humbertPathologyPathobiologyPulmonary2019.pdf",
@@ -250,11 +251,9 @@
     "LiteratureResearch/GeneDump/MAOB.md",
     "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md",
     "LiteratureResearch/GeneDump/TMEM9.md",
-    "LiteratureResearch/PH_General/Publications/humbertPathologyPathobiologyPulmonary2019/@humbertPathologyPathobiologyPulmonary2019.md",
     "AssociationAnalysis/clinicalParamCorrelations/clinical_parameters_correlation_heatmap.r.md",
     "AssociationAnalysis/CorrelationVisualizationFiltered/visualize_top_correlations_filtered.r.md",
     "AssociationAnalysis/CorrelationVisualizationFiltered/v_t_c_f_combined_visualization.r.md",
-    "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/@sommerCurrentFutureTreatments2021.md",
     "LiteratureResearch/PH_General/Publications/montaniPulmonaryArterialHypertension2013/@montaniPulmonaryArterialHypertension2013.md",
     "LiteratureResearch/GeneDump/PARD3.md",
     "LiteratureResearch/GeneDump/KLRD1.md",

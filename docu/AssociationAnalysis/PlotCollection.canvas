@@ -15,7 +15,7 @@
 		{"id":"4ee05771cd7258f1","type":"file","file":"AssociationAnalysis/GoEnrich/goEnrichment.r.md","x":-400,"y":1145,"width":749,"height":655},
 		{"id":"123fae3bbdae7bd8","type":"file","file":"AssociationAnalysis/clinicalParamCorrelations/clinical_parameters_correlation_heatmap.r.md","x":400,"y":-117,"width":749,"height":957},
 		{"id":"750c5e80894dbf9a","type":"file","file":"AssociationAnalysis/DisGeNet2r/visualize_disgenet2.r.segmentDistribution.md","x":400,"y":880,"width":749,"height":1080},
-		{"id":"06e128c7a01f79a7","type":"file","file":"AssociationAnalysis/StringExtended/String_extended.md","x":7120,"y":-120,"width":1680,"height":4637}
+		{"id":"06e128c7a01f79a7","type":"file","file":"AssociationAnalysis/StringExtended/String_extended.md","x":7140,"y":-120,"width":1680,"height":4637}
 	],
 	"edges":[]
 }
