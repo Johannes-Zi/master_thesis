@@ -65,44 +65,44 @@ process_directory <- function(directory_path, import_limit, file_pattern) {
 
 # Define the input directory path
 #input_directory_path <- "C:/Users/johan/Desktop/standard_regression/regression_output/regression_output/"
-input_directory_path <- "C:/Users/johan/Desktop/LOneOCV_regression/regression_output/"
+input_directory_path <- "C:/Users/johan/Desktop/temp_inputfile_for_MA_plots/RegFeaturesXnzero/regression_output/regression_output/"
 
 
 cat("imported directory path:\n", input_directory_path, "\n")
 
-# Process the directory and get the results
-output_df <- process_directory(input_directory_path, 20000, "\\Pearson.RData$")
-output_df <- process_directory(input_directory_path, 20000, "\\Spearman.RData$")
+# Process the directory and get the results - Limit 9k - not more than 9k files
+output_df <- process_directory(input_directory_path, 9050, "\\Pearson.RData$")
+#output_df <- process_directory(input_directory_path, 20000, "\\Spearman.RData$")
 
 # Print the resulting data frame
-#print(output_df)
+print(head(output_df))
 
-# Create the density dotplot
-ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
-       geom_density_2d() +
-       geom_point() +
-       labs(x = "Number of Features", y = "nzero") +
-       theme_minimal()
+# # Create the density dotplot
+# ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
+#        geom_density_2d() +
+#        geom_point() +
+#        labs(x = "Number of Features", y = "nzero") +
+#        theme_minimal()
 
-# Create the dotplot
-ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
-    geom_point() +
-    labs(x = "Number of Features", y = "nzero") +
-    theme_minimal()
+# # Create the dotplot
+# ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
+#     geom_point() +
+#     labs(x = "Number of Features", y = "nzero") +
+#     theme_minimal()
 
-# Create the dotplot
-ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
-  geom_point() +
-  labs(x = "Number of Features", y = "nzero") +
-  theme_minimal() +
-  coord_cartesian(xlim = c(0, max(output_df$number_of_features)), ylim = c(0, max(output_df$nzero_value))) +
-  geom_abline(intercept = 0, slope = 1, color = "red")
+# # Create the dotplot
+# ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
+#   geom_point() +
+#   labs(x = "Number of Features", y = "nzero") +
+#   theme_minimal() +
+#   coord_cartesian(xlim = c(0, max(output_df$number_of_features)), ylim = c(0, max(output_df$nzero_value))) +
+#   geom_abline(intercept = 0, slope = 1, color = "red")
 
-# Create the countplot
-ggplot(output_df, aes(x = number_of_features)) +
-  geom_bar() +
-  labs(x = "Number of Features", y = "Count") +
-  theme_minimal()
+# # Create the countplot
+# ggplot(output_df, aes(x = number_of_features)) +
+#   geom_bar() +
+#   labs(x = "Number of Features", y = "Count") +
+#   theme_minimal()
 
 # # Create the dotplot
 # ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
@@ -119,34 +119,34 @@ ggplot(output_df, aes(x = number_of_features)) +
 # print(y)
 
 
-# Create the dotplot with counts
-ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
-  geom_point() +
-  geom_count() +
-  labs(x = "Number of Features", y = "nzero") +
-  theme_minimal() +
-  coord_cartesian(xlim = c(0, max(output_df$number_of_features)), ylim = c(0, max(output_df$nzero_value))) +
-  geom_abline(intercept = 0, slope = 1, color = "red")
+# # Create the dotplot with counts
+# ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
+#   geom_point() +
+#   geom_count() +
+#   labs(x = "Number of Features", y = "nzero") +
+#   theme_minimal() +
+#   coord_cartesian(xlim = c(0, max(output_df$number_of_features)), ylim = c(0, max(output_df$nzero_value))) +
+#   geom_abline(intercept = 0, slope = 1, color = "red")
 
-  # Create the dotplot with counts
-ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
-  geom_point() +
-  geom_count() +
-  labs(x = "Number of Features", y = "nzero") +
-  theme_minimal() +
-  coord_cartesian(xlim = c(0, max(output_df$number_of_features)), ylim = c(0, max(output_df$nzero_value))) +
-  geom_abline(intercept = 0, slope = 1, color = "red")
+#   # Create the dotplot with counts
+# ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
+#   geom_point() +
+#   geom_count() +
+#   labs(x = "Number of Features", y = "nzero") +
+#   theme_minimal() +
+#   coord_cartesian(xlim = c(0, max(output_df$number_of_features)), ylim = c(0, max(output_df$nzero_value))) +
+#   geom_abline(intercept = 0, slope = 1, color = "red")
 
 
 
-  # Create the dotplot with counts
-ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
-  geom_point() +
-  geom_count() +
-  labs(x = "Number of Features", y = "nzero") +
-  theme_minimal() +
-  coord_cartesian(xlim = c(0, max(output_df$number_of_features)), ylim = c(0, max(output_df$nzero_value))) +
-  geom_abline(intercept = 0, slope = 1, color = "red")
+#   # Create the dotplot with counts
+# ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
+#   geom_point() +
+#   geom_count() +
+#   labs(x = "Number of Features", y = "nzero") +
+#   theme_minimal() +
+#   coord_cartesian(xlim = c(0, max(output_df$number_of_features)), ylim = c(0, max(output_df$nzero_value))) +
+#   geom_abline(intercept = 0, slope = 1, color = "red")
 
 
 # # Define the function to get density of points in 2 dimensions
@@ -173,35 +173,92 @@ ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
 
 
 # Spearman version
-s <- ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
-  geom_count(aes(color = ..n..)) +
-  scale_color_viridis_c() +
-  labs(x = "Number of Features", y = "nzero") +
-  ggtitle(expression(paste(bold("Regression Spearman - "), "Number of non-zero Coefficients vs. Number of Features"))) +
-  theme_bw() +
-  theme(plot.title = element_text(hjust = 0.5)) +
-  scale_x_continuous(breaks = seq(0, max(output_df$number_of_features), by = 10)) +
-  scale_y_continuous(breaks = seq(0, max(output_df$nzero_value), by = 10)) +
-  coord_cartesian(xlim = c(0, max(output_df$number_of_features)), ylim = c(0, max(output_df$nzero_value))) +
-  geom_abline(intercept = 0, slope = 1, color = "red")
+# s <- ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
+#   geom_count(aes(color = ..n..)) +
+#   scale_color_viridis_c() +
+#   labs(x = "Number of Features", y = "nzero") +
+#   ggtitle(expression(paste(bold("Regression Spearman - "), "Number of non-zero Coefficients vs. Number of Features"))) +
+#   theme_bw() +
+#   theme(plot.title = element_text(hjust = 0.5)) +
+#   scale_x_continuous(breaks = seq(0, max(output_df$number_of_features), by = 10)) +
+#   scale_y_continuous(breaks = seq(0, max(output_df$nzero_value), by = 10)) +
+#   coord_cartesian(xlim = c(0, max(output_df$number_of_features)), ylim = c(0, max(output_df$nzero_value))) +
+#   geom_abline(intercept = 0, slope = 1, color = "red")
 
-  # Save the plot as a PNG file
-ggsave("spearman_plot.png", plot = s, width = 12, height = 12, dpi = 600)
+#   # Save the plot as a PNG file
+# ggsave("spearman_plot.png", plot = s, width = 12, height = 12, dpi = 600)
 
 
 
+# original version
 # Pearson version
+# p <- ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
+#   geom_count(aes(color = ..n..)) +
+#   scale_color_viridis_c() +
+#   labs(x = "Number of Features", y = "nzero") +
+#   ggtitle(expression(paste(bold("Regression PearsonCorr. - "), "Number of non-zero Coefficients vs. Number of Features"))) +
+#   theme_bw() +
+#   theme(plot.title = element_text(hjust = 0.5)) +
+#   scale_x_continuous(breaks = seq(0, max(output_df$number_of_features), by = 10)) +
+#   scale_y_continuous(breaks = seq(0, max(output_df$nzero_value), by = 10)) +
+#   coord_cartesian(xlim = c(0, max(output_df$number_of_features)), ylim = c(0, max(output_df$nzero_value))) +
+#   geom_abline(intercept = 0, slope = 1, color = "red")
+
+
+# # adapted version
+# p <- ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
+#   geom_count(aes(color = ..n..)) +
+#   scale_color_viridis_c() +
+#   labs(x = "Number of Features", y = "nzero") +
+#   ggtitle(expression(paste(bold("Regression PearsonCorr. - "), "Number of non-zero Coefficients vs. Number of Features"))) +
+#   theme_bw() +
+#   theme(plot.title = element_text(hjust = 0.5)) +
+#   scale_x_continuous(breaks = seq(0, 70, by = 10)) +
+#   scale_y_continuous(breaks = seq(0, 70, by = 10)) +
+#   coord_cartesian(xlim = c(0, 70), ylim = c(0, 70)) +
+#   geom_abline(intercept = 0, slope = 1, color = "red")
+
+
 p <- ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
   geom_count(aes(color = ..n..)) +
   scale_color_viridis_c() +
-  labs(x = "Number of Features", y = "nzero") +
-  ggtitle(expression(paste(bold("Regression PearsonCorr. - "), "Number of non-zero Coefficients vs. Number of Features"))) +
+  labs(x = "number of input features", y = "number of features utilized", color = "Number of models", size = "") +
+  ggtitle(expression(bold("Partion of model input features utilized for predictions"))) +
   theme_bw() +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 20),
+    axis.title.x = element_text(size = 16),
+    axis.title.y = element_text(size = 16),
+    axis.text.x = element_text(size = 14),
+    axis.text.y = element_text(size = 14),
+    legend.title = element_text(size = 14),
+    legend.text = element_text(size = 14) 
+  ) +
   theme(plot.title = element_text(hjust = 0.5)) +
-  scale_x_continuous(breaks = seq(0, max(output_df$number_of_features), by = 10)) +
-  scale_y_continuous(breaks = seq(0, max(output_df$nzero_value), by = 10)) +
-  coord_cartesian(xlim = c(0, max(output_df$number_of_features)), ylim = c(0, max(output_df$nzero_value))) +
-  geom_abline(intercept = 0, slope = 1, color = "red")
+  scale_x_continuous(breaks = seq(0, 45, by = 10), limits = c(0, 45)) +
+  scale_y_continuous(breaks = seq(0, 45, by = 10), limits = c(0, 45)) +
+  coord_cartesian(xlim = c(0, 45), ylim = c(0, 45)) +
+  geom_abline(intercept = 0, slope = 1, color = "red") +
+  geom_jitter(data = subset(output_df, number_of_features > 45 | nzero_value > 45), 
+              aes(x = pmin(number_of_features, 45), y = pmin(nzero_value, 45), shape = "Outliers"), 
+              color = "#000000", fill = "#beefec", size = 2, width = 0, height = 0.5) +
+  scale_shape_manual(name = "", values = c("Outliers" = 23))+
+  guides(size = guide_legend(order = 2), shape = guide_legend(order = 1))
+
+
+
+
+# Print cwd
+print(getwd())
+
+# directory of the script
+script_dir <- dirname(sys.frame(1)$ofile)
+
+# Create plot filepath with script directory
+plot_filepath <- file.path(script_dir, "RegFeaturesXnzero")
+
+# Save the plot as a SVG file
+ggsave(paste(plot_filepath, ".svg", sep = ""), plot = p, width = 9, height = 6)
 
 # Save the plot as a PNG file
-ggsave("pearson_plot.png", plot = p, width = 12, height = 12, dpi = 600)
+ggsave(paste(plot_filepath, ".png", sep = ""), plot = p, width = 9, height = 6, dpi = 600)
