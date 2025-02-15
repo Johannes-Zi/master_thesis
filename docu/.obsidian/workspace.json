@@ -49,9 +49,9 @@
               "state": {
                 "file": "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
                 "viewState": {
-                  "x": -1463.5932000625432,
-                  "y": -1133.1301926609906,
-                  "zoom": -1.5275575866357753
+                  "x": -1347.2431446299324,
+                  "y": -1923.2845371877447,
+                  "zoom": 0.1666666997803568
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -59,23 +59,66 @@
             }
           },
           {
+            "id": "56dcb0a0934ec0cb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/RegFeaturesXnzero.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "RegFeaturesXnzero"
+            }
+          },
+          {
             "id": "4ec1d699fb390d6e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Transaltion_phase/BACH2.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "BACH2"
+            }
+          },
+          {
+            "id": "7d1086b85c5b102e",
             "type": "leaf",
             "state": {
               "type": "canvas",
               "state": {
-                "file": "AssociationAnalysis/PlotCollection.canvas",
+                "file": "Transaltion_phase/PPA.canvas",
                 "viewState": {
-                  "x": 1425.905472143888,
-                  "y": 1682.2699695372853,
-                  "zoom": -0.22336325400575935
+                  "x": -476.8925706053542,
+                  "y": -311.9930040251718,
+                  "zoom": -0.6666666004392863
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "PlotCollection"
+              "title": "PPA"
+            }
+          },
+          {
+            "id": "0cec4f7ea5d07596",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "LiteratureResearch/GeneDump/EGR1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "EGR1"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -94,7 +137,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -106,7 +150,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "fibr",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -145,7 +189,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 487.5026054382324
+    "width": 297.5026054382324
   },
   "right": {
     "id": "5b31fd771786262b",
@@ -230,13 +274,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "01a1ccf26329c2f6",
+  "active": "3700358e41e4305c",
   "lastOpenFiles": [
+    "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/RegFeaturesXnzero.md",
+    "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
+    "Stichit workflow/Regression/Performance Evaluation/MSEValMulti/MSEValMulti.md",
     "AssociationAnalysis/PlotCollection.canvas",
     "Result_section/MA_results.canvas",
+    "Transaltion_phase/PPA.canvas",
+    "Overexpression of IRF4 in a transgenic mouse model led to aggravated cardiac hypertrophy, fibrosis, and dysfunction.md",
+    "IRF4 could be a viable target for the development of therapeutic interventions aimed at constraining immune reactions.md",
+    "important regulator in the context of pro-inflammatory production of cytokines associated with inflammatory processes and in the development of fibrotic diseases in the mouse model.md",
+    "evidence for (key) regulator of immune responses, including immune cell differentiation and cytokine production.md",
+    "hypertrophy related in mice.md",
+    "X-0.57285861332439_ENSG00000137265_chr6.392002.392041.png",
+    "X-0.506635900889471_ENSG00000112182_chr6.90297158.90297307.png",
+    "X0.545278541272798_ENSG00000120738_chr5.138466759.138466998.png",
+    "LiteratureResearch/GeneDump/EGR1.md",
+    "Transaltion_phase/EGR1.md",
+    "Transaltion_phase/large module.md",
+    "Transaltion_phase/SPRY2.md",
+    "Transaltion_phase/FOXO1.md",
+    "Transaltion_phase/FOXO3.md",
+    "Transaltion_phase/IRF4.md",
+    "Transaltion_phase/BACH2.md",
+    "Transaltion_phase",
+    "AssociationAnalysis/CHEA3/CHEA3.md",
     "LiteratureResearch/PH_General/Publications/sommerCurrentFutureTreatments2021/@sommerCurrentFutureTreatments2021.md",
     "LiteratureResearch/PH_General/Publications/humbertPathologyPathobiologyPulmonary2019/@humbertPathologyPathobiologyPulmonary2019.md",
-    "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
     "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/fig_2504241637.md",
     "LiteratureResearch/Targets/StringDB.md",
     "LiteratureResearch/PH_General/Publications/humbertPathologyPathobiologyPulmonary2019/humbertPathologyPathobiologyPulmonary2019.pdf",
@@ -247,31 +312,12 @@
     "LiteratureResearch/Targets/PotentialHitsOfInterest.md",
     "LiteratureResearch/GeneDump/IRF4.md",
     "AssociationAnalysis/CorrelationVisualizationFiltered/clinical_parameter_gene_associations_heatmap.png",
-    "LiteratureResearch/GeneDump/EGR1.md",
-    "LiteratureResearch/GeneDump/MAOB.md",
-    "AssociationAnalysis/BasicCorrelation/BasicCorrelation.md",
-    "LiteratureResearch/GeneDump/TMEM9.md",
-    "AssociationAnalysis/clinicalParamCorrelations/clinical_parameters_correlation_heatmap.r.md",
-    "AssociationAnalysis/CorrelationVisualizationFiltered/visualize_top_correlations_filtered.r.md",
-    "AssociationAnalysis/CorrelationVisualizationFiltered/v_t_c_f_combined_visualization.r.md",
-    "LiteratureResearch/PH_General/Publications/montaniPulmonaryArterialHypertension2013/@montaniPulmonaryArterialHypertension2013.md",
-    "LiteratureResearch/GeneDump/PARD3.md",
-    "LiteratureResearch/GeneDump/KLRD1.md",
-    "LiteratureResearch/PH_General/Publications/simonneauClinicalClassificationPulmonary2004/@simonneauClinicalClassificationPulmonary2004.md",
-    "LiteratureResearch/PH_General/Publications/thenappanPulmonaryArterialHypertension2018/@thenappanPulmonaryArterialHypertension2018.md",
-    "LiteratureResearch/PH_General/ResearchSoni/ResearchSoni.md",
-    "LiteratureResearch/PH_General/Consensus/Consensus overview.md",
-    "AssociationAnalysis/CorrelationVisualization/visualize_top_correlations.r.md",
-    "AssociationAnalysis/StringExtended/String_extended.md",
     "AssociationAnalysis/StringExtended/Pasted image 20250104183823.png",
     "AssociationAnalysis/StringExtended/Pasted image 20250104183716.png",
     "AssociationAnalysis/StringExtended/Pasted image 20250104183310.png",
     "AssociationAnalysis/StringExtended/Pasted image 20250104182501.png",
     "AssociationAnalysis/StringExtended",
     "AssociationAnalysis/BasicCorrelation/mPAP_spearman_corr_density_p_value.png",
-    "AssociationAnalysis/CorrelationVisualizationFiltered/number_of_entries_per_param.png",
-    "AssociationAnalysis/DisGeNet2r/Pasted image 20241018225350.png",
-    "Result_section/plots/PA_diastolic_spearman_corr_density_p_value.png",
     "Result_section/plots",
     "Untitled.canvas",
     "Result_section/Stitchit",
@@ -281,7 +327,6 @@
     "AssociationAnalysis/CHEA3",
     "AssociationAnalysis/Reaktome_analysis",
     "AssociationAnalysis/GWAS",
-    "AssociationAnalysis/CorrelationVisualizationFiltered",
     "AssociationAnalysis/AssociationAnalysis.canvas",
     "Untitled 1.canvas",
     "Stichit workflow/Steps.canvas",

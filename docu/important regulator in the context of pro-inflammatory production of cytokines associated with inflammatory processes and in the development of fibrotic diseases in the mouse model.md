@@ -1,0 +1,2 @@
+* Biswas, P.S., Bhagat, G. and Pernis, A.B. (2010) ‘IRF4 and its regulators: evolving insights into the pathogenesis of inflammatory arthritis?’, _Immunological Reviews_, 233(1), pp. 79–96. Available at: https://doi.org/10.1111/j.0105-2896.2009.00864.x
+* Liu, Z. and Zhang, J. (2021) ‘Heterogenous Role of IRF4 in Kidney Fibrosis’, _Journal of the American Society of Nephrology_ _: JASN_, 32(11), pp. 2971–2972. Available at: https://doi.org/10.1681/ASN.2021060835.

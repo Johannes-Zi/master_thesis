@@ -9,8 +9,8 @@ Additional information about each gene can be found below the graphs.
 | [[ACVRL1]]    | Activin A Receptor Like Type 1                                          | ENSG00000139567 | +           |
 | [[GLI1]]      | GLI Family Zinc Finger 1                                                | ENSG00000111087 | +           |
 | [[ENG]]       | Endoglin                                                                | ENSG00000106991 | +           |
-| [[SPRY2]]     | Sprouty RTK Signaling Antagonist 2                                      | ENSG00000136158 | ++          |
-| [[EGR1]]      | Early Growth Response 1                                                 | ENSG00000120738 | ++          |
+| [[LiteratureResearch/GeneDump/SPRY2]]     | Sprouty RTK Signaling Antagonist 2                                      | ENSG00000136158 | ++          |
+| [[LiteratureResearch/GeneDump/EGR1]]      | Early Growth Response 1                                                 | ENSG00000120738 | ++          |
 | [[MAOB]]      | monoamine oxidase B                                                     | ENSG00000069535 | ++++        |
 | [[AOC3]]      | Amine Oxidase Copper Containing 3                                       | ENSG00000131471 | +++         |
 | [[AVP]]       | arginine vasopressin                                                    | ENSG00000101200 | ++          |
@@ -62,7 +62,7 @@ Additional information about each gene can be found below the graphs.
 | [[CD72]]      | CD72 Molecule, B-Cell Differentiation Antigen                           | ENSG00000137101 | ++++        |
 | [[RND1]]      | Rho Family GTPase 1                                                     | ENSG00000172602 | +++         |
 | [[ TMCC2 ]]   | Transmembrane And Coiled-Coil Domain Family 2                           | ENSG00000133069 | ++++        |
-| [[IRF4]]      | Lymphocyte-Specific Interferon Regulatory Factor                        | ENSG00000137265 | +++         |
+| [[LiteratureResearch/GeneDump/IRF4]]      | Lymphocyte-Specific Interferon Regulatory Factor                        | ENSG00000137265 | +++         |
 | [[FSCN2]]     | Fascin Actin-Bundling Protein 2, Retinal                                | ENSG00000186765 | +++         |
 | [[FAM124B]]   | Family With Sequence Similarity 124 Member B                            | ENSG00000124019 | ++++        |
 | [[BIN3]]      | Bridging Integrator 3                                                   | ENSG00000147439 | ++          |

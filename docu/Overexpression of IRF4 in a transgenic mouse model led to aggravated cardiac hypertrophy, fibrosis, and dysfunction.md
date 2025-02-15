@@ -1,0 +1,1 @@
+Jiang, D., Bian, Z., Zhang, Y., Zhang, S., Liu, Y., Zhang, R., Chen, Y., Yang, Q., Zhang, X., Fan, G., & Li, H. (2013). Role of Interferon Regulatory Factor 4 in the Regulation of Pathological Cardiac Hypertrophy. _Hypertension_, 61, 1193–1202. [https://doi.org/10.1161/HYPERTENSIONAHA.111.00614](https://doi.org/10.1161/HYPERTENSIONAHA.111.00614).

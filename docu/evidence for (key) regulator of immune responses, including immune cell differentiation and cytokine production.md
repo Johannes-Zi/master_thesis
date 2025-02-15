@@ -1,0 +1,2 @@
+ * Zhou, Y. _et al._ (2016) ‘The Bach Family of Transcription Factors: A Comprehensive Review’, _Clinical Reviews in Allergy & Immunology_, 50(3), pp. 345–356. Available at: https://doi.org/10.1007/s12016-016-8538-7
+- Yamashita, M. and Kuwahara, M. (2018) ‘The critical role of Bach2 in regulating type 2 chronic airway inflammation’, _International Immunology_, 30(9), pp. 397–402. Available at: https://doi.org/10.1093/intimm/dxy020.

@@ -1,0 +1,1 @@
+Jiang, X., Cao, M., Wu, J., Wang, X., Zhang, G., Yang, C., Gao, P., & Zou, Y. (2022). Protections of transcription factor BACH2 and natural product myricetin against pathological cardiac hypertrophy and dysfunction. _Frontiers in Physiology_, 13. [https://doi.org/10.3389/fphys.2022.971424](https://doi.org/10.3389/fphys.2022.971424).
