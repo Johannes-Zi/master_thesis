@@ -186,7 +186,7 @@ create_spearman_correlations_df <- function(clinical_vector, elnet_segments_atac
         geom_point(size = 4) +  # size of the dots
         labs(title = paste("A"),
             x = "ATAC-Seq enhancer signal",
-            y = "Mean pulmonary artery pressure",
+            y = "Systolic pulmonary artery pressure",
             color = "Condition",
             shape = "Condition") +
         theme_bw() +
@@ -509,7 +509,7 @@ if (TRUE) {
   if (TRUE) {
     cat(paste(bold(cyan("\nRun the correlation analysis with the filtered elnet segments atac data together with the clinical metadata over all clinical parameters.\n"))))
     # Create output_path based on cwd
-    output_path <- paste(getwd(), "AssociationAnalysis/CorrelationVisualization/runs/v3_single_plots", sep = "/")
+    output_path <- paste(getwd(), "AssociationAnalysis/CorrelationVisualization/runs/v4_single_plots", sep = "/")
 
 
 
@@ -521,9 +521,14 @@ if (TRUE) {
     #segment_to_visualize <- "chr12.51907898.51908147"
 
     # IRF4
-    clinical_parameter_to_visualize <- "mPAP"
-    gene_id_to_visualize <- "ENSG00000137265"
-    segment_to_visualize <- "chr6.392002.392041"
+    # clinical_parameter_to_visualize <- "mPAP"
+    # gene_id_to_visualize <- "ENSG00000137265"
+    # segment_to_visualize <- "chr6.392002.392041"
+
+    # BACH2
+    clinical_parameter_to_visualize <- "PA_systolic"
+    gene_id_to_visualize <- "ENSG00000112182"
+    segment_to_visualize <- "chr6.90297158.90297307"
 
 
     # Run Correlations with filtered elnet segments atac data

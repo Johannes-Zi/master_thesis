@@ -218,14 +218,27 @@ create_dotplot <- function(df, output_path) {
 
   # Create the dotplot
   dotplot <- ggplot(df, aes(x = nzero_value, y = Pearson, color = density)) +
-    geom_point() +
-    xlab("Number of Nonzero Feature Coefficients") +
-    ylab("Pearson Values") +
+    geom_point(size = 2) +
+    theme_bw() +
+    labs(title = "Utilized features vs. respective CV Pearson coefficients",
+       x = "Number of utilized features",
+       y = "CV Pearson coefficient") +
     scale_color_viridis() +
-    scale_x_continuous(breaks = seq(min(df$nzero_value), max(df$nzero_value), by = 1))  # Increase the number of breaks on the x-axis
-
+    scale_x_continuous(breaks = seq(min(df$nzero_value), max(df$nzero_value), by = 2)) +  # Increase the number of breaks on the x-axis
+    coord_cartesian(xlim = c(0, 29)) +  # Limit the x-axis to 0 - 30
+    theme(
+      plot.title = element_text(size = 20, face = "bold", hjust = 0.5),  # Add title and adjust size
+      axis.title.x = element_text(size = 16),
+      axis.title.y = element_text(size = 16),
+      axis.text.x = element_text(size = 14),
+      axis.text.y = element_text(size = 14),
+      legend.title = element_text(size = 16),
+      legend.text = element_text(size = 14)
+    )
   # Save the dotplot
-  ggsave(filename = paste(output_path, "/dotplot.png", sep = ""), plot = dotplot, width = 20)
+  ggsave(filename = paste(output_path, "/dotplot.png", sep = ""), plot = dotplot, width = 9, height = 6)
+  # Save svg dotplot
+  ggsave(filename = paste(output_path, "/dotplot.svg", sep = ""), plot = dotplot, width = 9, height = 6)
 }
 
 
@@ -233,20 +246,21 @@ create_dotplot <- function(df, output_path) {
 #' Import and preprocess Performance_Evaluation data
 #'
 # Import Performance_Overview files as dataframes
-input_directory_path_LeaveOneOut <- "C:/Users/johan/Desktop/LOneOCV_regression/performance_evaluation/Performance_Overview.txt"
-input_directory_path_standard <- "C:/Users/johan/Desktop/standard_regression/performance_evaluation/Performance_Overview.txt"
+input_directory_path_LeaveOneOut <- "C:/Users/johan/OneDrive/dateien_cloud/Master/Semester_4/Masterarbeit/data/pulmanory_hypertension/regression/leaveOneOut_regression/performance_evaluation/Performance_Overview.txt"
+input_directory_path_standard <- "C:/Users/johan/OneDrive/dateien_cloud/Master/Semester_4/Masterarbeit/data/pulmanory_hypertension/regression/standard_regression/performance_evaluation/Performance_Overview.txt"
+
 # Create dataframes
 df_LeaveOneOut <- read.table(input_directory_path_LeaveOneOut, header = TRUE, sep = "\t")
-df_standard <- read.table(input_directory_path_standard, header = TRUE, sep = "\t")
+#df_standard <- read.table(input_directory_path_standard, header = TRUE, sep = "\t")
 head(df_LeaveOneOut)
-head(df_standard)
+#head(df_standard)
 
 # Preprocess the standard CV dataframe
-df_standard_preprocessed_1 <- preprocess_performance_evaluation_df(df_standard)
-head(df_standard_preprocessed_1)
+#df_standard_preprocessed_1 <- preprocess_performance_evaluation_df(df_standard)
+#head(df_standard_preprocessed_1)
 # Select df entries which were based on Pearson based feature selection at the end of the segementation
-df_standard_preprocessed_2 <- df_standard_preprocessed_1[df_standard_preprocessed_1$segmentation_preselection_corellation == "Pearson", ]
-head(df_standard_preprocessed_2)
+#df_standard_preprocessed_2 <- df_standard_preprocessed_1[df_standard_preprocessed_1$segmentation_preselection_corellation == "Pearson", ]
+#head(df_standard_preprocessed_2)
 # Preprocess the LeaveOneOut CV dataframe
 df_LeaveOneOut_preprocessed_1 <- preprocess_performance_evaluation_df(df_standard)
 head(df_LeaveOneOut_preprocessed_1)
@@ -260,30 +274,30 @@ head(df_LeaveOneOut_preprocessed_2)
 #'
 # Define the input directory paths
 # For regression standard CV
-input_directory_path_standard <- "C:/Users/johan/Desktop/standard_regression/regression_output/regression_output/"
-cat("imported directory path:\n", input_directory_path_standard, "\n")
+#input_directory_path_standard <- "C:/Users/johan/Desktop/temp_inputfile_for_MA_plots/NzeroXpearson/standard_CV/regression_output/regression_output/"
+#cat("imported directory path:\n", input_directory_path_standard, "\n")
 # Process the directory and load the results - only for Pearson based feature (segment) preselection input
-output_df_standard <- process_directory(input_directory_path_standard, 20000, "\\Pearson.RData$")
-head(output_df_standard) # Crashes sometimes at first iteration and runs only when data is already loaded in cache
+#output_df_standard <- process_directory(input_directory_path_standard, 20000, "\\Pearson.RData$")
+#head(output_df_standard) # Crashes sometimes at first iteration and runs only when data is already loaded in cache
 #  For regression LeaveOneOut CV
-input_directory_path_LeaveOneOut <- "C:/Users/johan/Desktop/LOneOCV_regression/regression_output/"
+input_directory_path_LeaveOneOut <- "C:/Users/johan/Desktop/temp_inputfile_for_MA_plots/RegFeaturesXnzero/regression_output/regression_output/"
 cat("imported directory path:\n", input_directory_path_LeaveOneOut, "\n")
 # Process the directory and load the results - only for Pearson based feature (segment) preselection input
 output_df_LeaveOneOut <- process_directory(input_directory_path_LeaveOneOut, 20000, "\\Pearson.RData$")
 head(output_df_LeaveOneOut) # Crashes sometimes at first iteration and runs only when data is already loaded in cache
 
 # Second preprocessing step before merging the two dataframes
-processed_regression_models_df_standard <- process_regression_models_df(output_df_standard)
-head(processed_regression_models_df_standard)
+#processed_regression_models_df_standard <- process_regression_models_df(output_df_standard)
+#head(processed_regression_models_df_standard)
 processed_regression_models_df_LeaveOneOut <- process_regression_models_df(output_df_LeaveOneOut)
 head(processed_regression_models_df_LeaveOneOut)
 
 # Combine the two dataframes
 # For regression standard CV
-combined_df_standard <- merge(df_standard_preprocessed_2, processed_regression_models_df_standard , by = c("gene_name", "segmentation_preselection_corellation"), all = TRUE)
+#combined_df_standard <- merge(df_standard_preprocessed_2, processed_regression_models_df_standard , by = c("gene_name", "segmentation_preselection_corellation"), all = TRUE)
 # Filter out Spearman based entries
-combined_filtered_df_standard <- combined_df_standard[combined_df_standard$segmentation_preselection_corellation == "Pearson", ]
-head(combined_filtered_df_standard)
+#combined_filtered_df_standard <- combined_df_standard[combined_df_standard$segmentation_preselection_corellation == "Pearson", ]
+#head(combined_filtered_df_standard)
 #  For regression LeaveOneOut CV
 combined_df_LeaveOneOut <- merge(df_LeaveOneOut_preprocessed_2, processed_regression_models_df_LeaveOneOut , by = c("gene_name", "segmentation_preselection_corellation"), all = TRUE)
 # Filter out Spearman based entries
@@ -295,10 +309,10 @@ head(combined_filtered_df_LeaveOneOut)
 #' Create the dpotplot for standard CV dataframe
 #'
 # Set the output path to the directory of the active document
-output_path <- dirname(rstudioapi::getActiveDocumentContext()$path)
-print(output_path)
+#output_path <- dirname(rstudioapi::getActiveDocumentContext()$path)
+#print(output_path)
 # Created dotplot 
-create_dotplot(combined_filtered_df_standard, output_path)
+#create_dotplot(combined_filtered_df_standard, output_path)
 
 
 #'
