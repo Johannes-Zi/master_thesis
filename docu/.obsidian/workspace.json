@@ -15,9 +15,9 @@
               "state": {
                 "file": "Result_section/MA_results.canvas",
                 "viewState": {
-                  "x": 1760,
-                  "y": 1700,
-                  "zoom": -2.946438904290472
+                  "x": 2847.5866406194114,
+                  "y": 1237.5837220082908,
+                  "zoom": 1
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -49,9 +49,9 @@
               "state": {
                 "file": "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
                 "viewState": {
-                  "x": -3319.122093778725,
-                  "y": 1254.0438754966683,
-                  "zoom": -0.38888883369940525
+                  "x": -318.88753907443265,
+                  "y": 2051.8382346540384,
+                  "zoom": -1.4999999006589295
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -117,8 +117,7 @@
               "title": "EGR1"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -274,12 +273,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3700358e41e4305c",
+  "active": "0398f7be9dfe7969",
   "lastOpenFiles": [
-    "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/RegFeaturesXnzero.md",
-    "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
-    "Stichit workflow/Regression/Performance Evaluation/MSEValMulti/MSEValMulti.md",
     "AssociationAnalysis/PlotCollection.canvas",
+    "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
+    "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/RegFeaturesXnzero.md",
+    "Stichit workflow/Regression/Performance Evaluation/MSEValMulti/MSEValMulti.md",
     "Result_section/MA_results.canvas",
     "Transaltion_phase/PPA.canvas",
     "Overexpression of IRF4 in a transgenic mouse model led to aggravated cardiac hypertrophy, fibrosis, and dysfunction.md",

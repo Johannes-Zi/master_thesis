@@ -46,6 +46,9 @@ plot_entries <- function(input_df, output_dir) {
 
   # Save the plot to a file 
   ggsave(paste(output_dir, "number_of_entries_per_param.png", sep = ""))
+
+  # Save the number of entries for each clinical parameter to a csv file
+  write.table(as.data.frame(table(input_df$clinical_parameter)), paste(output_dir, "number_of_entries_per_param.csv", sep = ""), sep = ",", row.names = FALSE)
 }
 
 # Function that creates a barchart with the most abundand gene_id entries across all clinical parameters

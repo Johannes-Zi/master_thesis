@@ -246,6 +246,13 @@ create_reduced_correlation_datasets <- function(correlation_results_list, correl
   # Save the plot as a svg file based on the parameter_otput_dir
   ggsave(plot_output_path)
 
+  # Create reduced filtered df with only the columns clinical_parameter, num_genes_more_than_one_segment
+  filter_df_reduced <- filter_df[,c(1, 3)]
+
+  # Save the number of genes above threshold as a csv file using file.path
+  num_genes_above_threshold_output_path <- file.path(output_dir, "num_genes_above_threshold_per_clinical_parameter.csv")
+  write.csv(filter_df_reduced, num_genes_above_threshold_output_path, row.names = FALSE)
+
   # Creates a ggplot histogram plot with number of genes represented by more than one segment for each clinical parameter
   ggplot(filter_df, aes(x = clinical_parameter, y = num_genes_more_than_one_segment)) +
     geom_bar(stat = "identity") +
