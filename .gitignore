@@ -12,6 +12,8 @@ DisGeNETresults_0.4pqcutoff_uptotop225correlations.csv
 DisGeNETresults_0.2pqcutoff_uptotop100correlations.csv
 DisGeNETresults_0.2pqcutoff_uptotop50correlations.csv
 DisGeNETresults_0.4pqcutoff_uptotop250correlations_latest_version.csv
+reduced_clinical_metadata.csv
+DisGeNETresults_manual_input.csv
 
 # Ignore the GoEnrich results
 AssociationAnalysis/GoEnrich/runs/
