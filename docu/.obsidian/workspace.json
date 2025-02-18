@@ -15,9 +15,9 @@
               "state": {
                 "file": "Result_section/MA_results.canvas",
                 "viewState": {
-                  "x": 2847.5866406194114,
-                  "y": 1237.5837220082908,
-                  "zoom": 1
+                  "x": 2505.5996225391427,
+                  "y": 2864.978016603616,
+                  "zoom": -2.3333332008785725
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -28,17 +28,14 @@
             "id": "2e21852d79b3740c",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "AssociationAnalysis/PlotCollection.canvas",
-                "viewState": {
-                  "x": 8205.780760393747,
-                  "y": 2310.9313832650105,
-                  "zoom": 0.06666660043928646
-                }
+                "file": "AssociationAnalysis/GoEnrich/goEnrichment.r.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "PlotCollection"
+              "icon": "lucide-file",
+              "title": "goEnrichment.r"
             }
           },
           {
@@ -117,7 +114,8 @@
               "title": "EGR1"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -273,13 +271,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0398f7be9dfe7969",
+  "active": "2e21852d79b3740c",
   "lastOpenFiles": [
+    "AssociationAnalysis/GoEnrich/goEnrichment_manual_input.r.md",
+    "AssociationAnalysis/DisGeNet2r/disgenet2.r.md",
+    "AssociationAnalysis/DisGeNet2r/DisGeNet_manual_input.r.md",
     "AssociationAnalysis/PlotCollection.canvas",
     "Stichit workflow/Regression/Performance Evaluation/RegPlotOverview.canvas",
     "Stichit workflow/Regression/Performance Evaluation/RegFeaturesXnzero/RegFeaturesXnzero.md",
-    "Stichit workflow/Regression/Performance Evaluation/MSEValMulti/MSEValMulti.md",
     "Result_section/MA_results.canvas",
+    "Stichit workflow/Regression/Performance Evaluation/MSEValMulti/MSEValMulti.md",
     "Transaltion_phase/PPA.canvas",
     "Overexpression of IRF4 in a transgenic mouse model led to aggravated cardiac hypertrophy, fibrosis, and dysfunction.md",
     "IRF4 could be a viable target for the development of therapeutic interventions aimed at constraining immune reactions.md",
@@ -308,8 +309,6 @@
     "Stichit workflow/Regression/Performance Evaluation/MSEVarMuli/MSEVarMulti.md",
     "LiteratureResearch/Targets/CheckTopCorrelationsOfEnrichInput.md",
     "LiteratureResearch/Targets/ExtractFromLiterature.md",
-    "LiteratureResearch/Targets/PotentialHitsOfInterest.md",
-    "LiteratureResearch/GeneDump/IRF4.md",
     "AssociationAnalysis/CorrelationVisualizationFiltered/clinical_parameter_gene_associations_heatmap.png",
     "AssociationAnalysis/StringExtended/Pasted image 20250104183823.png",
     "AssociationAnalysis/StringExtended/Pasted image 20250104183716.png",

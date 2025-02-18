@@ -25,6 +25,44 @@ load_data <- function(input_dir) {
     # Add the data frame to the combined data frame
     combined_df <- rbind(combined_df, input_df)
   }
+  # Rename parameters
+  combined_df$clinical_parameter <- gsub("age", "age", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("\\bAT\\b", "pulmonary acceleration time", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("AT_ET", "AT / ET", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("AVDO2", "arteriovenous oxygen difference", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("BNP", "BNP - heart failure marker", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("Cardiac.Index", "caridac performance index", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("CVP", "central venous pressure", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("DLCO", "lung CO diffusion capacity", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("eGFR", "glomerular filtration rate", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("heart.rate", "heart rate", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("height", "height", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("HZV_Fick", "cardiac output (Fick principle)", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("HZV_Thermodil", "cardiac output (thermodilution)", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("Kreatinin", "kreatinin", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("mPAP", "mean Pulmonary Artery Pressure", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("NYHA", "classification of heart failure", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("PA_diastolic", "diastolic PAP", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("PA_systolic", "systolic PAP", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("Paradoxe_Septumbewegung", "ventricular septum movement", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("PAWP", "pulmonary capillary occlusion pressure", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("Perikarderguss", "pericardium fluid accumulation", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("PVR", "pulmonary vascular resistance", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("RA_area", "right atrium size", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("Rrsys", "systolic blood pressure at rest", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("RVEDD", "right ventricle size at diastole", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("\\bS\\b", "impaired ventricular contraction TAPSV", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("sPAP.excl..ZVD", "systolic PAP without CVP-est.", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("TAPSE", "impaired ventricular contraction TAPSE", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("Tiffeneau.Index.FEV1.VC", "airflow obstruction in lung", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("ZVD", "central venous pressure", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("VCI_diameter", "inferior vena cava diameter", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("ven_SO2", "venous oxygen saturation", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("\\bFEV1\\b", "one second forced expiratory volume", combined_df$clinical_parameter)
+
+  # Legende hinzufügen:
+  # AT / ET: (pulmonary acceleration time) / (right ventricular ejection time)
+  # measured by RHC link
   return(combined_df)
 }
 
@@ -157,20 +195,22 @@ clinical_parameter_gene_assotiations_heatmap <- function(input_df, output_dir) {
   # Create the heatmap
   ggplot(percentage_df, aes(x = Clinical_Parameter_X, y = Clinical_Parameter_Y, fill = Percentage)) +
     geom_tile() +
-    scale_fill_gradient(low = "white", high = "blue", na.value = "white") +
+    scale_fill_gradient(low = "white", high = "#0007c4", na.value = "white") +
     theme_minimal() +
     theme(
-      axis.text.x = element_text(angle = 45, hjust = 1),  # Rotate x-axis labels by 45 degrees
+      axis.text.x = element_text(angle = 45, hjust = 1, color = "black"),  # Rotate x-axis labels by 45 degrees
+      axis.text.y = element_text(angle = 45, color = "black"),
       plot.title = element_text(hjust = 0.5),  # Center the title
-      plot.background = element_rect(fill = "white", color = NA)  # Add white background to the plot
+      plot.background = element_rect(fill = "white", color = NA),
+      legend.position = c(0.9, 0.8)
     ) +
     labs(title = "Co-occurrence of Gene IDs Across Clinical Parameters",
         x = NULL,
         y = NULL,
-        fill = "Percentage")
+        fill = "Gene-set \noverlap\npercentage")
 
   # Save the plot to a file
-  ggsave(paste(output_dir, "clinical_parameter_gene_associations_heatmap.png", sep = ""))
+  ggsave(paste(output_dir, "clinical_parameter_gene_associations_heatmap.png", sep = ""), dpi = 200, height = 8, width = 8) 
   
   }
 
