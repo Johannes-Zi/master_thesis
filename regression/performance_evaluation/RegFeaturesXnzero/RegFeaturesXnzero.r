@@ -77,148 +77,6 @@ output_df <- process_directory(input_directory_path, 9050, "\\Pearson.RData$")
 # Print the resulting data frame
 print(head(output_df))
 
-# # Create the density dotplot
-# ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
-#        geom_density_2d() +
-#        geom_point() +
-#        labs(x = "Number of Features", y = "nzero") +
-#        theme_minimal()
-
-# # Create the dotplot
-# ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
-#     geom_point() +
-#     labs(x = "Number of Features", y = "nzero") +
-#     theme_minimal()
-
-# # Create the dotplot
-# ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
-#   geom_point() +
-#   labs(x = "Number of Features", y = "nzero") +
-#   theme_minimal() +
-#   coord_cartesian(xlim = c(0, max(output_df$number_of_features)), ylim = c(0, max(output_df$nzero_value))) +
-#   geom_abline(intercept = 0, slope = 1, color = "red")
-
-# # Create the countplot
-# ggplot(output_df, aes(x = number_of_features)) +
-#   geom_bar() +
-#   labs(x = "Number of Features", y = "Count") +
-#   theme_minimal()
-
-# # Create the dotplot
-# ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
-#   geom_point() +
-#   labs(x = "Number of Features", y = "nzero") +
-#   theme_minimal() +
-#   coord_cartesian(xlim = c(0, max(output_df$number_of_features)), ylim = c(0, max(output_df$nzero_value))) +
-#   geom_abline(intercept = 0, slope = 1, color = "red")
-
-# # Create the marginal boxplot
-# ggMarginal(x, type = "boxplot", fill = "transparent")
-
-# # Display the plot
-# print(y)
-
-
-# # Create the dotplot with counts
-# ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
-#   geom_point() +
-#   geom_count() +
-#   labs(x = "Number of Features", y = "nzero") +
-#   theme_minimal() +
-#   coord_cartesian(xlim = c(0, max(output_df$number_of_features)), ylim = c(0, max(output_df$nzero_value))) +
-#   geom_abline(intercept = 0, slope = 1, color = "red")
-
-#   # Create the dotplot with counts
-# ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
-#   geom_point() +
-#   geom_count() +
-#   labs(x = "Number of Features", y = "nzero") +
-#   theme_minimal() +
-#   coord_cartesian(xlim = c(0, max(output_df$number_of_features)), ylim = c(0, max(output_df$nzero_value))) +
-#   geom_abline(intercept = 0, slope = 1, color = "red")
-
-
-
-#   # Create the dotplot with counts
-# ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
-#   geom_point() +
-#   geom_count() +
-#   labs(x = "Number of Features", y = "nzero") +
-#   theme_minimal() +
-#   coord_cartesian(xlim = c(0, max(output_df$number_of_features)), ylim = c(0, max(output_df$nzero_value))) +
-#   geom_abline(intercept = 0, slope = 1, color = "red")
-
-
-# # Define the function to get density of points in 2 dimensions
-# get_density <- function(x, y, ...) {
-#   dens <- MASS::kde2d(x, y, ...)
-#   ix <- findInterval(x, dens$x)
-#   iy <- findInterval(y, dens$y)
-#   ii <- cbind(ix, iy)
-#   return(dens$z[ii])
-# }
-
-# # Add a new column to your data frame for density
-# output_df$density <- get_density(output_df$number_of_features, output_df$nzero_value, n = 100)
-
-# # Create the plot
-# ggplot(output_df, aes(x = number_of_features, y = nzero_value, color = density)) +
-#   geom_point() +
-#   labs(x = "Number of Features", y = "nzero") +
-#   theme_minimal() +
-#   coord_cartesian(xlim = c(0, max(output_df$number_of_features)), ylim = c(0, max(output_df$nzero_value))) +
-#   geom_abline(intercept = 0, slope = 1, color = "red") +
-#   scale_color_viridis()
-
-
-
-# Spearman version
-# s <- ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
-#   geom_count(aes(color = ..n..)) +
-#   scale_color_viridis_c() +
-#   labs(x = "Number of Features", y = "nzero") +
-#   ggtitle(expression(paste(bold("Regression Spearman - "), "Number of non-zero Coefficients vs. Number of Features"))) +
-#   theme_bw() +
-#   theme(plot.title = element_text(hjust = 0.5)) +
-#   scale_x_continuous(breaks = seq(0, max(output_df$number_of_features), by = 10)) +
-#   scale_y_continuous(breaks = seq(0, max(output_df$nzero_value), by = 10)) +
-#   coord_cartesian(xlim = c(0, max(output_df$number_of_features)), ylim = c(0, max(output_df$nzero_value))) +
-#   geom_abline(intercept = 0, slope = 1, color = "red")
-
-#   # Save the plot as a PNG file
-# ggsave("spearman_plot.png", plot = s, width = 12, height = 12, dpi = 600)
-
-
-
-# original version
-# Pearson version
-# p <- ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
-#   geom_count(aes(color = ..n..)) +
-#   scale_color_viridis_c() +
-#   labs(x = "Number of Features", y = "nzero") +
-#   ggtitle(expression(paste(bold("Regression PearsonCorr. - "), "Number of non-zero Coefficients vs. Number of Features"))) +
-#   theme_bw() +
-#   theme(plot.title = element_text(hjust = 0.5)) +
-#   scale_x_continuous(breaks = seq(0, max(output_df$number_of_features), by = 10)) +
-#   scale_y_continuous(breaks = seq(0, max(output_df$nzero_value), by = 10)) +
-#   coord_cartesian(xlim = c(0, max(output_df$number_of_features)), ylim = c(0, max(output_df$nzero_value))) +
-#   geom_abline(intercept = 0, slope = 1, color = "red")
-
-
-# # adapted version
-# p <- ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
-#   geom_count(aes(color = ..n..)) +
-#   scale_color_viridis_c() +
-#   labs(x = "Number of Features", y = "nzero") +
-#   ggtitle(expression(paste(bold("Regression PearsonCorr. - "), "Number of non-zero Coefficients vs. Number of Features"))) +
-#   theme_bw() +
-#   theme(plot.title = element_text(hjust = 0.5)) +
-#   scale_x_continuous(breaks = seq(0, 70, by = 10)) +
-#   scale_y_continuous(breaks = seq(0, 70, by = 10)) +
-#   coord_cartesian(xlim = c(0, 70), ylim = c(0, 70)) +
-#   geom_abline(intercept = 0, slope = 1, color = "red")
-
-
 p <- ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
   geom_count(aes(color = ..n..)) +
   scale_color_viridis_c() +
@@ -226,13 +84,16 @@ p <- ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
   ggtitle(expression(bold("Partion of model input features utilized for predictions"))) +
   theme_bw() +
   theme(
+    # Make all text black
+    text = element_text(color = "black"),
     plot.title = element_text(hjust = 0.5, size = 20),
-    axis.title.x = element_text(size = 16),
-    axis.title.y = element_text(size = 16),
-    axis.text.x = element_text(size = 14),
-    axis.text.y = element_text(size = 14),
+    axis.title.x = element_text(size = 14),
+    axis.title.y = element_text(size = 14),
+    axis.text.x = element_text(size = 14, color = "black"),
+    axis.text.y = element_text(size = 14, color = "black"),
     legend.title = element_text(size = 14),
-    legend.text = element_text(size = 14) 
+    legend.text = element_text(size = 14),
+    legend.position = "bottom" 
   ) +
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_x_continuous(breaks = seq(0, 45, by = 10), limits = c(0, 45)) +
@@ -246,8 +107,6 @@ p <- ggplot(output_df, aes(x = number_of_features, y = nzero_value)) +
   guides(size = guide_legend(order = 2), shape = guide_legend(order = 1))
 
 
-
-
 # Print cwd
 print(getwd())
 
@@ -258,7 +117,55 @@ script_dir <- dirname(sys.frame(1)$ofile)
 plot_filepath <- file.path(script_dir, "RegFeaturesXnzero")
 
 # Save the plot as a SVG file
-ggsave(paste(plot_filepath, ".svg", sep = ""), plot = p, width = 9, height = 6)
+ggsave(paste(plot_filepath, ".svg", sep = ""), plot = p, width = 7, height = 6)
 
 # Save the plot as a PNG file
-ggsave(paste(plot_filepath, ".png", sep = ""), plot = p, width = 9, height = 6, dpi = 600)
+ggsave(paste(plot_filepath, ".png", sep = ""), plot = p, width = 7, height = 6, dpi = 250)
+
+
+
+density_plot_1 <- ggplot(output_df, aes(x = number_of_features)) +
+  geom_density(fill = NA, color = "black", size = 1) +
+  labs(title = "Density Distribution of Number of Features",
+       x = "Number of Features",
+       y = "Density") +
+  theme_bw() +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 20),
+    axis.title.x = element_text(size = 16),
+    axis.title.y = element_text(size = 16),
+    axis.text.x = element_text(size = 14, color = "black"),
+    axis.text.y = element_text(size = 14, color = "black"),
+    panel.grid.major = element_blank(),  # Remove major grid lines
+    panel.grid.minor = element_blank()   # Remove minor grid lines
+  ) +
+  scale_x_continuous(limits = c(0, 45))
+
+
+# Save the plot as a PNG file
+ggsave(paste(plot_filepath, "_density_1.png", sep = ""), plot = density_plot_1, width = 11, height = 2, dpi = 200)
+# Save the plot as a SVG file
+ggsave(paste(plot_filepath, "_density_1.svg", sep = ""), plot = density_plot_1, width = 11, height = 2)
+
+density_plot_2 <- ggplot(output_df, aes(x = nzero_value)) +
+  geom_density(fill = NA, color = "black", size = 1.1) +
+  labs(title = "Density Distribution of Number of Features",
+       x = "Number of Features",
+       y = "Density") +
+  theme_bw() +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 20),
+    axis.title.x = element_text(size = 16),
+    axis.title.y = element_text(size = 16),
+    axis.text.x = element_text(size = 14, color = "black"),
+    axis.text.y = element_text(size = 14, color = "black"),
+    panel.grid.major = element_blank(),  # Remove major grid lines
+    panel.grid.minor = element_blank()   # Remove minor grid lines
+  ) +
+  scale_x_continuous(limits = c(0, 45))
+
+
+# Save the plot as a PNG file
+ggsave(paste(plot_filepath, "_density_2.png", sep = ""), plot = density_plot_2, width = 11, height = 2, dpi = 200)
+# Save the plot as a SVG file
+ggsave(paste(plot_filepath, "_density_2.svg", sep = ""), plot = density_plot_2, width = 8, height = 2)
