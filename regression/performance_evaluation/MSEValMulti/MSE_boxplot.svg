@@ -63,8 +63,8 @@
 <text transform='translate(279.42,256.29) rotate(-30)' text-anchor='middle' style='font-size: 12.00px;fill: #4D4D4D; font-family: "Arial";' textLength='16.68px' lengthAdjust='spacingAndGlyphs'>1.0</text>
 <text transform='translate(381.43,256.29) rotate(-30)' text-anchor='middle' style='font-size: 12.00px;fill: #4D4D4D; font-family: "Arial";' textLength='16.68px' lengthAdjust='spacingAndGlyphs'>1.5</text>
 <text transform='translate(483.44,256.29) rotate(-30)' text-anchor='middle' style='font-size: 12.00px;fill: #4D4D4D; font-family: "Arial";' textLength='16.68px' lengthAdjust='spacingAndGlyphs'>2.0</text>
-<text x='285.32' y='279.58' text-anchor='middle' style='font-size: 14.00px; font-weight: bold; font-family: "Arial";' textLength='30.33px' lengthAdjust='spacingAndGlyphs'>MSE</text>
-<text transform='translate(15.50,134.85) rotate(-90)' text-anchor='middle' style='font-size: 14.00px; font-weight: bold; font-family: "Arial";' textLength='145.17px' lengthAdjust='spacingAndGlyphs'>Cross Validation Type</text>
+<text x='285.32' y='279.58' text-anchor='middle' style='font-size: 14.00px; font-family: "Arial";' textLength='30.33px' lengthAdjust='spacingAndGlyphs'>MSE</text>
+<text transform='translate(15.50,134.85) rotate(-90)' text-anchor='middle' style='font-size: 14.00px; font-family: "Arial";' textLength='134.85px' lengthAdjust='spacingAndGlyphs'>Cross Validation Type</text>
 <text x='285.32' y='16.93' text-anchor='middle' style='font-size: 16.00px; font-weight: bold; font-family: "Arial";' textLength='404.14px' lengthAdjust='spacingAndGlyphs'>Cross-Validation Techniques MSE values distribution</text>
 </g>
 </svg>

@@ -220,18 +220,19 @@ create_dotplot <- function(df, output_path) {
   dotplot <- ggplot(df, aes(x = nzero_value, y = Pearson, color = density)) +
     geom_point(size = 2) +
     theme_bw() +
-    labs(title = "Utilized features vs. respective CV Pearson coefficients",
+    #labs(title = "Utilized features vs. respective CV Pearson coefficients",
+    labs(title = "",
        x = "Number of utilized features",
-       y = "CV Pearson coefficient") +
+       y = "Cross validation Pearson coefficient") +
     scale_color_viridis() +
     scale_x_continuous(breaks = seq(min(df$nzero_value), max(df$nzero_value), by = 2)) +  # Increase the number of breaks on the x-axis
     coord_cartesian(xlim = c(0, 29)) +  # Limit the x-axis to 0 - 30
     theme(
       plot.title = element_text(size = 20, face = "bold", hjust = 0.5),  # Add title and adjust size
-      axis.title.x = element_text(size = 16),
-      axis.title.y = element_text(size = 16),
-      axis.text.x = element_text(size = 14),
-      axis.text.y = element_text(size = 14),
+      axis.title = element_text(size = 16),
+      axis.title.y = element_text(margin = margin(r = 10,)),
+      axis.title.x = element_text(margin = margin(t = 10)),
+      axis.text = element_text(size = 14, color = "black"),
       legend.title = element_text(size = 16),
       legend.text = element_text(size = 14)
     )

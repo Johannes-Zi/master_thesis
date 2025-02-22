@@ -109,7 +109,7 @@ create_boxplots <- function(df_LeaveOneOut, df_standard, target_column, output_d
     labs(title = "Cross-Validation Techniques MSE values distribution", x = target_column, y = "Cross Validation Type") +
     theme_bw() +
     theme(plot.title = element_text(hjust = 0.5, size = 16, face = "bold"),
-          axis.title = element_text(size = 14, face = "bold"),
+          axis.title = element_text(size = 14),
           axis.text = element_text(size = 12, angle = 30)) +
     coord_cartesian(xlim = c(0.1, 2)) + 
     scale_fill_manual(values = c("LOOCV" = "#00aeba", "standard" = "#e7b800")) +
@@ -123,11 +123,12 @@ create_boxplots <- function(df_LeaveOneOut, df_standard, target_column, output_d
   violin_plot <- ggplot(df_filtered, aes(y = CV_Type, x = target, fill = CV_Type)) + # Swap x and y
     geom_violin(trim = FALSE, scale = "width", alpha = 0.7) +  # Use violin plot with full range and consistent width
     geom_boxplot(width = 0.25, outlier.shape = NA, alpha = 1, fill = "white") +  # Add boxplot inside violin plot for better visualization
-    labs(title = "Cross-Validation Techniques MSE values distribution", x = target_column, y = "Cross Validation Type") +
+    labs(title = "Cross-Validation techniques MSE values distribution", x = "Mean squared error", y = "Cross validation type") +
     theme_bw() +
-    theme(plot.title = element_text(hjust = 0.5, size = 16, face = "bold"),
-          axis.title = element_text(size = 14, face = "bold"),
-          axis.text = element_text(size = 12, angle = 30)) +
+    theme(plot.title = element_text(hjust = 0.5, size = 16),
+          axis.title = element_text(size = 15, color = "black"),
+          axis.text = element_text(color = "black", size = 14),
+          axis.text.y = element_text(angle = 30)) +
     coord_cartesian(xlim = c(0, 3)) + 
     scale_fill_manual(values = c("LOOCV" = "#00aeba", "standard" = "#e7b800")) +
     theme(legend.position = "none") # Remove legend
