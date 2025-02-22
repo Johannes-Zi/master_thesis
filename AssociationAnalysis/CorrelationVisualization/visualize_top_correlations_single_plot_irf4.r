@@ -177,11 +177,19 @@ create_spearman_correlations_df <- function(clinical_vector, elnet_segments_atac
     # Exclude rows with condition_vector = cteph
     data_df <- data_df[data_df$condition_vector != "cteph",]
 
+    # Rename the condition_vector entries
+    # Rename conditions
+    data_df <- data_df %>%
+      mutate(condition_vector = recode(condition_vector,
+                                "pah" = "PAH",
+                                "healthy" = "Healthy",
+                                "ph-lung" = "PH-Lung"))
+
     # Create dotplot to visualize the correlation with larger font and bigger dots
     # Create dotplot to visualize the correlation with larger font and bigger dots
     suppressWarnings(suppressMessages(({
       p <- ggplot(data = data_df, aes(x = atac_vector, y = clinical_vector, color = condition_vector, shape = condition_vector)) +
-        geom_smooth(aes(group = 1), method = "lm", se = TRUE, color = "black", linetype = "dashed", size = 1.5, show.legend = FALSE) +  # Combined smoothing line with confidence interval
+        geom_smooth(aes(group = 1), method = "lm", se = TRUE, color = "black", linetype = "dashed", size = 1.5, show.legend = FALSE, fill = "#c9c9c9") +  # Combined smoothing line with confidence interval
         geom_smooth(method = "lm", se = FALSE, size = 1.5, show.legend = FALSE) +  # Group-specific smoothing lines without confidence intervals
         geom_point(size = 4) +  # size of the dots
         labs(title = paste("A"),
@@ -192,15 +200,15 @@ create_spearman_correlations_df <- function(clinical_vector, elnet_segments_atac
         theme_bw() +
         theme(plot.title = element_text(hjust = 0.5)) +  # Center the title
         theme( 
-          plot.title = element_text(size = 28, colour = "#161616", face = "bold"),  #  font size for the title
+          plot.title = element_text(size = 28, colour = "black", face = "bold"),  #  font size for the title
           axis.title = element_text(size = 24),  #  font size for axis titles
-          axis.text = element_text(size = 20),  #  font size for axis text
-          axis.title.x = element_text(margin = margin(t = 15), colour = "#161616"),  #  space above the x-axis title
-          axis.title.y = element_text(margin = margin(r = 15), colour = "#161616"),  # Ad space to the right of the y-axis title
+          axis.text = element_text(size = 20, color = "black"),  #  font size for axis text
+          axis.title.x = element_text(margin = margin(t = 15), colour = "black"),  #  space above the x-axis title
+          axis.title.y = element_text(margin = margin(r = 15), colour = "black"),  # Ad space to the right of the y-axis title
           legend.position = c(0.85, 0.85),  # Position the legend inside the plot area
           legend.background = element_rect(fill = alpha('#ffffffed', 0.5)),  # Semi-transparent background for the legend
-          legend.text = element_text(size = 20, colour = "#161616"),  #  the size of the legend text
-          legend.title = element_text(size = 24, colour = "#161616"),  #  the size of the legend title
+          legend.text = element_text(size = 20, colour = "black"),  #  the size of the legend text
+          legend.title = element_text(size = 24, colour = "black"),  #  the size of the legend title
           legend.key.size = unit(1.5, "lines")  #  the size of the legend keys
         ) +
         scale_shape_manual(values = c(15, 16, 17)) +  #  shapes for different groups
@@ -225,7 +233,7 @@ create_spearman_correlations_df <- function(clinical_vector, elnet_segments_atac
     # Create boxplot to display the x-axis values of the different condition groups
     suppressWarnings(suppressMessages({
       boxplot <- ggplot(data = data_df, 
-                        aes(x = factor(condition_vector, levels = c("healthy", "ph-lung", "pah", "cteph")),  # Manually set the order of the groups
+                        aes(x = factor(condition_vector, levels = c("Healthy", "PH-Lung", "PAH")),  # Manually set the order of the groups
                             y = atac_vector, 
                             color = condition_vector, 
                             fill = condition_vector)) +
@@ -239,11 +247,11 @@ create_spearman_correlations_df <- function(clinical_vector, elnet_segments_atac
         theme_bw() +
         theme(plot.title = element_text(hjust = 0.5)) +  # Center the title
         theme(
-          plot.title = element_text(size = 28, colour = "#161616", face = "bold"),  # Increase font size for the title
+          plot.title = element_text(size = 28, colour = "black", face = "bold"),  # Increase font size for the title
           axis.title = element_text(size = 24),  # Increase font size for axis titles
-          axis.text = element_text(size = 20),  # Increase font size for axis text
-          axis.title.x = element_text(margin = margin(t = 15), colour = "#161616"),  # Add space above the x-axis title
-          axis.title.y = element_text(margin = margin(r = 15), colour = "#161616"),  # Add space to the right of the y-axis title
+          axis.text = element_text(size = 20, color = "black"),  # Increase font size for axis text
+          axis.title.x = element_text(colour = "black"),  # Add space above the x-axis title
+          axis.title.y = element_text(colour = "black"),  # Add space to the right of the y-axis title
           axis.text.x = element_text(angle = 35, vjust = 1, hjust = 1),
           legend.position = "none"  # Remove the legend
         ) +
