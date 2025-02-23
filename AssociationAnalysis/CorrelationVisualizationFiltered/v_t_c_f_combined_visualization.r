@@ -25,25 +25,35 @@ load_data <- function(input_dir) {
     # Add the data frame to the combined data frame
     combined_df <- rbind(combined_df, input_df)
   }
+
+  # Drop the clinical parameters that have no meaningful correlations
+  clinical_params_to_drop <- c("age", "height", "weight", "NYHA", "ZVD", "heart.rate", "Paradoxe_Septumbewegung", "Perikarderguss", "SMW")
+
+  # Drop the rows with the clinical parameters that have no meaningful correlations
+  combined_df <- combined_df[!combined_df$clinical_parameter %in% clinical_params_to_drop, ]
+  # Reset the row names
+  rownames(combined_df) <- NULL
+
+
   # Rename parameters
   combined_df$clinical_parameter <- gsub("age", "age", combined_df$clinical_parameter)
   combined_df$clinical_parameter <- gsub("\\bAT\\b", "pulmonary acceleration time", combined_df$clinical_parameter)
   combined_df$clinical_parameter <- gsub("AT_ET", "AT / ET", combined_df$clinical_parameter)
   combined_df$clinical_parameter <- gsub("AVDO2", "arteriovenous oxygen difference", combined_df$clinical_parameter)
-  combined_df$clinical_parameter <- gsub("BNP", "BNP - heart failure marker", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("BNP", "BNP heart failure marker", combined_df$clinical_parameter)
   combined_df$clinical_parameter <- gsub("Cardiac.Index", "caridac performance index", combined_df$clinical_parameter)
   combined_df$clinical_parameter <- gsub("CVP", "central venous pressure", combined_df$clinical_parameter)
   combined_df$clinical_parameter <- gsub("DLCO", "lung CO diffusion capacity", combined_df$clinical_parameter)
   combined_df$clinical_parameter <- gsub("eGFR", "glomerular filtration rate", combined_df$clinical_parameter)
   combined_df$clinical_parameter <- gsub("heart.rate", "heart rate", combined_df$clinical_parameter)
   combined_df$clinical_parameter <- gsub("height", "height", combined_df$clinical_parameter)
-  combined_df$clinical_parameter <- gsub("HZV_Fick", "cardiac output (Fick principle)", combined_df$clinical_parameter)
-  combined_df$clinical_parameter <- gsub("HZV_Thermodil", "cardiac output (thermodilution)", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("HZV_Fick", "cardiac output - Fick principle", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("HZV_Thermodil", "cardiac output - thermodilution", combined_df$clinical_parameter)
   combined_df$clinical_parameter <- gsub("Kreatinin", "kreatinin", combined_df$clinical_parameter)
-  combined_df$clinical_parameter <- gsub("mPAP", "mean Pulmonary Artery Pressure", combined_df$clinical_parameter)
-  combined_df$clinical_parameter <- gsub("NYHA", "classification of heart failure", combined_df$clinical_parameter)
-  combined_df$clinical_parameter <- gsub("PA_diastolic", "diastolic PAP", combined_df$clinical_parameter)
-  combined_df$clinical_parameter <- gsub("PA_systolic", "systolic PAP", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("mPAP", "mean pulmonary artery pressure", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("NYHA", " NYHA heart failure classification", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("PA_diastolic", "diastolic pulmonary artery pressure", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("PA_systolic", "systolic pulmonary artery pressure", combined_df$clinical_parameter)
   combined_df$clinical_parameter <- gsub("Paradoxe_Septumbewegung", "ventricular septum movement", combined_df$clinical_parameter)
   combined_df$clinical_parameter <- gsub("PAWP", "pulmonary capillary occlusion pressure", combined_df$clinical_parameter)
   combined_df$clinical_parameter <- gsub("Perikarderguss", "pericardium fluid accumulation", combined_df$clinical_parameter)
@@ -51,11 +61,11 @@ load_data <- function(input_dir) {
   combined_df$clinical_parameter <- gsub("RA_area", "right atrium size", combined_df$clinical_parameter)
   combined_df$clinical_parameter <- gsub("Rrsys", "systolic blood pressure at rest", combined_df$clinical_parameter)
   combined_df$clinical_parameter <- gsub("RVEDD", "right ventricle size at diastole", combined_df$clinical_parameter)
-  combined_df$clinical_parameter <- gsub("\\bS\\b", "impaired ventricular contraction TAPSV", combined_df$clinical_parameter)
-  combined_df$clinical_parameter <- gsub("sPAP.excl..ZVD", "systolic PAP without CVP-est.", combined_df$clinical_parameter)
-  combined_df$clinical_parameter <- gsub("TAPSE", "impaired ventricular contraction TAPSE", combined_df$clinical_parameter)
-  combined_df$clinical_parameter <- gsub("Tiffeneau.Index.FEV1.VC", "airflow obstruction in lung", combined_df$clinical_parameter)
-  combined_df$clinical_parameter <- gsub("ZVD", "central venous pressure", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("\\bS\\b", "TAPSV impaired ventricular contraction", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("sPAP.excl..ZVD", "est. systolic pulmonary artery pressure", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("TAPSE", "TAPSE impaired ventricular contraction", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("Tiffeneau.Index.FEV1.VC", "airflow obstruction in lung Tiffeneau", combined_df$clinical_parameter)
+  combined_df$clinical_parameter <- gsub("ZVD", "estimated central venous pressure", combined_df$clinical_parameter)
   combined_df$clinical_parameter <- gsub("VCI_diameter", "inferior vena cava diameter", combined_df$clinical_parameter)
   combined_df$clinical_parameter <- gsub("ven_SO2", "venous oxygen saturation", combined_df$clinical_parameter)
   combined_df$clinical_parameter <- gsub("\\bFEV1\\b", "one second forced expiratory volume", combined_df$clinical_parameter)
@@ -252,14 +262,6 @@ if (TRUE) {
 
   # Plot the number of segments for each clinical parameter
   plot_entries(input_df, output_dir)
-
-  # Drop the clinical parameters that have no meaningful correlations
-  clinical_params_to_drop <- c("age", "height", "weight", "NYHA", "ZVD", "heart.rate", "Paradoxe_Septumbewegung", "Perikarderguss", "SMW")
-
-  # Drop the rows with the clinical parameters that have no meaningful correlations
-  input_df <- input_df[!input_df$clinical_parameter %in% clinical_params_to_drop, ]
-  # Reset the row names
-  rownames(input_df) <- NULL
 
   # Plot the number of Gene IDs across all clinical parameters
   plot_top_gene_ids(input_df, output_dir)
