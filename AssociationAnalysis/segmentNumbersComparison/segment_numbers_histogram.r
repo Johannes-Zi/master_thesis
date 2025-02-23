@@ -2,16 +2,21 @@
 input_path_1 <- "C:/Users/johan/VSCode_projects/bioinf_master/AssociationAnalysis/plotRaw04Corrs/runs/11_01_25/num_genes_above_threshold_per_clinical_parameter.csv"
 df_segment_numbers_before_filtering <- read.csv(input_path_1, header = TRUE)
 
+print(head(df_segment_numbers_before_filtering))
+
 # Import csv file with segment numbers per clinical parameter after filtering
-input_path_2 <- "C:/Users/johan/VSCode_projects/bioinf_master/AssociationAnalysis/CorrelationVisualizationFiltered/visulizations/v1/number_of_entries_per_param.csv"
-df_segment_numbers_after_filtering <- read.csv(input_path_2, header = TRUE)
+input_path_2 <- "C:/Users/johan/VSCode_projects/bioinf_master/AssociationAnalysis/CorrelationVisualizationFiltered/visulizations/v1/number_of_entries_per_param.tsv"
+# Import tsv file
+df_segment_numbers_after_filtering <- read.delim(input_path_2, header = TRUE, sep = "\t")
+
+print(head(df_segment_numbers_after_filtering))
 
 # Rename columns to prepare alignment
 colnames(df_segment_numbers_before_filtering) <- c("clinical_parameter", "segment_number_before_filtering")
 colnames(df_segment_numbers_after_filtering) <- c("clinical_parameter", "segment_number_after_filtering")
 
-print(head(df_segment_numbers_before_filtering))
-print(head(df_segment_numbers_after_filtering))
+#print(head(df_segment_numbers_before_filtering))
+#print(head(df_segment_numbers_after_filtering))
 
 # Merge dataframes
 df_combined <- merge(df_segment_numbers_before_filtering, df_segment_numbers_after_filtering, by = "clinical_parameter", all = TRUE)
@@ -22,7 +27,7 @@ df_combined <- df_combined[!df_combined$clinical_parameter == "SMW", ]
 # Uopdate column index
 rownames(df_combined) <- 1:nrow(df_combined)
 
-print(df_combined)
+#print(head(df_combined))
 
 # Create with ggplot a stacked barplot
 library(ggplot2)
@@ -68,54 +73,61 @@ df_plot <- data.frame(clinical_parameter = df_combined$clinical_parameter,
 #                "weight", 
 #                "ZVD"))
 
+#print("### before rename")
+#print(head(df_plot))
+
 # Rename all clinical parameters to be more readable
 df_plot$clinical_parameter <- gsub("age", "age", df_plot$clinical_parameter)
-df_plot$clinical_parameter <- gsub("\\bAT\\b", "pulmonary acceleration time (AT)", df_plot$clinical_parameter)
+df_plot$clinical_parameter <- gsub("\\bAT\\b", "pulmonary acceleration time", df_plot$clinical_parameter)
 df_plot$clinical_parameter <- gsub("AT_ET", "(pulmonary acceleration time) / (right ventricular ejection time)", df_plot$clinical_parameter)
-df_plot$clinical_parameter <- gsub("AVDO2", "arteriovenous oxygen difference (AVDO2)", df_plot$clinical_parameter)
-df_plot$clinical_parameter <- gsub("BNP", "BNP (heart failure marker)", df_plot$clinical_parameter)
+df_plot$clinical_parameter <- gsub("AVDO2", "arteriovenous oxygen difference", df_plot$clinical_parameter)
+df_plot$clinical_parameter <- gsub("BNP", "BNP heart failure marker", df_plot$clinical_parameter)
 df_plot$clinical_parameter <- gsub("Cardiac.Index", "caridac performance index", df_plot$clinical_parameter)
-df_plot$clinical_parameter <- gsub("CVP", "central venous pressure (CVP)", df_plot$clinical_parameter)
-df_plot$clinical_parameter <- gsub("DLCO", "lung CO diffusion capacity (DLCO)", df_plot$clinical_parameter)
-df_plot$clinical_parameter <- gsub("eGFR", "glomerular filtration rate (eGFR)", df_plot$clinical_parameter)
+df_plot$clinical_parameter <- gsub("CVP", "central venous pressure", df_plot$clinical_parameter)
+df_plot$clinical_parameter <- gsub("DLCO", "lung CO diffusion capacity", df_plot$clinical_parameter)
+df_plot$clinical_parameter <- gsub("eGFR", "glomerular filtration rate", df_plot$clinical_parameter)
 df_plot$clinical_parameter <- gsub("heart.rate", "heart rate", df_plot$clinical_parameter)
 df_plot$clinical_parameter <- gsub("height", "height", df_plot$clinical_parameter)
-df_plot$clinical_parameter <- gsub("HZV_Fick", "cardiac output after Fick principle", df_plot$clinical_parameter)
-df_plot$clinical_parameter <- gsub("HZV_Thermodil", "cardiac output after thermodilution", df_plot$clinical_parameter)
+df_plot$clinical_parameter <- gsub("HZV_Fick", "cardiac output - Fick principle", df_plot$clinical_parameter)
+df_plot$clinical_parameter <- gsub("HZV_Thermodil", "cardiac output - thermodilution", df_plot$clinical_parameter)
 df_plot$clinical_parameter <- gsub("Kreatinin", "kreatinin", df_plot$clinical_parameter)
-df_plot$clinical_parameter <- gsub("mPAP", "mean Pulmonary Artery Pressure (PAP) (measured by RHC)", df_plot$clinical_parameter)
-df_plot$clinical_parameter <- gsub("NYHA", "classification of heart failure (NYHA)", df_plot$clinical_parameter)
-df_plot$clinical_parameter <- gsub("PA_diastolic", "diastolic PAP (by RHC)", df_plot$clinical_parameter)
-df_plot$clinical_parameter <- gsub("PA_systolic", "systolic PAP (by RHC)", df_plot$clinical_parameter)
-df_plot$clinical_parameter <- gsub("Paradoxe_Septumbewegung", "ventricular septum movement (pressure overload indicator)", df_plot$clinical_parameter)
-df_plot$clinical_parameter <- gsub("PAWP", "pulmonary capillary occlusion pressure (PAWP)", df_plot$clinical_parameter)
+df_plot$clinical_parameter <- gsub("mPAP", "mean pulmonary artery pressure", df_plot$clinical_parameter)
+df_plot$clinical_parameter <- gsub("NYHA", "NYHA heart failure classification", df_plot$clinical_parameter)
+df_plot$clinical_parameter <- gsub("PA_diastolic", "diastolic pulmonary artery pressure", df_plot$clinical_parameter)
+df_plot$clinical_parameter <- gsub("PA_systolic", "systolic pulmonary artery pressure", df_plot$clinical_parameter)
+df_plot$clinical_parameter <- gsub("Paradoxe_Septumbewegung", "ventricular septum movement", df_plot$clinical_parameter)
+df_plot$clinical_parameter <- gsub("PAWP", "pulmonary capillary occlusion pressure", df_plot$clinical_parameter)
 df_plot$clinical_parameter <- gsub("Perikarderguss", "pericardium fluid accumulation", df_plot$clinical_parameter)
-df_plot$clinical_parameter <- gsub("PVR", "pulmonary vascular resistance (PVR)", df_plot$clinical_parameter)
+df_plot$clinical_parameter <- gsub("PVR", "pulmonary vascular resistance", df_plot$clinical_parameter)
 df_plot$clinical_parameter <- gsub("RA_area", "right atrium size", df_plot$clinical_parameter)
 df_plot$clinical_parameter <- gsub("Rrsys", "systolic blood pressure at rest", df_plot$clinical_parameter)
 df_plot$clinical_parameter <- gsub("RVEDD", "right ventricle size at diastole", df_plot$clinical_parameter)
-df_plot$clinical_parameter <- gsub("\\bS\\b", "TAPSV (impaired right ventricular contraction indicator)", df_plot$clinical_parameter)
-df_plot$clinical_parameter <- gsub("sPAP.excl..ZVD", "systolic PAP without CVP-est. (by echocardiography)", df_plot$clinical_parameter)
-df_plot$clinical_parameter <- gsub("TAPSE", "impaired right ventricular contraction marker (TAPSE)", df_plot$clinical_parameter)
-df_plot$clinical_parameter <- gsub("Tiffeneau.Index.FEV1.VC", "airflow obstruction in lung (FEv1/FVC)", df_plot$clinical_parameter)
-df_plot$clinical_parameter <- gsub("ZVD", "central venous pressure by echocardiography (CVP-est.)", df_plot$clinical_parameter)
+df_plot$clinical_parameter <- gsub("\\bS\\b", "TAPSV impaired right ventricular contraction indicator", df_plot$clinical_parameter)
+df_plot$clinical_parameter <- gsub("sPAP.excl..ZVD", "estimated systolic pulmonary artery pressure", df_plot$clinical_parameter)
+df_plot$clinical_parameter <- gsub("TAPSE", "TAPSE impaired right ventricular contraction marker", df_plot$clinical_parameter)
+df_plot$clinical_parameter <- gsub("Tiffeneau.Index.FEV1.VC", "airflow obstruction in lung - Tiffeneau", df_plot$clinical_parameter)
+df_plot$clinical_parameter <- gsub("ZVD", "estimated central venous pressure", df_plot$clinical_parameter)
 df_plot$clinical_parameter <- gsub("VCI_diameter", "inferior vena cava diameter", df_plot$clinical_parameter)
-df_plot$clinical_parameter <- gsub("ven_SO2", "venous oxygen saturation (ven_SO2)", df_plot$clinical_parameter)
-df_plot$clinical_parameter <- gsub("\\bFEV1\\b", "one second forced expiratory volume (FEV1)", df_plot$clinical_parameter)
+df_plot$clinical_parameter <- gsub("ven_SO2", "venous oxygen saturation", df_plot$clinical_parameter)
+df_plot$clinical_parameter <- gsub("\\bFEV1\\b", "one second forced expiratory volume", df_plot$clinical_parameter)
 
+#print(head(df_plot))
 # Add colum to df wich holds the partion of after filtering to before filteing
 df_plot$partion <- df_plot$segment_number_after_filtering / df_plot$segment_number_before_filtering
 df_plot$partion_percent <- df_plot$partion * 100
 
+#print(head(df_plot))
+
 # Sort the dataframe row by column partion
 df_plot_sorted <- df_plot[order(df_plot$partion, decreasing = FALSE), ]
+
 # Update row index
 rownames(df_plot_sorted) <- 1:nrow(df_plot_sorted)
 
 # Update the factor levels of clinical_parameter based on the sorted order
 df_plot_sorted$clinical_parameter <- factor(df_plot_sorted$clinical_parameter, levels = df_plot_sorted$clinical_parameter)
 
-print(df_plot_sorted)
+#print(head(df_plot_sorted))
 
 # Create the plot
 # Create the plot with two different scales
@@ -149,4 +161,4 @@ output_dir <- "C:/Users/johan/VSCode_projects/bioinf_master/AssociationAnalysis/
 
 # Save the plot
 output_path <- paste0(output_dir, "segment_numbers_histogram.png")
-ggsave(output_path, width = 12, height = 12)
+ggsave(output_path, width = 12, height = 12, dpi = 300)
